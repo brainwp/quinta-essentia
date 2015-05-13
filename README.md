@@ -1,1 +1,1 @@
-Tema do site Recria
+Tema do site Quinta Essentia
