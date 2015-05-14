@@ -10,13 +10,26 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
-	
+get_header(); 
+$odin_general_opts = get_option( 'odin_general' );
+$destaque = $odin_general_opts['destaque'];
+
+?>
+	<!--[if lt IE 9]>
+	<script>
+	document.createElement('video');
+	</script>
+	<![endif]-->
 	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
 		<main id="main-content" class="site-main" role="main">
 			<article id="capa" <?php post_class('row secao'); ?>>
 				<div class="secao-imagem col-md-6"> 
-					<img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/capa.png">
+					<video autoplay loop poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
+					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.webm" type="video/webm">
+					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.mp4" type="video/mp4">
+					</video>
+					<button id="vidpause">Pause</button>
+					
 				</div>
 				<div class="secao-conteudo col-md-6" >
 					<?php
@@ -29,9 +42,14 @@ get_header(); ?>
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->
-			
+			<article id="destaque" <?php post_class('row secao'); ?>> 
+				<?php
+					echo $destaque;
+				
+				?>
+			</article>
 			<?php 
-			get_template_part( '/parts/acoes-home' );	
+
 			
 		$args = array(
 			'post_type' => 'secao',

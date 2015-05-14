@@ -61,7 +61,7 @@
 								'container'      => false,
 								'menu_class'     => 'nav navbar-nav',
 								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker()
+								// 'walker'         => new Odin_Bootstrap_Nav_Walker()
 							)
 						);
 					?>
