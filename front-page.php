@@ -41,7 +41,6 @@ $odin_general_opts = get_option( 'odin_general' );
 							echo $destaque_img;
 						?>
 					</div>
-					<div id="forma_destaque_texto"></div>
 					
 					<div id="destaque_texto" class="col-sm-8">
 							<?php 

@@ -5225,39 +5225,49 @@ video {
 	z-index:9999;
 }
 #destaque{
-	background-color:#292929;
-	position:relative;
+	background-color: #292929;
+	  position: relative;
+	  transform: rotateZ(20deg);
+	  overflow: hidden;
+	  width: 136vw;
+	  margin: -2% 0 -10% -10%;
+	  height: 50vw;
 	
 }
 #destaque_texto{
-	padding:20px 10%;
-	color:#ffffff;
-	margin-top:70px;
-	height:500px;
-	position:relative;
-	z-index:9;
+	padding: 20px 10%;
+	  color: #ffffff;
+	  margin-top: 70px;
+	  height: 500px;
+	  position: relative;
+	  z-index: 9;
+	  transform: rotateZ(-20deg);
+	
 	
 }
 #forma_destaque_texto{
 	width: 371px;
-	transform: rotateZ(20deg);
 	background-color: #ed912c;
 	height: 200px;
 	position: absolute;
 	top: -130px;
 	right: -10%;
 	
+	
 }
 #destaque_img{
-	position:relative;
-	z-index:99;
-	background-color:#ed912c;
+	position: relative;
+	  z-index: 99;
+	  background-color: #ed912c;
+	  transform: rotateZ(-20deg);
+	
 	
 }
 #destaque_img img{
-	transform:rotateZ(-2deg);
-	width:110%;
-	margin:-10px 0 -10px -1%;
+	transform: rotateZ(-4deg);
+	  max-width: 110vw;
+	  margin: -10px 0 -10px -2.5%%;
+	  width: 44.5vw;
 }
 
 #interno-nav-flauta div{
