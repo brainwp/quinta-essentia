@@ -23,25 +23,13 @@ $destaque = $odin_general_opts['destaque'];
 	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
 		<main id="main-content" class="site-main" role="main">
 			<article id="capa" <?php post_class('row secao'); ?>>
-				<div class="secao-imagem col-md-6"> 
-					<video autoplay loop poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
+				<video autoplay loop poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.webm" type="video/webm">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.mp4" type="video/mp4">
-					</video>
-					<button id="vidpause">Pause</button>
-					
-				</div>
-				<div class="secao-conteudo col-md-6" >
-					<?php
-
-					?>
-
-				</div>
-
-				<div class="entry-content">
-
-				</div><!-- .entry-content -->
+				</video>
+				<button id="vidpause">Pause</button>
 			</article><!-- #post-## -->
+
 			<article id="destaque" <?php post_class('row secao'); ?>> 
 				<?php
 					echo $destaque;

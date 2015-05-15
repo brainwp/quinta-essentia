@@ -14,7 +14,6 @@
 
 		<footer id="footer" role="contentinfo">
 			<div class="site-info">
-				<img src="<?php echo get_template_directory_uri().'/assets/images/apoio.png';?>">
 			</div><!-- .site-info -->
 		</footer><!-- #footer -->
 	</div><!-- .container -->

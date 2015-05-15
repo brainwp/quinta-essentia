@@ -324,8 +324,30 @@ if ( is_woocommerce_activated() ) {
 
 include_once('inc/advanced-custom-fields/acf.php');
 include_once('inc/custom-fields.php');
+include_once('inc/shortcodes.php');
+
 // define( 'ACF_LITE', true );
 
 add_filter('show_admin_bar', '__return_false');
+
+///////////////remover o link de upload de mídia comum
+add_action( 'admin_menu', 'remove_menu_links' );
+function remove_menu_links() {
+    global $submenu;
+    remove_menu_page('upload.php');
+    foreach( $submenu['upload.php'] as $position => $data ) {
+        $submenu['upload.php'][$position][1] = 'desired cap here';
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+/////tamanhos dos thumbs
+add_image_size( 'thumb-disco', 336, 304, true );
+add_image_size( 'thumb-equipe', 190, 190, true );
+add_image_size( 'thumb-projeto', 740, 200, true );
+add_image_size( 'thumb-midia', 334, 334, true );
+add_image_size( 'thumb-flauta', 120, 120, true );
+add_image_size( 'thumb-blog', 300, 130, true );
 
 

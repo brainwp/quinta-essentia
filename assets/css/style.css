@@ -5223,204 +5223,34 @@ video#bgvid {
 video { 
 	display: block; 
 }
+#interno-nav-flauta div{
+	display:inline-block;
+}
+#interno-flauta{
+	max-width: 400px;
+  	position: relative;
+	overflow: hidden;
+}
+
+#interno-nav-flauta{
+  	position: relative;
+  	width: 1000px;
+}
+
+#interno-projeto{
+	height: 500px;
+  	margin-bottom: 60px;
+  	overflow: hidden;
+}
+#interno-nav-projeto{
+  	position: relative;
+}
 
 
 
 
 
 
-
-	#capa{
-		background:#ffae4b;
-		
-	}
-	#capa img{
-		width:100%;
-		max-width:100%;
-		margin-top:100px;
-	}
-	.secao:first-child .secao-imagem{
-		width:100%;
-	  
-	}
-	.secao:first-child h1, .secao:first-child .secao-conteudo{
-		display:none;
-	}
-	.secao:nth-child(4n+3) .secao-imagem{
-		width:60%;
-	}
-	.secao:nth-child(4n+3) .secao-conteudo #triangulo{
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 30px 35px 30px 0;
-		border-color: transparent #d25406 transparent transparent;
-		position: absolute;
-	  	left: -35px;
-	  	top: 50%;
-	  	margin-top: 30px;
-		
-	}
-	
-	.secao:nth-child(4n+3) .secao-conteudo{
-		width:40%;
-	}
-	.secao:nth-child(4n+3){
-		background-color:#d25306;
-	}
-	.secao:nth-child(4n+4) .secao-imagem{
-		width:55%;
-		float:right;
-	}
-	.secao:nth-child(4n+4) .secao-conteudo #triangulo{
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 30px 0 30px 35px;
-		border-color: transparent transparent transparent #d25406;
-		position:absolute;
-	  	right: -35px;
-	  	top: 50%;
-	  	margin-top: 30px;
-	z-index:9999;
-		
-	}
-	.secao:nth-child(4n+4) .secao-conteudo{
-		width:45%;
-		float:left;
-		color:#323033;
-		
-	}
-	.secao:nth-child(4n+4) a{
-		font-weight:bold;
-	}
-	.secao:nth-child(4n+4) a:hover{
-		font-size:1.02em;
-	}
-	.secao:nth-child(4n+4) h1, 	.secao:nth-child(4n+4) a, 	.secao:nth-child(4n+4) a:hover, 	.secao:nth-child(4n+4) a:visited {
-		color:#323033;
-		text-decoration:none;
-	}
-	.secao:nth-child(4n+4){
-		background-color:#3e759b;
-	}
-	.secao:nth-child(4n+5){
-		background-color:#b5103b;
-	}
-	.secao:nth-child(4n+5) .secao-imagem{
-		width:55%;
-		float:left;
-	}
-	.secao:nth-child(4n+5) .secao-conteudo #triangulo{
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 30px 35px 30px 0;
-		border-color: transparent #d25406 transparent transparent;
-		position: absolute;
-	  	left: -35px;
-	  	top: 50%;
-	  	margin-top: 30px;
-		
-	}
-	
-	.secao:nth-child(4n+5) .secao-conteudo{
-		float:right;
-		width:45%;
-	}
-	.secao:nth-child(4n+6){
-		background-color:#3e759b;
-	}
-	.secao:nth-child(4n+6) .secao-conteudo #triangulo{
-	
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 30px 0 30px 35px;
-		border-color: transparent #d25406 transparent transparent;
-		position: absolute;
-	  	left: -35px;
-	  	top: 50%;
-	  	margin-top: 30px;
-		
-	}
-	.secao:nth-child(4n+6) .secao-conteudo{
-		float:left;
-	}
-	.secao:nth-child(4n+6) .secao-imagem{
-		float:right;
-	}
-	.type-secao{
-		color:#ffffff;
-	}
-	.type-secao .entry-header{
-		color:white;
-		letter-spacing:4px;
-		text-transform:uppercase;
-		margin-bottom:30px;
-	}
-	.secao-conteudo{
-		padding:60px 0 20px 40px;
-	}
-	.secao-conteudo p{
-		  width: 74%;
-		  line-height: 23px;
-		  letter-spacing: 4px;
-	}
-	#acoes{
-		background-color:#18aa9d;
-		padding-top:80px;
-		
-	}
-	.acao .entry-title{
-		padding:15px;
-		color:white;
-		font-size:1.4em;
-		font-weight:400;
-		text-transform:uppercase;
-		margin-top:0;
-	}
-	.acao a:hover{
-		text-decoration:none;
-	}
-	.acao:hover{
-		padding:5px;
-	}
-	.acao{
-	    -webkit-transition: all 0.5s ease-in-out;
-	    -o-transition: all 0.5s ease-in-out;
-	    transition: all 0.5s ease-in-out;
-	  
-		background-color:#f47b2a;
-		height:305px;
-		margin-bottom:20px;
-		width:20%;
-	}
-	#acoes > h1{
-		margin: 0 0 30px 20% ;
-	  	text-transform: uppercase;
-	  	color: white;
-		font-weight: 500;
-		
-	}
-
-	.acao:nth-child(3n+1){
-		margin-left:18%;
-		margin-right:0%;
-	}
-
-	.acao:nth-child(3n+2){
-		margin-left:2%;
-		margin-right:2%;
-	}
-	.acao:nth-child(3n+3){
-		margin-left:0%;
-		margin-right:18%;
-	}
-	#acoes-interno{
-/*		max-width:900px;*/
-		margin:0 auto;
-	}
 	#header-principal {
 	  background: #000000;
 	  border-bottom: 2px solid #f47b28;
@@ -5430,8 +5260,7 @@ video {
 	  width: 100%;
 	}
 	#logo{
-		vertical-align: middle;
-	  	line-height: 60px;
+	
 	}
 	.reveal-modal{
 		background-color: #f47b2a!important;
