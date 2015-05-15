@@ -12,7 +12,7 @@
 
 get_header(); 
 $odin_general_opts = get_option( 'odin_general' );
-$destaque = $odin_general_opts['destaque'];
+
 
 ?>
 	<!--[if lt IE 9]>
@@ -32,7 +32,24 @@ $destaque = $odin_general_opts['destaque'];
 
 			<article id="destaque" <?php post_class('row secao'); ?>> 
 				<?php
-					echo $destaque;
+				if (isset($odin_general_opts['destaque_check'])){
+					$destaque = $odin_general_opts['destaque'];
+					$destaque_img = wp_get_attachment_image($odin_general_opts['destaque_img'], 'full');
+					?>
+					<div id="destaque_img" class="col-sm-4" >
+						<?php 
+							echo $destaque_img;
+						?>
+					</div>
+					<div id="forma_destaque_texto"></div>
+					
+					<div id="destaque_texto" class="col-sm-8">
+							<?php 
+								echo $destaque;
+							?>
+					</div>
+				<?php 
+				}
 				
 				?>
 			</article>
