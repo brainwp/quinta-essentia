@@ -7,16 +7,23 @@ $odin_theme_options->set_tabs(
     array(
         array(
             'id' => 'odin_general', // ID da aba e nome da entrada no banco de dados.
-            'title' => __( 'Configurações', 'odin' ), // Título da aba.
+            'title' => __( 'Home', 'odin' ), // Título da aba.
         ),
-        
+		array(
+		     'id' => 'parallax_tab',
+		     'title' => __( 'Parallax', 'odin' )
+   		),
+		array(
+		     'id' => 'sobre_tab',
+		     'title' => __( 'Sobre', 'odin' )
+   		),
     )
 );
 $odin_theme_options->set_fields(
     array(
         'general_section' => array(
             'tab'   => 'odin_general', // Sessão da aba odin_general
-            'title' => __( 'Configuração', 'odin' ),
+            'title' => __( 'Destaque', 'odin' ),
             'fields' => array(
                 array(   
 				    'id'          => 'destaque_check', // Required
@@ -28,7 +35,7 @@ $odin_theme_options->set_fields(
 				),
 				array(
 				    'id'          => 'destaque', // Obrigatório
-				    'label'       => __( 'Destaque', 'odin' ), // Obrigatório
+				    'label'       => __( 'Testo de destaque', 'odin' ), // Obrigatório
 				    'type'        => 'editor', // Obrigatório
 				    'default'     => '', // Opcional
 				    'description' => __( 'Preencha com o destaque da home', 'odin' ), // Opcional
@@ -43,7 +50,14 @@ $odin_theme_options->set_fields(
 				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
 				    'description' => __( 'Imagem da Seção de destaque', 'odin' ), // Opcional
 				),
-				array(
+				
+            )
+        ),
+		'parallax_section' => array(
+            'tab'   => 'parallax_tab', // Sessão da aba odin_general
+            'title' => __( 'Imagens de Paralax', 'odin' ),
+            'fields' => array(
+   				array(
 				    'id'          => 'parallax_1', // Obrigatório
 				    'label'       => __( 'Imagem de fundo paralax 1', 'odin' ), // Obrigatório
 				    'type'        => 'image', // Obrigatório
@@ -52,5 +66,19 @@ $odin_theme_options->set_fields(
 				)
             )
         ),
+		'sobre_section' => array(
+            'tab'   => 'sobre_tab', // Sessão da aba odin_general
+            'title' => __( 'Opções da seção Sobre', 'odin' ),
+            'fields' => array(
+   				array(
+				    'id'          => 'logo', // Obrigatório
+				    'label'       => __( 'Logotipo', 'odin' ), // Obrigatório
+				    'type'        => 'image', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				    'description' => __( 'Logotipo do grupo', 'odin' ), // Opcional
+				)
+            )
+        ),
+		
     )
 );

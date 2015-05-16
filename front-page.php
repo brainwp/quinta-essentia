@@ -36,13 +36,13 @@ $odin_general_opts = get_option( 'odin_general' );
 					$destaque = $odin_general_opts['destaque'];
 					$destaque_img = wp_get_attachment_image($odin_general_opts['destaque_img'], 'full');
 					?>
-					<div id="destaque_img" class="col-sm-4" >
+					<div id="destaque_img" class="col-sm-5" >
 						<?php 
 							echo $destaque_img;
 						?>
 					</div>
 					
-					<div id="destaque_texto" class="col-sm-8">
+					<div id="destaque_texto" class="col-sm-7">
 							<?php 
 								echo $destaque;
 							?>

@@ -46,7 +46,25 @@ jQuery(document).ready(function($) {
 	    vid.pause();
 	    pauseButton.innerHTML = "Reproduzir";
 	  }
+	});
+	function poligonos() {
+	   	largura=$(window).width();
+		console.log(largura);
+		altura=largura*0.4663076582;
+		console.log(altura);
+		m=(altura*0.4)/largura
+		y_lar=m*0.33*largura+0.6*altura;
+		$('svg').css('height',altura*1.2);
+
+		$('#triangulo_sobre').attr('points','0,0 '+largura+','+altura+' 0,'+altura*0.6 );
+		
+		$('#triangulo_laranja').attr('points',  '0,'+altura*0.6+' '+largura*0.33+','+y_lar+' 0,'+altura*0.74);
+	 	
+			$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+largura+','+altura+ ' '+largura+','+altura*1.1+' 0,'+altura*1.1);
+		
+	} 
+	$(window).resize(function(){
+		poligonos();
 	})
-
-
+		poligonos();
 });
