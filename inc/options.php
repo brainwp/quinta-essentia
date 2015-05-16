@@ -42,6 +42,13 @@ $odin_theme_options->set_fields(
 				    'type'        => 'image', // Obrigatório
 				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
 				    'description' => __( 'Imagem da Seção de destaque', 'odin' ), // Opcional
+				),
+				array(
+				    'id'          => 'parallax_1', // Obrigatório
+				    'label'       => __( 'Imagem de fundo paralax 1', 'odin' ), // Obrigatório
+				    'type'        => 'image', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				    'description' => __( 'Imagem entre destaque e Sobre', 'odin' ), // Opcional
 				)
             )
         ),

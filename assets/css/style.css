@@ -5232,29 +5232,20 @@ video {
 	  width: 136vw;
 	  margin: -2% 0 -10% -10%;
 	  height: 50vw;
+	z-index:9;
 	
 }
 #destaque_texto{
-	padding: 20px 10%;
 	  color: #ffffff;
 	  margin-top: 70px;
 	  height: 500px;
 	  position: relative;
 	  z-index: 9;
+	  padding: 0 40vw 0 15vw;
 	  transform: rotateZ(-20deg);
-	
-	
+	  font-size: 1.4em;
 }
-#forma_destaque_texto{
-	width: 371px;
-	background-color: #ed912c;
-	height: 200px;
-	position: absolute;
-	top: -130px;
-	right: -10%;
-	
-	
-}
+
 #destaque_img{
 	position: relative;
 	  z-index: 99;
@@ -5268,6 +5259,43 @@ video {
 	  max-width: 110vw;
 	  margin: -10px 0 -10px -2.5%%;
 	  width: 44.5vw;
+}
+#sobre{
+	background-attachment:fixed;
+	position:relative;
+	z-index:1;
+	top: -220px;
+	padding-top:800px;
+  
+	
+}
+#triangulo {
+	width: 0;
+   	height: 0;
+	border-top: 0 solid transparent;
+	border-left: 108vw solid #292929;
+	border-bottom: 19vw solid transparent;
+	position: relative;
+	z-index: 99;
+	transform: rotateZ(20deg);
+	margin-left: -8vw;
+}
+#sobre header{
+	/*background: #292929;
+		transform: rotateZ(20deg);
+		width: 120%;
+		margin-left: -99px;
+		height: 300px;
+		padding: 155px 164px;*/
+}
+#sobre header h1{
+/*	  transform: rotateZ(-20deg);*/
+	display:inline-block;
+	color:#ffffff;
+	text-transform:uppercase;
+	font-weight:200;
+	font-size:3.3em;
+	
 }
 
 #interno-nav-flauta div{

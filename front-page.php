@@ -52,9 +52,9 @@ $odin_general_opts = get_option( 'odin_general' );
 				
 				?>
 			</article>
+			
 			<?php 
 
-			
 		$args = array(
 			'post_type' => 'secao',
 			'meta_key' => 'ordem',
