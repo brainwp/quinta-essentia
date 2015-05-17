@@ -54,14 +54,23 @@ jQuery(document).ready(function($) {
 		console.log(altura);
 		m=(altura*0.4)/largura
 		y_lar=m*0.33*largura+0.6*altura;
+		altura_img_disco = $('#parallax_midia').css('height');
+		altura_img_disco= parseInt(altura_img_disco);
+		console.log('altura:'+altura_img_disco);
 		$('svg').css('height',altura*1.2);
+		console.log('largura:'+largura);
 
 		$('#triangulo_sobre').attr('points','0,0 '+largura+','+altura+' 0,'+altura*0.6 );
 		
 		$('#triangulo_laranja').attr('points',  '0,'+altura*0.6+' '+largura*0.33+','+y_lar+' 0,'+altura*0.74);
 	 	
-			$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+largura+','+altura+ ' '+largura+','+altura*1.1+' 0,'+altura*1.1);
+		$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+largura+','+altura+ ' '+largura+','+altura*1.2+' 0,'+altura*1.2);
 		
+		$('#triangulo_amarelo').attr('points','0,0 '+largura+',0 0,'+altura*0.17 );
+		
+		$('#poligono_disco').attr('points','0,'+(altura*0.17)+' '+largura+',0 '+ largura+','+(altura*0.17)+' '+largura+','+(altura*0.17)*2+' 0,'+(altura*0.17)*2);
+		$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*2)
+		$('#discografia').css('top',altura_img_disco);
 	} 
 	$(window).resize(function(){
 		poligonos();

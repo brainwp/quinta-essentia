@@ -5193,6 +5193,9 @@ html {
 }
 
 /*Começo da customização*/
+.secao{
+	position:relative;
+}
 #fundo-menu{
 	width:100%;
 	height:auto;
@@ -5270,20 +5273,22 @@ video {
 }
 .secao-background{
 	width: 100%;
-  	height: 1200px;
+  	height: 100vw;
  	position: absolute;
   	top: 0;
   	z-index: 99;
-background-attachment:fixed;
-background-repeat:no-repeat;
-background-size:cover;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+  	background-position: center;
+  	background-position-y: 20vh;
+background-color:#0C090D;
 }
 #sobre{
 	background-attachment:fixed;
 	position:relative;
 	z-index:1;
-	top: -220px;
-	padding-top:520px;
+	top: -15vw;
+	padding-top:45vw;
   
 	
 }
@@ -5305,83 +5310,202 @@ svg{
 	fill:#ffffff;
 	
 }
+#triangulo_amarelo{
+	fill:#f3b945;
+}
+#poligono_disco{
+	fill:#292929;
 
+}
+#svg_disco{
+	top:10px;
+}
 #sobre header{
 	display: inline-block;
 	  position: relative;
 	  top: 0;
 	  z-index: 9999;
 	  left: 7.5vw;
-	  padding: 18vw 0 12vw;
+	  padding: 18vw 0 0vw;
 	}
-#sobre header h1{
+.entry-header h1{
 	color:#ffffff;
 	text-transform:uppercase;
 	font-weight:200;
-	font-size:3.3em;
+	font-size:3.5vw;
 	
 }
 #cabecalho_sobre{
 	position:relative;
 	z-index:999;
+	left: 7.5vw;
+  	top:10vw;
 }
 #cabecalho_sobre img, #cabecalho_sobre h1{
 	display:inline-block;
+	margin-bottom:1%;
 	
+}
+#cabecalho_sobre img{
+	width:12vw;
 }
 #cabecalho_sobre h1{
-	  vertical-align: bottom;
-	  text-transform: uppercase;
-	  margin-left: 5%;
-	  padding-bottom: 2%;
-	  font-weight: 300;
-	  font-size: 4em;
-	
+	vertical-align: bottom;
+	text-transform: uppercase;
+	padding-bottom: 2%;
+	font-weight: 300;
+	font-size: 4vw;
+	margin:0 0vw 0 7vw ;
 }
 #sobre .conteudo-secao {
-	margin:0 7.5vw;
-
+	margin:0 7vw 0 26.5vw;
+	color: #5A5A5A;
+	font-size:1.7vw;
 }
 #sobre .secao-interno{
-position:relative;
-z-index:999;
-top:10vw;
-background:#ffffff;
-}
-#sobre .conteudo-secao p{
-	background-color:#ffffff;
-}
-#sobre .conteudo-secao p:first-child,#sobre .conteudo-secao h1 {
+	position:relative;
+	z-index:999;
+	background:#f2f1f0;
+	top:10vw;
+  	padding: 3% 0 10%;
+  	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	background-position-y: -12vh;
+
 }
 
+#sobre h5{
+	display:inline-block;
+	
+}
+#sobre .conteudo-secao p{
+	margin-right:10vw;
+}
+.row_contato{
+	margin-right:2vw;
+}
+.row_contato h3, .row_contato h5{
+	margin:0;
+	vertical-align:middle;
+	line-height:30px;
+}
+#interno-equipe{
+	
+}
+
+.cada-equipe{
+ padding:1vw;
+}
+.cada-equipe:first-child{
+	margin-left:-1vw;
+}
 #interno-nav-flauta div{
 	display:inline-block;
 }
-#interno-flauta{
-	max-width: 400px;
-  	position: relative;
-	overflow: hidden;
+#titulo_flautas{
+	margin-top: 17vw;
+  font-size: 4vw;
+  text-transform: uppercase;
+  font-weight: 400;
+color:black;
 }
+.cada-flauta{
+	margin:0 1vw;
+	width: 9vw;
+}
+#interno-flauta{
+  	margin: 0 0 0 -15vw;
+  	max-width: 66vw;
+	overflow: hidden;
+	position:relative;
+}
+#background_flautas{
+	position:absolute;
+	width:100vw;
+	height:100vw;
+	background-attachment:fixed;
+}
+#interno-flauta .glyphicon{
+	position:absolute;
+  line-height: 9.1vw;
+	  background: #f2f1f0;
+	top:0;
+	z-index:9999;
+}
+#interno-flauta .glyphicon.esquerda	{
+	left:0;
+  	border-radius:  10px 0 0 10px ;
+
+}
+#interno-flauta .glyphicon.direita{
+	right:0;
+	border-radius: 0 10px 10px 0;
+	
+  
+}
+.cada-flauta img{
+	width:100%;
+}
+
 
 #interno-nav-flauta{
   	position: relative;
-  	width: 1000px;
+  	width: 1200vw;
 }
-
+#projetos{
+	background:#292929;
+}
 #interno-projeto{
-	height: 500px;
-  	margin-bottom: 60px;
-  	overflow: hidden;
+	height: 65vh;
+	margin-bottom: 60px;
+	overflow: hidden;
+	padding: 0 5vw 0 8vw;
 }
 #interno-nav-projeto{
   	position: relative;
 }
+#midia{
+	background:#f3b945;
+	padding: 0px 0 60px;
+  
+}
+.depois{
+	position:relative;
+}
+#parallax_midia{
+	height: 50vw;
+	background-size:cover;
+	background-position-y:0;
+	
+}
+.conteudo-secao{
+	max-width:1000px;
+	margin:0 auto;
+}
 
+.cada-midia img{
+	margin: 2% auto;
+  	display: block;
+  	width: 96%;
+}
+#discografia{
+	position:relative;
+}
 
+#discografia .entry-header{
+   	position: absolute;
+   	top: -10vw;
+   	z-index: 9999;
+   	color: #ffffff;
+	right:10vw;
+	display:inline-block;
+}
 
-
-
-
+#interno-disco{
+	height:20vw;
+	
+}
 	
 	#logo{
 	

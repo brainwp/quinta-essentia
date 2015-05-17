@@ -3,6 +3,13 @@
 
 function short_query_func( $atts ) {
 	$html='';
+	$antes_interno = '';
+	$depois_interno = '';
+	$class_item = '';
+	$class_container = "";
+	$class_thumb = "";
+	
+	
     $a = shortcode_atts( array(
 	        'post_type' => 'flauta',
 	        ), $atts );
@@ -10,31 +17,45 @@ function short_query_func( $atts ) {
 	   case 'flauta':
 	        $per_page= '999999999';
 			$thumb='thumb-flauta';
-			$html = '<h1>Flautas</h1>';
+			$html = '<h1 id="titulo_flautas">Flautas</h1>';
+			$antes_interno = '<span class="esquerda glyphicon glyphicon-chevron-left"></span>';
+    		$depois_interno = '<span class="direita glyphicon glyphicon-chevron-right"></span>';
 	         break;
 	   case 'projeto':
 		     $per_page= '99999';
 			$thumb='thumb-projeto';
+			$class_container = "col-sm-8";
+			
 		
 	         break;
 	   case 'midia':
 			 $per_page= '9';
 			$thumb='thumb-midia';
+			$class_item = 'col-sm-4';
+			$class_container = "row";
+			
 			
 	         break;
 		case 'equipe':
 				 $per_page= '999999';
 				$thumb='thumb-equipe';
-        
+				$class_item = 'col-sm-3';
+				$class_container = "row";
+				
 		         break;
 	    case 'disco':
 	    		 $per_page= '99999';
 	    		$thumb='thumb-disco';
+				$class_container = "row";
+				$class_thumb = "col-sm-4 ";
+	
+				
        
 	             break;
 		 case 'post':
 		 		 $per_page= '1';
 		 		$thumb='thumb-blog';
+		
         
 		          break;
 	}  
@@ -48,13 +69,24 @@ function short_query_func( $atts ) {
 	);
 
 	$query = new WP_Query( $args );
-	$html .= "<div id='interno-".$a['post_type']."'><div id='interno-nav-".$a['post_type']."'>";
+	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>".$antes_interno."<div id='interno-nav-".$a['post_type']."'>";
 	if($query->have_posts()) : 
 	    while($query->have_posts()) : 
 	    	$query->the_post();
         	
-			$html .="<div class='cada-".$a['post_type']."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
 			
+			if ($a['post_type'] == 'disco'){
+				$html .="<div class='".$class_item." cada-".$a['post_type']."'>
+							<div class='".$class_thumb."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
+					$html .= '<div class="texto_disco col-sm-8"><h1 class="titulo-disco">'.get_the_title( $query->post->ID).'</h1>'; 
+					$content = get_the_content();
+					$trimmed_content = wp_trim_words( $content, 100, '...');
+					$html .= $trimmed_content."</div></div><div class='clearfix'></div>";
+
+			}
+			else{
+			$html .="<div class='".$class_item." cada-".$a['post_type']."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
+			}
 		endwhile;
 			
 		    wp_reset_postdata();   	
@@ -63,10 +95,31 @@ function short_query_func( $atts ) {
 
 	
 	   endif;
-	$html .= "</div></div>";
+	$html .= "</div>".$depois_interno."</div>";
     return $html;
 }
 add_shortcode( 'query', 'short_query_func' );
+
+
+
+//[query] 
+
+function info_contato(  ) {
+	$contato_options= get_option( 'contato_tab' );
+	$html = "<div class='row_contato'><div class='col-sm-3'><h3>Contrate o Grupo</h3></div><div class='col-sm-4'><h5>".$contato_options['nome_contato']."</h5></div><div class='col-sm-5'><h5>".$contato_options['telefone_contato']."</h5></div><div class='clearfix'></div></div>";
+    return $html;
+}
+add_shortcode( 'contato', 'info_contato' );
+
+
+function lista_videos(  ) {
+	$contato_options= get_option( 'contato_tab' );
+	$html = "<div class='col-sm-4'></div>";
+    return $html;
+}
+add_shortcode( 'videos', 'lista_videos' );
+
+
 
 
 

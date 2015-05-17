@@ -17,6 +17,10 @@ $odin_theme_options->set_tabs(
 		     'id' => 'sobre_tab',
 		     'title' => __( 'Sobre', 'odin' )
    		),
+		array(
+		     'id' => 'contato_tab',
+		     'title' => __( 'Informação de contato', 'odin' )
+   		),
     )
 );
 $odin_theme_options->set_fields(
@@ -63,6 +67,13 @@ $odin_theme_options->set_fields(
 				    'type'        => 'image', // Obrigatório
 				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
 				    'description' => __( 'Imagem entre destaque e Sobre', 'odin' ), // Opcional
+				),
+				array(
+				    'id'          => 'parallax_2', // Obrigatório
+				    'label'       => __( 'Imagem de fundo paralax 2', 'odin' ), // Obrigatório
+				    'type'        => 'image', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				    'description' => __( 'Imagem entre midia e discografia', 'odin' ), // Opcional
 				)
             )
         ),
@@ -77,6 +88,62 @@ $odin_theme_options->set_fields(
 				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
 				    'description' => __( 'Logotipo do grupo', 'odin' ), // Opcional
 				)
+            )
+        ),
+		'contato_section' => array(
+            'tab'   => 'contato_tab', // Sessão da aba odin_general
+            'title' => __( 'Informações para o contato do grupo', 'odin' ),
+            'fields' => array(
+   				array(
+				      'id' => 'nome_contato',
+				      'label' => __( 'Nome para contato', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'telefone_contato',
+				      'label' => __( 'Telefone para contato', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'email_contato',
+				      'label' => __( 'Email para contato', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'facebook',
+				      'label' => __( 'Facebook', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'twitter',
+				      'label' => __( 'Twitter', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'instagram',
+				      'label' => __( 'Instagram', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'youtube',
+				      'label' => __( 'Youtube', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'soundcloud',
+				      'label' => __( 'Sound cloud', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'reverbnation',
+				      'label' => __( 'Reverbnation', 'odin' ),
+				      'type' => 'text'
+				),
+				array(
+				      'id' => 'vimeo',
+				      'label' => __( 'Vimeo', 'odin' ),
+				      'type' => 'text'
+				),
             )
         ),
 		
