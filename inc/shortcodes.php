@@ -48,6 +48,8 @@ function short_query_func( $atts ) {
 	    		$thumb='thumb-disco';
 				$class_container = "row";
 				$class_thumb = "col-sm-4 ";
+				$class_item = 'row';
+				
 	
 				
        

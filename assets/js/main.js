@@ -64,14 +64,31 @@ jQuery(document).ready(function($) {
 		
 		$('#triangulo_laranja').attr('points',  '0,'+altura*0.6+' '+largura*0.33+','+y_lar+' 0,'+altura*0.74);
 	 	
-		$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+largura+','+altura+ ' '+largura+','+altura*1.2+' 0,'+altura*1.2);
+		$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+(largura+1)+','+altura+ ' '+(largura+1)+','+altura*1.2+' 0,'+altura*1.2);
+		$('#sobre .secao-interno').css('margin-top',altura*0.6);
+		// $('#cabecalho_sobre').css('margin-top',-altura*0.6);
 		
 		$('#triangulo_amarelo').attr('points','0,0 '+largura+',0 0,'+altura*0.17 );
+		$('#svg_midia').css('height',altura*0.17)
 		
 		$('#poligono_disco').attr('points','0,'+(altura*0.17)+' '+largura+',0 '+ largura+','+(altura*0.17)+' '+largura+','+(altura*0.17)*2+' 0,'+(altura*0.17)*2);
-		$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*2)
-		$('#discografia').css('top',altura_img_disco);
+		$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*+1)
+		$('#svg_disco').css('height',+(altura*0.17)*2)
+		
+		$('#discografia').css('margin-top',altura_img_disco);
+		
+		$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
+		$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
+		$('#poligono_social').parent().css('top',-altura*0.05);
+		$('#social .secao-interno').css('margin-top',altura*0.25);
+		$('#social svg').css('height',altura*0.3);
+		$('#svg_social_depois').css('height',altura*0.3);
+		
+		$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
+		
 	} 
+	
+	
 	$(window).resize(function(){
 		poligonos();
 	})

@@ -5183,11 +5183,8 @@ html {
 .widgettitle, .widget-title {
     margin-bottom: 10px;
 }
-#footer {
-    padding: 20px 0 20px;
-    text-align: center;
-	background-color:#151515;
-}
+
+
 .error404 #searchform {
     margin-bottom: 10px;
 }
@@ -5287,7 +5284,7 @@ background-color:#0C090D;
 	background-attachment:fixed;
 	position:relative;
 	z-index:1;
-	top: -15vw;
+	margin-top: -15vw;
 	padding-top:45vw;
   
 	
@@ -5336,10 +5333,11 @@ svg{
 	
 }
 #cabecalho_sobre{
-	position:relative;
-	z-index:999;
-	left: 7.5vw;
-  	top:10vw;
+	position: absolute;
+  	z-index: 999;
+  	margin-top: -16vw;
+  	left: 7vw;
+
 }
 #cabecalho_sobre img, #cabecalho_sobre h1{
 	display:inline-block;
@@ -5366,7 +5364,6 @@ svg{
 	position:relative;
 	z-index:999;
 	background:#f2f1f0;
-	top:10vw;
   	padding: 3% 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
@@ -5460,14 +5457,24 @@ color:black;
 	height: 65vh;
 	margin-bottom: 60px;
 	overflow: hidden;
-	padding: 0 5vw 0 8vw;
 }
 #interno-nav-projeto{
   	position: relative;
 }
+#projetos .entry-header{
+	text-align:center;
+	margin-top:20px;
+}
+.cada-projeto{
+	margin-bottom:20px;
+}
+#projetos .secao-interno{
+	margin-top: 100px;
+  
+}
 #midia{
 	background:#f3b945;
-	padding: 0px 0 60px;
+  	padding: 60px 0 60px;
   
 }
 .depois{
@@ -5489,11 +5496,14 @@ color:black;
   	display: block;
   	width: 96%;
 }
-#discografia{
-	position:relative;
+#discografia .secao-interno{
+	padding:10vw 0;
+	padding: 10vw 0;
+  background-position: center;
+  background-size: cover;
 }
 
-#discografia .entry-header{
+#discografia .entry-header, #social .entry-header{
    	position: absolute;
    	top: -10vw;
    	z-index: 9999;
@@ -5501,11 +5511,73 @@ color:black;
 	right:10vw;
 	display:inline-block;
 }
-
+#discografia .entry-header{
+	top: 0;
+   	
+}
 #interno-disco{
-	height:20vw;
+	max-height:650px;
+	overflow:hidden;
 	
 }
+.cada-disco{
+	margin-bottom:40px;
+	display:block;
+	background-color:#565555;
+	color:#ffffff;
+}
+.texto_disco{
+	padding:20px;
+}
+#poligono_social{
+	fill:#d95b35;
+}
+#triangulo_social, #poligono_social_depois{
+	fill:#6f1112;
+}
+#social .entry-header{
+	top:0;
+}
+#social {
+	background-color:#f3b945;
+}
+	
+input, textarea{
+  box-shadow: none;
+  border: none;
+  border-radius: 7px;
+  font-size: 20px;
+  padding: 7px;
+  width: 30%;
+}
+.wpcf7-submit{
+	width:10%;
+	border-radius:10px;
+}
+#footer {
+	background-color:#ffffff;
+	padding-top:100px;
+}
+.site-info{
+	max-width:1000px;
+	margin:0 auto;
+}
+#parcerias{
+	margin-top: 114px;
+	text-align:right;
+}
+#parcerias img{
+	margin-left:20px;
+	vertical-align:bottom;
+}
+#logo_footer div{
+	display:inline-block;
+	vertical-align:bottom;
+}
+#logo_footer img{
+	vertical-align:middle;;
+}
+	
 	
 	#logo{
 	
