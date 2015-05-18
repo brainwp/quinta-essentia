@@ -12,6 +12,7 @@ function short_query_func( $atts ) {
 	
     $a = shortcode_atts( array(
 	        'post_type' => 'flauta',
+	        'paged'     => get_query_var( 'paged', 1 )
 	        ), $atts );
 	switch ($a['post_type']) {
 	   case 'flauta':
@@ -31,12 +32,11 @@ function short_query_func( $atts ) {
 		
 	         break;
 	   case 'midia':
-			 $per_page= '9';
+			 $per_page= '3';
 			$thumb='thumb-midia';
 			$class_item = 'col-sm-4';
 			$class_container = "row";
-			
-			
+
 	         break;
 		case 'equipe':
 				 $per_page= '999999';
@@ -63,7 +63,7 @@ function short_query_func( $atts ) {
         
 		          break;
 	}  
-	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	$paged = $a['paged'];
 	
 	$args = array(
 		'post_type' => $a['post_type'],
@@ -89,10 +89,14 @@ function short_query_func( $atts ) {
 
 			}
 			else{
-			$html .="<div class='".$class_item." cada-".$a['post_type']."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
+				if($a['post_type'] == 'midia' && !defined('DOING_AJAX')){
+					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query->max_num_pages.'">';
+					$depois_interno .= __('Carregar +','odin');
+					$depois_interno .= '</a>';
+				}
+				$html .="<div class='".$class_item." cada-".$a['post_type']."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
 			}
 		endwhile;
-			
 		    wp_reset_postdata();   	
 		else: 
 		    $html = 'Adicionar um '.$a['post_type'];
@@ -123,9 +127,10 @@ function lista_videos(  ) {
 }
 add_shortcode( 'videos', 'lista_videos' );
 
-
-
-
-
-
-
+//ajax midia
+function ajax_midia_load_posts(){
+	echo do_shortcode('[query post_type="midia" paged="'.$_POST['paged'].'"]');
+	wp_die();
+}
+add_action( 'wp_ajax_midia_load_posts', 'ajax_midia_load_posts' );
+add_action( 'wp_ajax_nopriv_midia_load_posts', 'ajax_midia_load_posts' );
