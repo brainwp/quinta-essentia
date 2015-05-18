@@ -304,6 +304,18 @@ require_once get_template_directory() . '/inc/optimize.php';
 require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Brasa Social Feed
+ */
+require_once get_template_directory() . '/inc/social-class.php';
+$options = get_option('social');
+global $brasa_social_feed;
+$brasa_social_feed = new Brasa_Social_Feed(
+	array(
+		'facebook_api_url' => $options['facebook_api_url'],
+		'facebook_auth'    => $options['facebook_auth'],
+	)
+);
+/**
  * WooCommerce compatibility files.
  */
 if ( is_woocommerce_activated() ) {

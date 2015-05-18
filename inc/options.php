@@ -21,6 +21,10 @@ $odin_theme_options->set_tabs(
 		     'id' => 'contato_tab',
 		     'title' => __( 'Informação de contato', 'odin' )
    		),
+   		array(
+		     'id' => 'social',
+		     'title' => __( 'Redes Sociais', 'odin' )
+   		),
     )
 );
 $odin_theme_options->set_fields(
@@ -146,6 +150,29 @@ $odin_theme_options->set_fields(
 				),
             )
         ),
-		
+		'social_fb_section' => array(
+            'tab'   => 'social', // Sessão da aba odin_general
+            'title' => __( 'Opções do Facebook', 'odin' ),
+            'fields' => array(
+   				array(
+				    'id'          => 'facebook_auth', // Obrigatório
+				    'label'       => __( 'Token de autorização do Facebook', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+				array(
+				    'id'          => 'facebook_api_url', // Obrigatório
+				    'label'       => __( 'URL da API do Facebook', 'odin' ), // Obrigatório
+				    'type'        => 'textarea', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+				array(
+				    'id'          => 'facebook_url', // Obrigatório
+				    'label'       => __( 'URL da página do Facebook', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+            )
+        ),
     )
 );

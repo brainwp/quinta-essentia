@@ -228,5 +228,11 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	var data = {
+		'action': 'facebook_brasa_social_feed'
+	};
+	$.post(odin_main.ajaxurl, data, function(response) {
+		$('#facebook-feed').html(response);
+	});
 });
 
