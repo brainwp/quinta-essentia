@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 		$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*+1)
 		$('#svg_disco').css('height',+(altura*0.17)*2)
 		
-		$('#discografia').css('margin-top',altura_img_disco);
+		// $('#discografia').css('margin-top',altura_img_disco);
 		
 		$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
 		$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
