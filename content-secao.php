@@ -47,15 +47,15 @@ switch ($post->post_name) {
 	 case 'discografia':
 	  	$entre = '';
 	  	$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
-	 	$depois = '';
+	 	$depois = '<svg height="400" width="500">
+	 		<polygon id="poligono_social" points=""/>
+ 			<polygon id="triangulo_social" points=""/>
+		</svg>';
 	     break;
 		
 	case 'social':
 	  	$entre = '';
-	  	$antes = '<svg height="400" width="500">
-	 		<polygon id="poligono_social" points=""/>
- 			<polygon id="triangulo_social" points=""/>
-		</svg><header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
+	  	$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
 	 	$depois = '';
 	     break;
 	}
