@@ -243,3 +243,44 @@ function equipe_cpt() {
 		register_post_type( 'disco', $args );
 	}
 	/////////////////////////////////////////
+if ( ! function_exists( 'custom_tax_categoria' ) ) {
+
+// Register Custom Taxonomy
+function custom_tax_categoria() {
+
+	$labels = array(
+		'name'                       => _x( 'Categorias', 'Taxonomy General Name', 'odin' ),
+		'singular_name'              => _x( 'Categoria', 'Taxonomy Singular Name', 'odin' ),
+		'menu_name'                  => __( 'Categorias', 'odin' ),
+		'all_items'                  => __( 'Todas Categorias', 'odin' ),
+		'parent_item'                => __( 'Categoria Parente', 'odin' ),
+		'parent_item_colon'          => __( 'Categoria Parente:', 'odin' ),
+		'new_item_name'              => __( 'Adicionar nova Categoria', 'odin' ),
+		'add_new_item'               => __( 'Adicionar nova Categoria', 'odin' ),
+		'edit_item'                  => __( 'Editar categoria', 'odin' ),
+		'update_item'                => __( 'Atualizar categoria', 'odin' ),
+		'view_item'                  => __( 'Ver Categoria', 'odin' ),
+		'separate_items_with_commas' => __( 'Categorias separadas por virgula', 'odin' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover categorias', 'odin' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'odin' ),
+		'popular_items'              => __( 'Categorias populares', 'odin' ),
+		'search_items'               => __( 'Buscar Categoria', 'odin' ),
+		'not_found'                  => __( 'Não encontrado', 'odin' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'categoria', array( 'midia' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'custom_tax_categoria', 0 );
+
+}

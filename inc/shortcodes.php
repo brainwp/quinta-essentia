@@ -12,7 +12,8 @@ function short_query_func( $atts ) {
 	
     $a = shortcode_atts( array(
 	        'post_type' => 'flauta',
-	        'paged'     => get_query_var( 'paged', 1 )
+	        'paged'     => get_query_var( 'paged', 1 ),
+	        'category'  => false
 	        ), $atts );
 	switch ($a['post_type']) {
 	   case 'flauta':
@@ -25,15 +26,32 @@ function short_query_func( $atts ) {
 	   case 'projeto':
 		     $per_page= '99999';
 			$thumb='thumb-projeto';
-			$class_container = "col-sm-8";
-			
-		
+			$class_container = "col-sm-8";		
 	         break;
 	   case 'midia':
 			 $per_page= '3';
 			$thumb='thumb-midia';
 			$class_item = 'col-sm-4';
 			$class_container = "row";
+			if(!defined('DOING_AJAX')){
+				$antes_interno  = '<div class="midia-category">';
+				$antes_interno .= '<a class="btn btn-default btn-lg btn-ajax-categoria active" data-category="all">';
+				$antes_interno .= __('Todos','odin');
+				$antes_interno .= '</a>';
+				$categories = get_categories(
+					array(
+						'type' => 'midia', 
+						'taxonomy' => 'categoria',
+					)
+				);
+				foreach ($categories as $cat) {
+					$antes_interno .= '<a class="btn btn-default btn-lg btn-ajax-categoria" data-category="'.$cat->term_id.'">';
+					$antes_interno .= apply_filters('the_title',$cat->name);
+					$antes_interno .= '</a>';
+				}
+
+				$antes_interno .= '</div>';
+			}
 
 	         break;
 		case 'equipe':
@@ -69,7 +87,20 @@ function short_query_func( $atts ) {
 		'paged'         => $paged,
 	    
 	);
-
+	if($a['category'] != false && $a['category'] !== 'all'){
+		$args = array(
+			'post_type' => $a['post_type'],
+			'posts_per_page' => $per_page,
+			'paged'         => $paged,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'categoria',
+					'field'    => 'term_id',
+					'terms'    => $a['category'],
+				),
+			),
+		);
+	}
 	$query = new WP_Query( $args );
 	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>".$antes_interno."<div id='interno-nav-".$a['post_type']."'>";
 	if($query->have_posts()) : 
@@ -88,13 +119,17 @@ function short_query_func( $atts ) {
 			}
 			else{
 				if($a['post_type'] == 'midia' && !defined('DOING_AJAX')){
-					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query->max_num_pages.'">';
+					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query->max_num_pages.'" data-category="all">';
 					$depois_interno .= __('Carregar +','odin');
 					$depois_interno .= '</a>';
 				}
 				$html .="<div class='".$class_item." cada-".$a['post_type']."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
 			}
 		endwhile;
+		    if($a['post_type'] == 'midia' && defined('DOING_AJAX') && DOING_AJAX){
+		    	global $ajax_max_paged;
+		    	$ajax_max_paged = $query->max_num_pages;
+			}
 		    wp_reset_postdata();   	
 		else: 
 		    $html = 'Adicionar um '.$a['post_type'];
@@ -127,8 +162,24 @@ add_shortcode( 'videos', 'lista_videos' );
 
 //ajax midia
 function ajax_midia_load_posts(){
-	echo do_shortcode('[query post_type="midia" paged="'.$_POST['paged'].'"]');
+	if(!isset($_POST['category']) || $_POST['category'] == 'all'){
+		echo do_shortcode('[query post_type="midia" paged="'.$_POST['paged'].'"]');
+	}
+	else{
+		echo do_shortcode('[query post_type="midia" paged="'.$_POST['paged'].'" category="'.$_POST['category'].'"]');
+	}
 	wp_die();
 }
 add_action( 'wp_ajax_midia_load_posts', 'ajax_midia_load_posts' );
 add_action( 'wp_ajax_nopriv_midia_load_posts', 'ajax_midia_load_posts' );
+//ajax load categories posts
+function ajax_midia_load_category(){
+	global $ajax_max_paged;
+	$ajax_response = array();
+	$ajax_response['html'] = do_shortcode('[query post_type="midia" category="'.$_POST['category'].'"]');
+	$ajax_response['max_paged'] = $ajax_max_paged;
+	echo json_encode($ajax_response);
+	wp_die();
+}
+add_action( 'wp_ajax_midia_load_category', 'ajax_midia_load_category' );
+add_action( 'wp_ajax_nopriv_midia_load_category', 'ajax_midia_load_category' );
