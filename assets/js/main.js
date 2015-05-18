@@ -85,7 +85,11 @@ jQuery(document).ready(function($) {
 		$('#svg_social_depois').css('height',altura*0.3);
 		
 		$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
-		
+		$('#triangulo_footer').attr('points', '0,0 ' +largura+','+altura*0.35+ ' 0,'+ altura*0.35);
+		$('#svg_footer').css('height',altura*0.35);
+		altura_footer= parseInt($('#footer').css('height'));
+		altura_site_info =  parseInt($('.site-info.row').css('height'));		
+		$('.site-info').css('padding-top',(altura_footer/2)-(altura_site_info/2));
 	} 
 	
 	
@@ -93,4 +97,35 @@ jQuery(document).ready(function($) {
 		poligonos();
 	})
 		poligonos();
+	
+	var lastScrollTop = 0;	
+	$(window).scroll(function() {
+		var st = $(this).scrollTop();
+	   
+	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	      $('#footer').css('position','absolute')
+					  .css('top','0')
+					.css('width','100vw')
+					.css('z-index','9999')
+		$('#header-principal').css('margin-top',altura_footer)
+		window.scrollTo(0, 0)
+					
+	   }
+		// else if ($(window).scrollTop()  > $(window).height() ){
+		// 			
+		// 		}
+		else if (st < lastScrollTop && $(window).scrollTop() == 0){
+			$('#footer').css('position','relative')
+												  .css('top','0')
+												.css('width','100vw')
+												.css('z-index','9999')
+									$('#header-principal').css('margin-top','0')
+		window.scrollTo(0, $(document).height() - 1 )
+									
+		}
+		lastScrollTop = st;
+	   
+		console.log('altura doc'+$(document).height())
+	});
 });
+

@@ -56,8 +56,7 @@ switch ($post->post_name) {
 	 		<polygon id="poligono_social" points=""/>
  			<polygon id="triangulo_social" points=""/>
 		</svg><header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
-	 	$depois = '<svg id="svg_social_depois" height="400" width="500">
-	 		<polygon id="poligono_social_depois" points=""/></svg>';
+	 	$depois = '';
 	     break;
 	}
 ?>

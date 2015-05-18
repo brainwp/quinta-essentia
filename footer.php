@@ -10,12 +10,13 @@
  */
 $sobre_options= get_option( 'sobre_tab' );
 $logo = wp_get_attachment_url($sobre_options['logo'], 'full');
-	echo "logooo".$logo;
 ?>
 
 		</div><!-- #main -->
-
+		
 		<footer id="footer" role="contentinfo">
+			<svg id="svg_social_depois" height="400" width="500">
+		 		<polygon id="poligono_social_depois" points=""/></svg>
 			<div class="site-info row">
 				<div id="logo_footer" class="col-sm-6">
 				 	<img src="<?php echo $logo;?>"/>
@@ -28,6 +29,9 @@ $logo = wp_get_attachment_url($sobre_options['logo'], 'full');
 					
 				</div>
 			</div><!-- .site-info -->
+			<svg id="svg_footer">
+				<polygon id="triangulo_footer" points=""/>
+			</svg>
 		</footer><!-- #footer -->
 	</div><!-- .container -->
 

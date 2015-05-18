@@ -5307,7 +5307,7 @@ svg{
 	fill:#ffffff;
 	
 }
-#triangulo_amarelo{
+#triangulo_amarelo,#triangulo_footer{
 	fill:#f3b945;
 }
 #poligono_disco{
@@ -5555,8 +5555,12 @@ input, textarea{
 	border-radius:10px;
 }
 #footer {
-	background-color:#ffffff;
-	padding-top:100px;
+	background-color: #ffffff;
+	  height: 100vh;
+	  position: relative;
+}
+#svg_footer{
+	bottom:0;
 }
 .site-info{
 	max-width:1000px;
