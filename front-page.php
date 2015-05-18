@@ -57,9 +57,9 @@ $odin_general_opts = get_option( 'odin_general' );
 
 		$args = array(
 			'post_type' => 'secao',
-			'meta_key' => 'ordem',
-			'orderby' => 'meta_value',
-			'order'   => 'ASC'
+			// 'meta_key' => 'ordem',
+			// 			'orderby' => 'meta_value',
+			// 			'order'   => 'ASC'
 		);
 		$cont=0;
 		global $count;
@@ -72,8 +72,7 @@ $odin_general_opts = get_option( 'odin_general' );
 
 				<!-- the loop -->
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-						$value = get_field( "ordem" );
-						echo $value; 
+					
 						get_template_part( 'content', 'secao' );						
 					
 					endwhile; ?>
