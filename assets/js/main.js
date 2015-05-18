@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 	} 
 	
 	
-	
+	///////////navegacao flautas
 	n=$('.cada-flauta').length;
 	tam = parseInt($('.cada-flauta').outerWidth(true));
 	console.log ('n:'+tam)
@@ -102,37 +102,78 @@ jQuery(document).ready(function($) {
 	largura_interno_flauta = $('#interno-flauta').outerWidth();
 	fim = nav_flauta_largura - largura_interno_flauta+100;
 	$('#interno-nav-flauta').css('width',nav_flauta_largura)
+	alturaProj = $('#interno-nav-projeto').css('height');
 	$(".botao").click(function(e) {
-		console.log('fim'+fim)
 		
 		id = $(this).attr('id')
-		e.preventDefault();
-		posicaoLeft = $('#interno-nav-flauta').css('left');
-		posicaoLeft=parseInt(posicaoLeft)
+		
 		switch(id) {
 		    case 'left':
-				if(posicaoLeft > 0){
+				e.preventDefault();
+				posicaoLeft = $('#interno-nav-flauta').css('left');
+				posicaoLeft=parseInt(posicaoLeft)
+				if(posicaoLeft >= 0){
 					console.log('acabou')
 		        	break;
 				}
 				else{
-					console.log('teste')
 					$('#interno-nav-flauta').css('left',posicaoLeft+100)
 					break
 				}
 			case 'right':
+				e.preventDefault();
+				posicaoLeft = $('#interno-nav-flauta').css('left');
+				posicaoLeft=parseInt(posicaoLeft)
 				if(posicaoLeft < -fim){
-					console.log('acabou')
 		        	break;
 				}
 				else{
-					console.log('testerr')
 					$('#interno-nav-flauta').css('left',posicaoLeft-100)
 					break
 				}
+			case 'cima':
+				e.preventDefault();
+				posicaoTop = $('#interno-nav-projeto').css('top');
+				posicaoTop=parseInt(posicaoTop)
+				
+				console.log('postop'+posicaoTop)
+				if (posicaoTop <= 0){
+					console.log('teste')
+					$('#interno-nav-projeto').css('top',posicaoTop+100)
+					
+					break
+				}
+				else{
+					break
+				}
+				
+			case 'baixo':
+				e.preventDefault();
+				posicaoTop = $('#interno-nav-projeto').css('top');
+				posicaoTop=parseInt(posicaoTop)
+				alturaProj=$('.cada-projeto').outerHeight(true);
+				limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
+				if (-posicaoTop <= limite){
+					console.log('desce ate'+limite)
+					console.log('postop'+posicaoTop)
+					
+					$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
+					
+					break
+				}
+				else{
+					console.log('nao desce')
+					break								
+				}
+
+				
 		}
 	});
-	
+		///////////navegacao flautas
+		
+		
+		
+		
 	$(window).resize(function(){
 		poligonos();
 		tam = parseInt($('.cada-flauta').outerWidth(true));
