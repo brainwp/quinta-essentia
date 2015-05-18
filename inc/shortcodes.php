@@ -18,8 +18,8 @@ function short_query_func( $atts ) {
 	        $per_page= '999999999';
 			$thumb='thumb-flauta';
 			$html = '<h1 id="titulo_flautas">Flautas</h1>';
-			$antes_interno = '<span class="esquerda glyphicon glyphicon-chevron-left"></span>';
-    		$depois_interno = '<span class="direita glyphicon glyphicon-chevron-right"></span>';
+			$antes_interno = '<a href="" class="botao" id="left"><span class="esquerda glyphicon glyphicon glyphicon-menu-left"></span></a>';
+    		$depois_interno = '<a class="botao" href="" id="right"><span class="direita glyphicon glyphicon glyphicon-menu-right"></span></a>';
 	         break;
 	   case 'projeto':
 		     $per_page= '99999';

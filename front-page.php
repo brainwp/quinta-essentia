@@ -27,7 +27,7 @@ $odin_general_opts = get_option( 'odin_general' );
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.webm" type="video/webm">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.mp4" type="video/mp4">
 				</video>
-				<button id="vidpause">Pause</button>
+				<a class="button" id="vidpause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></a>
 			</article><!-- #post-## -->
 
 			<article id="destaque" <?php post_class('row secao'); ?>> 

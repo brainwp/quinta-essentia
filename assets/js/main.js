@@ -20,9 +20,8 @@ jQuery(document).ready(function($) {
 
 
 
-	console.log('teste');
 	var vid = document.getElementById("bgvid");
-	var pauseButton = document.querySelector("#capa button");
+	var pauseButton = document.querySelector("#capa .button");
 
 	function vidFade() {
 	  vid.classList.add("stopfade");
@@ -41,12 +40,14 @@ jQuery(document).ready(function($) {
 	  vid.classList.toggle("stopfade");
 	  if (vid.paused) {
 	    vid.play();
-	    pauseButton.innerHTML = "Pause";
+	    pauseButton.innerHTML = '<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>';
 	  } else {
 	    vid.pause();
-	    pauseButton.innerHTML = "Reproduzir";
+	    pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
 	  }
 	});
+	
+	
 	function poligonos() {
 	   	largura=$(window).width();
 		console.log(largura);
@@ -93,8 +94,55 @@ jQuery(document).ready(function($) {
 	} 
 	
 	
+	
+	n=$('.cada-flauta').length;
+	tam = parseInt($('.cada-flauta').outerWidth(true));
+	console.log ('n:'+tam)
+	nav_flauta_largura=n*tam*1.02
+	largura_interno_flauta = $('#interno-flauta').outerWidth();
+	fim = nav_flauta_largura - largura_interno_flauta+100;
+	$('#interno-nav-flauta').css('width',nav_flauta_largura)
+	$(".botao").click(function(e) {
+		console.log('fim'+fim)
+		
+		id = $(this).attr('id')
+		e.preventDefault();
+		posicaoLeft = $('#interno-nav-flauta').css('left');
+		posicaoLeft=parseInt(posicaoLeft)
+		switch(id) {
+		    case 'left':
+				if(posicaoLeft > 0){
+					console.log('acabou')
+		        	break;
+				}
+				else{
+					console.log('teste')
+					$('#interno-nav-flauta').css('left',posicaoLeft+100)
+					break
+				}
+			case 'right':
+				if(posicaoLeft < -fim){
+					console.log('acabou')
+		        	break;
+				}
+				else{
+					console.log('testerr')
+					$('#interno-nav-flauta').css('left',posicaoLeft-100)
+					break
+				}
+		}
+	});
+	
 	$(window).resize(function(){
 		poligonos();
+		tam = parseInt($('.cada-flauta').outerWidth(true));
+		console.log ('n:'+tam)
+		nav_flauta_largura=n*tam*1.02
+		console.log ('nav_flauta_largura:'+nav_flauta_largura)
+		$('#interno-nav-flauta').css('width',nav_flauta_largura)
+		
+		largura_interno_flauta = $('#interno-flauta').outerWidth();
+		fim = nav_flauta_largura - largura_interno_flauta+100;
 	})
 		poligonos();
 	
