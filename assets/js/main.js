@@ -175,5 +175,28 @@ jQuery(document).ready(function($) {
 	   
 		console.log('altura doc'+$(document).height())
 	});
+
+	//ajax midia
+	$('.btn-loadmore').on('click',function(e){
+		var data = {
+			'action': 'midia_load_posts',
+			'paged': $(this).attr('data-paged')
+		};
+		var default_html = $(this).html();
+		$(this).html($(this).attr('data-loading'));
+		var elem = this;
+		var selector = $(elem).attr('data-selector');
+		$.post(odin_main.ajaxurl, data, function(response) {
+			$(selector).append(response);
+			$(elem).html(default_html);
+			var paged = parseInt($(elem).attr('data-paged')) + 1;
+			var max_paged = parseInt($(elem).attr('data-max-paged'));
+			$(elem).attr('data-paged',paged);
+			if(paged > max_paged){
+				$(elem).fadeOut('slow');
+			}
+		});
+
+	})
 });
 

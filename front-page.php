@@ -83,7 +83,7 @@ $odin_general_opts = get_option( 'odin_general' );
 				<?php wp_reset_postdata(); ?>
 				
 			<?php else : ?>
-				<p><?php _e( 'Crie uma´seção', 'odin' ); ?></p>
+				<p><?php _e( 'Crie umaseção', 'odin' ); ?></p>
 			
 			<?php endif; 
 			?>
