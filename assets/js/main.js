@@ -150,13 +150,14 @@ jQuery(document).ready(function($) {
 	$(window).scroll(function() {
 		var st = $(this).scrollTop();
 	   
-	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	   if(st > lastScrollTop && $(window).scrollTop() + $(window).height() == $(document).height()) {
 	      $('#footer').css('position','absolute')
 					  .css('top','0')
 					.css('width','100vw')
 					.css('z-index','9999')
 		$('#header-principal').css('margin-top',altura_footer)
-		window.scrollTo(0, 0)
+		st = 0;
+		window.scrollTo(0, 0);
 					
 	   }
 		// else if ($(window).scrollTop()  > $(window).height() ){
@@ -168,8 +169,8 @@ jQuery(document).ready(function($) {
 												.css('width','100vw')
 												.css('z-index','9999')
 									$('#header-principal').css('margin-top','0')
-		window.scrollTo(0, $(document).height() - 1 )
-									
+		window.scrollTo(0, $(document).height() - 10 )
+		st = $(document).height();							
 		}
 		lastScrollTop = st;
 	   

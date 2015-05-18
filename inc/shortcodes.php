@@ -26,6 +26,8 @@ function short_query_func( $atts ) {
 		     $per_page= '99999';
 			$thumb='thumb-projeto';
 			$class_container = "col-sm-8";
+			$antes_interno = '<a href="" class="botao" id="left"><span class="esquerda glyphicon glyphicon glyphicon-menu-left"></span></a>';
+    		$depois_interno = '<a class="botao" href="" id="right"><span class="direita glyphicon glyphicon glyphicon-menu-right"></span></a>';
 			
 		
 	         break;
