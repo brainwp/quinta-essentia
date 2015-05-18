@@ -235,6 +235,7 @@ function odin_enqueue_scripts() {
 
 		// Main jQuery.
 		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+		wp_localize_script( 'odin-main', 'odin_main', array('ajaxurl' => admin_url( 'admin-ajax.php' )) );
 
 
 	// Grunt watch livereload in the browser.
