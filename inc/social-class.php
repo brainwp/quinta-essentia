@@ -21,15 +21,20 @@ class Brasa_Social_Feed{
 	}
 
 	public function do_ajax_facebook(){
-		$posts = $this->get_facebook_posts(5);
+		$limit = 2;
+		$posts = $this->get_facebook_posts($limit);
 
 		if(!$posts || empty($posts))
 			wp_die();
-
+		$i = 1;
 		foreach ($posts as $post) {
+			if($i > $limit)
+				break;
+
 			global $fb_post;
 			$fb_post = $post;
 			get_template_part('content','facebook');
+			$i++;
 		}
 		wp_die();
 	}
