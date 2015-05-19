@@ -192,5 +192,29 @@ $odin_theme_options->set_fields(
 				),
             )
         ),
+        'social_yt_section' => array(
+            'tab'   => 'social', // Sessão da aba odin_general
+            'title' => __( 'Opções do YouTube', 'odin' ),
+            'fields' => array(
+   				array(
+				    'id'          => 'youtube_auth', // Obrigatório
+				    'label'       => __( 'Token de autorização do YouTube', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+				array(
+				    'id'          => 'youtube_user', // Obrigatório
+				    'label'       => __( 'ID do canal no YouTube', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+				array(
+				    'id'          => 'youtube_url', // Obrigatório
+				    'label'       => __( 'URL do canal no YouTube', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+            )
+        ),
     )
 );

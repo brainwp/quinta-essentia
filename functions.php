@@ -316,6 +316,8 @@ $brasa_social_feed = new Brasa_Social_Feed(
 	array(
 		'facebook_api_url' => $options['facebook_api_url'],
 		'facebook_auth'    => $options['facebook_auth'],
+		'youtube_auth'     => $options['youtube_auth'],
+		'youtube_user'     => $options['youtube_user']
 	)
 );
 /**

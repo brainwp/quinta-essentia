@@ -248,6 +248,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	//ajax facebook
 	var data = {
 		'action': 'facebook_brasa_social_feed'
 	};
@@ -255,6 +256,15 @@ jQuery(document).ready(function($) {
 		$('#facebook-feed').html(response);
 	});
 
+	//ajax youtube
+	var data = {
+		'action': 'youtube_brasa_social_feed'
+	};
+	$.post(odin_main.ajaxurl, data, function(response) {
+		$('#youtube-feed').html(response);
+	});
+
+	//ajax twitter
 	var config1 = {
 		"id": odin_main.twitter_widget_id,
 		"domId": 'twitter-feed',
