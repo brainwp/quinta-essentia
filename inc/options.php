@@ -174,5 +174,23 @@ $odin_theme_options->set_fields(
 				),
             )
         ),
+		'social_twitter_section' => array(
+            'tab'   => 'social', // Sessão da aba odin_general
+            'title' => __( 'Opções do Twitter', 'odin' ),
+            'fields' => array(
+   				array(
+				    'id'          => 'twitter_widget_id', // Obrigatório
+				    'label'       => __( 'ID do Widget do Twitter', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+				array(
+				    'id'          => 'twitter_url', // Obrigatório
+				    'label'       => __( 'URL da página no Twitter', 'odin' ), // Obrigatório
+				    'type'        => 'text', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
+            )
+        ),
     )
 );

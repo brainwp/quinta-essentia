@@ -56,6 +56,7 @@ switch ($post->post_name) {
 	case 'social':
 	  	$entre  = '<div class="col-md-4 social-feed pull-right">';
 	  	$entre .= '<div id="facebook-feed"></div>';
+	    $entre .= '<div id="twitter-feed"></div>';
 	  	$entre .= '</div>';
 	  	$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
 	 	$depois = '';

@@ -14,7 +14,7 @@ class Brasa_Social_Feed{
 			), 
 			$this->args['facebook_api_url'] 
 		);
-		$request_url = esc_url($request_url);
+		$request_url = esc_url_raw($request_url);
 		$request = wp_remote_get( $request_url );
 		$response = json_decode( wp_remote_retrieve_body( $request ), true );
 		return $response['data'];
@@ -26,17 +26,11 @@ class Brasa_Social_Feed{
 
 		if(!$posts || empty($posts))
 			wp_die();
-		$i = 1;
 		foreach ($posts as $post) {
-			if($i > $limit)
-				break;
-
 			global $fb_post;
 			$fb_post = $post;
 			get_template_part('content','facebook');
-			$i++;
 		}
 		wp_die();
 	}
-
 }
