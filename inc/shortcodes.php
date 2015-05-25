@@ -127,7 +127,7 @@ function short_query_func( $atts ) {
 					$depois_interno .= __('Carregar +','odin');
 					$depois_interno .= '</a>';
 				}
-				$html .="<div class='".$class_item." cada-".$a['post_type']."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
+				$html .="<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
 			}
 		endwhile;
 		    if($a['post_type'] == 'midia' && defined('DOING_AJAX') && DOING_AJAX){

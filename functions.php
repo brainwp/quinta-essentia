@@ -234,8 +234,11 @@ function odin_enqueue_scripts() {
 		
 
 		// Main jQuery.
+		$options = get_option('social');
+
+		wp_enqueue_script( 'twitter-api-js', $template_url . '/assets/js/libs/twitter.min.js', array(), null, true );
 		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
-		wp_localize_script( 'odin-main', 'odin_main', array('ajaxurl' => admin_url( 'admin-ajax.php' )) );
+		wp_localize_script( 'odin-main', 'odin_main', array('ajaxurl' => admin_url( 'admin-ajax.php' ), 'twitter_widget_id' => $options['twitter_widget_id'] ) );
 
 
 	// Grunt watch livereload in the browser.
@@ -303,6 +306,20 @@ require_once get_template_directory() . '/inc/optimize.php';
  */
 require_once get_template_directory() . '/inc/template-tags.php';
 
+/**
+ * Brasa Social Feed
+ */
+require_once get_template_directory() . '/inc/social-class.php';
+$options = get_option('social');
+global $brasa_social_feed;
+$brasa_social_feed = new Brasa_Social_Feed(
+	array(
+		'facebook_api_url' => $options['facebook_api_url'],
+		'facebook_auth'    => $options['facebook_auth'],
+		'youtube_auth'     => $options['youtube_auth'],
+		'youtube_user'     => $options['youtube_user']
+	)
+);
 /**
  * WooCommerce compatibility files.
  */
