@@ -113,17 +113,17 @@ function short_query_func( $atts ) {
 			),
 		);
 	}
-	$query = new WP_Query( $args );
+	$query2 = new WP_Query( $args );
 	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>".$antes_interno."<div id='interno-nav-".$a['post_type']."'>";
-	if($query->have_posts()) : 
-	    while($query->have_posts()) : 
-	    	$query->the_post();
+	if($query2->have_posts()) : 
+	    while($query2->have_posts()) : 
+	    	$query2->the_post();
         	
 			
 			if ($a['post_type'] == 'disco'){
 				$html .="<div class='".$class_item."cada-".$a['post_type']."'>
-							<div class='".$class_thumb."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
-					$html .= '<div class="texto_disco col-sm-8"><h1 class="titulo-disco">'.get_the_title( $query->post->ID).'</h1>'; 
+							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
+					$html .= '<div class="texto_disco col-sm-8"><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
 					$content = get_the_content();
 					$trimmed_content = wp_trim_words( $content, 100, '...');
 					$html .= $trimmed_content."</div></div><div class='clearfix'></div>";
@@ -131,16 +131,16 @@ function short_query_func( $atts ) {
 			}
 			else{
 				if($a['post_type'] == 'midia' && !defined('DOING_AJAX')){
-					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query->max_num_pages.'" data-category="all">';
+					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query2->max_num_pages.'" data-category="all">';
 					$depois_interno .= __('Carregar +','odin');
 					$depois_interno .= '</a>';
 				}
-				$html .="<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
+				$html .="<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
 			}
 		endwhile;
 		    if($a['post_type'] == 'midia' && defined('DOING_AJAX') && DOING_AJAX){
 		    	global $ajax_max_paged;
-		    	$ajax_max_paged = $query->max_num_pages;
+		    	$ajax_max_paged = $query2->max_num_pages;
 			}
 		    wp_reset_postdata();   	
 		else: 
@@ -149,7 +149,9 @@ function short_query_func( $atts ) {
 	
 	   endif;
 	$html .= "</div>".$depois_interno."</div>";
+
     return $html;
+
 }
 add_shortcode( 'query', 'short_query_func' );
 

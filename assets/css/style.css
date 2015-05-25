@@ -5614,10 +5614,10 @@ input, textarea{
   border-radius: 7px;
   font-size: 20px;
   padding: 7px;
-  width: 30%;
+  width: 100%;
 }
 .wpcf7-submit{
-	width:10%;
+	width:30%;
 	border-radius:10px;
 }
 #footer {
@@ -5675,6 +5675,81 @@ input, textarea{
 		position:absolute;
 	}
 	
+	.img-container{
+		height:5vw;
+		max-height:50px;
+		overflow:hidden;
+		
+	}
+	.social-feed{
+		padding:0 20px;
+		font-size:0.8em;
+	}
+	.social-feed a{
+		color:#000000;
+	}
+
+	.social-feed h5{
+		display:inline-block;
+	}
+	.social-link .col-md-10, #twitter-feed span span{
+		padding-left:10px;
+		margin-bottom:10px;
+	}
+	#facebook-feed, #twitter-feed{
+	  	background: rgba(255, 255, 255, 0.27);
+		padding:10px 10px;
+		margin-bottom:10px;
+		
+	}
+	#twitter-feed ul{
+		list-style:none;
+		padding:0;
+	}
+	#facebook-feed .col-md-12{
+		float:none;
+		display:block;
+	}
+	.facebook-icone{
+		background-image: url('../images/social.png');
+	  width: 23px;
+	  height: 23px;
+	  background-position: 0 -23px;
+	  background-repeat: no-repeat;
+	  display: inline-block;
+	}
+	.twitter-icone{
+		background-image: url('../images/social.png');
+		  width: 25px;
+		  height: 20px;
+		  background-position: 0 0;
+		  background-repeat: no-repeat;
+		  display: inline-block;
+	}
+	.sound_cloud-icone{
+		background-image: url('../images/social.png');
+		  width: 35px;
+		  height: 20px;
+		  background-position: -27px 3px;
+		  background-repeat: no-repeat;
+		  display: inline-block;
+	}
+	.reverbnation-icone{
+	  background-image: url('../images/social.png');
+	  width: 35px;
+	  height: 23px;
+	  background-position: -27px -23px;
+	  background-repeat: no-repeat;
+	  display: inline-block;
+	}
+	.youtube-icone{
+		background-image: url('../images/social.png');
+		  width: 35px;
+		  height: 19px;
+		  background-position: -91px 0px;
+		  background-repeat: no-repeat;
+		  display: inline-block;
+	}
 /*fim da custoimização*/
 
 
@@ -5936,3 +6011,4 @@ select {
     border: 1px solid #ddd !important;
 }
 }
+.depois svg{display:none}

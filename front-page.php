@@ -64,14 +64,14 @@ $odin_general_opts = get_option( 'odin_general' );
 		$cont=0;
 		global $count;
 		$query = new WP_Query( $args );			// the query
-			$the_query = new WP_Query( $args ); ?>
+			$query_secao = new WP_Query( $args ); ?>
 
-			<?php if ( $the_query->have_posts() ) : ?>
+			<?php if ( $query_secao->have_posts() ) : ?>
 
 				<!-- pagination here -->
 
 				<!-- the loop -->
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+				<?php while ( $query_secao->have_posts() ) : $query_secao->the_post(); 
 					
 						get_template_part( 'content', 'secao' );						
 					

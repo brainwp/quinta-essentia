@@ -20,7 +20,7 @@ $logo = wp_get_attachment_url($sobre_options['logo'], 'full');
 			<div class="site-info row">
 				<div id="logo_footer" class="col-sm-6">
 				 	<img src="<?php echo $logo;?>"/>
-					<div>Alguns Direitos Reservados</br>Quinta Essentia Quarteto 2015</div>
+					<div><?php echo __('Alguns Direitos Reservados','odin');?></br>Quinta Essentia Quarteto 2015</div>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cc.png">
 				</div>
 				<div id="parcerias" class="col-sm-6">
