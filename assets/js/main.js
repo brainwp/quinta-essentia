@@ -114,84 +114,7 @@ jQuery(document).ready(function($) {
 	} 
 	
 	
-	///////////navegacao flautas e projetos
-	n=$('.cada-flauta').length;
-	tam = parseInt($('.cada-flauta').outerWidth(true));
-	console.log ('n:'+tam)
-	nav_flauta_largura=n*tam*1.02
-	largura_interno_flauta = $('#interno-flauta').outerWidth();
-	fim = nav_flauta_largura - largura_interno_flauta+100;
-	$('#interno-nav-flauta').css('width',nav_flauta_largura)
-	alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
-	$('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
-	alturaProj = $('#interno-nav-projeto').css('height');
-	$(".botao").click(function(e) {
-		
-		id = $(this).attr('id')
-		
-		switch(id) {
-		    case 'left':
-				e.preventDefault();
-				posicaoLeft = $('#interno-nav-flauta').css('left');
-				posicaoLeft=parseInt(posicaoLeft)
-				if(posicaoLeft >= 0){
-					console.log('acabou')
-		        	break;
-				}
-				else{
-					$('#interno-nav-flauta').css('left',posicaoLeft+100)
-					break
-				}
-			case 'right':
-				e.preventDefault();
-				posicaoLeft = $('#interno-nav-flauta').css('left');
-				posicaoLeft=parseInt(posicaoLeft)
-				if(posicaoLeft < -fim){
-		        	break;
-				}
-				else{
-					$('#interno-nav-flauta').css('left',posicaoLeft-100)
-					break
-				}
-			case 'cima':
-				e.preventDefault();
-				posicaoTop = $('#interno-nav-projeto').css('top');
-				posicaoTop=parseInt(posicaoTop)
-				
-				console.log('postop'+posicaoTop)
-				if (posicaoTop <= 0){
-					console.log('teste')
-					$('#interno-nav-projeto').css('top',posicaoTop+100)
-					
-					break
-				}
-				else{
-					break
-				}
-				
-			case 'baixo':
-				e.preventDefault();
-				posicaoTop = $('#interno-nav-projeto').css('top');
-				posicaoTop=parseInt(posicaoTop)
-				alturaProj=$('.cada-projeto').outerHeight(true);
-				limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
-				if (-posicaoTop <= limite){
-					console.log('desce ate'+limite)
-					console.log('postop'+posicaoTop)
-					
-					$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
-					
-					break
-				}
-				else{
-					console.log('nao desce')
-					break								
-				}
-
-				
-		}
-	});
-		///////////navegacao flautas
+	
 		
 		
 		
@@ -318,5 +241,90 @@ jQuery(document).ready(function($) {
 		"showInteraction": false
 	};
 	twitterFetcher.fetch(config1);
+	
+	$('.cada-flauta img').load(function () {
+		///////////navegacao flautas e projetos
+		n=$('.cada-flauta').length;
+		tam = $('.cada-flauta img').outerWidth(true)
+		console.log ('n:'+tam)
+		nav_flauta_largura=(n+20)*tam*1.02
+		largura_interno_flauta = $('#interno-flauta').outerWidth();
+		fim = nav_flauta_largura - largura_interno_flauta+100;
+		$('#interno-nav-flauta').css('width',nav_flauta_largura)
+		alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
+		$('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
+		alturaProj = $('#interno-nav-projeto').css('height');
+		$(".botao").click(function(e) {
+
+			id = $(this).attr('id')
+
+			switch(id) {
+			    case 'left':
+					e.preventDefault();
+					posicaoLeft = $('#interno-nav-flauta').css('left');
+					posicaoLeft=parseInt(posicaoLeft)
+					if(posicaoLeft >= 0){
+						console.log('acabou')
+			        	break;
+					}
+					else{
+						$('#interno-nav-flauta').css('left',posicaoLeft+100)
+						break
+					}
+				case 'right':
+					e.preventDefault();
+					posicaoLeft = $('#interno-nav-flauta').css('left');
+					posicaoLeft=parseInt(posicaoLeft)
+					if(posicaoLeft < -fim){
+			        	break;
+					}
+					else{
+						$('#interno-nav-flauta').css('left',posicaoLeft-100)
+						break
+					}
+				case 'cima':
+					e.preventDefault();
+					posicaoTop = $('#interno-nav-projeto').css('top');
+					posicaoTop=parseInt(posicaoTop)
+
+					console.log('postop'+posicaoTop)
+					if (posicaoTop <= 0){
+						console.log('teste')
+						$('#interno-nav-projeto').css('top',posicaoTop+100)
+
+						break
+					}
+					else{
+						break
+					}
+
+				case 'baixo':
+					e.preventDefault();
+					posicaoTop = $('#interno-nav-projeto').css('top');
+					posicaoTop=parseInt(posicaoTop)
+					alturaProj=$('.cada-projeto').outerHeight(true);
+					limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
+					if (-posicaoTop <= limite){
+						console.log('desce ate'+limite)
+						console.log('postop'+posicaoTop)
+
+						$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
+
+						break
+					}
+					else{
+						console.log('nao desce')
+						break								
+					}
+
+
+			}
+		});
+			///////////navegacao flautas
+
+	});
+	
+	
 });
+
 

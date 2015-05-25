@@ -82,7 +82,15 @@ function short_query_func( $atts ) {
 		
         
 		          break;
+		 case 'eventos':
+		        $per_page= '999999999';
+		 		$thumb='thumb-eventos';
+		 		$html = '<h1 id="titulo_eventos">Eventos</h1>';
+		 		$antes_interno = '<a href="" class="botao" id="left"><span class="esquerda glyphicon glyphicon glyphicon-menu-left"></span></a>';
+		   		$depois_interno = '<a class="botao" href="" id="right"><span class="direita glyphicon glyphicon glyphicon-menu-right"></span></a>';
+				   break;
 	}  
+	
 	$paged = $a['paged'];
 	
 	$args = array(
@@ -113,7 +121,7 @@ function short_query_func( $atts ) {
         	
 			
 			if ($a['post_type'] == 'disco'){
-				$html .="<div class='".$class_item." cada-".$a['post_type']."'>
+				$html .="<div class='".$class_item."cada-".$a['post_type']."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query->post->ID, $thumb)."</div>";
 					$html .= '<div class="texto_disco col-sm-8"><h1 class="titulo-disco">'.get_the_title( $query->post->ID).'</h1>'; 
 					$content = get_the_content();

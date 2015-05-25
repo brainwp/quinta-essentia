@@ -5284,7 +5284,7 @@ video {
 	background-attachment:fixed;
 	background-repeat:no-repeat;
   	background-position-x: center;
-  	background-position-y: 20vh;
+  	background-position-y: 0;
 background-color:#0C090D;
 }
 #sobre{
@@ -5404,7 +5404,7 @@ svg{
 .cada-equipe:first-child{
 	margin-left:-1vw;
 }
-#interno-nav-flauta div{
+#interno-nav-flauta div, #interno-nav-eventos div{
 	display:inline-block;
 }
 
@@ -5417,7 +5417,7 @@ color:black;
 }
 .cada-flauta{
 	margin:0 10px;
-/*	width: 9;*/
+
 }
 #interno-flauta{
   	margin: 0 0 0 -15vw;
@@ -5450,7 +5450,7 @@ color:black;
   
 }
 .cada-flauta img{
-/*	width:100%;*/
+	width:100%;
 }
 
 
@@ -5468,7 +5468,13 @@ color:black;
 #projetos{
 	background:#292929;
 }
+#youtube-feed{
+	padding-left: 130px;
+  
+	display:inline-block;
+}
 #interno-projeto{
+	diplay:inline-block;
 	position:relative;
 	height: 500px;
 	margin-bottom: 60px;

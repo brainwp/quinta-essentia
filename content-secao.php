@@ -30,6 +30,8 @@ switch ($post->post_name) {
          break;
 	case 'projetos':
 		$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
+	    $entre .= '<div class="col-sm-4 pull-right" id="youtube-feed"></div>';
+
 	  	break;
 	case 'midia':
 	
@@ -57,11 +59,13 @@ switch ($post->post_name) {
 	  	$entre  = '<div class="col-md-4 social-feed pull-right">';
 	  	$entre .= '<div id="facebook-feed"></div>';
 	    $entre .= '<div id="twitter-feed"></div>';
-	    $entre .= '<div id="youtube-feed"></div>';
 	  	$entre .= '</div>';
 	  	$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
 	 	$depois = '';
 	     break;
+	 case 'agenda':
+	   		
+		break;
 	}
 ?>
 <article id="<?php echo $post->post_name ?>" <?php post_class('row'); ?>>

@@ -369,3 +369,4 @@ add_image_size( 'thumb-flauta', 120, 120, true );
 add_image_size( 'thumb-blog', 300, 130, true );
 
 
+// require_once (get_stylesheet_directory() . '/inc/requires-agenda.php');

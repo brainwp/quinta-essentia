@@ -40,12 +40,12 @@ class Brasa_Social_Feed{
 		wp_die();
 	}
 
-	public function get_youtube_posts($limit = 2){
+	public function get_youtube_posts($limit = 4){
 		$request_url = add_query_arg( 
 			array(
 				'channelId'    => $this->args['youtube_user'],
 				'part'         => 'snippet,id&order=date',
-				'maxResults'   => $limit,
+				'maxResults'   => 4,
 				'key'          => $this->args['youtube_auth']
 			), 
 			'https://www.googleapis.com/youtube/v3/search/' 
