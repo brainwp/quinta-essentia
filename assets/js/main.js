@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
 		$('#triangulo_laranja').attr('points',  '0,'+altura*0.6+' '+largura*0.33+','+y_lar+' 0,'+altura*0.74);
 	 	
 		$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+(largura+1)+','+altura+ ' '+(largura+1)+','+altura*1.2+' 0,'+altura*1.2);
-		$('#sobre .secao-interno').css('margin-top',altura*0.6);
+		$('#sobre .secao-interno').css('margin-top',altura*0.5);
 		// $('#cabecalho_sobre').css('margin-top',-altura*0.6);
 		
 		$('#triangulo_amarelo').attr('points','0,0 '+largura+',0 0,'+altura*0.17 );

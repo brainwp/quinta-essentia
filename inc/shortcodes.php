@@ -36,7 +36,7 @@ function short_query_func( $atts ) {
 			 $per_page= '3';
 			$thumb='thumb-midia';
 			$class_item = 'col-sm-4';
-			$class_container = "row";
+			$class_container = "row ";
 			if(!defined('DOING_AJAX')){
 				$antes_interno  = '<div class="midia-category">';
 				$antes_interno .= '<a class="btn btn-default btn-lg btn-ajax-categoria active" data-category="all">';
@@ -62,15 +62,15 @@ function short_query_func( $atts ) {
 				 $per_page= '999999';
 				$thumb='thumb-equipe';
 				$class_item = 'col-sm-3';
-				$class_container = "row";
+				$class_container = "row ";
 				
 		         break;
 	    case 'disco':
-	    		 $per_page= '99999';
+	    		 $per_page= '2';
 	    		$thumb='thumb-disco';
-				$class_container = "row";
-				$class_thumb = "col-sm-4 ";
-				$class_item = 'row';
+				$class_container = "row ";
+				$class_thumb = "col-xs-4 ";
+				$class_item = 'row ';
 				
 	
 				
@@ -121,12 +121,21 @@ function short_query_func( $atts ) {
         	
 			
 			if ($a['post_type'] == 'disco'){
-				$html .="<div class='".$class_item."cada-".$a['post_type']."'>
+				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item."cada-".$a['post_type']."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
-					$html .= '<div class="texto_disco col-sm-8"><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
+					$html .= '<div class="texto_disco col-xs-8"><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
 					$content = get_the_content();
 					$trimmed_content = wp_trim_words( $content, 100, '...');
-					$html .= $trimmed_content."</div></div><div class='clearfix'></div>";
+					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
+
+			}
+			else if ($a['post_type'] == 'post'){
+				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item."cada-".$a['post_type']."'>
+							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
+					$html .= '<div class="texto_post "><h1 class="titulo-post">'.get_the_title( $query2->post->ID).'</h1>'; 
+					$content = get_the_content();
+					$trimmed_content = wp_trim_words( $content, 100, '...');
+					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div></a>";
 
 			}
 			else{
