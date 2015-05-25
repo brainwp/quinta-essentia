@@ -5281,7 +5281,7 @@ video {
   	z-index: 99;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
-  	background-position: center;
+  	background-position-x: center;
   	background-position-y: 20vh;
 background-color:#0C090D;
 }
@@ -5372,7 +5372,7 @@ svg{
   	padding: 3% 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
-  	background-position: center;
+  	background-position-x: center;
   	background-position-y: -12vh;
 
 }
@@ -5415,11 +5415,11 @@ color:black;
 }
 .cada-flauta{
 	margin:0 10px;
-	width: 9vw;
+/*	width: 9;*/
 }
 #interno-flauta{
   	margin: 0 0 0 -15vw;
-    max-width: 50vw;
+  	max-width: 75%;
 	overflow: hidden;
 	position:relative;
 }
@@ -5438,17 +5438,17 @@ color:black;
 }
 #interno-flauta .glyphicon.esquerda	{
 	left:0;
-  	border-radius:  10px 0 0 10px ;
+  	border-radius: 0;
 
 }
 #interno-flauta .glyphicon.direita{
 	right:0;
-	border-radius: 0 10px 10px 0;
+	border-radius:0;
 	
   
 }
 .cada-flauta img{
-	width:100%;
+/*	width:100%;*/
 }
 
 
@@ -5540,6 +5540,9 @@ color:black;
 	background-size:cover;
 	background-position-y:0;
 	
+}
+#svg_midia{
+	margin-top:-2px;
 }
 .conteudo-secao{
 	max-width:1000px;

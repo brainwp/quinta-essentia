@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 	} 
 	
 	
-	///////////navegacao flautas
+	///////////navegacao flautas e projetos
 	n=$('.cada-flauta').length;
 	tam = parseInt($('.cada-flauta').outerWidth(true));
 	console.log ('n:'+tam)
@@ -102,6 +102,8 @@ jQuery(document).ready(function($) {
 	largura_interno_flauta = $('#interno-flauta').outerWidth();
 	fim = nav_flauta_largura - largura_interno_flauta+100;
 	$('#interno-nav-flauta').css('width',nav_flauta_largura)
+	alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
+	$('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
 	alturaProj = $('#interno-nav-projeto').css('height');
 	$(".botao").click(function(e) {
 		
