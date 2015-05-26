@@ -2153,7 +2153,7 @@ textarea.input-lg, .input-group-lg>textarea.form-control, .input-group-lg>textar
     box-shadow: none;
 }
 .btn-default, input[type="submit"], input[type="reset"], button {
-    color: #333;
+    color: #ffffff;
     background-color: #fff;
     border-color: #ccc;
 }
@@ -3004,16 +3004,17 @@ tbody.collapse.in {
 }
 .navbar-toggle .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+   	width: 33px;
+  	height: 4px;
     border-radius: 1px;
+	color:#ffffff;
 }
 .navbar-toggle .icon-bar+.icon-bar {
     margin-top: 4px;
 }
 @media (min-width: 768px) {
     .navbar-toggle {
-    display: none;
+    display: block;
 }
 }.navbar-nav {
     margin: 7.5px -15px;
@@ -3181,7 +3182,8 @@ tbody.collapse.in {
     margin-right: 0;
 }
 }.navbar-default {
-
+  	margin-top: 2vw;
+  	z-index: 999999;
     border:none;
 }
 .navbar-default .navbar-brand {
@@ -3212,13 +3214,20 @@ tbody.collapse.in {
     background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-    border-color: #ddd;
+	  border:none;
+	  position: fixed;
+	  top: 10px;
+	  left: 10px;
+	  z-index: 99999;
+	
+	}
 }
+
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #ddd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #000000;
+    background-color: #ffffff;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7;
@@ -5197,8 +5206,7 @@ html {
 
 /*Começo da customização*/
 #main-content{
-	background-color: rgb(12, 9, 13);
-  
+	background-color: #000000
 }
 .secao{
 	position:relative;
@@ -5208,11 +5216,49 @@ html {
 	height:auto;
 	position:relative;
 }
+.navbar-header{
+	opacity:0;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999999;
+	-webkit-transition: opacity 1s ease;                  
+	    -moz-transition: opacity 1s ease;                 
+	    -o-transition: opacity 1s ease;   
+	    -ms-transition: opacity 1s ease;          
+	    transition: opacity 1s ease;
+}
+.aberto{
+	opacity:1!important;
+	-webkit-transition: opacity 0.3s ease;                  
+	    -moz-transition: opacity 0.3s ease;                 
+	    -o-transition: opacity 0.3s ease;   
+	    -ms-transition: opacity 0.3s ease;          
+	    transition: opacity 0.3s ease;
+}
+.menu-fixo {
+	background-color:#6E0E10;
+	-webkit-transition: opacity 0.3s ease;                  
+	    -moz-transition: opacity 0.3s ease;                 
+	    -o-transition: opacity 0.3s ease;   
+	    -ms-transition: opacity 0.3s ease;          
+	    transition: opacity 0.3s ease;
+		top:0!important;
+  		position: fixed!important;
+		left:0px;
+	
+	}
 .navbar-main-navigation{
-	position:absolute;
+	position:relative;
 	top:2vw;
 	width:100%;
+	-webkit-transition: opacity 0.3s ease;                  
+	    -moz-transition: opacity 0.3s ease;                 
+	    -o-transition: opacity 0.3s ease;   
+	    -ms-transition: opacity 0.3s ease;          
+	    transition: opacity 0.3s ease;
 }
+
 
 video#bgvid {
 	position: relative; 
@@ -5308,7 +5354,7 @@ svg{
 	width:100vw;
 	height:20vw;
 	position:absolute;
-	z-index:999;
+	z-index:99999;
 }
 #triangulo_sobre{
 	fill:#292929;
@@ -5318,11 +5364,17 @@ svg{
 	
 	
 }
+#triangulo_menu{
+	fill:#cd111e;
+}
+#poligono_header{
+	fill:#ec902b;
+}
 #poligono_branco{
 	fill:#ffffff;
 	
 }
-#triangulo_amarelo,#triangulo_footer{
+#triangulo_amarelo,#triangulo_footer,#triangulo_header_topo{
 	fill:#f3b945;
 }
 #poligono_disco{
@@ -5630,7 +5682,7 @@ color:black;
 #poligono_social{
 	fill:#d95b35;
 }
-#triangulo_social, #poligono_social_depois{
+#triangulo_social, #poligono_social_depois,#triangulo_header_baixo{
 	fill:#6f1112;
 }
 #social .entry-header{
@@ -5663,7 +5715,7 @@ header{
 	margin-top:100.5vh;
 }
 #svg_footer{
-	bottom:0;
+	bottom:-1px;
 }
 .site-info{
 	max-width:1000px;

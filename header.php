@@ -19,19 +19,27 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	<script src="//cdn.jsdelivr.net/vivus/0.2.1/vivus.min.js"></script>
 	
 </head>
 
 <body <?php body_class(); ?>>
 	<div class="container">
 		<header id="header-principal" class ="row" id="header" role="banner">
+			<svg>
+				<polygon id="triangulo_header_topo" points=""/>
+			  	<polygon id="poligono_header" points=""/>
+			  	<polygon id="triangulo_header_baixo" points=""/>
 			
+			  
+			</svg>
 			<nav id="main-navigation" class=" col-md-12 navbar navbar-default" role="navigation">
-				<img id="fundo-menu" src="<?php echo get_stylesheet_directory_uri();?>/assets/images/menu.png">
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<svg>
+						<polygon id="triangulo_menu" points="0,0 0,150 150,0"/>
+						
+					</svg>
+					<button type="button" class="navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
 					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -44,7 +52,7 @@
 					*/ ?>
 				</div>
 
-				<div class="collapse navbar-collapse navbar-main-navigation">
+				<div class="  navbar-main-navigation">
 				
 					<?php
 						wp_nav_menu(
@@ -53,7 +61,7 @@
 								'depth'          => 2,
 								'container'      => false,
 								'menu_class'     => 'nav navbar-nav',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'fallback_cb'    => '',
 								// 'walker'         => new Odin_Bootstrap_Nav_Walker()
 							)
 						);
