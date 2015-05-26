@@ -40,46 +40,46 @@ jQuery(document).ready(function($) {
 
 
 
-	var vid = document.getElementById("bgvid");
-	var pauseButton = document.querySelector("#capa .button");
-
-	function vidFade() {
-	  vid.classList.add("stopfade");
-	}
-
-	vid.addEventListener('ended', function()
-	{
-	// only functional if "loop" is removed 
-	vid.pause();
-	// to capture IE10
-	vidFade();
-	}); 
-
-
-	pauseButton.addEventListener("click", function() {
-	  vid.classList.toggle("stopfade");
-	  if (vid.paused) {
-	    vid.play();
-	    pauseButton.innerHTML = '<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>';
-	  } else {
-	    vid.pause();
-	    pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
-	  }
-	});
+	// var vid = document.getElementById("bgvid");
+	// 	var pauseButton = document.querySelector("#capa .button");
+	// 
+	// 	function vidFade() {
+	// 	  vid.classList.add("stopfade");
+	// 	}
+	// 
+	// 	vid.addEventListener('ended', function()
+	// 	{
+	// 	// only functional if "loop" is removed 
+	// 	vid.pause();
+	// 	// to capture IE10
+	// 	vidFade();
+	// 	}); 
+	// 
+	// 
+	// 	pauseButton.addEventListener("click", function() {
+	// 	  vid.classList.toggle("stopfade");
+	// 	  if (vid.paused) {
+	// 	    vid.play();
+	// 	    pauseButton.innerHTML = '<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>';
+	// 	  } else {
+	// 	    vid.pause();
+	// 	    pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
+	// 	  }
+	// 	});
 	
 	
 	function poligonos() {
 	   	largura=$(window).width();
-		console.log(largura);
+		
 		altura=largura*0.4663076582;
-		console.log(altura);
+		
 		m=(altura*0.4)/largura
 		y_lar=m*0.33*largura+0.6*altura;
 		altura_img_disco = $('#parallax_midia').css('height');
 		altura_img_disco= parseInt(altura_img_disco);
-		console.log('altura:'+altura_img_disco);
+		
 		$('svg').css('height',altura*1.2);
-		console.log('largura:'+largura);
+		
 
 		$('#triangulo_sobre').attr('points','0,0 '+largura+','+altura+' 0,'+altura*0.6 );
 		
@@ -112,6 +112,9 @@ jQuery(document).ready(function($) {
 		altura_site_info =  parseInt($('.site-info.row').css('height'));		
 		$('.site-info').css('padding-top',(altura_footer/2)-(altura_site_info/2));
 	} 
+	altura_footer= parseInt($('#footer').css('height'));
+	window.scrollTo(0, altura_footer);
+	
 	
 	
 	
@@ -122,9 +125,9 @@ jQuery(document).ready(function($) {
 	$(window).resize(function(){
 		poligonos();
 		tam = parseInt($('.cada-flauta').outerWidth(true));
-		console.log ('n:'+tam)
+		
 		nav_flauta_largura=n*tam*1.02
-		console.log ('nav_flauta_largura:'+nav_flauta_largura)
+		
 		$('#interno-nav-flauta').css('width',nav_flauta_largura)
 		
 		largura_interno_flauta = $('#interno-flauta').outerWidth();
@@ -132,32 +135,57 @@ jQuery(document).ready(function($) {
 	})
 		poligonos();
 	
-	var lastScrollTop = 0;	
+	var lastScrollTop = $(this).scrollTop();	
 	$(window).scroll(function() {
 		var st = $(this).scrollTop();
-	   
-	   if(st > lastScrollTop && $(window).scrollTop() + $(window).height() == $(document).height()) {
-	      $('#footer').css('position','absolute')
-					  .css('top','0')
-					.css('width','100vw')
-					.css('z-index','9999')
-		$('#header-principal').css('margin-top',altura_footer)
-		st = 0;
-		window.scrollTo(0, 0);
-					
-	   }
-		else if (st < lastScrollTop && $(window).scrollTop() == 0){
+	    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+		if(!isMobile.matches && st > lastScrollTop && $(window).scrollTop() + $(window).height() == $(document).height()) {
+			$('#footer').css('position','absolute')
+		  
+		      $('#footer').css('top','0')
+						.css('width','100vw')
+						.css('z-index','9999')
+			$('#header-principal').css('margin-top',altura_footer)
+			st = 0;
+			window.scrollTo(0, 0);
+
+		   }
+	   else if(!isMobile.matches && st > lastScrollTop && $(window).scrollTop() > 2*$(window).height() ) {
+		  $('#footer').css('position','relative')
+	    
+		console.log('$(window).scrollTop()'+$(window).scrollTop())
+		console.log('$(window).height()'+$(window).height())
+		console.log('$(document).height()'+$(document).height())
+		console.log('altura_footer'+altura_footer)
+		console.log("------------------------------------------------")
+		}
+		else if (!isMobile.matches && st < lastScrollTop && $(window).scrollTop() == 0){
+			console.log('caso1')
 			$('#footer').css('position','relative')
-												  .css('top','0')
+											  	.css('top','0')
 												.css('width','100vw')
 												.css('z-index','9999')
 									$('#header-principal').css('margin-top','0')
 		window.scrollTo(0, $(document).height() - 10 )
 		st = $(document).height();							
 		}
+		else if (!isMobile.matches && st < lastScrollTop && $(document).height() - 2* $(window).scrollTop() > 2*$(window).height() ){
+			$('#footer').css('position','absolute')
+			console.log('$(window).scrollTop()'+$(window).scrollTop())
+			console.log('$(window).height()'+$(window).height())
+			console.log('$(document).height()'+$(document).height())
+			console.log('altura_footer'+altura_footer)
+			console.log("------------------------------------------------")
+			console.log('caso2')
+			
+		  
+		}
+	    
+	
+		
+		
 		lastScrollTop = st;
 	   
-		console.log('altura doc'+$(document).height())
 	});
 
 	//ajax midia
@@ -246,7 +274,6 @@ jQuery(document).ready(function($) {
 		///////////navegacao flautas e projetos
 		n=$('.cada-flauta').length;
 		tam = $('.cada-flauta img').outerWidth(true)
-		console.log ('n:'+tam)
 		nav_flauta_largura=(n+20)*tam*1.02
 		largura_interno_flauta = $('#interno-flauta').outerWidth();
 		fim = nav_flauta_largura - largura_interno_flauta+100;
@@ -264,7 +291,7 @@ jQuery(document).ready(function($) {
 					posicaoLeft = $('#interno-nav-flauta').css('left');
 					posicaoLeft=parseInt(posicaoLeft)
 					if(posicaoLeft >= 0){
-						console.log('acabou')
+						
 			        	break;
 					}
 					else{
@@ -287,9 +314,9 @@ jQuery(document).ready(function($) {
 					posicaoTop = $('#interno-nav-projeto').css('top');
 					posicaoTop=parseInt(posicaoTop)
 
-					console.log('postop'+posicaoTop)
+					
 					if (posicaoTop <= 0){
-						console.log('teste')
+						
 						$('#interno-nav-projeto').css('top',posicaoTop+100)
 
 						break
@@ -305,15 +332,15 @@ jQuery(document).ready(function($) {
 					alturaProj=$('.cada-projeto').outerHeight(true);
 					limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
 					if (-posicaoTop <= limite){
-						console.log('desce ate'+limite)
-						console.log('postop'+posicaoTop)
+						
+						
 
 						$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
 
 						break
 					}
 					else{
-						console.log('nao desce')
+						
 						break								
 					}
 

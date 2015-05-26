@@ -3049,13 +3049,15 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
     .navbar-nav {
-    float: left;
-    margin: 0;
-	width:100%;
-}
+		margin: 0 auto;
+		  width: 100%;
+		  max-width: 1000px;
+		  display: block;
+		  float: none;
+		}
 .navbar-nav>li {
     float: left;
-	width:25%;
+	width:16%;
 }
 .navbar-nav>li>a {
     padding-top: 20px;
@@ -5194,6 +5196,10 @@ html {
 }
 
 /*Começo da customização*/
+#main-content{
+	background-color: rgb(12, 9, 13);
+  
+}
 .secao{
 	position:relative;
 }
@@ -5333,6 +5339,8 @@ svg{
 	  z-index: 9999;
 	  left: 7.5vw;
 	  padding: 18vw 0 0vw;
+	  margin-top: 00vh;
+	
 	}
 .entry-header h1{
 	color:#ffffff;
@@ -5646,8 +5654,13 @@ input, textarea{
 }
 #footer {
 	background-color: #ffffff;
-	  height: 100vh;
-	  position: relative;
+	  height: 100.5vh;
+	  position: absolute;
+		top:0;
+		width:100vw;
+}
+header{
+	margin-top:100.5vh;
 }
 #svg_footer{
 	bottom:0;
@@ -5860,6 +5873,9 @@ th.visible-xs, td.visible-xs {
 
 
 @media (max-width: 767px) {
+	
+	#bgvid,#vidpause { display: none; }
+
 	.social-feed {
 	  margin: 0 auto;
 	  display: block;
@@ -5883,20 +5899,24 @@ th.visible-xs, td.visible-xs {
 	  background-size: contain;
 	}
 	#destaque {
-	  height: 80vw;
-
+	  height: 85vw;
+	  right: 50vw;
+	  width: 200vw;
+	  top: 9vw;
 	}
+
 	#interno-disco {
 	  max-height: initial;
 	}
+
 	#destaque_texto {
-	display:block;
-	float:none!important; 
-	width:100%;
-	height:initial;
-	font-size:2.5vw;
-  	padding-top: 78px;
-	/* width: 100%;
+		float: none!important;
+		  width: 90VW;
+		  height: initial;
+		  font-size: 2.5vw;
+		  padding-top: 78px;
+		  right: -30VW;
+			/* width: 100%;
 	 	  color: #ffffff;
 	 	  top: 32px;
 	 	  right: 37vw;
@@ -6137,3 +6157,6 @@ select {
 }
 }
 /*.depois svg{display:none}*/
+#animado{
+	background-color:white;
+}

@@ -19,6 +19,8 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+	<script src="//cdn.jsdelivr.net/vivus/0.2.1/vivus.min.js"></script>
+	
 </head>
 
 <body <?php body_class(); ?>>
