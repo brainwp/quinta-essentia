@@ -5679,6 +5679,12 @@ color:black;
 	font-size:1.6em;
 	margin
 }
+.conteudo-secao .btn-loadmore-discos {
+	background-color:#000000;
+	color:#ffffff;
+	border: none;
+	  box-shadow: none;
+}
 .midia-category .btn.active, .btn-loadmore:hover{
 	background: #6f1112;
 	color:#ffffff;
