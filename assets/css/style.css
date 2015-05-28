@@ -5390,7 +5390,7 @@ svg{
 
 }
 	
-#poligono_header{
+#poligono_header, #poligono_agenda{
 	fill:#ec902b;
 }
 #poligono_branco{
@@ -5547,6 +5547,37 @@ font-size:1em;
 }
 #interno-nav-flauta div, #interno-nav-eventos div{
 	display:inline-block;
+}
+#titulo_agenda{
+	position:absolute;
+	z-index:999999;
+	right:10vw;
+	text-transform:uppercase;
+	color:#ffffff;
+  	font-weight: 200;
+	 font-size: 3.5vw;
+}
+#agenda .conteudo-secao{
+	margin-top:10vw;
+}
+#agenda{
+	background-color:#f5b843;
+	padding-bottom:20px;
+}
+.cada-eventos {
+	background-color:#ffffff;
+	width:30%;
+	padding:0!important;
+	height:400px;
+}
+.cada-eventos:first-child{
+	margin:0 0 0 2.5%;
+}
+.cada-eventos:nth-child(2){
+	margin:0 2.5%;
+}
+.cada-eventos:nth-child(3){
+	margin:0 2.5% 0  0;
 }
 
 #titulo_flautas{
@@ -5771,7 +5802,7 @@ color:black;
 #poligono_social{
 	fill:#d95b35;
 }
-#triangulo_social, #poligono_social_depois,#triangulo_header_baixo,#poligono_social_depois_page{
+#triangulo_social, #poligono_social_depois,#triangulo_header_baixo,#poligono_social_depois_page, #triangulo_agenda{
 	fill:#6f1112;
 }
 #social .entry-header{
@@ -6005,7 +6036,10 @@ input, textarea{
 		background-color:#ffffff;
 		
 	}
-	.single .entry-header , .page .entry-header {
+	.archive .entry-header{
+		background-color:transparent;
+	}
+	.single .entry-header , .page .entry-header, .archive .page-title {
 		margin:0 0 20px;
 		padding:10px 0;
 		color:#000000;

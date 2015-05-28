@@ -84,6 +84,10 @@ if ($('body').hasClass('home')){
 		$('#triangulo_amarelo').attr('points','0,0 '+largura+',0 0,'+altura*0.17 );
 		$('#svg_midia').css('height',altura*0.17)
 
+		$('#triangulo_agenda').attr('points','0,0 '+largura/7+',0 0,'+largura/7 );
+		$('#poligono_agenda').attr('points','0,0 '+largura+',0 '+ largura+','+(altura*0.2)+' 0,'+(altura*0.1));
+
+
 		$('#poligono_disco').attr('points','0,'+(altura*0.17)+' '+largura+',0 '+ largura+','+(altura*0.17)+' '+largura+','+(altura*0.17)*2+' 0,'+(altura*0.17)*2);
 		$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*+1)
 		$('#svg_disco').css('height',+(altura*0.17)*2)

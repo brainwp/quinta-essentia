@@ -83,11 +83,10 @@ function short_query_func( $atts ) {
         
 		          break;
 		 case 'eventos':
-		        $per_page= '999999999';
+		        $per_page= '3';
 		 		$thumb='thumb-eventos';
-		 		$html = '<h1 id="titulo_eventos">Eventos</h1>';
-		 		$antes_interno = '<a href="" class="botao" id="left"><span class="esquerda glyphicon glyphicon glyphicon-menu-left"></span></a>';
-		   		$depois_interno = '<a class="botao" href="" id="right"><span class="direita glyphicon glyphicon glyphicon-menu-right"></span></a>';
+				$class_item = "col-sm-4 ";
+		
 				   break;
 	}  
 	
@@ -127,6 +126,14 @@ function short_query_func( $atts ) {
 					$content = get_the_content();
 					$trimmed_content = wp_trim_words( $content, 100, '...');
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
+			}
+			else if ($a['post_type'] == 'eventos'){
+				$html .="<div class='".$class_item."cada-".$a['post_type']." animated bounceIn'><a href='".get_permalink( $query2->post->ID)."'>
+							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
+					$html .= '<div class="texto_disco "><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
+					$content = get_the_content();
+					$trimmed_content = wp_trim_words( $content, 30, '...');
+					$html .= $trimmed_content."</div><div class='mais-disco'></div></a></div>";
 			}
 			else if ($a['post_type'] == 'post'){
 				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item."cada-".$a['post_type']."'>

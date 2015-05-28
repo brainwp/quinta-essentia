@@ -16,16 +16,16 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
+get_header('page'); ?>
 
-	<section id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
+	<section id="primary" class="single <?php echo odin_classes_page_full(); ?>">
 		<main id="main-content" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
+				<header class="entry-header">
 					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_title( '<h1 class="e">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
 				</header><!-- .page-header -->
@@ -39,7 +39,7 @@ get_header(); ?>
 						 * use this in a child theme, then include a file called called content-___.php
 						 * (where ___ is the post format) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						get_template_part( 'content', 'eventos' );
 
 					endwhile;
 
@@ -56,5 +56,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+get_footer('page');
