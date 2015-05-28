@@ -52,7 +52,7 @@ function mytheme_add_box() {
 		$date = get_post_meta( $post->ID, 'agenda-event-date', true );
 
 		if( $date != '' )
-			$date = date( 'm-d-Y', $date );	
+			$date = date( 'd/m/Y', $date );	
 		
 	}
 }
@@ -61,6 +61,9 @@ function mytheme_add_box() {
 // Callback function to show fields in meta box
 function mytheme_show_box() {
     global $meta_box, $post;
+    if(get_post_type($post->ID) != 'eventos')
+    	return;
+
     // Use nonce for verification
     echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 

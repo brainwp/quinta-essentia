@@ -232,6 +232,8 @@ function odin_enqueue_scripts() {
 			wp_enqueue_script( 'home', $template_url . '/assets/js/home.js', array(), null, true );
 		}
 		
+		//slick slider
+        wp_enqueue_script( 'slick-slider-js', $template_url . '/assets/js/slick.min.js', array(), null, true );
 
 		// Main jQuery.
 		$options = get_option('social');

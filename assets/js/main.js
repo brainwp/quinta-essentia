@@ -459,9 +459,13 @@ if ($('body').hasClass('home')){
 					$('#main-navigation').addClass('sumido');					
 				}
 		});
-		
 
-	
+	/*slick slider - slider agenda */
+	$('#interno-nav-eventos').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3
+	});	
 });
 
 

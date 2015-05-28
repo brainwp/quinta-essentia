@@ -1,6 +1,6 @@
 jQuery(function($) {
 	$( "#agenda-event-date" ).datepicker({
-dateFormat: 'yy/mm/dd',
+dateFormat: 'dd/mm/yy',
 dayNames: [
 'Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'
 ],

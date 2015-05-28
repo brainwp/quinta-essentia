@@ -82,10 +82,10 @@ function short_query_func( $atts ) {
 		
         
 		          break;
-		 case 'eventos':
-		        $per_page= '3';
+		 case 'eventos':			
+		        $class_container = "col-md-12 ";
 		 		$thumb='thumb-eventos';
-				$class_item = "col-sm-4 ";
+
 		
 				   break;
 	}  
@@ -112,6 +112,22 @@ function short_query_func( $atts ) {
 			),
 		);
 	}
+    if($a['post_type'] == 'eventos'){
+		$args = array(
+			'post_type' => $a['post_type'],
+			'posts_per_page' => -1,
+			'orderby'  => 'meta_value',
+			'meta_key' => 'agenda-event-date',
+			'order'   => 'DESC',
+			'meta_query' => array(
+				array(
+					'key' => 'agenda-event-date',
+					'compare' => '>=',
+					'value' => current_time( 'd/m/Y')
+				),
+			),		
+		);
+	}
 	$query2 = new WP_Query( $args );
 	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>".$antes_interno."<div id='interno-nav-".$a['post_type']."'>";
 	if($query2->have_posts()) : 
@@ -128,7 +144,7 @@ function short_query_func( $atts ) {
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
 			}
 			else if ($a['post_type'] == 'eventos'){
-				$html .="<div class='".$class_item."cada-".$a['post_type']." animated bounceIn'><a href='".get_permalink( $query2->post->ID)."'>
+				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
 					$html .= '<div class="texto_disco "><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
 					$content = get_the_content();
