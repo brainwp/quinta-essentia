@@ -270,8 +270,12 @@ if ($('body').hasClass('home')){
 			
 		}
 		var st = $(this).scrollTop();
-	   
-		if(!isMobile.matches && st > lastScrollTop && $(window).scrollTop() + $(window).height() == $(document).height()) {
+	   	console.log('$(window).height()'+$(window).height());
+		console.log('$(window).scrollTop()'+$(window).scrollTop());
+		console.log('$(window).scrollTop() + $(window).height() - $(document).height()'+ (($(window).scrollTop() + $(window).height()) - $(document).height()) );
+		console.log('$(document).height()'+$(document).height());
+		console.log ('st > lastScrollTop'+(st > lastScrollTop));
+		if(!isMobile.matches && st > lastScrollTop && ($(window).scrollTop() + ($(window).height() - $(document).height())) >= -1)  {
 		   		
 			$('#footer').css('position','absolute')
 		  

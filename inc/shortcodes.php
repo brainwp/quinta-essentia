@@ -8,7 +8,7 @@ function short_query_func( $atts ) {
 	$class_item = '';
 	$class_container = "";
 	$class_thumb = "";
-	
+	$per_page = -1;
 	
     $a = shortcode_atts( array(
 	        'post_type' => 'flauta',
@@ -117,15 +117,15 @@ function short_query_func( $atts ) {
 			'post_type' => $a['post_type'],
 			'posts_per_page' => -1,
 			'orderby'  => 'meta_value',
-			'meta_key' => 'agenda-event-date',
-			'order'   => 'DESC',
-			'meta_query' => array(
-				array(
-					'key' => 'agenda-event-date',
-					'compare' => '>=',
-					'value' => current_time( 'd/m/Y')
-				),
-			),		
+									'meta_key' => 'agenda-event-date',
+									'order'   => 'DESC',
+									'meta_query' => array(
+										array(
+											'key' => 'agenda-event-date',
+											'compare' => '>=',
+											'value' =>  time()
+										),
+									),		
 		);
 	}
 	$query2 = new WP_Query( $args );
@@ -144,7 +144,7 @@ function short_query_func( $atts ) {
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
 			}
 			else if ($a['post_type'] == 'eventos'){
-				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
+				$html .="hoje:". date('d/m/Y',time( ))."data:".date('d/m/Y',get_post_meta( $query2->post->ID, 'agenda-event-date', true ))."<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
 					$html .= '<div class="texto_disco "><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
 					$content = get_the_content();

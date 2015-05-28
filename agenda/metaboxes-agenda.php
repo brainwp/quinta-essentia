@@ -49,11 +49,11 @@ function mytheme_add_box() {
 		$meta_box['priority']);
 	
 	if (isset($post)){
-		$date = get_post_meta( $post->ID, 'agenda-event-date', true );
+		$date = (get_post_meta( $post->ID, 'agenda-event-date', true ));
 
-		if( $date != '' )
-			$date = date( 'd/m/Y', $date );	
-		
+		if( $date != '' ){
+			$date = strtotime($date );	
+		}
 	}
 }
 	
@@ -71,8 +71,13 @@ function mytheme_show_box() {
 	echo '<table class="agenda-table">';
     foreach ($meta_box['fields'] as $field) {
     // get current post meta data
-    $meta = get_post_meta($post->ID, $field['id'], true);
-    
+	if ($field['id']== 'agenda-event-date'){
+		$meta = get_post_meta($post->ID, $field['id'], true);
+	    $meta = date('d/m/Y', $meta);
+	}
+	else{
+		$meta = get_post_meta($post->ID, $field['id'], true);
+	}
 	// Inicia o tr
 	echo '<tr>',
     '<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th></tr>',
@@ -133,8 +138,18 @@ function mytheme_show_box() {
     }
     
 	foreach ($meta_box['fields'] as $field) {
+		if ($field['id'] == 'agenda-event-date'){
+			$new = explode('/',$_POST[$field['id']]);
+			$new = array_reverse($new);
+			$new = implode('-',$new);
+			$new = strtotime($new);
+		    
+		}
+		else{
+			$new = $_POST[$field['id']];
+		    
+		}
     $old = get_post_meta($post_id, $field['id'], true);
-    $new = $_POST[$field['id']];
     if ($new && $new != $old) {
     update_post_meta($post_id, $field['id'], $new);
     } elseif ('' == $new && $old) {
