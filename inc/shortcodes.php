@@ -170,7 +170,8 @@ add_shortcode( 'query', 'short_query_func' );
 
 function info_contato(  ) {
 	$contato_options= get_option( 'contato_tab' );
-	$html = "<div class='row_contato'><div class='col-sm-3'><h3>Contrate o Grupo</h3></div><div class='col-sm-4'><h5>".$contato_options['nome_contato']."</h5></div><div class='col-sm-5'><h5>".$contato_options['telefone_contato']."</h5></div><div class='clearfix'></div></div>";
+	$html = "<div class='row_contato'><div class='col-sm-3'><h3>Contrate o Grupo</h3></div><div id='nome_contato' class='col-sm-4'><span class='glyphicon glyphicon-earphone' aria-hidden='true'></span> <h5>".$contato_options['nome_contato']."</h5><h5>".$contato_options['telefone_contato']."</h5></div><div class='col-sm-5' id='email_contato'><span class='glyphicon glyphicon-envelope
+	' aria-hidden='true'></span><h5>".$contato_options['email_contato']."</h5></div><div class='clearfix'></div></div>";
     return $html;
 }
 add_shortcode( 'contato', 'info_contato' );

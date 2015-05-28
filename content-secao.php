@@ -23,7 +23,7 @@ switch ($post->post_name) {
 		
         $background = 	$parallax_1;
 		$antes = '<div style="background-image:url('.$background.');" class="secao-background"></div>
-		<svg height="210" width="500">
+		<svg id="svg_sobre">
 		  <polygon id="triangulo_laranja" points=""/>
 		  <polygon id="triangulo_sobre" points=""  />
 		  <polygon id="poligono_branco" points=""  />

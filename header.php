@@ -25,26 +25,26 @@
 <body <?php body_class(); ?>>
 	<div class="container">
 		<header id="header-principal" class ="row" id="header" role="banner">
+			<div id="menu-lado" class ="sumido">
+				<div id="triangulo_menu" ></div>
+				<a class="menu-fechado" href="" title="">
+				<button id="botao-menu" type="button" class=" navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
+				<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				</a>
+			</div><!--menu lado-->
 			<svg>
 				<polygon id="triangulo_header_topo" points=""/>
 			  	<polygon id="poligono_header" points=""/>
 			  	<polygon id="triangulo_header_baixo" points=""/>
-			
-			  
 			</svg>
-			<nav id="main-navigation" class=" col-md-12 navbar navbar-default" role="navigation">
-				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
+			<nav id="main-navigation" class=" aparecido menu-inicial col-md-12 navbar navbar-default" role="navigation">
+				
 				<div class="navbar-header">
-					<svg>
-						<polygon id="triangulo_menu" points="0,0 0,150 150,0"/>
-						
-					</svg>
-					<button type="button" class="navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
-					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+				
 					<?php /*
 
 					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -52,7 +52,7 @@
 					*/ ?>
 				</div>
 
-				<div class="  navbar-main-navigation">
+				<div id="menu-interno" class="sem-fundo navbar-main-navigation">
 				
 					<?php
 						wp_nav_menu(

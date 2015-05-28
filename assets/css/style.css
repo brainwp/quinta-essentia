@@ -2130,9 +2130,7 @@ textarea.input-lg, .input-group-lg>textarea.form-control, .input-group-lg>textar
     user-select: none;
 }
 .btn:focus, input[type="submit"]:focus, input[type="reset"]:focus, button:focus, .btn.focus, input.focus[type="submit"], input.focus[type="reset"], button.focus, .btn:active:focus, input[type="submit"]:active:focus, input[type="reset"]:active:focus, button:active:focus, .btn:active.focus, input[type="submit"]:active.focus, input[type="reset"]:active.focus, button:active.focus, .btn.active:focus, input.active[type="submit"]:focus, input.active[type="reset"]:focus, button.active:focus, .btn.active.focus, input.active.focus[type="submit"], input.active.focus[type="reset"], button.active.focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+   
 }
 .btn:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .btn:focus, input[type="submit"]:focus, input[type="reset"]:focus, button:focus, .btn.focus, input.focus[type="submit"], input.focus[type="reset"], button.focus {
     color: #333;
@@ -2157,7 +2155,7 @@ textarea.input-lg, .input-group-lg>textarea.form-control, .input-group-lg>textar
     background-color: #fff;
     border-color: #ccc;
 }
-.btn-default:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .btn-default:focus, input[type="submit"]:focus, input[type="reset"]:focus, button:focus, .btn-default.focus, input.focus[type="submit"], input.focus[type="reset"], button.focus, .btn-default:active, input[type="submit"]:active, input[type="reset"]:active, button:active, .btn-default.active, input.active[type="submit"], input.active[type="reset"], button.active, .open>.btn-default.dropdown-toggle, .open>input.dropdown-toggle[type="submit"], .open>input.dropdown-toggle[type="reset"], .open>button.dropdown-toggle {
+.btn-default:hover, input[type="submit"]:hover, input[type="reset"]:hover,  .btn-default:focus, input[type="submit"]:focus, input[type="reset"]:focus,  .btn-default.focus, input.focus[type="submit"], input.focus[type="reset"], button.focus, .btn-default:active, input[type="submit"]:active, input[type="reset"]:active, .btn-default.active, input.active[type="submit"], input.active[type="reset"], button.active, .open>.btn-default.dropdown-toggle, .open>input.dropdown-toggle[type="submit"], .open>input.dropdown-toggle[type="reset"], .open>button.dropdown-toggle {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;
@@ -2987,17 +2985,24 @@ tbody.collapse.in {
     .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: -15px;
 }
-}.navbar-toggle {
-    position: relative;
+}
+.navbar-toggle span{
+	background-color:#ffffff;
+}
+.navbar-toggle {
+	position: fixed;
     float: right;
     margin-right: 15px;
     padding: 9px 10px;
-    margin-top: 8px;
+    margin-top: 30px;
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+	top:0;
+	left:0;
+	z-index:999999;
 }
 .navbar-toggle:focus {
     outline: 0;
@@ -3182,9 +3187,7 @@ tbody.collapse.in {
     margin-right: 0;
 }
 }.navbar-default {
-  	margin-top: 2vw;
-  	z-index: 999999;
-    border:none;
+
 }
 .navbar-default .navbar-brand {
     color: #777;
@@ -3196,13 +3199,15 @@ tbody.collapse.in {
 .navbar-default .navbar-text {
     color: #000000;
 }
+.navbar-default .navbar-nav>li:hover>a{
+	color:#e45b31
+	}
 .navbar-default .navbar-nav>li>a {
-    color: #ffffff;
+	color:#ffffff;
 	text-align:center;
 	text-transform:uppercase;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    color: #333;
     background-color: transparent;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
@@ -5216,49 +5221,32 @@ html {
 	height:auto;
 	position:relative;
 }
-.navbar-header{
-	opacity:0;
-	position:fixed;
+#main-navigation{
+/*	opacity:1;
+*/	position:fixed;
 	top:0;
 	left:0;
-	z-index:999999;
-	-webkit-transition: opacity 1s ease;                  
-	    -moz-transition: opacity 1s ease;                 
-	    -o-transition: opacity 1s ease;   
-	    -ms-transition: opacity 1s ease;          
-	    transition: opacity 1s ease;
+	z-index:99999;
+
 }
-.aberto{
-	opacity:1!important;
-	-webkit-transition: opacity 0.3s ease;                  
-	    -moz-transition: opacity 0.3s ease;                 
-	    -o-transition: opacity 0.3s ease;   
-	    -ms-transition: opacity 0.3s ease;          
-	    transition: opacity 0.3s ease;
-}
+
+
 .menu-fixo {
-	background-color:#6E0E10;
-	-webkit-transition: opacity 0.3s ease;                  
-	    -moz-transition: opacity 0.3s ease;                 
-	    -o-transition: opacity 0.3s ease;   
-	    -ms-transition: opacity 0.3s ease;          
-	    transition: opacity 0.3s ease;
+		background-color:#6E0E10;
 		top:0!important;
   		position: fixed!important;
 		left:0px;
+		padding-left:200px;
+		opacity:0;
 	
 	}
 .navbar-main-navigation{
+	z-index:99999;
 	position:relative;
 	top:2vw;
 	width:100%;
-	-webkit-transition: opacity 0.3s ease;                  
-	    -moz-transition: opacity 0.3s ease;                 
-	    -o-transition: opacity 0.3s ease;   
-	    -ms-transition: opacity 0.3s ease;          
-	    transition: opacity 0.3s ease;
+	
 }
-
 
 video#bgvid {
 	position: relative; 
@@ -5338,8 +5326,8 @@ video {
 	background-attachment:fixed;
 	background-repeat:no-repeat;
   	background-position-x: center;
-  	background-position-y: 0;
-background-color:#0C090D;
+  background-position-y: 200px;
+background-color:#000000;
 }
 #sobre{
 	background-attachment:fixed;
@@ -5354,7 +5342,8 @@ svg{
 	width:100vw;
 	height:20vw;
 	position:absolute;
-	z-index:99999;
+	z-index: 9999;
+  
 }
 #triangulo_sobre{
 	fill:#292929;
@@ -5364,9 +5353,43 @@ svg{
 	
 	
 }
-#triangulo_menu{
-	fill:#cd111e;
+.menu-inicial{
+	opacity:1;
+	
 }
+
+.aparecido{
+	opacity:1;
+	transition-property: opacity;
+    transition-duration: 0.7s;
+	
+}
+.sumido{
+	opacity:0;
+	transition-property: opacity;
+    transition-duration: 0.7s;
+}
+.com-fundo{
+	background-color:#6f1112;
+	transition-property: background-color,top;
+    transition-duration: 1s;
+	top:0;
+}
+#triangulo_menu{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 150px 150px 0 0;
+	border-color: #D61528 transparent transparent transparent;
+	position:fixed;
+	z-index:999999;
+	top:0;
+	left:0;
+}
+.navbar-toggle{
+
+}
+	
 #poligono_header{
 	fill:#ec902b;
 }
@@ -5431,7 +5454,7 @@ svg{
 }
 #sobre .secao-interno{
 	position:relative;
-	z-index:999;
+	z-index:99999;
 	background:#f2f1f0;
   	padding: 3% 0 10%;
   	background-attachment: fixed;
@@ -5448,13 +5471,34 @@ svg{
 #sobre .conteudo-secao p{
 	margin-right:10vw;
 }
+.row_contato h5{
+margin-top:0;
+font-size:1em;
+}
+.glyphicon-earphone, .glyphicon-envelope
+{
+	margin-right:10px;
+	color:#d25205;
+}
+.row_contato .col-sm-4{
+	
+	padding:0;
+	}
 .row_contato{
 	margin-right:2vw;
+	text-align:center;
 }
 .row_contato h3, .row_contato h5{
 	margin:0;
 	vertical-align:middle;
 	line-height:30px;
+}
+#menu-lado{
+	position:relative;
+	z-index:999999;
+}
+#nome_contato:before{
+	
 }
 #interno-equipe{
 	
@@ -5527,7 +5571,11 @@ color:black;
 	
 
 }
+#projetos h1{
+	margin-bottom:30px;
+}
 #projetos{
+	padding:80px 0;
 	background:#292929;
 }
 #youtube-feed{
@@ -5582,7 +5630,7 @@ color:black;
 }
 #midia{
 	background:#f3b945;
-  	padding: 60px 0 60px;
+  	padding: 80px 0 60px;
   
 }
 .midia-category{
@@ -5711,8 +5759,15 @@ input, textarea{
 		top:0;
 		width:100vw;
 }
-header{
-	margin-top:100.5vh;
+#header-principal{
+  margin-top: 98.5vh;
+}
+#svg_header{
+	position:relative;
+	max-width:200px;
+}
+.menu-item:hover a{
+	color:#e45b31;
 }
 #svg_footer{
 	bottom:-1px;
