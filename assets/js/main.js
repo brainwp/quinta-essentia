@@ -386,41 +386,58 @@ function poligonos() {
 			},
 		});
 	});
-	
-	
 
-	// //ajax facebook
-	// var data = {
-	// 	'action': 'facebook_brasa_social_feed'
-	// };
-	// $.post(odin_main.ajaxurl, data, function(response) {
-	// 	$('#facebook-feed').html(response);
-	// });
-	// 
-	// //ajax youtube
-	// var data = {
-	// 	'action': 'youtube_brasa_social_feed'
-	// };
-	// $.post(odin_main.ajaxurl, data, function(response) {
-	// 	$('#youtube-feed').html(response);
-	// });
-	// 
-	// //ajax twitter
-	// var config1 = {
-	// 	"id": odin_main.twitter_widget_id,
-	// 	"domId": 'twitter-feed',
-	// 	"maxTweets": 2,
-	// 	"enableLinks": true,
-	// 	"showTime": false,
-	// 	"showRetweet": false,
-	// 	"showInteraction": false
-	// };
-	// twitterFetcher.fetch(config1);
-	// 
-	
-	
-	
-	
+	//ajax discos
+	$('.btn-loadmore-discos').on('click',function(e){
+		var data = {
+			'action': 'discos_load',
+			'paged': $(this).attr('data-paged'),
+		};
+		var default_html = $(this).html();
+		$(this).html($(this).attr('data-loading'));
+		var elem = this;
+		var selector = $(elem).attr('data-selector');
+		$.post(odin_main.ajaxurl, data, function(response) {
+			$(selector).append(response);
+			$(elem).html(default_html);
+			var paged = parseInt($(elem).attr('data-paged')) + 1;
+			var max_paged = parseInt($(elem).attr('data-max-paged'));
+			$(elem).attr('data-paged',paged);
+			if(paged > max_paged){
+				$(elem).fadeOut('slow');
+			}
+		});
+
+	});
+
+	//ajax facebook
+	var data = {
+		'action': 'facebook_brasa_social_feed'
+	};
+	$.post(odin_main.ajaxurl, data, function(response) {
+		$('#facebook-feed').html(response);
+	});
+
+	//ajax youtube
+	var data = {
+		'action': 'youtube_brasa_social_feed'
+	};
+	$.post(odin_main.ajaxurl, data, function(response) {
+		$('#youtube-feed').html(response);
+	});
+
+	//ajax twitter
+	var config1 = {
+		"id": odin_main.twitter_widget_id,
+		"domId": 'twitter-feed',
+		"maxTweets": 2,
+		"enableLinks": true,
+		"showTime": false,
+		"showRetweet": false,
+		"showInteraction": false
+	};
+	twitterFetcher.fetch(config1);
+
 	
 });
 
