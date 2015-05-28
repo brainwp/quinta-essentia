@@ -71,5 +71,8 @@
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
-
+		<?php 
+		$parallax_options= get_option( 'parallax_tab' );	
+		$parallax_1 = wp_get_attachment_url($parallax_options['parallax_1'], 'full');
+		echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";?>
 		<div id="main" class="site-main row">

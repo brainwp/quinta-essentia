@@ -38,146 +38,157 @@ jQuery(document).ready(function($) {
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
 	
-	////////////funcao de criacao dos pontos dos poligonos svg
-	////////////funcao de criacao dos pontos dos poligonos svg
-function poligonos() {
-   	largura=$(window).width();
-	
+	largura=$(window).width();
+
 	altura=largura*0.4663076582;
-	
+
 	m=(altura*0.4)/largura
 	y_lar=m*0.33*largura+0.6*altura;
-	altura_img_disco = $('#parallax_midia').css('height');
-	altura_img_disco= parseInt(altura_img_disco);
-	
-	$('#svg_sobre').css('height',altura*1.2);
-	
 	$('#triangulo_header_topo').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1 );
 	$('#poligono_header').attr('points','0,0 '+largura+','+altura*0.1+" " +largura+','+altura*0.18+ ' 0,'+altura*0.25);
 	$('#triangulo_header_baixo').attr('points', largura+","+altura*0.18+" "+largura+','+altura*0.3+' '+(2/3)*largura+','+0.203*altura );
-
-	$('#triangulo_sobre').attr('points','0,0 '+largura+','+altura+' 0,'+altura*0.6 );
-	
-	$('#triangulo_laranja').attr('points',  '0,'+altura*0.6+' '+largura*0.33+','+y_lar+' 0,'+altura*0.74);
- 	
-	$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+(largura+1)+','+altura+ ' '+(largura+1)+','+altura*1.2+' 0,'+altura*1.2);
-	$('#sobre .secao-interno').css('margin-top',altura*0.5);
-	// $('#cabecalho_sobre').css('margin-top',-altura*0.6);
-	
-	$('#triangulo_amarelo').attr('points','0,0 '+largura+',0 0,'+altura*0.17 );
-	$('#svg_midia').css('height',altura*0.17)
-	
-	$('#poligono_disco').attr('points','0,'+(altura*0.17)+' '+largura+',0 '+ largura+','+(altura*0.17)+' '+largura+','+(altura*0.17)*2+' 0,'+(altura*0.17)*2);
-	$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*+1)
-	$('#svg_disco').css('height',+(altura*0.17)*2)
-	
-	$('#discografia').css('margin-top',altura_img_disco);
-	
 	$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
 	$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
 	$('#poligono_social').parent().css('top',-altura*0.05);
 	$('#social .secao-interno').css('margin-top',altura*0.25);
 	$('#social svg').css('height',altura*0.3);
-	$('#svg_social_depois').css('height',altura*0.3);
-	
+
+
 	$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
-	$('#triangulo_footer').attr('points', '0,0 ' +largura+','+altura*0.35+ ' 0,'+ altura*0.35);
-	$('#svg_footer').css('height',altura*0.35);
-	altura_footer= parseInt($('#footer').css('height'));
-	altura_site_info =  parseInt($('.site-info.row').css('height'));		
-	$('.site-info').css('padding-top',(altura_footer/2)-(altura_site_info/2));
-}                                                                            
-///////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-
-///////////navegacao flautas e projetos
-///////////navegacao flautas e projetos
-	function flautas_projetos(){
-		
-		console.log('teste')
-		n=$('.cada-flauta').length;
-		console.log('n'+n)
-		
-		tam = $('.cada-flauta img').outerWidth(true)
-		console.log('tam'+tam)
-		
-		nav_flauta_largura=n*(tam+20)*1.06
-		console.log('nav_flauta_largura'+nav_flauta_largura)
-		
-		largura_interno_flauta = $('#interno-flauta').outerWidth();
-		console.log('largura_interno_flauta'+largura_interno_flauta)
-		
-		fim = nav_flauta_largura - largura_interno_flauta+100;
-		$('#interno-nav-flauta').css('width',nav_flauta_largura)
-		alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
-		$('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
-		alturaProj = $('#interno-nav-projeto').css('height');
-	}
-	$(".botao").click(function(e) {
-		id = $(this).attr('id')
-		switch(id) {
-		    case 'left':
-				e.preventDefault();
-				posicaoLeft = $('#interno-nav-flauta').css('left');
-				posicaoLeft=parseInt(posicaoLeft)
-				if(posicaoLeft >= 0){
-					
-		        	break;
-				}
-				else{
-					$('#interno-nav-flauta').css('left',posicaoLeft+100)
-					break
-				}
-			case 'right':
-				e.preventDefault();
-				posicaoLeft = $('#interno-nav-flauta').css('left');
-				posicaoLeft=parseInt(posicaoLeft)
-				if(posicaoLeft < -fim){
-		        	break;
-				}
-				else{
-					$('#interno-nav-flauta').css('left',posicaoLeft-100)
-					break
-				}
-			case 'cima':
-				e.preventDefault();
-				posicaoTop = $('#interno-nav-projeto').css('top');
-				posicaoTop=parseInt(posicaoTop)
-
-				
-				if (posicaoTop <= 0){
-					
-					$('#interno-nav-projeto').css('top',posicaoTop+100)
-
-					break
-				}
-				else{
-					break
-				}
-			case 'baixo':
-				e.preventDefault();
-				posicaoTop = $('#interno-nav-projeto').css('top');
-				posicaoTop=parseInt(posicaoTop)
-				alturaProj=$('.cada-projeto').outerHeight(true);
-				limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
-				if (-posicaoTop <= limite){
-					$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
-					break
-				}
-				else{
-					
-					break								
-				}
-		}
-	});
-	///////////navegacao flautas
-	///////////navegacao flautas
-
-
-
-
+	$('#poligono_social_depois_page').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1+'  0,'+altura*0.02 );
+	
 	
 
+	//////////////////home///
+	//////////////////home///
+
+if ($('body').hasClass('home')){
+		////////////funcao de criacao dos pontos dos poligonos svg
+		////////////funcao de criacao dos pontos dos poligonos svg
+	function poligonos() {
+	   	
+		altura_img_disco = $('#parallax_midia').css('height');
+		altura_img_disco= parseInt(altura_img_disco);
+
+		$('#svg_sobre').css('height',altura*1.2);
+
+		
+		$('#triangulo_sobre').attr('points','0,0 '+largura+','+altura+' 0,'+altura*0.6 );
+
+		$('#triangulo_laranja').attr('points',  '0,'+altura*0.6+' '+largura*0.33+','+y_lar+' 0,'+altura*0.74);
+
+		$('#poligono_branco').attr('points',  '0,'+altura*0.74 +' '+largura*0.33+','+y_lar+' '+(largura+1)+','+altura+ ' '+(largura+1)+','+altura*1.2+' 0,'+altura*1.2);
+		$('#sobre .secao-interno').css('margin-top',altura*0.5);
+		// $('#cabecalho_sobre').css('margin-top',-altura*0.6);
+
+		$('#triangulo_amarelo').attr('points','0,0 '+largura+',0 0,'+altura*0.17 );
+		$('#svg_midia').css('height',altura*0.17)
+
+		$('#poligono_disco').attr('points','0,'+(altura*0.17)+' '+largura+',0 '+ largura+','+(altura*0.17)+' '+largura+','+(altura*0.17)*2+' 0,'+(altura*0.17)*2);
+		$('#svg_disco').css('top',altura_img_disco-(altura*0.17)*+1)
+		$('#svg_disco').css('height',+(altura*0.17)*2)
+
+		$('#discografia').css('margin-top',altura_img_disco);
+
+		$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
+		$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
+		$('#poligono_social').parent().css('top',-altura*0.05);
+		$('#social .secao-interno').css('margin-top',altura*0.25);
+		$('#social svg').css('height',altura*0.3);
+		$('#svg_social_depois').css('height',altura*0.3);
+
+		$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
+		$('#triangulo_footer').attr('points', '0,0 ' +largura+','+altura*0.35+ ' 0,'+ altura*0.35);
+		$('#svg_footer').css('height',altura*0.35);
+		altura_footer= parseInt($('#footer').css('height'));
+		altura_site_info =  parseInt($('.site-info.row').css('height'));		
+		$('.site-info').css('padding-top',(altura_footer/2)-(altura_site_info/2));
+	}                                                                            
+	///////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////
+	
+	///////////navegacao flautas e projetos
+	///////////navegacao flautas e projetos
+		function flautas_projetos(){
+
+			console.log('teste')
+			n=$('.cada-flauta').length;
+			console.log('n'+n)
+
+			tam = $('.cada-flauta img').outerWidth(true)
+			console.log('tam'+tam)
+
+			nav_flauta_largura=n*(tam+20)*1.06
+			console.log('nav_flauta_largura'+nav_flauta_largura)
+
+			largura_interno_flauta = $('#interno-flauta').outerWidth();
+			console.log('largura_interno_flauta'+largura_interno_flauta)
+
+			fim = nav_flauta_largura - largura_interno_flauta+100;
+			$('#interno-nav-flauta').css('width',nav_flauta_largura)
+			alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
+			$('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
+			alturaProj = $('#interno-nav-projeto').css('height');
+		}
+		$(".botao").click(function(e) {
+			id = $(this).attr('id')
+			switch(id) {
+			    case 'left':
+					e.preventDefault();
+					posicaoLeft = $('#interno-nav-flauta').css('left');
+					posicaoLeft=parseInt(posicaoLeft)
+					if(posicaoLeft >= 0){
+
+			        	break;
+					}
+					else{
+						$('#interno-nav-flauta').css('left',posicaoLeft+100)
+						break
+					}
+				case 'right':
+					e.preventDefault();
+					posicaoLeft = $('#interno-nav-flauta').css('left');
+					posicaoLeft=parseInt(posicaoLeft)
+					if(posicaoLeft < -fim){
+			        	break;
+					}
+					else{
+						$('#interno-nav-flauta').css('left',posicaoLeft-100)
+						break
+					}
+				case 'cima':
+					e.preventDefault();
+					posicaoTop = $('#interno-nav-projeto').css('top');
+					posicaoTop=parseInt(posicaoTop)
+
+
+					if (posicaoTop <= 0){
+
+						$('#interno-nav-projeto').css('top',posicaoTop+100)
+
+						break
+					}
+					else{
+						break
+					}
+				case 'baixo':
+					e.preventDefault();
+					posicaoTop = $('#interno-nav-projeto').css('top');
+					posicaoTop=parseInt(posicaoTop)
+					alturaProj=$('.cada-projeto').outerHeight(true);
+					limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
+					if (-posicaoTop <= limite){
+						$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
+						break
+					}
+					else{
+
+						break								
+					}
+			}
+		});
+		///////////navegacao flautas
+		///////////navegacao flautas
 	///////////botao pause do video
 	///////////botao pause do video
 	var vid = document.getElementById("bgvid");
@@ -296,25 +307,6 @@ function poligonos() {
 		lastScrollTop = st;
 	   	
 	});
-		$( ".navbar-toggle" ).click(function(e) {
-				e.preventDefault();
-				
-		       if ($('#main-navigation').hasClass('sumido')){
-					$('#main-navigation').removeClass('sumido');
-					$('#main-navigation').addClass('aparecido');
-					$('#menu-interno').removeClass('sumido');
-					$('#menu-interno').addClass('aparecido');
-					console.log ('aparece');
-					} 
-				else {
-					console.log ('some');
-					
-					$('#menu-interno').removeClass('sumido');
-					$('#menu-interno').addClass('aparecido');
-					$('#main-navigation').removeClass('aparecido');					
-					$('#main-navigation').addClass('sumido');					
-				}
-		});
 		flautas_projetos()	
 
  		if (!isMobile.matches){
@@ -436,6 +428,34 @@ function poligonos() {
 		"showInteraction": false
 	};
 	twitterFetcher.fetch(config1);
+}
+//////////////////home///
+//////////////////home///
+//////////////////home///
+
+	
+
+
+		$( ".navbar-toggle" ).click(function(e) {
+				e.preventDefault();
+				
+		       if ($('#main-navigation').hasClass('sumido')){
+					$('#main-navigation').removeClass('sumido');
+					$('#main-navigation').addClass('aparecido');
+					$('#menu-interno').removeClass('sumido');
+					$('#menu-interno').addClass('aparecido');
+					console.log ('aparece');
+					} 
+				else {
+					console.log ('some');
+					
+					$('#menu-interno').removeClass('sumido');
+					$('#menu-interno').addClass('aparecido');
+					$('#main-navigation').removeClass('aparecido');					
+					$('#main-navigation').addClass('sumido');					
+				}
+		});
+		
 
 	
 });

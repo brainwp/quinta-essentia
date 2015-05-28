@@ -52,7 +52,7 @@ switch ($post->post_name) {
 	 case 'discografia':
 	  	$entre = '';
 	  	$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
-	 	$depois = '<svg height="400" width="500">
+	 	$depois = '<svg >
 	 		<polygon id="poligono_social" points=""/>
  			<polygon id="triangulo_social" points=""/>
 		</svg>';

@@ -5221,7 +5221,7 @@ html {
 	height:auto;
 	position:relative;
 }
-#main-navigation{
+.home #main-navigation{
 /*	opacity:1;
 */	position:fixed;
 	top:0;
@@ -5340,7 +5340,7 @@ background-color:#000000;
 }
 svg{
 	width:100vw;
-	height:20vw;
+
 	position:absolute;
 	z-index: 9999;
   
@@ -5771,7 +5771,7 @@ color:black;
 #poligono_social{
 	fill:#d95b35;
 }
-#triangulo_social, #poligono_social_depois,#triangulo_header_baixo{
+#triangulo_social, #poligono_social_depois,#triangulo_header_baixo,#poligono_social_depois_page{
 	fill:#6f1112;
 }
 #social .entry-header{
@@ -5793,14 +5793,14 @@ input, textarea{
 	width:30%;
 	border-radius:10px;
 }
-#footer {
+.home #footer {
 	background-color: #ffffff;
 	  height: 100.5vh;
 	  position: absolute;
 		top:0;
 		width:100vw;
 }
-#header-principal{
+.home  #header-principal{
   margin-top: 98.5vh;
 }
 #svg_header{
@@ -5979,6 +5979,44 @@ input, textarea{
 		margin:0 auto;
 		padding: 20px;
 	  
+	}
+	.single, .page{
+		background-color:#ffffff;
+	}
+	.single #social, .page #social{
+		margin-top:-150px;
+	}
+	#single-header-img{
+		width:100%;
+		height:600px;
+		overflow:hidden;
+	} 
+	.single #primary, .page #primary{
+		margin:0 auto 100px;
+		width:100%;
+		display:block;
+		float:none;
+	}
+	.single #page-content, .page #page-content{
+		max-width:1000px;
+		margin:0 auto;
+	}
+	.single article, .page article{
+		background-color:#ffffff;
+		
+	}
+	.single .entry-header , .page .entry-header {
+		margin:0 0 20px;
+		padding:10px 0;
+		color:#000000;
+		text-align:center;
+		background-color:#e35a30;
+		
+	}
+	.single #main, .page #main{
+	}
+	.single .site-info > div, .page .site-info > div{
+	  margin: 100px 0 35px;
 	}
 /*fim da custoimização*/
 
