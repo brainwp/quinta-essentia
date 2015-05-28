@@ -331,8 +331,7 @@ function poligonos() {
 			$('#header-principal').css('margin-top','0')
 		}
 		poligonos();
-
-
+	
 	//ajax midia
 	$('.btn-loadmore').on('click',function(e){
 		var data = {

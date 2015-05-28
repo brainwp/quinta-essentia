@@ -137,13 +137,19 @@ function short_query_func( $atts ) {
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div></a>";
 
 			}
+			else if ($a['post_type'] == 'equipe' ){
+				$content = $query2->post->post_content;
+				$trimmed_content_equipe = wp_trim_words( $content, 60, '...');
+				$html .="<div class='link-equipe'> <div class='".$class_item." cada-equipe animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div><!--cada-equipe--><div class='equipe-conteudo'><a href='".get_permalink( $query2->post->ID)."'>".$trimmed_content_equipe." <span class='glyphicon glyphicon-plus' aria-hidden='true'></span></a></div><!--equipe-conteudo--></div><!--link-equipe-->";
+				
+			}
 			else{
 				if($a['post_type'] == 'midia' && !defined('DOING_AJAX')){
 					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query2->max_num_pages.'" data-category="all">';
 					$depois_interno .= __('Carregar +','odin');
 					$depois_interno .= '</a>';
 				}
-				$html .="<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
+				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div></a>";
 			}
 		endwhile;
 		    if(defined('DOING_AJAX') && DOING_AJAX){

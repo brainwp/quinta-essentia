@@ -5500,9 +5500,44 @@ font-size:1em;
 #nome_contato:before{
 	
 }
-#interno-equipe{
-	
+#interno-nav-equipe{
+	position:relative;
 }
+.cada-equipe img {
+	width:80%;
+	opacity:0.9;
+	-webkit-transition: opacity,width 0.5s ease-in-out;
+    -o-transition: opacity,width 0.5s ease-in-out;
+    transition: opacity,width 0.5s ease-in-out;
+}
+.equipe-conteudo{
+	position:absolute;
+	opacity:0;
+	-webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	visibility:hidden;
+	top:400px;
+	width:10%;
+}
+.link-equipe{
+}
+.link-equipe:hover .equipe-conteudo{
+	opacity: 1;
+	  top: 0px;
+	  visibility: visible;
+	  margin-top: 200px;
+	width:100%;
+}
+
+.link-equipe:hover img{
+	opacity:1;
+	max-width:130%;
+	width:100%;
+}
+.link-equipe{
+}
+
 
 .cada-equipe{
  padding:1vw;
@@ -5692,7 +5727,7 @@ color:black;
    	
 }
 #interno-disco{
-	max-height:650px;
+	
 
 	
 }
