@@ -81,7 +81,7 @@ switch ($post->post_name) {
 	  	
 	     break;
 	 case 'agenda':
-	   			$antes = '<h1 id="titulo_agenda">Agenda</h1><svg id="svg_agenda" height="400" width="500">
+	   			$antes = '<h1 id="titulo_agenda">Agenda</h1><svg id="svg_agenda" >
 			 		<polygon id="triangulo_agenda" points=""/>
 		 			<polygon id="poligono_agenda" points=""/>
 				</svg>';

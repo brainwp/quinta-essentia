@@ -35,7 +35,7 @@
 		)
     );
 	
-add_action('admin_menu', 'mytheme_add_box');
+add_action('add_meta_boxes', 'mytheme_add_box');
    
 // Adiciona o MetaBox
 function mytheme_add_box() {
@@ -59,25 +59,35 @@ function mytheme_add_box() {
 	
 	
 // Callback function to show fields in meta box
-function mytheme_show_box() {
-    global $meta_box, $post;
-    if(get_post_type($post->ID) != 'eventos')
+function mytheme_show_box($post) {
+	wp_nonce_field( 'mytheme_meta_box', 'mytheme_meta_box_nonce' );
+	/////////////////////////////
+    if(get_post_type($post->ID) != 'eventos'){
     	return;
-
-    // Use nonce for verification
-    echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
-
+	}
 	// Inicia a tabela
+	global $meta_box;
+	
+	// echo '<pre>';
+	// print_r($meta_box);
+	// echo '</pre>';
+
 	echo '<table class="agenda-table">';
     foreach ($meta_box['fields'] as $field) {
     // get current post meta data
-	if ($field['id']== 'agenda-event-date'){
-		$meta = get_post_meta($post->ID, $field['id'], true);
-	    $meta = date('d/m/Y', $meta);
-	}
-	else{
-		$meta = get_post_meta($post->ID, $field['id'], true);
-	}
+		if (get_post_meta($post->ID, $field['id'], true)){
+			if ($field['id']== 'agenda-event-date'){
+				$meta = get_post_meta($post->ID, $field['id'], true);
+				$meta = date('d/m/Y', $meta);
+			}
+			else{
+				$meta = get_post_meta($post->ID, $field['id'], true);
+			}
+		}
+		else{
+			$meta='';
+		}
+		
 	// Inicia o tr
 	echo '<tr>',
     '<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th></tr>',
@@ -110,20 +120,23 @@ function mytheme_show_box() {
     }
     // Fecha a tabela
 	echo '</table>';
-    }
+}
 	
-	add_action('save_post', 'mytheme_save_data');
+	
+add_action('save_post', 'mytheme_save_data');
     // Save data from meta box
-    function mytheme_save_data($post_id) {
-    global $meta_box;
+function mytheme_save_data($post_id) {
+    // Check if our nonce is set.
+	if ( ! isset( $_POST['mytheme_meta_box_nonce'] ) ) {
+		return;
+	}
+	if ( ! wp_verify_nonce( $_POST['mytheme_meta_box_nonce'], 'mytheme_meta_box' ) ) {
+		return;
+	}
+	global $meta_box;
+	// verify nonce
+    // Verify that the nonce is valid.
 	
-	$meta_box['agenda-event-date'] = strtotime( $_POST['agenda-event-date'] );
-
-	
-    // verify nonce
-    if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__))) {
-    return $post_id;
-    }
     // Checa se AutoSave está ativo e o ignora
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
     return $post_id;
@@ -175,11 +188,11 @@ function agenda_events_jquery_datepicker() {
 		array('jquery', 'jquery-ui-datepicker')
 	);
 	
-	wp_enqueue_script(
-		'valida-datepicker',
-		get_bloginfo('stylesheet_directory') . '/agenda/datepicker/valida-datepicker.js',
-		array('jquery')
-	);
+	// wp_enqueue_script(
+	// 		'valida-datepicker',
+	// 		get_bloginfo('stylesheet_directory') . '/agenda/datepicker/valida-datepicker.js',
+	// 		array('jquery')
+	// 	);
 }
 add_action('admin_print_scripts-post-new.php', 'agenda_events_jquery_datepicker');
 add_action('admin_print_scripts-post.php', 'agenda_events_jquery_datepicker');

@@ -122,8 +122,8 @@ function short_query_func( $atts ) {
 									'meta_query' => array(
 										array(
 											'key' => 'agenda-event-date',
-											'compare' => '>=',
-											'value' =>  time()
+											'compare' => '>',
+											'value' =>  time()-86400
 										),
 									),		
 		);
@@ -144,9 +144,9 @@ function short_query_func( $atts ) {
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
 			}
 			else if ($a['post_type'] == 'eventos'){
-				$html .="hoje:". date('d/m/Y',time( ))."data:".date('d/m/Y',get_post_meta( $query2->post->ID, 'agenda-event-date', true ))."<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
+				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
-					$html .= '<div class="texto_disco "><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
+					$html .= '<div class="texto_disco "><h7>'.date('d/m/Y',get_post_meta( $query2->post->ID, "agenda-event-date", true )).'</h7><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
 					$content = get_the_content();
 					$trimmed_content = wp_trim_words( $content, 30, '...');
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></a></div>";
