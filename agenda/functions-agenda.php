@@ -20,11 +20,7 @@
 				$data_explo = explode("/", $data_invert);
 				echo
 				'<span style="font-size:15px;">' .
-				$data_explo[2]
-				. "." .
-				$data_explo[1]
-				. "." .
-				$data_explo[0]
+				date('d/m/Y', $data_invert)
 				. '</span>';
 				break;
 			default:

@@ -19,7 +19,7 @@ function short_query_func( $atts ) {
 	   case 'flauta':
 	        $per_page= '999999999';
 			$thumb='thumb-flauta';
-			$html = '<h1 id="titulo_flautas">Flautas</h1>';
+			$html = '<h1 id="titulo_flautas">Instrumentarium</h1>';
 			$antes_interno = '<a href="" class="botao" id="left"><span class="esquerda glyphicon glyphicon glyphicon-menu-left"></span></a>';
     		$depois_interno = '<a class="botao" href="" id="right"><span class="direita glyphicon glyphicon glyphicon-menu-right"></span></a>';
 	         break;
@@ -113,6 +113,7 @@ function short_query_func( $atts ) {
 		);
 	}
     if($a['post_type'] == 'eventos'){
+		
 		$args = array(
 			'post_type' => $a['post_type'],
 			'posts_per_page' => -1,
@@ -144,9 +145,22 @@ function short_query_func( $atts ) {
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
 			}
 			else if ($a['post_type'] == 'eventos'){
+				
 				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
-					$html .= '<div class="texto_disco "><h7>'.date('d/m/Y',get_post_meta( $query2->post->ID, "agenda-event-date", true )).'</h7><h1 class="titulo-disco">'.get_the_title( $query2->post->ID).'</h1>'; 
+					$html .= '<div class="texto_disco ">
+					<h7>'
+						.date('d/m/Y',get_post_meta( $query2->post->ID, "agenda-event-date", true ))
+					.'</h7> - 
+					<h7>'
+						.get_post_meta( $query2->post->ID, 'agenda_horario_inic', true )
+					.'</h7><br/>
+					<h7>'
+						.get_post_meta( $query2->post->ID, "agenda_endereco", true )
+					.'</h7>
+					<h1 class="titulo-disco">'
+						.get_the_title( $query2->post->ID)
+					.'</h1>'; 
 					$content = get_the_content();
 					$trimmed_content = wp_trim_words( $content, 30, '...');
 					$html .= $trimmed_content."</div><div class='mais-disco'></div></a></div>";

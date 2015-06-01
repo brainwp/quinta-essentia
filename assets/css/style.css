@@ -5897,6 +5897,12 @@ font-size:1em;
 .cada-eventos a{
     background-color:#FFF;
     display: inline-block;
+	height:450px;
+
+}
+.cada-eventos .mais-disco, .cada-eventos:hover .mais-disco {
+	bottom:0;
+	right:0;
 }
 
 #titulo_flautas{
