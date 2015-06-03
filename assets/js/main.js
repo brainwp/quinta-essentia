@@ -470,6 +470,7 @@ if ($('body').hasClass('home')){
 		slidesToShow: 3,
 		slidesToScroll: 3
 	});	
+	flautas_projetos()
 });
 
 
