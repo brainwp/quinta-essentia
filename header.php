@@ -23,7 +23,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="container">
+	<div id="preloader"></div><!-- #preloader -->
+	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
 			<div id="menu-lado" class ="sumido">
 				<div id="triangulo_menu" ></div>
