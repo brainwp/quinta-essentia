@@ -36,7 +36,7 @@
 				</button>
 				</a>
 			</div><!--menu lado-->
-			<svg>
+			<svg id="svg_header">
 				<polygon id="triangulo_header_topo" points=""/>
 			  	<polygon id="poligono_header" points=""/>
 			  	<polygon id="triangulo_header_baixo" points=""/>

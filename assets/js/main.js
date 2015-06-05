@@ -38,24 +38,7 @@ jQuery(document).ready(function($) {
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
 	
-	largura=$(window).width();
-
-	altura=largura*0.4663076582;
-
-	m=(altura*0.4)/largura
-	y_lar=m*0.33*largura+0.6*altura;
-	$('#triangulo_header_topo').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1 );
-	$('#poligono_header').attr('points','0,0 '+largura+','+altura*0.1+" " +largura+','+altura*0.18+ ' 0,'+altura*0.25);
-	$('#triangulo_header_baixo').attr('points', largura+","+altura*0.18+" "+largura+','+altura*0.3+' '+(2/3)*largura+','+0.203*altura );
-	$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
-	$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
-	$('#poligono_social').parent().css('top',-altura*0.05);
-	$('#social .secao-interno').css('margin-top',altura*0.25);
-	$('#social svg').css('height',altura*0.3);
-
-
-	$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
-	$('#poligono_social_depois_page').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1+'  0,'+altura*0.02 );
+	
 	
 	
 
@@ -66,10 +49,29 @@ if ($('body').hasClass('home')){
 		////////////funcao de criacao dos pontos dos poligonos svg
 		////////////funcao de criacao dos pontos dos poligonos svg
 	function poligonos() {
-	   	
+	   	largura=$(window).width();
+
+		altura=largura*0.4663076582;
+
+		m=(altura*0.4)/largura
+		y_lar=m*0.33*largura+0.6*altura;
+		
 		altura_img_disco = $('#parallax_midia').css('height');
 		altura_img_disco= parseInt(altura_img_disco);
+		$('#triangulo_header_topo').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1 );
+		$('#poligono_header').attr('points','0,0 '+largura+','+altura*0.1+" " +largura+','+altura*0.18+ ' 0,'+altura*0.25);
+		$('#triangulo_header_baixo').attr('points', largura+","+altura*0.18+" "+largura+','+altura*0.3+' '+(2/3)*largura+','+0.203*altura );
+		$('#svg_header').css('height',altura*0.3)
+		
+		$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
+		$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
+		$('#poligono_social').parent().css('top',-altura*0.05);
+		$('#social .secao-interno').css('margin-top',altura*0.25);
+		$('#social svg').css('height',altura*0.3);
 
+
+		$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
+		$('#poligono_social_depois_page').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1+'  0,'+altura*0.02 );
 		$('#svg_sobre').css('height',altura*1.2);
 
 		
@@ -86,6 +88,7 @@ if ($('body').hasClass('home')){
 
 		$('#triangulo_agenda').attr('points','0,0 '+largura/7+',0 0,'+largura/7 );
 		$('#poligono_agenda').attr('points','0,0 '+largura+',0 '+ largura+','+(altura*0.2)+' 0,'+(altura*0.1));
+		$('#svg_agenda').css('height',largura/7)
 
 
 		$('#poligono_disco').attr('points','0,'+(altura*0.17)+' '+largura+',0 '+ largura+','+(altura*0.17)+' '+largura+','+(altura*0.17)*2+' 0,'+(altura*0.17)*2);
@@ -470,7 +473,13 @@ if ($('body').hasClass('home')){
 		slidesToShow: 3,
 		slidesToScroll: 3
 	});	
-	flautas_projetos()
+	flautas_projetos();
+	if (isMobile.matches){
+		$('#menu-interno').removeClass('sumido');
+		$('#menu-interno').addClass('aparecido');
+		$('#main-navigation').removeClass('aparecido');					
+		$('#main-navigation').addClass('sumido');
+	}
 });
 
 
