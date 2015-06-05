@@ -474,7 +474,15 @@ if ($('body').hasClass('home')){
 	$('#interno-nav-eventos').slick({
 		infinite: true,
 		slidesToShow: 3,
-		slidesToScroll: 3
+		slidesToScroll: 3,
+		responsive: [{
+			breakpoint: 700,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+			}
+		}]
 	});	
 	flautas_projetos()
 });
