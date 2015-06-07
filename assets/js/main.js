@@ -25,10 +25,20 @@ $(window).load(function() {
 	$('#preloader').fadeOut('slow');
     $('#container-preload').fadeIn('slow');
 	altura_footer= parseInt($('#footer').css('height'));
-	window.scrollTo(0, altura_footer);
+	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+	console.log('isMobile.matches'+isMobile.matches);
+	if (!isMobile.matches){
+		window.scrollTo(0, altura_footer);
+			$('#menu-lado').removeClass('aparecido com-fundo');
+			$('#menu-lado').addClass('sumido');
+		
+		
+	}
 
 });
+
 jQuery(document).ready(function($) {
+	
 	// fitVids.
 	$( '.entry-content' ).fitVids();
 
@@ -60,7 +70,6 @@ if ($('body').hasClass('home')){
 		////////////funcao de criacao dos pontos dos poligonos svg
 	function poligonos() {
 	   	largura=$(window).width();
-
 		altura=largura*0.4663076582;
 
 		m=(altura*0.4)/largura
@@ -128,23 +137,18 @@ if ($('body').hasClass('home')){
 	///////////navegacao flautas e projetos
 		function flautas_projetos(){
 
-			console.log('teste')
 			n=$('.cada-flauta').length;
-			console.log('n'+n)
 
 			tam = $('.cada-flauta img').outerWidth(true)
-			console.log('tam'+tam)
 
 			nav_flauta_largura=n*(tam+20)*1.06
-			console.log('nav_flauta_largura'+nav_flauta_largura)
 
 			largura_interno_flauta = $('#interno-flauta').outerWidth();
-			console.log('largura_interno_flauta'+largura_interno_flauta)
 
 			fim = nav_flauta_largura - largura_interno_flauta+100;
-			$('#interno-nav-flauta').css('width',nav_flauta_largura)
+			// $('#interno-nav-flauta').css('width',nav_flauta_largura)
 			alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
-			$('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
+			// $('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
 			alturaProj = $('#interno-nav-projeto').css('height');
 		}
 		$(".botao").click(function(e) {
@@ -240,11 +244,24 @@ if ($('body').hasClass('home')){
 		///////////Quando redimensiona
 		///////////Quando redimensiona
 		$(window).resize(function(){
+			if(isMobile.matches){
+					$('#main-navigation').removeClass('aparecido');
+			       	$('#main-navigation').addClass('sumido');
+					$('#main-navigation #menu-interno').addClass('com-fundo');
+					$('#menu-lado').addClass('aparecido');
+					$('#menu-lado').removeClass('sumido');
+			}
+			else if (!(Math.sqrt(($(window).scrollTop() +20 - altura_footer)*($(window).scrollTop() - altura_footer)) > 15 )){
+				$('#main-navigation').addClass('aparecido');
+	       		$('#main-navigation').removeClass('sumido');
+				$('#main-navigation #menu-interno').removeClass('com-fundo');
+				$('#menu-lado').removeClass('aparecido');
+				$('#menu-lado').addClass('sumido');
+			}
 			poligonos();
 			tam = parseInt($('.cada-flauta').outerWidth(true));
 
 			nav_flauta_largura=n*tam*1.02
-			console.log('nav_flauta_largura'+nav_flauta_largura)
 			$('#interno-nav-flauta').css('width',nav_flauta_largura)
 
 			largura_interno_flauta = $('#interno-flauta').outerWidth();
@@ -367,7 +384,6 @@ if ($('body').hasClass('home')){
 			'action': 'midia_load_category',
 			'category': $(this).attr('data-category')
 		};
-		console.log(data);
 		var elem = this;
 		$('.btn-ajax-categoria.active').removeClass('active');
 		$('.btn-loadmore').show();
@@ -416,38 +432,59 @@ if ($('body').hasClass('home')){
 
 	});
 
-	//ajax facebook
-	var data = {
-		'action': 'facebook_brasa_social_feed'
-	};
-	$.post(odin_main.ajaxurl, data, function(response) {
-		$('#facebook-feed').html(response);
-	});
 
-	//ajax youtube
-	var data = {
-		'action': 'youtube_brasa_social_feed'
-	};
-	$.post(odin_main.ajaxurl, data, function(response) {
-		$('#youtube-feed').html(response);
-	});
-
-	//ajax twitter
-	var config1 = {
-		"id": odin_main.twitter_widget_id,
-		"domId": 'twitter-feed',
-		"maxTweets": 2,
-		"enableLinks": true,
-		"showTime": false,
-		"showRetweet": false,
-		"showInteraction": false
-	};
-	twitterFetcher.fetch(config1);
 }
 //////////////////home///
 //////////////////home///
 //////////////////home///
+else{
+	
+		largura=$(window).width();
+		altura=largura*0.4663076582;
+		$('#triangulo_header_topo').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1 );
+		$('#poligono_header').attr('points','0,0 '+largura+','+altura*0.1+" " +largura+','+altura*0.18+ ' 0,'+altura*0.25);
+		$('#triangulo_header_baixo').attr('points', largura+","+altura*0.18+" "+largura+','+altura*0.3+' '+(2/3)*largura+','+0.203*altura );
+		$('#svg_header').css('height',altura*0.3)
+	console.log('teste');
+	$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
+	$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
+	$('#poligono_social').parent().css('top',-altura*0.05);
+	$('#social .secao-interno').css('margin-top',altura*0.25);
+	$('#social svg').css('height',altura*0.3);
+	$('#svg_social_depois').css('height',altura*0.3);
 
+	$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
+	$('#triangulo_footer').attr('points', '0,0 ' +largura+','+altura*0.35+ ' 0,'+ altura*0.35);
+}
+
+//ajax facebook
+
+var data = {
+	'action': 'facebook_brasa_social_feed'
+};
+$.post(odin_main.ajaxurl, data, function(response) {
+	$('#facebook-feed').html(response);
+});
+
+//ajax youtube
+var data = {
+	'action': 'youtube_brasa_social_feed'
+};
+$.post(odin_main.ajaxurl, data, function(response) {
+	$('#youtube-feed').html(response);
+});
+
+//ajax twitter
+var config1 = {
+	"id": odin_main.twitter_widget_id,
+	"domId": 'twitter-feed',
+	"maxTweets": 2,
+	"enableLinks": true,
+	"showTime": false,
+	"showRetweet": false,
+	"showInteraction": false
+};
+twitterFetcher.fetch(config1);
 	
 
 
@@ -459,10 +496,8 @@ if ($('body').hasClass('home')){
 					$('#main-navigation').addClass('aparecido');
 					$('#menu-interno').removeClass('sumido');
 					$('#menu-interno').addClass('aparecido');
-					console.log ('aparece');
 					} 
 				else {
-					console.log ('some');
 					
 					$('#menu-interno').removeClass('sumido');
 					$('#menu-interno').addClass('aparecido');
@@ -485,6 +520,8 @@ if ($('body').hasClass('home')){
 			}
 		}]
 	});	
+	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
 	flautas_projetos();
 	if (isMobile.matches){
 		$('#menu-interno').removeClass('sumido');

@@ -26,7 +26,7 @@
 	<div id="preloader"></div><!-- #preloader -->
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
-			<div id="menu-lado" class ="sumido">
+			<div id="menu-lado" class ="aparecido com-fundo">
 				<div id="triangulo_menu" ></div>
 				<a class="menu-fechado" href="" title="">
 				<button id="botao-menu" type="button" class=" navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
@@ -53,7 +53,7 @@
 					*/ ?>
 				</div>
 
-				<div id="menu-interno" class="sem-fundo navbar-main-navigation">
+				<div id="menu-interno" class="com-fundo navbar-main-navigation">
 				
 					<?php
 						wp_nav_menu(

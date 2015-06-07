@@ -23,11 +23,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="container">
-		<header id="header-page" class ="row" id="header" role="banner">
-			<div id="menu-lado-page" class ="sumido">
+	<div id="preloader"></div><!-- #preloader -->
+	<div class="container" id="container-preload">
+		<header id="header-principal" class ="row" id="header" role="banner">
+			<div id="menu-lado" class ="sumido">
 				<div id="triangulo_menu" ></div>
-				<a class="menu-fechado-page" href="" title="">
+				<a class="menu-fechado" href="" title="">
 				<button id="botao-menu" type="button" class=" navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
 				<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
 					<span class="icon-bar"></span>
@@ -36,7 +37,7 @@
 				</button>
 				</a>
 			</div><!--menu lado-->
-			<svg>
+			<svg id="svg_header">
 				<polygon id="triangulo_header_topo" points=""/>
 			  	<polygon id="poligono_header" points=""/>
 			  	<polygon id="triangulo_header_baixo" points=""/>

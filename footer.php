@@ -36,5 +36,6 @@ $logo = wp_get_attachment_url($sobre_options['logo'], 'full');
 	</div><!-- .container -->
 
 	<?php wp_footer(); ?>
+	
 </body>
 </html>
