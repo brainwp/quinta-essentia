@@ -1025,8 +1025,9 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif!important;
     font-size: 14px;
+	font-weight:300!important;
     line-height: 1.42857;
     color: #333;
 	background:#000000;
@@ -4773,7 +4774,7 @@ button.close {
     position: absolute;
     z-index: 1070;
     display: block;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Lato',"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: normal;
     line-height: 1.4;
@@ -4880,7 +4881,7 @@ button.close {
     display: none;
     max-width: 276px;
     padding: 1px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Lato',"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.42857;
@@ -5354,7 +5355,7 @@ p img, .wp-caption {
     max-width: 100%}
 .wp-caption .wp-caption-text, .gallery-caption {
     color: #666;
-    font-family: Georgia,  serif;
+    font-family: 'Lato',Georgia,  serif;
     font-size: 12px;
 }
 .wp-caption .wp-caption-text {
@@ -5925,8 +5926,8 @@ font-size:1em;
 }
 
 #titulo_flautas{
-	margin-top: 17vw;
-  font-size: 4vw;
+	margin-top: 46%;
+  font-size: 1.3em;
   text-transform: uppercase;
   font-weight: 400;
 color:black;
@@ -6254,6 +6255,9 @@ input, textarea{
 		width:100%;
 	}
 }
+.next-post-reveal-nav,.prev-post-reveal-nav{
+	display:none;
+}
 .reveal-modal-bg{
 	z-index:9999999!important;
 }
@@ -6336,6 +6340,7 @@ input, textarea{
 		top:-10px;
 		right:-10px;
 		border-color: transparent #ed922a transparent transparent;
+		z-index:9;
 		
 	}
 	html dialog .close-reveal-modal,html .reveal-modal .close-reveal-modal {
@@ -6347,6 +6352,7 @@ input, textarea{
 	  color: #ffffff!important;
 	  font-weight: bold;
 	  cursor: pointer;
+		z-index:99;
 	}
 	.reveal-modal{
 		background-color: #555555!important;

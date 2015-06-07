@@ -6,6 +6,8 @@
  * Time: 17:52
  */ ?>
 <?php if ( have_posts() ) : ?>
+	<div id="triangulo-close-modal"></div>
+	
 
 <?php /* Start the Loop */ ?>
 <?php while ( have_posts() ) : the_post(); ?>

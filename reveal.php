@@ -8,9 +8,10 @@ if(is_object($wp_query) && is_object($wp_query->post) && !empty($wp_query->post-
   }
   elseif($type == 'discos'){
     get_template_part('modal','discos');
+	die();
   }
 else{
 	get_template_part('modal');
-    
+    die();
 }
 }
