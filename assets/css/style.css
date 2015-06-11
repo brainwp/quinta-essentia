@@ -5194,6 +5194,9 @@ button.close {
 .clearfix:after {
     clear: both;
 }
+.sem-altura{
+	height:0;
+}
 .center-block {
     display: block;
     margin-left: auto;
@@ -5769,7 +5772,7 @@ svg{
 .entry-header h1{
 	color:#ffffff;
 	text-transform:uppercase;
-	font-weight:200;
+	font-weight:300;
 	font-size:3.5vw;
 	
 }
@@ -5896,11 +5899,14 @@ font-size:1em;
 	right:10vw;
 	text-transform:uppercase;
 	color:#ffffff;
-  	font-weight: 200;
+  	font-weight: 300;
 	 font-size: 3.5vw;
 }
 #agenda{
     height:600px;
+}
+#agenda .background-image{
+	background-color:#f5b843;
 }
 #agenda .conteudo-secao{
 	margin-top:10vw;
@@ -5991,6 +5997,7 @@ color:black;
 #projetos{
 	padding:80px 0;
 	background:#292929;
+	clear:both;
 }
 #youtube-feed{
 	padding-left: 130px;
@@ -6214,7 +6221,7 @@ input, textarea{
 	padding:0;
 }
 #reveal-modal-id h1{
-	font-weight:lighter;
+	font-weight:300;
 	-ms-transform: rotate(-4deg); /* IE 9 */
 	    -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
 	    transform: rotate(-4deg);
@@ -6222,7 +6229,7 @@ input, textarea{
 }
 #reveal-modal-id p{
   	padding: 0% 5% 40px;
-	font-weight:lighter;
+	font-weight:300;
   	font-size: 1.2em;
 	color:#ffffff;
 }

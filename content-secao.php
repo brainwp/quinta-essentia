@@ -94,7 +94,7 @@ switch ($post->post_name) {
 	<?php echo $antes;?>
 	
 	
-	<div  style='background-image:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID));?>);' class="secao-interno col-md-12"  >
+	<div  style='background-image:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID));?>);' class="background-image secao-interno col-md-12"  >
 		
 		<div class="conteudo-secao" >
 			<?php echo $entre;?>
@@ -104,7 +104,7 @@ switch ($post->post_name) {
 			?>
 			<div class="<?php echo $classe_conteudo;?>" >
 				<?php echo $content;?>
-				<div class="clearfix"></div>
+				<div class="clearfix "></div>
 		 	</div>
 			<?php echo $depois_conteudo;?>
 		</div>
@@ -113,6 +113,6 @@ switch ($post->post_name) {
 </article><!-- #post-## -->
 <div class="depois"><?php echo $depois;?>
 </div>
-<div class="clearfix"></div>
+<div class="clearfix sem-altura"></div>
 
 
