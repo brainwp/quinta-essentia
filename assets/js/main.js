@@ -77,7 +77,7 @@ if ($('body').hasClass('home')){
 		
 		altura_img_disco = $('#parallax_midia').css('height');
 		altura_img_disco= parseInt(altura_img_disco);
-		$('#triangulo_header_topo').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1 );
+		$('#triangulo_header_topo').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.1 + " 0,"+altura*0.1 );
 		$('#poligono_header').attr('points','0,0 '+largura+','+altura*0.1+" " +largura+','+altura*0.18+ ' 0,'+altura*0.25);
 		$('#triangulo_header_baixo').attr('points', largura+","+altura*0.18+" "+largura+','+altura*0.3+' '+(2/3)*largura+','+0.203*altura );
 		$('#svg_header').css('height',altura*0.3)
@@ -128,7 +128,7 @@ if ($('body').hasClass('home')){
 		$('#svg_footer').css('height',altura*0.35);
 		altura_footer= parseInt($('#footer').css('height'));
 		altura_site_info =  parseInt($('.site-info.row').css('height'));		
-		$('.site-info').css('padding-top',(altura_footer/2)-(altura_site_info/2));
+		// $('.site-info').css('padding-top',(altura_footer/2)-(altura_site_info));
 	}                                                                            
 	///////////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////

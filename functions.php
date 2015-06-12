@@ -374,3 +374,18 @@ add_image_size( 'thumb-blog', 300, 130, true );
 
 
 require_once (get_stylesheet_directory() . '/inc/requires-agenda.php');
+
+
+function linguas_init() {
+
+	register_sidebar( array(
+		'name'          => 'Línguas',
+		'id'            => 'linguas',
+		'before_widget' => '<div class="linguas">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'linguas_init' );

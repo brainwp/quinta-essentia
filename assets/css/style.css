@@ -2492,7 +2492,7 @@ textarea.input-lg, .input-group-lg>textarea.form-control, .input-group-lg>textar
     box-shadow: none;
 }
 .btn-default, input[type="submit"], input[type="reset"], button {
-    color: #ffffff;
+    color: #000000;
     background-color: #fff;
     border-color: #ccc;
 }
@@ -5581,7 +5581,19 @@ html {
 
 }
 
-
+.linguas{
+	position:absolute;
+	right:20px;
+	top:4vh;
+}
+.linguas ul{
+	list-style:none;
+	
+}
+.linguas li{
+	display:inline-block;
+	margin-left:10px;
+}
 .menu-fixo {
 		background-color:#6E0E10;
 		top:0!important;
@@ -5626,6 +5638,7 @@ video {
   color: white;
 }
 #destaque{
+	background-image:url('../images/black-paper.png');
 	background-color: #292929;
   position: relative;
   -ms-transform: rotate(25deg); /* IE 9 */
@@ -5676,8 +5689,7 @@ video {
   	z-index: 99;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
-  	background-position-x: center;
-  background-position-y: 200px;
+	background-position: center 10vh;
 background-color:#000000;
 }
 #sobre{
@@ -5697,7 +5709,8 @@ svg{
   
 }
 #triangulo_sobre{
-	fill:#292929;
+
+
 }
 #triangulo_laranja{
 	fill:#e45b31;
@@ -5742,8 +5755,8 @@ svg{
 
 }
 	
-#poligono_header, #poligono_agenda{
-	fill:#ec902b;
+ #poligono_agenda{
+
 }
 #poligono_branco{
 	fill:#ffffff;
@@ -5907,6 +5920,7 @@ font-size:1em;
 }
 #agenda .background-image{
 	background-color:#f5b843;
+	position:absolute;
 }
 #agenda .conteudo-secao{
 	margin-top:10vw;
@@ -6180,7 +6194,9 @@ input, textarea{
 	border-radius:10px;
 }
 .home #footer {
-	background-color: #ffffff;
+	background-color: #ebe7e2;
+	background-image: url(../images/fresh-snow.png);
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 	  height: 100.5vh;
 	  position: absolute;
 		top:0;
@@ -6196,6 +6212,7 @@ input, textarea{
 	bottom:-1px;
 }
 .site-info{
+	padding-top:17%;
 	max-width:1000px;
 	margin:0 auto;
 }

@@ -24,8 +24,13 @@ switch ($post->post_name) {
         $background = 	$parallax_1;
 		$antes = '<div style="background-image:url('.$background.');" class="secao-background"></div>
 		<svg id="svg_sobre">
+			<defs>
+			    <pattern id="image2" patternUnits="userSpaceOnUse" height="400" width="400">
+			      <image x="0" y="0" height="400" width="400" xlink:href="'.get_template_directory_uri().'/assets/images/black-paper-svg.jpg"></image>
+			    </pattern>
+			  </defs>
 		  <polygon id="triangulo_laranja" points=""/>
-		  <polygon id="triangulo_sobre" points=""  />
+		  <polygon fill="url(#image2)" id="triangulo_sobre" points=""  />
 		  <polygon id="poligono_branco" points=""  />
 		</svg><header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
 		
@@ -81,9 +86,13 @@ switch ($post->post_name) {
 	  	
 	     break;
 	 case 'agenda':
-	   			$antes = '<h1 id="titulo_agenda">Agenda</h1><svg id="svg_agenda" >
-			 		<polygon id="triangulo_agenda" points=""/>
-		 			<polygon id="poligono_agenda" points=""/>
+	   			$antes = '<h1 id="titulo_agenda">Agenda</h1><svg id="svg_agenda" ><defs>
+				    <pattern id="image" patternUnits="userSpaceOnUse" height="349" width="466">
+				      <image x="0" y="0" height="349" width="466" xlink:href="'.get_template_directory_uri().'/assets/images/asfalt.jpg"></image>
+				    </pattern>
+				  </defs>
+			 		<polygon  id="triangulo_agenda" points=""/>
+		 			<polygon fill="url(#image)" id="poligono_agenda" points=""/>
 				</svg>';
 		break;
 	}
