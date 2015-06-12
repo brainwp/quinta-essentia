@@ -35,6 +35,18 @@ $(window).load(function() {
 		
 	}
 
+	var add_sc_players = function(){
+		$('.player-soundcloud').each(function(){
+			if(!$(this).hasClass('init')){
+				$(this).scPlayer({
+					links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
+				});
+				$(this).addClass('init');
+				console.log($(this).attr('data-url'));
+			}
+		});
+	}
+	add_sc_players();
 });
 
 jQuery(document).ready(function($) {
@@ -355,7 +367,19 @@ if ($('body').hasClass('home')){
 			$('#header-principal').css('margin-top','0')
 		}
 		poligonos();
-	
+	//sound cloud midias
+	var add_sc_players = function(){
+		$('.player-soundcloud').each(function(){
+			if(!$(this).hasClass('init')){
+				$(this).scPlayer({
+					links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
+				});
+				$(this).addClass('init');
+				console.log($(this).attr('data-url'));
+			}
+		});
+	}
+
 	//ajax midia
 	$('.btn-loadmore').on('click',function(e){
 		var data = {
@@ -376,6 +400,7 @@ if ($('body').hasClass('home')){
 			if(paged > max_paged){
 				$(elem).fadeOut('slow');
 			}
+			add_sc_players();
 		});
 
 	});
@@ -405,6 +430,7 @@ if ($('body').hasClass('home')){
 					$('.btn-loadmore').fadeOut('slow');
 				}
 				$(selector).html(obj.html);
+				add_sc_players();
 			},
 		});
 	});
@@ -537,5 +563,19 @@ twitterFetcher.fetch(config1);
 		var html = '<iframe src="'+src+'" class="youtube-iframe-modal" frameborder="0">';
 		$('#reveal-modal-id').html(html);
 		$('#reveal-modal-id').foundation('reveal', 'open');
+    });
+
+    //sound cloud midias
+	$(document).on('click', '.play-soundcloud', function(e){
+		e.preventDefault();
+		var elem = $(this).attr('data-id');
+		if(!$(this).hasClass('init')){
+			$(elem).scPlayer({
+				links: [{url: $(elem).attr('data-url'), title: $(elem).attr('data-url')}]
+			});
+		}
+		else{
+			$(elem).parent('.sc-play').trigger('click');
+		}
     });
 });

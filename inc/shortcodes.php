@@ -186,7 +186,11 @@ function short_query_func( $atts ) {
 					$depois_interno .= __('Carregar +','odin');
 					$depois_interno .= '</a>';
 				}
-				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div></a>";
+				$player = '';
+				if($url = get_post_meta($query2->post->ID, 'soundcloud_url', true)){
+					$player .= '<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'"></div>';
+				}
+				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb).$player."</div></a>";
 			}
 		endwhile;
 		    if(defined('DOING_AJAX') && DOING_AJAX){
