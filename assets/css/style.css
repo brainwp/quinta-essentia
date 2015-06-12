@@ -6903,3 +6903,8 @@ select {
 #container-preload{
     display: none;
 }
+/*youtube open video modal */
+.youtube-iframe-modal{
+    width:100%;
+    height:80vh;
+}

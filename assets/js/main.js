@@ -529,6 +529,13 @@ twitterFetcher.fetch(config1);
 		$('#main-navigation').removeClass('aparecido');					
 		$('#main-navigation').addClass('sumido');
 	}
+	//open youtube in a modal
+
+	$(document).on('click', '.youtube-video-open', function(e){
+		e.preventDefault();
+		var src = 'https://www.youtube.com/embed/'+$(this).attr('data-id');
+		var html = '<iframe src="'+src+'" class="youtube-iframe-modal" frameborder="0">';
+		$('#reveal-modal-id').html(html);
+		$('#reveal-modal-id').foundation('reveal', 'open');
+    });
 });
-
-

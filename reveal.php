@@ -11,8 +11,8 @@ if(is_object($wp_query) && is_object($wp_query->post) && !empty($wp_query->post-
     get_template_part('modal','disco');
 
   	}
-	else{
-	get_template_part('modal');
-	}
+    else{
+      get_template_part('modal');
+    }
 }
 
