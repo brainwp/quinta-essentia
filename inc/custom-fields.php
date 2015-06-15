@@ -40,3 +40,42 @@
 		'menu_order' => 0,
 	));
 }
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_opcoes-de-midia-j9ou',
+		'title' => 'Opções de mídia',
+		'fields' => array (
+			array (
+				'key' => 'field_557b35cdbcb0f',
+				'label' => 'URL do audio no soundcloud',
+				'name' => 'soundcloud_url',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'midia',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
