@@ -6035,14 +6035,14 @@ color:black;
 }
 
 #youtube-feed{
-	padding-left: 130px;
+	padding-left: 25%;
   	position:absolute;
 	top:-130px;
 	z-index:9999;
 	display:inline-block;
 }
 #youtube-feed .social-feed{
-	padding: 19%;
+	padding-top: 10%;
   	width: 120%;
 	
   
