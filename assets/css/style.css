@@ -6527,10 +6527,21 @@ input, textarea{
 	.single #social, .page #social{
 		margin-top:-150px;
 	}
+	#single-header-img	img{
+		margin: 0 auto;
+	  	display: block;
+	}
+		
+	 .single #social .entry-header, .page #social.entry-header, .archive #social .page-title{
+		background-color:transparent;
+	}
+	
 	#single-header-img{
 		width:100%;
 		height:600px;
 		overflow:hidden;
+		background-color: #000000;
+	  
 	} 
 	.single #primary, .page #primary{
 		margin:0 auto 100px;

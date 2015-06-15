@@ -38,8 +38,13 @@
 				</a>
 			</div><!--menu lado-->
 			<svg id="svg_header">
+				<defs>
+				    <pattern id="image" patternUnits="userSpaceOnUse" height="349" width="466">
+				      <image x="0" y="0" height="349" width="466" xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/asfalt.jpg"></image>
+				    </pattern>
+				  </defs>
 				<polygon id="triangulo_header_topo" points=""/>
-			  	<polygon id="poligono_header" points=""/>
+			  	<polygon fill="url(#image)" id="poligono_header" points=""/>
 			  	<polygon id="triangulo_header_baixo" points=""/>
 			</svg>
 			<nav id="main-navigation" class=" aparecido menu-inicial col-md-12 navbar navbar-default" role="navigation">
