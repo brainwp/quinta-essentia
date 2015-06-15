@@ -38,8 +38,8 @@ switch ($post->post_name) {
          break;
 	case 'projetos':
 		$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
-	    $entre .= '<div class="col-sm-4 pull-right" id="youtube-feed"></div>';
-
+	    $entre .= '<div class="col-sm-4 pull-right" ><div id="youtube-feed"></div><div id="triangulo_projetos"></div><div id="retangulo_projetos"></div></div>';
+	
 	  	break;
 	case 'midia':
 	

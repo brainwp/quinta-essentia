@@ -83,6 +83,7 @@ if ($('body').hasClass('home')){
 	function poligonos() {
 	   	largura=$(window).width();
 		altura=largura*0.4663076582;
+	   	altura_janela=$(window).height();
 
 		m=(altura*0.4)/largura
 		y_lar=m*0.33*largura+0.6*altura;
@@ -134,6 +135,8 @@ if ($('body').hasClass('home')){
 		$('#social .secao-interno').css('margin-top',altura*0.25);
 		$('#social svg').css('height',altura*0.3);
 		$('#svg_social_depois').css('height',altura*0.3);
+
+	
 
 		$('#poligono_social_depois').attr('points','0,0 '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.05 );
 		$('#triangulo_footer').attr('points', '0,0 ' +largura+','+altura*0.35+ ' 0,'+ altura*0.35);
