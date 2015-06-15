@@ -94,6 +94,7 @@ switch ($post->post_name) {
 			 		<polygon  id="triangulo_agenda" points=""/>
 		 			<polygon fill="url(#image)" id="poligono_agenda" points=""/>
 				</svg>';
+				$depois_conteudo = '<a href="eventos/">+ Agenda</a><div class="clearfix"></div>';
 		break;
 	}
 	

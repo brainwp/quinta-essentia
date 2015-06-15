@@ -5944,7 +5944,7 @@ font-size:1em;
 }
 #agenda .background-image{
 	background-color:#f5b843;
-	position:absolute;
+	position:relative;
 }
 #agenda .conteudo-secao{
 	margin-top:10vw;
