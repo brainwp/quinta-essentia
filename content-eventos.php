@@ -15,21 +15,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('col-md-4'); ?>>
 		<div class="cada-eventos">
-			<a class="col-md-12" href="<?php get_permalink();?>">
+			<a class="col-md-12" href="<?php echo get_permalink();?>">
 				<div class="">
-					<img width="305" height="130" src="<?php get_the_post_thumbnail();?>" class="attachment-thumb-eventos wp-post-image" alt="eventos">
-				</div>
-				<div class="texto_disco ">
-					<h7><?php echo date('d/m/Y',get_post_meta( $post->ID, "agenda-event-date", true ));?></h7> - 
-					<h7><?php echo get_post_meta( $post->ID, 'agenda_horario_inic', true );?></h7>
-					<br>
-					<h7><?php echo get_post_meta( $post->ID, "agenda_endereco", true );?></h7>
-					<?php 
-						the_title( '<h1 class="titulo_disco">', '</h1>' );
-						the_content( );
+					<?php echo get_the_post_thumbnail($post->ID, 'eventos');
+					the_title( '<h1 class="titulo_disco">', '</h1>' );
+					
 					?>
 				</div>
-				<div class="mais-disco"></div>
+				<div class="texto_disco ">
+					<h7 class="data-evento"><?php echo date('d/m',get_post_meta( $post->ID, "agenda-event-date", true ));?></h7> 
+					<div class="endereco-eventos">
+						<h7><?php echo get_post_meta( $post->ID, 'agenda_horario_inic', true );?> - </h7>
+						<h7><?php echo get_post_meta( $post->ID, "agenda_endereco", true );?></h7>
+					</div>
+					<?php 
+						$content = get_the_content();
+						$trimmed_content = wp_trim_words( $content, 30, '...');
+						echo "<br/>".$trimmed_content;
+						?>
+				</div>
 			</a>
 		</div>
+		<div class="mais-disco"></div>
+		
 </article><!-- #post-## -->

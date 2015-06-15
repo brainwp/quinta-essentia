@@ -28,7 +28,7 @@
 				<?php $data_invert = get_post_meta( $post->ID , 'agenda-event-date' , true );
 				$data_explo = explode("/", $data_invert);
 				echo
-				'<span id="data">' .
+				'<span class="data-evento">' .
 				date('d/m', $data_invert)
 				. '</span>'; 
 				echo '<span > <div id="horario">' .get_post_meta( $post->ID , 'agenda_horario_inic' , true ). '</div>'; 

@@ -4740,6 +4740,14 @@ button.close {
 .modal-footer .btn+.btn, .modal-footer input[type="submit"]+.btn, .modal-footer input[type="reset"]+.btn, .modal-footer button+.btn, .modal-footer .btn+input[type="submit"], .modal-footer input[type="submit"]+input[type="submit"], .modal-footer input[type="reset"]+input[type="submit"], .modal-footer button+input[type="submit"], .modal-footer .btn+input[type="reset"], .modal-footer input[type="submit"]+input[type="reset"], .modal-footer input[type="reset"]+input[type="reset"], .modal-footer button+input[type="reset"], .modal-footer .btn+button, .modal-footer input[type="submit"]+button, .modal-footer input[type="reset"]+button, .modal-footer button+button {
     margin-left: 5px;
     margin-bottom: 0;
+
+}
+#footer-page .site-info{
+	padding:20px;
+}
+#footer-page{
+	background-color: #ebe7e2;
+	  background-image: url(../images/fresh-snow.png);
 }
 .modal-footer .btn-group .btn+.btn, .modal-footer .btn-group input[type="submit"]+.btn, .modal-footer .btn-group input[type="reset"]+.btn, .modal-footer .btn-group button+.btn, .modal-footer .btn-group .btn+input[type="submit"], .modal-footer .btn-group input[type="submit"]+input[type="submit"], .modal-footer .btn-group input[type="reset"]+input[type="submit"], .modal-footer .btn-group button+input[type="submit"], .modal-footer .btn-group .btn+input[type="reset"], .modal-footer .btn-group input[type="submit"]+input[type="reset"], .modal-footer .btn-group input[type="reset"]+input[type="reset"], .modal-footer .btn-group button+input[type="reset"], .modal-footer .btn-group .btn+button, .modal-footer .btn-group input[type="submit"]+button, .modal-footer .btn-group input[type="reset"]+button, .modal-footer .btn-group button+button {
     margin-left: -1px;
@@ -5906,6 +5914,22 @@ font-size:1em;
 #interno-nav-eventos div{
     display:block;
 }
+.page-eventos .cada-eventos a:hover{
+	text-decoration:none;
+}
+.page-eventos{
+	max-width: 1000px;
+	  display: block;
+	  margin: 0 auto;
+	  float: none;
+}
+.post-type-archive-eventos{
+	background-color:#f5b843;
+}
+.eventos.type-eventos{
+	border:6px solid #f5b843;
+	padding:0;
+}
 #titulo_agenda{
 	position:absolute;
 	z-index:999999;
@@ -5940,6 +5964,7 @@ font-size:1em;
 	height:450px;
 
 }
+
 .cada-eventos .mais-disco, .cada-eventos:hover .mais-disco {
 	bottom:0;
 	right:0;
@@ -6314,10 +6339,20 @@ input, textarea{
 .reveal-modal-bg{
 	z-index:9999999!important;
 }
-#data{
-	color:#ED912A;
-	font-size: 3em;
-  	line-height: 1.5em;
+.data-evento{
+	  color: #ED912A;
+	  font-size: 2em;
+	  line-height: 1.5em;
+	  vertical-align: top;
+	  margin-right: 5%;
+}
+.post-type-archive-eventos #main{
+	background-color:#f5b843;
+	padding:50px 0 40px ;
+}
+.endereco-eventos{
+	width:50%;
+	display:inline-block;
 }
 .modal-eventos{
 	background-color:#ffffff;
@@ -6550,10 +6585,32 @@ input, textarea{
 		padding: 20px;
 	  
 	}
+	.post-type-archive-eventos .single{
+		background-color:transparent;
+		margin-bottom: 10vh;
+	}
+	.post-type-archive-eventos .cada-eventos a{
+		color:#666666;
+	}
+	.post-type-archive-eventos #main-content{
+		background-color:#f5b843;
+	}
+	.post-type-archive-eventos .cada-eventos a:hover{
+		color:#A19D9D;
+	}
+	.post-type-archive-eventos .cada-eventos .endereco-eventos{
+		  margin-bottom: 13px;
+		  font-size: 0.8em;
+	}
+	.post-type-archive-eventos .titulo_disco{
+		font-size:1.6em;
+		padding:0 10px;
+		color:#666666;
+	}
 	.single, .page{
 		background-color:#ffffff;
 	}
-	.single #social, .page #social{
+	.single #social, .page #social, .post-type-archive-eventos #social{
 		margin-top:-150px;
 	}
 	#single-header-img	img{

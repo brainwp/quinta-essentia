@@ -18,7 +18,7 @@
 
 get_header('page'); ?>
 
-	<section id="primary" class="single <?php echo odin_classes_page_full('row'); ?>">
+	<section id="primary" class="page-eventos single <?php echo odin_classes_page_full('row'); ?>">
 		<main id="main-content" class="site-main" role="main">
 			<?php
 					// Start the Loop.
@@ -39,6 +39,8 @@ get_header('page'); ?>
 			
 			?>
 		</main><!-- #main -->
+		<div class="clearfix"></div>
+		
 	</section><!-- #primary -->
 
 <?php
