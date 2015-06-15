@@ -6914,3 +6914,21 @@ select {
 #container-preload{
     display: none;
 }
+/*youtube open video modal */
+.youtube-iframe-modal{
+    width:100%;
+    height:80vh;
+}
+/*sound cloud hidden player*/
+.sc-artwork-list,
+.sc-info,
+.sc-trackslist,
+.sc-info-toggle,
+.sc-scrubber{
+    display: none;
+}
+.player-soundcloud{
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+}
