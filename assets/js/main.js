@@ -563,7 +563,7 @@ twitterFetcher.fetch(config1);
 	$(document).on('click', '.youtube-video-open', function(e){
 		e.preventDefault();
 		var src = 'https://www.youtube.com/embed/'+$(this).attr('data-id');
-		var html = '<iframe src="'+src+'" class="youtube-iframe-modal" frameborder="0">';
+		var html = '<div id="triangulo-close-modal"></div><a class="close-reveal-modal">&#215;</a><iframe src="'+src+'" class="youtube-iframe-modal" frameborder="0">';
 		$('#reveal-modal-id').html(html);
 		$('#reveal-modal-id').foundation('reveal', 'open');
     });
