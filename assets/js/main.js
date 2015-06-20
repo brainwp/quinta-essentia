@@ -47,6 +47,14 @@ $(window).load(function() {
 	}
 	add_sc_players();
 	if (location.hash) {
+		if (location.hash == "#social"){
+			$('#footer').css('position','relative')
+					  	.css('top','0')
+						.css('width','100vw')
+						.css('z-index','9999')
+			
+		}
+		console.log(location.hash)
 	        location.href = location.hash;
 	    }
 });
