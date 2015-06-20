@@ -94,13 +94,13 @@ switch ($post->post_name) {
 			 		<polygon  id="triangulo_agenda" points=""/>
 		 			<polygon fill="url(#image)" id="poligono_agenda" points=""/>
 				</svg>';
-				$depois_conteudo = '<a href="eventos/">+ Agenda</a><div class="clearfix"></div>';
+				$depois_conteudo = '<a class="btn btn-loadmore" href="eventos/">+ Agenda</a><div class="clearfix"></div>';
 		break;
 	}
 	
 	$post=$post_antigo;
 ?>
-<article id="<?php echo $post->post_name ?>" <?php post_class('row'); ?>>
+<article name="<?php echo $post->post_name; ?>" id="<?php echo $post->post_name; ?>" <?php post_class('row'); ?>>
 	<?php echo $antes;?>
 	
 	

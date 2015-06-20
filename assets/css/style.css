@@ -1,5 +1,14 @@
-﻿/* slick slider */
+﻿@font-face {
+    font-family:vineritc;
+    src: url(../fonts/vineritc.ttf);
+}
+
+/* slick slider */
 /* Slider */
+a , a:focus;{
+	border-style:none;
+}
+
 .slick-slider
 {
     position: relative;
@@ -5804,9 +5813,19 @@ svg{
   	left: 7vw;
 
 }
+
 #cabecalho_sobre img, #cabecalho_sobre h1{
 	display:inline-block;
 	margin-bottom:1%;
+	font-family:vineritc;
+	color:#C00;
+	font-size: 3.2em;
+	  font-style: normal;
+	  line-height: .5;
+	  font-weight: 400;
+	  color: #C00;
+	  letter-spacing: -3pt;
+	text-transform:lowercase!important;
 	
 }
 #cabecalho_sobre img{
@@ -5826,15 +5845,13 @@ svg{
 	font-size:1.7em;
 }
 #sobre .secao-interno{
-	position:relative;
+	background-position: center -12vh;
+  	position:relative;
 	z-index:99999;
 	background:#f2f1f0;
   	padding: 3% 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
-  	background-position-x: center;
-  	background-position-y: -12vh;
-
 }
 
 #sobre h5{
@@ -5941,6 +5958,9 @@ font-size:1em;
 }
 #agenda{
     height:600px;
+}
+#agenda .btn-loadmore{
+	margin-bottom:30px;
 }
 #agenda .background-image{
 	background-color:#f5b843;
@@ -6176,6 +6196,7 @@ color:black;
 
 #discografia .entry-header, #social .entry-header{
    	position: absolute;
+	background-color:transparent;
    	top: -10vw;
    	z-index: 9999;
    	color: #ffffff;
@@ -6290,6 +6311,8 @@ input, textarea{
 	max-width:1000px;
 	z-index: 99999999;
 	padding:0;
+	position: fixed;
+	  top: 10vh!important;
 }
 #reveal-modal-id h1{
 	font-weight:300;

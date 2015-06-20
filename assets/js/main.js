@@ -26,7 +26,6 @@ $(window).load(function() {
     $('#container-preload').fadeIn('slow');
 	altura_footer= parseInt($('#footer').css('height'));
 	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-	console.log('isMobile.matches'+isMobile.matches);
 	if (!isMobile.matches){
 		window.scrollTo(0, altura_footer);
 			$('#menu-lado').removeClass('aparecido com-fundo');
@@ -42,7 +41,6 @@ $(window).load(function() {
 					links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
 				});
 				$(this).addClass('init');
-				console.log($(this).attr('data-url'));
 			}
 		});
 	}
@@ -378,7 +376,6 @@ if ($('body').hasClass('home')){
 					links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
 				});
 				$(this).addClass('init');
-				console.log($(this).attr('data-url'));
 			}
 		});
 	}
@@ -474,7 +471,6 @@ else{
 		$('#poligono_header').attr('points','0,0 '+largura+','+altura*0.1+" " +largura+','+altura*0.18+ ' 0,'+altura*0.25);
 		$('#triangulo_header_baixo').attr('points', largura+","+altura*0.18+" "+largura+','+altura*0.3+' '+(2/3)*largura+','+0.203*altura );
 		$('#svg_header').css('height',altura*0.3)
-	console.log('teste');
 	$('#poligono_social').attr('points','0,'+altura*0.05+' '+largura+',0 '+largura+','+altura*0.3+'  0,'+altura*0.2 );
 	$('#triangulo_social').attr('points','  0,'+altura*0.2+' '+0.6*largura+','+0.26*altura+' 0,'+altura*0.27);
 	$('#poligono_social').parent().css('top',-altura*0.05);
