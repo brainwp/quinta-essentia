@@ -31,8 +31,9 @@ $(window).load(function() {
 			$('#menu-lado').removeClass('aparecido com-fundo');
 			$('#menu-lado').addClass('sumido');
 		
-		
+	
 	}
+	
 
 	var add_sc_players = function(){
 		$('.player-soundcloud').each(function(){
@@ -45,7 +46,12 @@ $(window).load(function() {
 		});
 	}
 	add_sc_players();
+	if (location.hash) {
+	        location.href = location.hash;
+	    }
 });
+
+
 
 jQuery(document).ready(function($) {
 	
@@ -74,6 +80,8 @@ jQuery(document).ready(function($) {
 
 	//////////////////home///
 	//////////////////home///
+
+
 
 if ($('body').hasClass('home')){
 		////////////funcao de criacao dos pontos dos poligonos svg
