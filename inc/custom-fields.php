@@ -43,7 +43,7 @@
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_opcoes-de-midia-j9ou',
+		'id' => 'acf_opcoes-de-midia',
 		'title' => 'Opções de mídia',
 		'fields' => array (
 			array (
@@ -68,12 +68,14 @@ if(function_exists("register_field_group"))
 					'order_no' => 0,
 					'group_no' => 0,
 				),
+			),
+			array (
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'disco',
-					'order_no' => 1,
-					'group_no' => 0,
+					'order_no' => 0,
+					'group_no' => 1,
 				),
 			),
 		),
