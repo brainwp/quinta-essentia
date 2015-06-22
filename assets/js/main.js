@@ -593,4 +593,14 @@ twitterFetcher.fetch(config1);
 			$(elem).parent('.sc-play').trigger('click');
 		}
     });
+	$(".menu-item a").click(function(){
+					endereco = $(this).attr("href").split("#")[1];
+		if (endereco == 'social'){
+			console.log($(this).attr("href"))
+			$('#footer').css('position','relative')
+					  	.css('top','0')
+						.css('width','100vw')
+						.css('z-index','9999')
+		}
+	});
 });

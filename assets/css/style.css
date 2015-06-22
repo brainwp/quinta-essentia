@@ -5844,8 +5844,9 @@ svg{
 	color: #5A5A5A;
 	font-size:1.7em;
 }
+
 #sobre .secao-interno{
-	background-position: center -12vh;
+	background-position: center center;
   	position:relative;
 	z-index:99999;
 	background:#f2f1f0;
