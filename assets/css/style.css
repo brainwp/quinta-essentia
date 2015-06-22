@@ -5853,6 +5853,8 @@ svg{
   	padding: 3% 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
+  background-position-y: -27vh;
+
 }
 
 #sobre h5{
