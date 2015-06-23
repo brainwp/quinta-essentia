@@ -165,10 +165,13 @@ if ($('body').hasClass('home')){
 	///////////navegacao flautas e projetos
 	///////////navegacao flautas e projetos
 		function flautas_projetos(){
-
+			
 			n=$('.cada-flauta').length;
 
 			tam = $('.cada-flauta img').outerWidth(true)
+			posicaoLeft = parseInt($('#interno-nav-flauta').css('left'));
+			$('#interno-nav-flauta').css('left',18)
+			console.log(posicaoLeft)
 
 			nav_flauta_largura=n*(tam+20)*1.06
 
@@ -199,7 +202,13 @@ if ($('body').hasClass('home')){
 					e.preventDefault();
 					posicaoLeft = $('#interno-nav-flauta').css('left');
 					posicaoLeft=parseInt(posicaoLeft)
-					if(posicaoLeft < -fim){
+					console.log('posleftp'+posicaoLeft);
+					console.log('fim'+fim);
+					nav_flauta_largura=n*(tam+20)*1.01
+					largura_interno_flauta = $('#interno-flauta').outerWidth();
+
+					fim = nav_flauta_largura - largura_interno_flauta;
+					if(posicaoLeft < -1*fim){
 			        	break;
 					}
 					else{

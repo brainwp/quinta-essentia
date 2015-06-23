@@ -5846,14 +5846,12 @@ svg{
 }
 
 #sobre .secao-interno{
-	background-position: center center;
   	position:relative;
 	z-index:99999;
-	background:#f2f1f0;
-  	padding: 3% 0 10%;
+	background: #F2F1F0 none no-repeat fixed 0% -35vh;
+	padding: 3% 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
-  background-position-y: -27vh;
 
 }
 
@@ -6009,6 +6007,7 @@ color:black;
   	max-width: 75%;
 	overflow: hidden;
 	position:relative;
+	border:solid 1px black;
 }
 #background_flautas{
 	position:absolute;
@@ -6019,25 +6018,33 @@ color:black;
 #interno-flauta .glyphicon{
 	  position: absolute;
 	  line-height: 102%;
-	  height: 10vw;
+	  height: 120px;
 	  background: #f2f1f0;
 	  top: 0;
 	  z-index: 9999;
 	
 }
+#interno-flauta .glyphicon-menu-right:before,#interno-flauta .glyphicon-menu-left:before{
+
+	position:relative;
+	display:block;
+	top:50%;
+	margin-top:-14px;
+}
 #interno-flauta .glyphicon.esquerda	{
 	left:0;
   	border-radius: 0;
+	border-right:solid 1px black;
 
 }
 #interno-flauta .glyphicon.direita{
 	right:0;
 	border-radius:0;
-	
+	border-left:solid 1px black;	
   
 }
 .cada-flauta img{
-	width:10vw;
+	width:120px;
 	max-width:120px;
 }
 
@@ -6145,6 +6152,18 @@ color:black;
   	padding: 80px 0 60px;
   
 }
+.sc-player .sc-controls a{
+	color:transparent;
+}
+.sc-player{
+	background-image:url(../images/playpause.png);
+ 	height: 30px;
+ 	width: 30px;
+}
+.sc-player.playing{
+	background-position: 30px;
+	
+}
 .midia-category{
 	margin: 0 0 30px 10%;
 }
@@ -6215,11 +6234,18 @@ color:black;
 
 	
 }
+.cada-disco a .texto_disco{
+	color:#ffffff;
+	
+}
+.sc-play{
+	color:transparent;
+}
 .cada-disco{
 	margin-bottom:40px;
 	display:block;
 	background-color:#565555;
-	color:#ffffff;
+	color:#ffffff!important;
 	position: relative;
   
 }
@@ -6307,7 +6333,9 @@ input, textarea{
 	vertical-align:bottom;
 }
 #logo_footer img{
-	vertical-align:middle;;
+	vertical-align:middle;
+	max-width: 200px;
+  
 }
 	
 #reveal-modal-id{
