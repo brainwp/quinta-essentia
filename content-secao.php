@@ -78,7 +78,7 @@ switch ($post->post_name) {
 	  	$depois_conteudo .= '</div>';
 		$depois_conteudo .= '<div class="col-md-4 blog-feed ">';
     	$depois_conteudo .= '<div id="blog-feed"><h4>'.__('Nosso Blog','odin').'</h4>'.do_shortcode( '[query post_type=post]' ).'</div>';
-  		$depois_conteudo .= '<form class="" id="newsletter"><h4>'.__('Assine nossa Newsletter','odin').'</h4><input id="email" name="email" type="text"></input><input id="enviar" type="submit" name="enviar" value="'.__('Ok','odin').'"></input></form></div><!--blog-->';
+  		$depois_conteudo .= do_shortcode( '[contact-form-7 id="780" title="newsletter"]' ).'</div><!--blog-->';
 		$depois_conteudo .= '';
 		$classe_conteudo = "col-md-4";
 	  	

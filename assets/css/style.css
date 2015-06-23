@@ -5818,13 +5818,12 @@ svg{
 	display:inline-block;
 	margin-bottom:1%;
 	font-family:vineritc;
-	color:#C00;
 	font-size: 3.2em;
 	  font-style: normal;
 	  line-height: .5;
 	  font-weight: 400;
-	  color: #C00;
-	  letter-spacing: -3pt;
+	  color: #000000;
+	  letter-spacing: -1pt;
 	text-transform:lowercase!important;
 	
 }
