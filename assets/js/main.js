@@ -602,6 +602,17 @@ twitterFetcher.fetch(config1);
 			$(elem).parent('.sc-play').trigger('click');
 		}
     });
+    $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+    	var element = $(this).find('.player-soundcloud-url-modal');
+		if(!$(element).hasClass('init')){
+			var _id = '#play-modal-' + element.attr('data-id');
+			console.log(_id); 
+			$(_id).scPlayer({
+				links: [{url: element.attr('data-url'), title: element.attr('data-url')}]
+			});
+			$(_id).addClass('init');
+		}
+	});
 	$(".menu-item a").click(function(){
 					endereco = $(this).attr("href").split("#")[1];
 		if (endereco == 'social'){

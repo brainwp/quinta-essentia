@@ -78,7 +78,7 @@ function mytheme_show_box($post) {
 		if (get_post_meta($post->ID, $field['id'], true)){
 			if ($field['id']== 'agenda-event-date'){
 				$meta = get_post_meta($post->ID, $field['id'], true);
-				$meta = date('d/m/Y', $meta);
+				$meta = date('d/m/Y', intval($meta));
 			}
 			else{
 				$meta = get_post_meta($post->ID, $field['id'], true);

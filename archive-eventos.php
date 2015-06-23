@@ -20,6 +20,23 @@ get_header('page'); ?>
 
 	<section id="primary" class="page-eventos single <?php echo odin_classes_page_full('row'); ?>">
 		<main id="main-content" class="site-main" role="main">
+			<div class="dropdown">
+				<button class="btn btn-default btn-loadmore active dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<?php _e('Filtrar por ano','odin');?>
+					<span class="caret"></span>
+			    </button>
+			    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    	<?php $year = intval(date('Y')) + 2;?>
+			    	<?php for ($i = 2006; $i < $year; $i++): ?>
+			    	    <?php $link = array('by_year' => $i);?>
+			    		<li>
+			    			<a href="<?php echo esc_url(add_query_arg($link,get_post_type_archive_link('eventos' )));?>">
+			    				<?php echo $i;?>
+			    			</a>
+			    		</li>
+			    	<?php endfor;?>
+			    </ul>
+			</div>
 			<?php
 					// Start the Loop.
 					while ( have_posts() ) : the_post();
@@ -33,11 +50,15 @@ get_header('page'); ?>
 
 					endwhile;
 
-					// Page navigation.
-					odin_paging_nav();
 
 			
 			?>
+	        <div class="text-center col-md-12">
+	        	<?php 
+	    	    // Page navigation.
+		        odin_paging_nav();
+		        ?>
+	        </div><!-- .text-center col-md-12 -->
 		</main><!-- #main -->
 		<div class="clearfix"></div>
 		
