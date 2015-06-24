@@ -23,7 +23,7 @@
 					?>
 				</div>
 				<div class="texto_disco ">
-					<h7 class="data-evento"><?php echo date('d/m',get_post_meta( $post->ID, "agenda-event-date", true ));?></h7> 
+					<h7 class="data-evento"><?php echo date('d/m',intval(get_post_meta( $post->ID, "agenda-event-date", true )));?></h7> 
 					<div class="endereco-eventos">
 						<h7><?php echo get_post_meta( $post->ID, 'agenda_horario_inic', true );?> - </h7>
 						<h7><?php echo get_post_meta( $post->ID, "agenda_endereco", true );?></h7>

@@ -156,7 +156,7 @@ function short_query_func( $atts ) {
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
 					$html .= '<div class="texto_disco ">
 					<h7>'
-						.date('d/m/Y',get_post_meta( $query2->post->ID, "agenda-event-date", true ))
+						.date('d/m/Y',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
 					.'</h7> - 
 					<h7>'
 						.get_post_meta( $query2->post->ID, 'agenda_horario_inic', true )
