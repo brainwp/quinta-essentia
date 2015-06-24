@@ -42,7 +42,7 @@
 				$query->set('order', 'DESC');
 			}
 		}
-		if(is_post_type_archive('eventos') && isset($_GET['by_year'])){
+		if(is_post_type_archive('eventos') && isset($_GET['by_year']) && $query->is_main_query()){
 			$meta_query = array(
 				array(
 					'key'     => 'agenda-event-year',

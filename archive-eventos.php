@@ -22,7 +22,11 @@ get_header('page'); ?>
 		<main id="main-content" class="site-main" role="main">
 			<div class="dropdown">
 				<button class="btn btn-default btn-loadmore active dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					<?php _e('Filtrar por ano','odin');?>
+					<?php if(!isset($_GET['by_year'])):?>
+					    <?php _e('Filtrar por ano','odin');?>
+				    <?php else: ?>
+				        <?php echo $_GET['by_year'];?>
+				    <?php endif;?>
 					<span class="caret"></span>
 			    </button>
 			    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -30,9 +34,15 @@ get_header('page'); ?>
 			    	<?php for ($i = 2006; $i < $year; $i++): ?>
 			    	    <?php $link = array('by_year' => $i);?>
 			    		<li>
+			    			<?php if(isset($_GET['by_year']) && $i == $_GET['by_year']):?>
 			    			<a href="<?php echo esc_url(add_query_arg($link,get_post_type_archive_link('eventos' )));?>">
+			    				<b><?php echo $i;?></b>
+			    			</a>
+			    		    <?php else: ?>
+			    		    <a href="<?php echo esc_url(add_query_arg($link,get_post_type_archive_link('eventos' )));?>">
 			    				<?php echo $i;?>
 			    			</a>
+			    		    <?php endif;?>
 			    		</li>
 			    	<?php endfor;?>
 			    </ul>
