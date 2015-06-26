@@ -26,7 +26,7 @@
 	<div id="preloader"></div><!-- #preloader -->
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
-			<div id="menu-lado" class ="sumido">
+			<div id="menu-lado" class ="">
 				<div id="triangulo_menu" ></div>
 				<a class="menu-fechado" href="" title="">
 				<button id="botao-menu" type="button" class=" navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">

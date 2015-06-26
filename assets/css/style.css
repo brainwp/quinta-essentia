@@ -6006,6 +6006,8 @@ color:black;
   	max-width: 75%;
 	overflow: hidden;
 	position:relative;
+	background-color:rgba(0, 0, 0, 0.59);
+	
 	border:solid 1px black;
 }
 #background_flautas{
@@ -6013,15 +6015,16 @@ color:black;
 	width:100vw;
 	height:100vw;
 	background-attachment:fixed;
+	
 }
 #interno-flauta .glyphicon{
 	  position: absolute;
 	  line-height: 102%;
 	  height: 120px;
-	  background: #f2f1f0;
 	  top: 0;
 	  z-index: 9999;
-	
+	  background-color: rgba(0, 0, 0, 0.59);
+	  color: #ffffff;
 }
 #interno-flauta .glyphicon-menu-right:before,#interno-flauta .glyphicon-menu-left:before{
 
@@ -6039,7 +6042,8 @@ color:black;
 #interno-flauta .glyphicon.direita{
 	right:0;
 	border-radius:0;
-	border-left:solid 1px black;	
+	border-left:solid 1px black;
+		
   
 }
 .cada-flauta img{
@@ -6053,9 +6057,10 @@ color:black;
   	width: 1200vw;
 	right:0;
 	left:0;
-	-webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+	-webkit-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+
 	
 
 }
@@ -6102,35 +6107,36 @@ color:black;
   
 }
 #interno-projeto{
-	diplay:inline-block;
+	display:inline-block;
 	position:relative;
 	height: 500px;
 	margin-bottom: 60px;
 	overflow: hidden;
+	background-color:rgba(0, 0, 0, 0.59);
+	
 }
 #projetos .botao{
 	position:absolute;
 	color:#ffffff;
 	z-index:999	;
+	font-size:30px;
+	width:100%;
+	background-color:rgba(0, 0, 0, 0.59);
+	
+}
+#projetos .botao span{
 	left:50%;
-	font-size:80px;
-	margin-left:-57px;
-	-ms-transform: rotate(90deg); /* IE 9 */
-	  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-	  transform: rotate(90deg);
+	margin-left:-30px;
 }
 #cima{
 	top:0;
-	margin-top:-30px;
-	
 }
 #baixo{
 	bottom:0;
-	margin-bottom:-30px;
 }
 #interno-nav-projeto{
   	position: relative;
-	top:0;
+	top:30px;
 	-webkit-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
@@ -7071,3 +7077,105 @@ select {
     bottom: 50px;
     right: 40px;
 }
+@media screen and (max-width: 767px) {
+	#destaque{
+		display:none;
+	}
+	#sobre {
+	  margin-top: 0;
+	  padding-top: 0;
+	}
+	#youtube-feed{
+		position:relative;
+	  	padding-left: 0;
+		
+	}
+	#triangulo_projetos,#retangulo_projetos{
+		display:none;
+	}
+	#parcerias {
+	  text-align: center;
+	}
+	.site-info {
+		width:60%;
+		margin:0 auto;
+	}
+	#footer{
+		height:initial!important;
+		padding-bottom:10%;
+	}
+	svg{
+		display:none;
+	}
+	.secao-background{
+		position:relative;
+		height:300px;
+	}
+	#sobre header{
+		padding-top:0;
+	}
+	#cabecalho_sobre {
+	  position: relative;
+	  margin-top: 0;
+	  left: 0;
+	  width: 100%;
+	}
+	#sobre .conteudo-secao{
+		margin:0 5%;
+		width:90%;
+	}
+	#cabecalho_sobre h1{
+		font-size:8%;
+		padding-bottom: 7%;
+	  
+	}
+	#cabecalho_sobre img {
+	  width: 30%;
+	}
+	#sobre .secao-interno{
+		background:#F2F1F0 none no-repeat fixed center 10%;
+		background-size:contain;
+		
+	}
+	#sobre .conteudo-secao p {
+	  margin-right: 0;
+	}
+	.single #social, .page #social, .post-type-archive-eventos #social {
+	  	margin-top: 0;
+	}
+	#header-principal{
+		position:absolute;
+	}
+	#single-header-img	img {
+	  margin: 110px auto;
+	}
+	.single #page-content, .page #page-content {
+		width:90%;
+		margin-left:5%;
+	}
+	.single #triangulo_menu,	.single .navbar-toggle{
+		position:absolute;
+		}
+	.single .main-navigation{
+		left:20px;
+	}
+	#interno-flauta{
+		margin:0 auto;
+		width:90%;
+		border:none;
+		max-width:100%;
+		background-color:transparent;
+		
+	}
+	#interno-nav-flauta{
+		width:100%;
+		left:0!important;
+	}
+	.cada-flauta{
+		margin:10px 10px 0 0;
+	}
+	#left, #right{
+		display:none;
+	}
+}
+

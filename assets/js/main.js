@@ -170,14 +170,14 @@ if ($('body').hasClass('home')){
 
 			tam = $('.cada-flauta img').outerWidth(true)
 			posicaoLeft = parseInt($('#interno-nav-flauta').css('left'));
-			$('#interno-nav-flauta').css('left',18)
+			$('#interno-nav-flauta').css('left',28)
 			console.log(posicaoLeft)
 
 			nav_flauta_largura=n*(tam+20)*1.06
 
 			largura_interno_flauta = $('#interno-flauta').outerWidth();
 
-			fim = nav_flauta_largura - largura_interno_flauta+100;
+			fim = nav_flauta_largura - largura_interno_flauta;
 			// $('#interno-nav-flauta').css('width',nav_flauta_largura)
 			alturaNavFlauta = $("#interno-nav-flauta").outerHeight();
 			// $('#interno-flauta .glyphicon').css("line-height",alturaNavFlauta+"px")
@@ -190,58 +190,72 @@ if ($('body').hasClass('home')){
 					e.preventDefault();
 					posicaoLeft = $('#interno-nav-flauta').css('left');
 					posicaoLeft=parseInt(posicaoLeft)
-					if(posicaoLeft >= 0){
-
+					nav_flauta_largura=n*(tam+20)+28
+					interno_flauta_largura = $('#interno-flauta').outerWidth();
+					console.log('left: '+posicaoLeft);
+					
+					if(  (posicaoLeft + 28 + 200) > 0){
+						$('#interno-nav-flauta').css('left',posicaoLeft - posicaoLeft + 28)
 			        	break;
 					}
 					else{
-						$('#interno-nav-flauta').css('left',posicaoLeft+100)
+						$('#interno-nav-flauta').css('left',posicaoLeft+200)
 						break
 					}
 				case 'right':
 					e.preventDefault();
 					posicaoLeft = $('#interno-nav-flauta').css('left');
 					posicaoLeft=parseInt(posicaoLeft)
-					console.log('posleftp'+posicaoLeft);
-					console.log('fim'+fim);
-					nav_flauta_largura=n*(tam+20)*1.01
-					largura_interno_flauta = $('#interno-flauta').outerWidth();
-
-					fim = nav_flauta_largura - largura_interno_flauta;
-					if(posicaoLeft < -1*fim){
+					nav_flauta_largura=n*(tam+20)+28
+					interno_flauta_largura = $('#interno-flauta').outerWidth();
+					dif= nav_flauta_largura-interno_flauta_largura+posicaoLeft
+					
+					fim = nav_flauta_largura - largura_interno_flauta*1.078;
+					if(dif < 200){
+						$('#interno-nav-flauta').css('left',posicaoLeft - dif)
 			        	break;
 					}
 					else{
-						$('#interno-nav-flauta').css('left',posicaoLeft-100)
+						$('#interno-nav-flauta').css('left',posicaoLeft-200)
 						break
 					}
 				case 'cima':
 					e.preventDefault();
 					posicaoTop = $('#interno-nav-projeto').css('top');
+					interno_projeto_altura = $('#interno-projeto').outerHeight(false);
+					interno_nav_projeto= $('#interno-nav-projeto').outerHeight(true);
 					posicaoTop=parseInt(posicaoTop)
-
-
-					if (posicaoTop <= 0){
-
-						$('#interno-nav-projeto').css('top',posicaoTop+100)
-
+					console.log('posicaoTop'+posicaoTop)
+					console.log('interno_nav_projeto'+interno_nav_projeto)				
+					console.log('interno_nav_projeto - interno_projeto_altura +posicaoTop )'+(interno_nav_projeto - interno_projeto_altura +posicaoTop ))				
+					console.log('interno_projeto_altura'+interno_projeto_altura)
+					
+					if (posicaoTop >= -200){
+						$('#interno-nav-projeto').css('top',posicaoTop-posicaoTop+30)
+						
 						break
 					}
 					else{
+						$('#interno-nav-projeto').css('top',posicaoTop+200)
+						
 						break
 					}
 				case 'baixo':
 					e.preventDefault();
 					posicaoTop = $('#interno-nav-projeto').css('top');
-					posicaoTop=parseInt(posicaoTop)
-					alturaProj=$('.cada-projeto').outerHeight(true);
-					limite =  parseInt($('#interno-nav-projeto').css('height'))-(alturaProj*2)
-					if (-posicaoTop <= limite){
-						$('#interno-nav-projeto').css('top',posicaoTop-alturaProj)
+					interno_projeto_altura = $('#interno-projeto').outerHeight(false);
+					interno_nav_projeto= $('#interno-nav-projeto').outerHeight(true);
+					posicaoTop=parseInt(posicaoTop)	
+					console.log('posicaoTop'+posicaoTop)
+					
+					
+									
+					if ((interno_nav_projeto - interno_projeto_altura +posicaoTop +30) < 200){
+						$('#interno-nav-projeto').css('top',posicaoTop-( interno_nav_projeto - interno_projeto_altura + posicaoTop + 30));					
 						break
 					}
 					else{
-
+						$('#interno-nav-projeto').css('top',posicaoTop - 200)
 						break								
 					}
 			}
