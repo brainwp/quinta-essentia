@@ -87,7 +87,7 @@ function short_query_func( $atts ) {
 		 case 'eventos':			
 		        $class_container = "col-md-12 ";
 		 		$thumb='thumb-eventos';
-
+				$class_thumb = 'thumb-eventos';
 		
 				   break;
 	}  
@@ -154,24 +154,23 @@ function short_query_func( $atts ) {
 			}
 			else if ($a['post_type'] == 'eventos'){
 				
-				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>
-							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
+				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>";
 					$html .= '<div class="texto_disco ">
-					<h7>'
-						.date('d/m/Y',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
-					.'</h7> - 
-					<h7>'
+					<h7 class="data-evento">'
+						.date('d/m',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
+					.'</h7> <br>
+					<h7 class="hora">'
 						.get_post_meta( $query2->post->ID, 'agenda_horario_inic', true )
 					.'</h7><br/>
-					<h7>'
+					<h7 class="endereco-eventos">'
 						.get_post_meta( $query2->post->ID, "agenda_endereco", true )
 					.'</h7>
 					<h1 class="titulo-disco">'
 						.get_the_title( $query2->post->ID)
-					.'</h1>'; 
+					.'</h1><div class="'.$class_thumb.'">'.get_the_post_thumbnail($query2->post->ID, $thumb).'</div>'; 
 					$content = get_the_content();
 					$trimmed_content = wp_trim_words( $content, 30, '...');
-					$html .= $trimmed_content."</div><div class='mais-disco'></div></a></div>";
+					// $html .= $trimmed_content."</div><div class='mais-disco'></div></a></div>";
 			}
 			else if ($a['post_type'] == 'post'){
 				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item."cada-".$a['post_type']."'>
@@ -185,7 +184,7 @@ function short_query_func( $atts ) {
 			else if ($a['post_type'] == 'equipe' ){
 				$content = $query2->post->post_content;
 				$trimmed_content_equipe = wp_trim_words( $content, 60, '...');
-				$html .="<div class='link-equipe'> <div class='".$class_item." cada-equipe animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div><!--cada-equipe--><div class='equipe-conteudo'><a href='".get_permalink( $query2->post->ID)."'>".$trimmed_content_equipe." <span class='glyphicon glyphicon-plus' aria-hidden='true'></span></a></div><!--equipe-conteudo--></div><!--link-equipe-->";
+				$html .="<div class='link-equipe'><a href='".get_permalink( $query2->post->ID)."'> <div class='".$class_item." cada-equipe animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</a></div><!--cada-equipe--><div class='equipe-conteudo'><a href='".get_permalink( $query2->post->ID)."'>".$trimmed_content_equipe." </a></div><!--equipe-conteudo--></div><!--link-equipe-->";
 				
 			}
 			else{

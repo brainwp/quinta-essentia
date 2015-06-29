@@ -20,6 +20,7 @@ $classe_conteudo = "";
 $parallax_1 = wp_get_attachment_url($parallax_options['parallax_1'], 'full');
 switch ($post->post_name) {
    case 'sobre':
+		$classe_conteudo = 'sobre-conteudo';
 		
         $background = 	$parallax_1;
 		$antes = '<div style="background-image:url('.$background.');" class="secao-background"></div>
@@ -33,8 +34,7 @@ switch ($post->post_name) {
 		  <polygon fill="url(#image2)" id="triangulo_sobre" points=""  />
 		  <polygon id="poligono_branco" points=""  />
 		</svg><header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
-		
-		$entre .="<div id='cabecalho_sobre'> <img src='".$logo."'/><h1>Quinta Essentia</h1></div> ";
+		$entre .="<div id='retangulo-branco'></div><div id='cabecalho_sobre'> <img src='".$logo."'/> <img id='sobre-escrito' src='".get_template_directory_uri()."/assets/images/escrito.png'/></div> </div>";
          break;
 	case 'projetos':
 		$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';

@@ -1429,10 +1429,24 @@ pre code {
     width: 100%;
 
 }
+.link-equipe img{
+	-webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.equipe-conteudo a:hover{
+	text-decoration:none;
+}
+.equipe-conteudo a {
+	color:#222;
+}
 .link-equipe:hover img{
 	opacity:1;
 	max-width:130%;
 	width:100%;
+	-webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .link-equipe:hover .equipe-conteudo{
 	opacity: 1;
@@ -5803,15 +5817,15 @@ svg{
 	color:#ffffff;
 	text-transform:uppercase;
 	font-weight:300;
-	font-size:3.5vw;
+	font-size:30pt;
 	
 }
 #cabecalho_sobre{
-	position: absolute;
-  	z-index: 999;
-  	margin-top: -16vw;
-  	left: 7vw;
-
+	  position: relative;
+	  z-index: 999;
+	  margin-top: -225px;
+	  left: 7vw;
+	  margin-bottom: 40px;
 }
 
 #cabecalho_sobre img, #cabecalho_sobre h1{
@@ -5829,7 +5843,15 @@ svg{
 }
 #cabecalho_sobre img{
 	width:12vw;
+	width: 215px;
+  	margin: 0 0 0 26px;
+  	vertical-align: bottom;
 }
+#retangulo-branco{
+	height:95px;
+	background-color:#ffffff;
+}
+
 #cabecalho_sobre h1{
 	vertical-align: bottom;
 	text-transform: uppercase;
@@ -5839,7 +5861,7 @@ svg{
 	margin:0 0vw 0 7vw ;
 }
 #sobre .conteudo-secao {
-	margin:0 7vw 0 26.5vw;
+	margin: 0;
 	color: #5A5A5A;
 	font-size:1.7em;
 }
@@ -5848,7 +5870,7 @@ svg{
   	position:relative;
 	z-index:99999;
 	background: #F2F1F0 none no-repeat fixed 0% -35vh;
-	padding: 3% 0 10%;
+	padding: 0 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
 
@@ -5908,7 +5930,19 @@ font-size:1em;
     transition: all 0.5s ease-in-out;
 	visibility:hidden;
 	top:400px;
-	width:10%;
+	width:100%;
+}
+.home .endereco-eventos{
+	width: 100%;
+  	margin-top: 60px;
+
+  
+}
+.thumb-eventos{
+  	width: 45%;
+	position:absolute;
+	top:20px;
+	right:20px;
 }
 .link-equipe{
 }
@@ -5981,8 +6015,12 @@ font-size:1em;
 .cada-eventos a{
     background-color:#FFF;
     display: inline-block;
-	height:450px;
+  	height: 250px;
 
+}
+.hora{
+	vertical-align:bottom;
+	margin-bottom:5px;
 }
 
 .cada-eventos .mais-disco, .cada-eventos:hover .mais-disco {
@@ -6006,9 +6044,9 @@ color:black;
   	max-width: 75%;
 	overflow: hidden;
 	position:relative;
-	background-color:rgba(0, 0, 0, 0.59);
-	
-	border:solid 1px black;
+	background-color:transparent;
+	border-bottom:solid 1px black;
+	border-top:solid 1px black;
 }
 #background_flautas{
 	position:absolute;
@@ -6023,8 +6061,9 @@ color:black;
 	  height: 120px;
 	  top: 0;
 	  z-index: 9999;
-	  background-color: rgba(0, 0, 0, 0.59);
+	  background-color:#000000;
 	  color: #ffffff;
+	border:solid black 1px 0;
 }
 #interno-flauta .glyphicon-menu-right:before,#interno-flauta .glyphicon-menu-left:before{
 
@@ -6136,7 +6175,7 @@ color:black;
 }
 #interno-nav-projeto{
   	position: relative;
-	top:30px;
+	top:42px;
 	-webkit-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
@@ -6203,6 +6242,19 @@ color:black;
 }
 #svg_midia{
 	margin-top:-2px;
+}
+#sobre .conteudo-secao{
+	max-width:100%;
+}
+.sobre-conteudo {
+  max-width: 1000px;
+  margin: 0 0 0 20%;
+  width: 70%;
+  position: relative;
+	font-size:1.3em;
+}
+#sobre-escrito{
+	width:350px!important;
 }
 .conteudo-secao{
 	max-width:1000px;
@@ -6347,8 +6399,7 @@ input, textarea{
 	max-width:1000px;
 	z-index: 99999999;
 	padding:0;
-	position: fixed;
-	  top: 10vh!important;
+  	top: 200px!important;
 }
 #reveal-modal-id h1{
 	font-weight:300;
@@ -6777,11 +6828,11 @@ th.visible-xs, td.visible-xs {
 	}
 	.midia-category .btn, .btn-loadmore {
 	 
-	  font-size: 4vw;
+	  font-size: 35px;
 	}
 	#sobre .conteudo-secao {
 	 
-	  font-size: 2.7vw;
+	  font-size: 16px;
 	}
 	#parallax_midia,#sobre .secao-interno,.secao-background {
 	  background-size: contain;
@@ -6814,7 +6865,7 @@ th.visible-xs, td.visible-xs {
 		float: none!important;
 		  width: 90VW;
 		  height: initial;
-		  font-size: 2.5vw;
+		  font-size: 25px;
 		  padding-top: 78px;
 		  right: -30VW;
 		  -ms-transform: rotate(-0);
@@ -7088,7 +7139,8 @@ select {
 	#youtube-feed{
 		position:relative;
 	  	padding-left: 0;
-		
+		top: 0;
+	  
 	}
 	#triangulo_projetos,#retangulo_projetos{
 		display:none;
@@ -7109,7 +7161,10 @@ select {
 	}
 	.secao-background{
 		position:relative;
-		height:300px;
+	  	height: 500px;
+		background-attachment: initial;
+	    background-position: center 100px;
+	  
 	}
 	#sobre header{
 		padding-top:0;
@@ -7133,7 +7188,8 @@ select {
 	  width: 30%;
 	}
 	#sobre .secao-interno{
-		background:#F2F1F0 none no-repeat fixed center 10%;
+		background:#F2F1F0 none no-repeat ;
+		background-attachment:initial;
 		background-size:contain;
 		
 	}
@@ -7174,8 +7230,87 @@ select {
 	.cada-flauta{
 		margin:10px 10px 0 0;
 	}
-	#left, #right{
+	#left, #right,#cima,#baixo{
 		display:none;
 	}
-}
+	#interno-projeto{
+		height:initial;
+		margin-top:30px;
+		overflow:visible;
+		background-color:transparent;
+	}
+	#interno-nav-projeto{
+		top:0;
+	}
+	#interno-nav-disco .col-xs-4 {
+		width: 80%;
+		margin: 0 auto;
+		display: block;
+		float: none;
+	}
+	.texto_disco {
+		width:100%;
+	}
+	.cada-disco{
+		padding:20px;
+	}
+	#logo_footer div{
+		padding:10px 0;
+	}
+	#discografia{
+		margin-top:0!important;
+	}
+	#parallax_midia{
+		background-size: 100% auto;
+	  background-position-y: 0;
+	  height: 300px;
+	  background-attachment: initial;
+	}
+	#sobre .secao-interno {
+	  padding: 0% 0 10%;
+	}
+	#cabecalho_sobre{
+		margin-bottom:30px;
+	}
+	.cada-flauta img {
+	  width:85%;
+	}
+	.midia-category .btn-default{
+	  font-size: 20px;
 
+	}
+	#discografia .entry-header{
+		position:relative;
+		right:0;
+	}
+	#retangulo-branco{
+		display:none;
+	}
+	#sobre .conteudo-secao{
+	  width: 100%;
+	  background-color: #ffffff;
+	  padding: 45px 0 15px;
+	  margin: 0 0 30px;		
+	}
+	.equipe-conteudo{
+		margin-bottom:40px;
+	}
+	#titulo_flautas{
+		margin-top:40px;
+	}
+	.player-soundcloud {
+	  position: absolute;
+	  bottom: 20px;
+	  left: 20px;
+	}
+	#discografia .entry-title{
+		color:#000000;
+	}
+}
+.equipe-conteudo a:hover{
+	text-decoration:none;
+}
+.equipe-conteudo a{
+	color:#222;
+	
+}

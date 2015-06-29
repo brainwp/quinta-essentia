@@ -231,7 +231,7 @@ if ($('body').hasClass('home')){
 					console.log('interno_projeto_altura'+interno_projeto_altura)
 					
 					if (posicaoTop >= -200){
-						$('#interno-nav-projeto').css('top',posicaoTop-posicaoTop+30)
+						$('#interno-nav-projeto').css('top',posicaoTop-posicaoTop+42)
 						
 						break
 					}
@@ -250,8 +250,8 @@ if ($('body').hasClass('home')){
 					
 					
 									
-					if ((interno_nav_projeto - interno_projeto_altura +posicaoTop +30) < 200){
-						$('#interno-nav-projeto').css('top',posicaoTop-( interno_nav_projeto - interno_projeto_altura + posicaoTop + 30));					
+					if ((interno_nav_projeto - interno_projeto_altura +posicaoTop +42) < 200){
+						$('#interno-nav-projeto').css('top',posicaoTop-( interno_nav_projeto - interno_projeto_altura + posicaoTop + 42));					
 						break
 					}
 					else{
