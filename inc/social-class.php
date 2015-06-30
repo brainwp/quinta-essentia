@@ -10,6 +10,12 @@ class Brasa_Social_Feed{
 		//ajax youtube
 		add_action( 'wp_ajax_youtube_brasa_social_feed', array($this,'do_ajax_youtube') );
 		add_action( 'wp_ajax_nopriv_youtube_brasa_social_feed', array($this,'do_ajax_youtube') );
+
+		//add youtube cron
+		if ( ! wp_next_scheduled( 'brasa_social_feed_cron_youtube' ) ) {
+			wp_schedule_event( time(), 'hourly', 'brasa_social_feed_cron_youtube' );
+		}
+		add_action( 'brasa_social_feed_cron_youtube', array($this,'do_cron_youtube') );
 	}
 
 	public function get_facebook_posts($limit = 2){
@@ -57,9 +63,8 @@ class Brasa_Social_Feed{
 	}
 
 	public function do_ajax_youtube(){
-		$limit = 2;
 
-		$posts = $this->get_youtube_posts($limit);
+		$posts = get_option('cache_youtube_posts');
 		if(!$posts || empty($posts))
 			wp_die();
 		foreach ($posts as $post) {
@@ -68,6 +73,12 @@ class Brasa_Social_Feed{
 			get_template_part('content','youtube');
 		}
 		wp_die();
+	}
+	public function do_cron_youtube(){
+		$videos = $this->get_youtube_posts();
+		if($videos && !empty($videos)){
+			update_option( 'cache_youtube_posts', $videos);
+		}
 	}
 
 }
