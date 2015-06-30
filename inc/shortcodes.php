@@ -132,48 +132,71 @@ function short_query_func( $atts ) {
 		);
 	}
 	$query2 = new WP_Query( $args );
-	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>".$antes_interno."<div id='interno-nav-".$a['post_type']."'>";
-	if($query2->have_posts()) : 
-	    while($query2->have_posts()) : 
-	    	$query2->the_post();
-        	
-			
-			if ($a['post_type'] == 'disco'){
-				$player = '';
-				if($url = get_post_meta($query2->post->ID, 'soundcloud_url', true)){
-					$player .= '<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'"></div>';
+	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>"
+				.$antes_interno."
+				<div id='interno-nav-".$a['post_type']."'>";
+				if($query2->have_posts()) : 
+	    			while($query2->have_posts()) : 
+	    				$query2->the_post();
+        				if ($a['post_type'] == 'disco'){
+							$player = '';
+							if($url = get_post_meta($query2->post->ID, 'soundcloud_url', true)){
+								$player .= '
+								<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'">
+								</div>';
 
-				}
-				$html .="<div class='".$class_item."cada-".$a['post_type']." animated bounceIn'>
-							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb).$player."</div>";
-					$html .= "<a href='".get_permalink( $query2->post->ID)."'><div class='texto_disco col-xs-8'><h1 class='titulo-disco'>".get_the_title( $query2->post->ID)."</h1>"; 
-					$content = get_the_content();
-					$trimmed_content = wp_trim_words( $content, 100, '...');
-					$html .= $trimmed_content."</div><div class='mais-disco'></div></div><div class='clearfix'></div>";
-									
-			}
-			else if ($a['post_type'] == 'eventos'){
+							}
+							$html .="
+							<div class='".$class_item."cada-".$a['post_type']." animated bounceIn'>
+								<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb).$player."
+								</div>";
+							$html .= "
+								<a href='".get_permalink( $query2->post->ID)."'>
+									<div class='texto_disco col-xs-8'>
+										<h1 class='titulo-disco'>".get_the_title( $query2->post->ID)."
+										</h1>"; 
+										$content = get_the_content();
+										$trimmed_content = wp_trim_words( $content, 100, '...');
+										$html .= $trimmed_content."
+									</div>
+									<div class='mais-disco'></div></div><div class='clearfix'>
+									</div>";
+						}
+						else if ($a['post_type'] == 'eventos'){
 				
-				$html .="<div class='".$class_item." cada-".$a['post_type']."'><a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>";
-					$html .= '<div class="texto_disco ">
-					<h7 class="data-evento">'
-						.date('d/m',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
-					.'</h7> <br>
-					<h7 class="hora">'
-						.get_post_meta( $query2->post->ID, 'agenda_horario_inic', true )
-					.'</h7><br/>
-					<h7 class="endereco-eventos">'
-						.get_post_meta( $query2->post->ID, "agenda_endereco", true )
-					.'</h7>
-					<h1 class="titulo-disco">'
-						.get_the_title( $query2->post->ID)
-					.'</h1><div class="'.$class_thumb.'">'.get_the_post_thumbnail($query2->post->ID, $thumb).'</div>'; 
-					$content = get_the_content();
-					$trimmed_content = wp_trim_words( $content, 30, '...');
-					// $html .= $trimmed_content."</div><div class='mais-disco'></div></a></div>";
-			}
-			else if ($a['post_type'] == 'post'){
-				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item."cada-".$a['post_type']."'>
+							$html .="
+							<div class='".$class_item." cada-".$a['post_type']."'>
+								<a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>";
+									$html .= 
+									'<div class="texto_disco ">
+										<div class="hora_data">
+											<h7 class="data-evento">'
+												.date('d/m',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
+											.'</h7> <br>
+											<h7 class="hora">'
+												.get_post_meta( $query2->post->ID, 'agenda_horario_inic', true )
+								 	   		.'</h7><br/>
+										</div><!--hora_data-->
+									 	   <div class="'.$class_thumb.'">'
+									 	   		.get_the_post_thumbnail($query2->post->ID, $thumb)
+									 	   .'</div>
+											<h2 class="titulo-disco">'
+										 	   	.get_the_title( $query2->post->ID)
+									 	   .'</h2>
+									 	   <h7 class="endereco-eventos">'
+								 	   			.get_post_meta( $query2->post->ID, "agenda_endereco", true )
+							 	   			.'</h7>'; 
+								 	   $content = get_the_content();
+								 	   $trimmed_content = wp_trim_words( $content, 30, '...');
+								 	   $html .= "
+									</div>
+									<div class='mais-disco'>
+									</div>									
+								</a>
+							</div>";
+					}
+					else if ($a['post_type'] == 'post'){
+						$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item."cada-".$a['post_type']."'>
 							<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</div>";
 					$html .= '<div class="texto_post "><h1 class="titulo-post">'.get_the_title( $query2->post->ID).'</h1>'; 
 					$content = get_the_content();

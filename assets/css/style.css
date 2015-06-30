@@ -5934,15 +5934,20 @@ font-size:1em;
 }
 .home .endereco-eventos{
 	width: 100%;
-  	margin-top: 60px;
-
-  
 }
-.thumb-eventos{
+#interno-nav-eventos div.thumb-eventos, #interno-nav-eventos div.hora_data, .thumb-eventos, .hora_data{
   	width: 45%;
-	position:absolute;
-	top:20px;
-	right:20px;
+	position:relative;
+	display:inline-block;
+	float:left;
+	
+}
+.cada-eventos h2, .post-type-archive.post-type-archive-eventos h2{
+	font-size:20px;
+	margin-top:20px
+}
+.thumb-eventos img{
+	margin-bottom:15px;
 }
 .link-equipe{
 }
@@ -5990,6 +5995,7 @@ font-size:1em;
   	font-weight: 300;
 	 font-size: 3.5vw;
 }
+
 #agenda{
     height:600px;
 }
@@ -6011,7 +6017,11 @@ font-size:1em;
 	padding:0;
     padding-left:5px;
     padding-right:5px;
+	position:relative;
+	padding-bottom: 6px;
+
 }
+
 .cada-eventos a{
     background-color:#FFF;
     display: inline-block;
@@ -6024,16 +6034,16 @@ font-size:1em;
 }
 
 .cada-eventos .mais-disco, .cada-eventos:hover .mais-disco {
-	bottom:0;
-	right:0;
+	bottom: -7px;
+  	right: -7px;
 }
 
 #titulo_flautas{
 	margin-top: 46%;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  font-weight: 400;
-color:black;
+  	font-size: 1.3em;
+  	text-transform: uppercase;
+  	font-weight: 400;
+	color:black;
 }
 .cada-flauta{
 	margin:0 10px;
@@ -6461,7 +6471,7 @@ input, textarea{
 	padding:50px 0 40px ;
 }
 .endereco-eventos{
-	width:50%;
+	width:90%;
 	display:inline-block;
 }
 .modal-eventos{
@@ -6499,7 +6509,7 @@ input, textarea{
 	background-color:#F1EFF0;
 }
 #modal-quinta .imagem-modal{
-	padding:0;
+	padding:0 20px 0 0;
 }
 #modal-quinta .imagem-modal img{
 	width:100%;
