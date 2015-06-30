@@ -30,8 +30,7 @@
 				
 			</a>
 		</div>
-		<a class="col-md-12" href="<?php echo get_permalink();?>">
-			<div class="mais-disco"></div>
+		<a class="mais-disco col-md-12" href="<?php echo get_permalink();?>">
 		</a>	
 		
 </article><!-- #post-## -->

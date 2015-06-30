@@ -85,7 +85,7 @@ function short_query_func( $atts ) {
         
 		          break;
 		 case 'eventos':			
-		        $class_container = "col-md-12 ";
+		        $class_container = " ";
 		 		$thumb='thumb-eventos';
 				$class_thumb = 'thumb-eventos';
 		
@@ -166,7 +166,7 @@ function short_query_func( $atts ) {
 				
 							$html .="
 							<div class='".$class_item." cada-".$a['post_type']."'>
-								<a class='col-md-12' href='".get_permalink( $query2->post->ID)."'>";
+								<a class='' href='".get_permalink( $query2->post->ID)."'>";
 									$html .= 
 									'<div class="texto_disco ">
 										<div class="hora_data">
@@ -207,7 +207,18 @@ function short_query_func( $atts ) {
 			else if ($a['post_type'] == 'equipe' ){
 				$content = $query2->post->post_content;
 				$trimmed_content_equipe = wp_trim_words( $content, 60, '...');
-				$html .="<div class='link-equipe'><a href='".get_permalink( $query2->post->ID)."'> <div class='".$class_item." cada-equipe animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb)."</a></div><!--cada-equipe--><div class='equipe-conteudo'><a href='".get_permalink( $query2->post->ID)."'>".$trimmed_content_equipe." </a></div><!--equipe-conteudo--></div><!--link-equipe-->";
+				$html .="<div class='link-equipe'>
+							<a href='".get_permalink( $query2->post->ID)."'>
+								<div class='".$class_item." cada-equipe animated bounceIn'>"
+									.get_the_post_thumbnail($query2->post->ID, $thumb)."
+								</div><!--cada-equipe-->
+							</a>
+							<div class='equipe-conteudo'>
+								<a href='".get_permalink( $query2->post->ID)."'>"
+									.$trimmed_content_equipe." 
+								</a>
+							</div><!--equipe-conteudo-->
+						</div><!--link-equipe-->";
 				
 			}
 			else{

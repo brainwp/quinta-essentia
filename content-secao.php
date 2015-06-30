@@ -33,8 +33,20 @@ switch ($post->post_name) {
 		  <polygon id="triangulo_laranja" points=""/>
 		  <polygon fill="url(#image2)" id="triangulo_sobre" points=""  />
 		  <polygon id="poligono_branco" points=""  />
-		</svg><header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';
-		$entre .="<div id='retangulo-branco'></div><div id='cabecalho_sobre'> <img src='".$logo."'/> <img id='sobre-escrito' src='".get_template_directory_uri()."/assets/images/escrito.png'/></div> </div>";
+		</svg>
+		<header class="entry-header">
+			<h1 class="entry-title">'
+				.get_the_title($post->ID)
+			.'</h1>
+		</header><!-- .entry-header -->';
+		
+		$entre .="
+		<div id='retangulo-branco'>
+		</div>
+		<div id='cabecalho_sobre'>
+			<img src='".$logo."'/>
+			<img id='sobre-escrito' src='".get_template_directory_uri()."/assets/images/escrito.png'/>
+		</div>";
          break;
 	case 'projetos':
 		$antes = '<header class="entry-header"><h1 class="entry-title">'.get_the_title($post->ID).'</h1></header><!-- .entry-header -->';

@@ -3754,7 +3754,7 @@ tbody.collapse.in {
     padding: 6px 12px;
     line-height: 1.42857;
     text-decoration: none;
-    color: #337ab7;
+    color: #D95B35;
     background-color: #fff;
     border: 1px solid #ddd;
     margin-left: -1px;
@@ -5441,8 +5441,8 @@ p img, .wp-caption {
 ul.page-numbers>li>span.current, ul.page-numbers>li>span.current:hover, ul.page-numbers>li>span.current:focus {
     z-index: 2;
     color: #fff;
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #D95B35;
+    border-color:#D95B35;
     cursor: default;
 }
 .form-radio-group .radio:first-child {
@@ -5721,7 +5721,14 @@ video {
 	background-attachment:fixed;
 	background-repeat:no-repeat;
 	background-position: center 10vh;
-background-color:#000000;
+	background-color:#000000;
+  	background-size: cover;
+}
+#agenda svg{
+	position:relative;
+}
+.home #primary{
+	float:none;
 }
 #sobre{
 	background-attachment:fixed;
@@ -5848,7 +5855,7 @@ svg{
   	vertical-align: bottom;
 }
 #retangulo-branco{
-	height:95px;
+	height:120px;
 	background-color:#ffffff;
 }
 
@@ -5869,10 +5876,11 @@ svg{
 #sobre .secao-interno{
   	position:relative;
 	z-index:99999;
-	background: #F2F1F0 none no-repeat fixed 0% -35vh;
+  	background: #F2F1F0 none no-repeat fixed 0% -15vh;
 	padding: 0 0 10%;
   	background-attachment: fixed;
   	background-repeat: no-repeat;
+	background-size:cover;
 
 }
 
@@ -5944,10 +5952,12 @@ font-size:1em;
 }
 .cada-eventos h2, .post-type-archive.post-type-archive-eventos h2{
 	font-size:20px;
-	margin-top:20px
+  margin-top: 90px;
+
 }
 .thumb-eventos img{
 	margin-bottom:15px;
+	width: 100%;
 }
 .link-equipe{
 }
@@ -6007,7 +6017,7 @@ font-size:1em;
 	position:relative;
 }
 #agenda .conteudo-secao{
-	margin-top:10vw;
+
 }
 #agenda{
 	background-color:#f5b843;
@@ -6025,7 +6035,7 @@ font-size:1em;
 .cada-eventos a{
     background-color:#FFF;
     display: inline-block;
-  	height: 250px;
+  	height: 300px;
 
 }
 .hora{
@@ -6034,10 +6044,16 @@ font-size:1em;
 }
 
 .cada-eventos .mais-disco, .cada-eventos:hover .mais-disco {
-	bottom: -7px;
-  	right: -7px;
+	bottom: 0px;
+  	right: 0px;
 }
-
+.home .cada-eventos>a{
+	position:relative;
+}
+.home .cada-eventos .mais-disco{
+	right:-2px;
+	bottom:-2px;
+}
 #titulo_flautas{
 	margin-top: 46%;
   	font-size: 1.3em;
@@ -6323,17 +6339,17 @@ font-size:1em;
 	  width: 72px;
 	  background-position: 0 -36px;
 	  position: absolute;
-	bottom:-8px;
-	right:-8px;
-}
+	bottom: -3px;
+	right: -4px;
+	}
 .mais-disco:hover{
 	background-image: url('../images/play.png');
 	  height: 74px;
 	  width: 72px;
 	  background-position: 0 -111px;
 	  position: absolute;
-	bottom:-8px;
-	right:-8px;
+	bottom: -3px;
+	right: -4px;
 }
 
 .texto_disco{
@@ -6720,7 +6736,7 @@ input, textarea{
 	}
 	.post-type-archive-eventos .cada-eventos .endereco-eventos{
 		  margin-bottom: 13px;
-		  font-size: 0.8em;
+
 	}
 	.post-type-archive-eventos .titulo_disco{
 		font-size:1.6em;
@@ -7138,7 +7154,17 @@ select {
     bottom: 50px;
     right: 40px;
 }
+#youtube-feed .social-feed img{
+	width:80%;
+}
+@media screen and (min-width: 1200px) {
+	.secao-background{
+		background-size:initial;
+	}
+}
+
 @media screen and (max-width: 767px) {
+	
 	#destaque{
 		display:none;
 	}
@@ -7316,6 +7342,7 @@ select {
 	#discografia .entry-title{
 		color:#000000;
 	}
+
 }
 .equipe-conteudo a:hover{
 	text-decoration:none;
