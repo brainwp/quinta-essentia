@@ -6409,7 +6409,6 @@ input, textarea{
 	max-width:1000px;
 	z-index: 99999999;
 	padding:0;
-  	top: 200px!important;
 }
 #reveal-modal-id h1{
 	font-weight:300;
