@@ -26,7 +26,7 @@
 	<div id="preloader"></div><!-- #preloader -->
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
-			<div id="menu-lado" class ="">
+			<div id="menu-lado" class ="aparecido com-fundo">
 				<div id="triangulo_menu" ></div>
 				<a class="menu-fechado" href="" title="">
 				<button id="botao-menu" type="button" class=" navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
@@ -57,8 +57,7 @@
 
 					*/ ?>
 				</div>
-
-				<div id="menu-interno" class="sem-fundo navbar-main-navigation">
+				<div id="menu-interno" class="com-fundo navbar-main-navigation">
 				
 					<?php
 						wp_nav_menu(
@@ -73,12 +72,14 @@
 						);
 					?>
 
-					
+					<?php if ( is_active_sidebar( 'linguas' ) ) : ?>
+							<?php dynamic_sidebar( 'linguas' ); ?>
+					<?php endif; ?>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
-		<?php 
-		$parallax_options= get_option( 'parallax_tab' );	
-		$parallax_1 = wp_get_attachment_url($parallax_options['parallax_1'], 'full');
-		echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";?>
+			<?php 
+			$parallax_options= get_option( 'parallax_tab' );	
+			$parallax_1 = wp_get_attachment_url($parallax_options['parallax_1'], 'full');
+			echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";?>
 		<div id="main" class="site-main row">

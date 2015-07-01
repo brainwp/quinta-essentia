@@ -229,9 +229,32 @@ function short_query_func( $atts ) {
 				}
 				$player = '';
 				if($url = get_post_meta($query2->post->ID, 'soundcloud_url', true)){
-					$player .= '<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'"></div>';
+					$player .= '
+					<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'">
+					</div>';
+					$html .="
+						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
+								<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/black.png'  class='attachment-thumb-midia wp-post-image' alt='midia'>"
+							.$player."
+						</div>";
 				}
-				$html .="<a href='".get_permalink( $query2->post->ID)."'><div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>".get_the_post_thumbnail($query2->post->ID, $thumb).$player."</div></a>";
+				else if (has_post_thumbnail()){
+					$html .="
+					<a href='".get_permalink( $query2->post->ID)."'>
+						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>"
+							.get_the_post_thumbnail($query2->post->ID, $thumb)."
+						</div>
+					</a>";
+				}
+				else{
+					$html .="
+					<a href='".get_permalink( $query2->post->ID)."'>
+						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
+							<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/blank.png'  class='attachment-thumb-midia wp-post-image' alt='midia'>
+						</div>
+					</a>";
+				}
+				
 			}
 		endwhile;
 		    if(defined('DOING_AJAX') && DOING_AJAX){

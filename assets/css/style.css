@@ -6225,15 +6225,19 @@ font-size:1em;
 }
 .sc-player .sc-controls a{
 	color:transparent;
+	position: relative;
+	  display: block;
+	  width: 100%;
+	  height: 100%;
 }
-.sc-player{
-	background-image:url(../images/playpause.png);
- 	height: 30px;
- 	width: 30px;
+.sc-player .sc-controls{
+	background-image:url(../images/player.png);
+ 	height: 90px;
+ 	width: 90px;
+	content:'';
 }
-.sc-player.playing{
-	background-position: 30px;
-	
+.sc-player.playing .sc-controls {
+	background-position: 90px;
 }
 .midia-category{
 	margin: 0 0 30px 10%;
@@ -6484,7 +6488,7 @@ input, textarea{
 }
 .post-type-archive-eventos #main{
 	background-color:#f5b843;
-	padding:50px 0 40px ;
+  padding: 150px 0 40px;
 }
 .endereco-eventos{
 	width:90%;
@@ -7150,9 +7154,10 @@ select {
     display: none;
 }
 .player-soundcloud{
-    position: absolute;
-    bottom: 50px;
-    right: 40px;
+  	position: absolute;
+  	right: 50%;
+  	bottom: 50%;
+  	margin: 0 -45px -45px 0;
 }
 #youtube-feed .social-feed img{
 	width:80%;
