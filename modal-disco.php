@@ -13,7 +13,13 @@
 <?php /* Start the Loop */ ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<div id="modal-quinta" class="row modal-<?php echo get_post_type();?>">
-		<div class=" imagem-modal col-md-4 "><?php the_post_thumbnail();?></div>
+		<div class=" imagem-modal col-md-4 ">
+			<?php the_post_thumbnail();?>
+			<?php if($url = get_post_meta(get_the_ID(), 'soundcloud_url', true)):?>
+				<div class="player-soundcloud-url-modal" data-id="<?php echo get_the_ID();?>" data-url="<?php echo $url;?>" style="display:none;"></div><!-- #player-soundcloud-url-modal -->
+				<div class="player-soundcloud" id="play-modal-<?php echo get_the_ID();?>" data-url="<?php echo $url;?>"></div>
+		    <?php endif;?>	
+		</div>
 		<div id="container-modal-titulo" class="col-md-8">
 			<div id="fundo-modal-titulo" class="col-md-12">
 					<div class="col-md-6" id="tiangulo-modal"></div>

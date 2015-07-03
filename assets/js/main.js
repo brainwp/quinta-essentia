@@ -21,7 +21,7 @@ c.push(d);b++}if(null===A){a=c.length;g=0;f=document.getElementById(B);for(h="<u
 //preloader
 var $ = jQuery.noConflict();
 $(window).load(function() {
-	
+
 	$('#preloader').fadeOut('slow');
     $('#container-preload').fadeIn('slow');
 	altura_footer= parseInt($('#footer').css('height'));
@@ -650,5 +650,8 @@ twitterFetcher.fetch(config1);
 						.css('width','100vw')
 						.css('z-index','9999')
 		}
+	});
+	$(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
+		$.scPlayer.stopAll();
 	});
 });
