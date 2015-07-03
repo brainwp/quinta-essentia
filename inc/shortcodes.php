@@ -234,7 +234,9 @@ function short_query_func( $atts ) {
 					</div>';
 					$html .="
 						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
-								<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/black.png'  class='attachment-thumb-midia wp-post-image' alt='midia'>"
+								<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/black.png'  class='attachment-thumb-midia wp-post-image' alt='midia'><h3 class='musica midia-titulo'> ".get_the_title()."</h3>
+								"
+								
 							.$player."
 						</div>";
 				}
@@ -250,7 +252,8 @@ function short_query_func( $atts ) {
 					$html .="
 					<a href='".get_permalink( $query2->post->ID)."'>
 						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
-							<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/blank.png'  class='attachment-thumb-midia wp-post-image' alt='midia'>
+							<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/video.png'  class='attachment-thumb-midia wp-post-image' alt='midia'>
+							<h3 class='midia-titulo'> ".get_the_title()."</h3>
 						</div>
 					</a>";
 				}

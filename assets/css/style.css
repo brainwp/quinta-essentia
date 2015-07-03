@@ -6242,6 +6242,22 @@ font-size:1em;
 .midia-category{
 	margin: 0 0 30px 10%;
 }
+
+
+.midia-titulo.musica{
+	  margin: 0 auto;
+	  top: 20%;
+	  width: 65%;
+	color:#ffffff;
+}
+.midia-titulo{
+	position: absolute;
+	  top: 50%;
+	  width: 50%;
+	  font-size: 18px;
+	margin: -40px auto;
+	  left: 70px;
+}
 .midia-category .btn, .btn-loadmore{
 	background: transparent;
 	  border: none;
