@@ -6258,7 +6258,7 @@ font-size:1em;
 	margin: -40px auto;
 	  left: 70px;
 }
-.midia-category .btn, .btn-loadmore{
+.midia-category .btn, .btn-loadmore, .btn-carregarmais{
 	background: transparent;
 	  border: none;
 	  box-shadow: none;
@@ -6298,7 +6298,18 @@ font-size:1em;
   margin: 0 0 0 20%;
   width: 70%;
   position: relative;
-	font-size:1.3em;
+	font-size:23px;
+}
+.capa-capa{
+	background-color: rgba(0, 0, 0, 0.9);
+	background-image: url(http://www.transparenttextures.com/patterns/dark-dotted-2.png);
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  z-index: 9979;
+	opacity:0.6;
+	}
 }
 #sobre-escrito{
 	width:350px!important;

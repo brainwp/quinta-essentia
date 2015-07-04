@@ -23,9 +23,10 @@ $odin_general_opts = get_option( 'odin_general' );
 	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
 		<main id="main-content" class="site-main" role="main">
 			<article id="capa" <?php post_class('row secao'); ?>>
+				<div class="capa-capa"></div>
 				<video  loop poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
-					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.webm" type="video/webm">
-					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.mp4" type="video/mp4">
+					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.webm" type="video/webm">
+					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.mp4" type="video/mp4">
 				</video>
 				<a class="button" id="vidpause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></a>
 			</article><!-- #post-## -->
