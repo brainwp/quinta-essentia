@@ -11,6 +11,10 @@ if(is_object($wp_query) && is_object($wp_query->post) && !empty($wp_query->post-
     get_template_part('modal','disco');
 
   	}
+	else if (has_term('video','categoria')){
+		get_template_part('modal','video');
+	    
+	}
     else{
       get_template_part('modal');
     }

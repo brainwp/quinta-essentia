@@ -248,16 +248,17 @@ function short_query_func( $atts ) {
 						</div>
 					</a>";
 				}
-				else{
+				else if (has_term('video', 'categoria')){
+					$thumbnail = 'http://img.youtube.com/vi/'.get_the_content().'/0.jpg';
+					$url = 'https://youtu.be/'.get_the_content();					
 					$html .="
-					<a href='".get_permalink( $query2->post->ID)."'>
-						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
-							<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/video.png'  class='attachment-thumb-midia wp-post-image' alt='midia'>
+					<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
+						<a class='youtube  youtube-video-open' href='#' data-id='".get_the_content()."'>				
 							<h3 class='midia-titulo'> ".get_the_title()."</h3>
-						</div>
-					</a>";
-				}
-				
+							<img style='width:293px; ' src='".$thumbnail."'/>
+						</a>
+					</div>";
+				}				
 			}
 		endwhile;
 		    if(defined('DOING_AJAX') && DOING_AJAX){
