@@ -654,9 +654,4 @@ twitterFetcher.fetch(config1);
 	$(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 		$.scPlayer.stopAll();
 	});
-	$('.close-reveal-modal').click(function(){
-	  
-	});
-	console.log('testeetetetetet');
-	
 });

@@ -248,14 +248,14 @@ function short_query_func( $atts ) {
 						</div>
 					</a>";
 				}
-				else if (has_term('video', 'categoria')){
+				else if (has_term('videos', 'categoria')){
 					$thumbnail = 'http://img.youtube.com/vi/'.get_the_content().'/0.jpg';
 					$url = 'https://youtu.be/'.get_the_content();					
 					$html .="
 					<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
-						<a class='youtube  youtube-video-open' href='#' data-id='".get_the_content()."'>				
-							<h3 class='midia-titulo'> ".get_the_title()."</h3>
-							<img style='width:293px; ' src='".$thumbnail."'/>
+						<h3 class='midia-titulo'> ".get_the_title()."</h3>
+						<a class='youtube youtube-video-open' href='#' data-id='".get_the_content()."'>				
+							<img style='width:293px;' src='".$thumbnail."'/>
 						</a>
 					</div>";
 				}				
