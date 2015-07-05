@@ -222,7 +222,7 @@ function short_query_func( $atts ) {
 				
 			}
 			else{
-				if($a['post_type'] == 'midia' && !defined('DOING_AJAX')){
+				if($a['post_type'] == 'midia' && !defined('DOING_AJAX') && $query2->max_num_pages > 1){
 					$depois_interno  = '<a class="btn btn-loadmore" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-midia" data-max-paged="'.$query2->max_num_pages.'" data-category="all">';
 					$depois_interno .= __('Carregar +','odin');
 					$depois_interno .= '</a>';
@@ -265,7 +265,7 @@ function short_query_func( $atts ) {
 		    	global $ajax_max_paged;
 		    	$ajax_max_paged = $query2->max_num_pages;
 			}
-			if($a['post_type'] == 'disco' && !defined('DOING_AJAX')){
+			if($a['post_type'] == 'disco' && !defined('DOING_AJAX') && $query2->max_num_pages > 1){
 				$depois_interno  = '<a class="btn btn-primary btn-loadmore-discos" data-paged="2" data-loading="'.__('Carregando...', 'odin').'" data-selector="#interno-nav-disco" data-max-paged="'.$query2->max_num_pages.'">';
 				$depois_interno .= __('Carregar +','odin');
 				$depois_interno .= '</a>';
