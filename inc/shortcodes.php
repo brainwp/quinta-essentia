@@ -171,7 +171,7 @@ function short_query_func( $atts ) {
 									'<div class="texto_disco ">
 										<div class="hora_data">
 											<h7 class="data-evento">'
-												.date('d/m',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
+												.date('d/m/y',intval(get_post_meta( $query2->post->ID, "agenda-event-date", true )))
 											.'</h7> <br>
 											<h7 class="hora">'
 												.get_post_meta( $query2->post->ID, 'agenda_horario_inic', true )

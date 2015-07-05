@@ -41,10 +41,7 @@ switch ($post->post_name) {
 		</header><!-- .entry-header -->';
 		
 		$entre .="
-		<div id='retangulo-branco'>
-		</div>
 		<div id='cabecalho_sobre'>
-			<img src='".$logo."'/>
 			<img id='sobre-escrito' src='".get_template_directory_uri()."/assets/images/escrito.png'/>
 		</div>";
          break;
@@ -106,7 +103,7 @@ switch ($post->post_name) {
 			 		<polygon  id="triangulo_agenda" points=""/>
 		 			<polygon fill="url(#image)" id="poligono_agenda" points=""/>
 				</svg>';
-				$depois_conteudo = '<a class="btn btn-loadmore" href="eventos/">+ Agenda</a><div class="clearfix"></div>';
+				$depois_conteudo = '<a class="btn btn-carregarmais" href="eventos/">+ Agenda</a><div class="clearfix"></div>';
 		break;
 	}
 	
