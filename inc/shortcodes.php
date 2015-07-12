@@ -160,8 +160,10 @@ function short_query_func( $atts ) {
 										$trimmed_content = wp_trim_words( $content, 100, '...');
 										$html .= $trimmed_content."
 									</div>
-									<div class='mais-disco'></div></div><div class='clearfix'>
-									</div>";
+									<div class='mais-disco'></div>
+								</a>
+							</div>
+							<div class='clearfix'></div>";
 						}
 						else if ($a['post_type'] == 'eventos'){
 				
@@ -276,7 +278,7 @@ function short_query_func( $atts ) {
 		    wp_reset_postdata();   	
 		else: 
 			
-		    
+		    	
 	
 	   endif;
 	$html .= "</div>".$depois_interno."</div>";
