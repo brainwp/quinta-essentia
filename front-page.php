@@ -24,7 +24,7 @@ $odin_general_opts = get_option( 'odin_general' );
 		<main id="main-content" class="site-main" role="main">
 			<article id="capa" <?php post_class('row secao'); ?>>
 				<div class="capa-capa"></div>
-				<video  loop poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
+				<video  autoplay poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.webm" type="video/webm">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.mp4" type="video/mp4">
 				</video>

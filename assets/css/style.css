@@ -1454,6 +1454,7 @@ pre code {
 	  visibility: visible;
 	  margin-top: 25%;
 	width:100%;
+	font-size:19px;
 }
 }
 @media (min-width: 992px) {
@@ -5894,7 +5895,10 @@ svg{
 }
 .row_contato h5{
 margin-top:0;
-font-size:1em;
+font-size: 0.7em;
+}
+.archive svg {
+	z-index:9;
 }
 .glyphicon-earphone, .glyphicon-envelope
 {
@@ -6008,7 +6012,6 @@ font-size:1em;
 }
 
 #agenda{
-    height:600px;
 }
 #agenda .btn-loadmore{
 	margin-bottom:30px;
@@ -6259,13 +6262,13 @@ font-size:1em;
 	margin: -40px auto;
 	  left: 70px;
 }
-.conteudo-secao .btn-carregarmais{
+.conteudo-secao .btn-carregarmais, .btn-carregarmais{
 	font-size:1.4em!important;
 	margin-top:5px;
 	display:inline-block;
 	position:relative;
 }
-.midia-category .btn, .btn-loadmore,.conteudo-secao .btn-carregarmais{
+.midia-category .btn, .btn-loadmore,.conteudo-secao .btn-carregarmais, .btn-carregarmais{
 	background: transparent;
 	padding:5px 10px;
 	  border: none;
@@ -6280,7 +6283,7 @@ font-size:1em;
 	border: none;
 	  box-shadow: none;
 }
-.midia-category .btn.active, .btn-loadmore:hover, .btn-loadmore.active, .conteudo-secao .btn-carregarmais:hover, .conteudo-secao .btn-carregarmais.active{
+.midia-category .btn.active, .btn-loadmore:hover, .btn-loadmore.active, .btn-carregarmais, .conteudo-secao .btn-carregarmais:hover, .conteudo-secao .btn-carregarmais.active{
 	background: #6f1112;
 	color:#ffffff;
 	border-radius:0;
@@ -7390,4 +7393,22 @@ select {
 .equipe-conteudo a{
 	color:#222;
 	
+}
+.midia-titulo-youtube{
+	top: 15%;
+	  left: 10%;
+	  margin: 0;
+	  color: #000;
+	  background-color: rgba(255, 255, 255, 0.46);
+	  width: initial;
+	  padding: 5px 10px;
+	  position: absolute;
+	
+}
+.img-midia{
+	padding:0 0 70px;
+}
+.img-midia img{
+	display:block;
+	margin:0 auto;
 }

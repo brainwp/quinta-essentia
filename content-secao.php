@@ -95,7 +95,7 @@ switch ($post->post_name) {
 	  	
 	     break;
 	 case 'agenda':
-	   			$antes = '<h1 id="titulo_agenda">Agenda</h1><svg id="svg_agenda" ><defs>
+	   			$antes = '<h1 id="titulo_agenda">'.get_the_title($post->ID).'</h1><svg id="svg_agenda" ><defs>
 				    <pattern id="image" patternUnits="userSpaceOnUse" height="349" width="466">
 				      <image x="0" y="0" height="349" width="466" xlink:href="'.get_template_directory_uri().'/assets/images/asfalt.jpg"></image>
 				    </pattern>
@@ -103,7 +103,7 @@ switch ($post->post_name) {
 			 		<polygon  id="triangulo_agenda" points=""/>
 		 			<polygon fill="url(#image)" id="poligono_agenda" points=""/>
 				</svg>';
-				$depois_conteudo = '<a class="btn btn-carregarmais" href="eventos/">+ Agenda</a><div class="clearfix"></div>';
+				$depois_conteudo = '<a class="btn btn-carregarmais" href="eventos/">'.__('+ Agenda','odin').'</a><div class="clearfix"></div>';
 		break;
 	}
 	

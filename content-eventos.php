@@ -18,7 +18,7 @@
 			<a class="col-md-12" href="<?php echo get_permalink();?>">
 				<div class="texto_disco ">
 					<div class="hora_data">
-						<h7 class="data-evento"><?php echo date('d/m',intval(get_post_meta( $post->ID, "agenda-event-date", true )));?></h7> <br>
+						<h7 class="data-evento"><?php echo date('d/m/y',intval(get_post_meta( $post->ID, "agenda-event-date", true )));?></h7> <br>
 						<h7 class="hora"><?php echo get_post_meta( $post->ID, 'agenda_horario_inic', true );?></h7><br>
 					</div><!--hora_data-->
 					<div class="thumb-eventos">

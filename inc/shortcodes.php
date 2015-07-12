@@ -135,6 +135,7 @@ function short_query_func( $atts ) {
 	$html .= "<div class='".$class_container."' id='interno-".$a['post_type']."'>"
 				.$antes_interno."
 				<div id='interno-nav-".$a['post_type']."'>";
+				
 				if($query2->have_posts()) : 
 	    			while($query2->have_posts()) : 
 	    				$query2->the_post();
@@ -240,25 +241,26 @@ function short_query_func( $atts ) {
 							.$player."
 						</div>";
 				}
-				else if (has_post_thumbnail()){
-					$html .="
-					<a href='".get_permalink( $query2->post->ID)."'>
-						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>"
-							.get_the_post_thumbnail($query2->post->ID, $thumb)."
-						</div>
-					</a>";
-				}
 				else if (has_term('videos', 'categoria')){
 					$thumbnail = 'http://img.youtube.com/vi/'.get_the_content().'/0.jpg';
 					$url = 'https://youtu.be/'.get_the_content();					
 					$html .="
 					<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
-						<h3 class='midia-titulo'> ".get_the_title()."</h3>
+						<h3 class='midia-titulo-youtube'> ".get_the_title()."</h3>
 						<a class='youtube youtube-video-open' href='#' data-id='".get_the_content()."'>				
 							<img style='width:293px;' src='".$thumbnail."'/>
 						</a>
 					</div>";
-				}				
+				}
+				else {
+					$html .="
+					<a class ='fotos' href='".get_permalink( $query2->post->ID)."'>
+						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>"
+							.get_the_post_thumbnail($query2->post->ID, $thumb)."
+						</div>
+					</a>";
+				}
+						
 			}
 		endwhile;
 		    if(defined('DOING_AJAX') && DOING_AJAX){
@@ -273,8 +275,8 @@ function short_query_func( $atts ) {
 
 		    wp_reset_postdata();   	
 		else: 
-		    $html = 'Adicionar um '.$a['post_type'];
-
+			
+		    
 	
 	   endif;
 	$html .= "</div>".$depois_interno."</div>";

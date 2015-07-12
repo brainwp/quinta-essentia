@@ -13,16 +13,15 @@
 <?php /* Start the Loop */ ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<div id="modal-quinta" class="row modal-<?php echo get_post_type();?>">
-		<div class=" imagem-modal col-md-4 "><?php the_post_thumbnail();?></div>
-		<div id="container-modal-titulo" class="col-md-8">
+		<div id="container-modal-titulo" class="col-md-12">
 			<div id="fundo-modal-titulo" class="col-md-12">
-					<div class="col-md-6" id="tiangulo-modal"></div>
+					<div class="col-md-12" id="tiangulo-modal"></div>
 					<h1 class="col-md-6"><?php the_title(); ?></h1>
 			</div>
 			
 		
-			<div class="col-md-12">
-				<?php the_content();?>
+			<div class="img-midia col-md-12">
+				<?php echo get_the_post_thumbnail($query2->post->ID, $thumb);?>
 			</div>
 		</div>
 	</div>

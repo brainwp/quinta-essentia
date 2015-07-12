@@ -81,19 +81,7 @@ $odin_theme_options->set_fields(
 				)
             )
         ),
-		'sobre_section' => array(
-            'tab'   => 'sobre_tab', // Sessão da aba odin_general
-            'title' => __( 'Opções da seção Sobre', 'odin' ),
-            'fields' => array(
-   				array(
-				    'id'          => 'logo', // Obrigatório
-				    'label'       => __( 'Logotipo', 'odin' ), // Obrigatório
-				    'type'        => 'image', // Obrigatório
-				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
-				    'description' => __( 'Logotipo do grupo', 'odin' ), // Opcional
-				)
-            )
-        ),
+		
 		'contato_section' => array(
             'tab'   => 'contato_tab', // Sessão da aba odin_general
             'title' => __( 'Informações para o contato do grupo', 'odin' ),

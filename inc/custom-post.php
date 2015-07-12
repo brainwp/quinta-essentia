@@ -79,44 +79,44 @@ function equipe_cpt() {
 /////////////////////////////////////////
 
 	/////////////CPT Flautas
-	add_action( 'init', 'flauta_cpt' );
-
-	function flauta_cpt() {
-		$labels = array(                        
-			'name'               => 'flautas',
-			'singular_name'      => 'Flauta',
-			'menu_name'          => 'Flautas',
-			'name_admin_bar'     => 'Flauta',
-			'add_new'            => 'Adicionar Nova',
-			'add_new_item'       => 'Adicionar Nova Flauta',
-			'new_item'           => 'Nova Flauta' ,
-			'edit_item'          => 'Editar Flauta',
-			'view_item'          => 'Ver todas' ,
-			'all_items'          => 'Todas' ,
-			'search_items'       => 'Buscar',
-			'parent_item_colon'  => 'Pai' ,
-			'not_found'          => 'Nenhuma encontrado' ,
-			'not_found_in_trash' => 'Nenhuma encontrado na lixeira' ,
-		);
-
-		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'flauta' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => null,
-			'menu_icon' => 'dashicons-format-audio',
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
-		);
-
-		register_post_type( 'flauta', $args );
-	}
+	// add_action( 'init', 'flauta_cpt' );
+	// 
+	// 	function flauta_cpt() {
+	// 		$labels = array(                        
+	// 			'name'               => 'flautas',
+	// 			'singular_name'      => 'Flauta',
+	// 			'menu_name'          => 'Flautas',
+	// 			'name_admin_bar'     => 'Flauta',
+	// 			'add_new'            => 'Adicionar Nova',
+	// 			'add_new_item'       => 'Adicionar Nova Flauta',
+	// 			'new_item'           => 'Nova Flauta' ,
+	// 			'edit_item'          => 'Editar Flauta',
+	// 			'view_item'          => 'Ver todas' ,
+	// 			'all_items'          => 'Todas' ,
+	// 			'search_items'       => 'Buscar',
+	// 			'parent_item_colon'  => 'Pai' ,
+	// 			'not_found'          => 'Nenhuma encontrado' ,
+	// 			'not_found_in_trash' => 'Nenhuma encontrado na lixeira' ,
+	// 		);
+	// 
+	// 		$args = array(
+	// 			'labels'             => $labels,
+	// 			'public'             => true,
+	// 			'publicly_queryable' => true,
+	// 			'show_ui'            => true,
+	// 			'show_in_menu'       => true,
+	// 			'query_var'          => true,
+	// 			'rewrite'            => array( 'slug' => 'flauta' ),
+	// 			'capability_type'    => 'post',
+	// 			'has_archive'        => true,
+	// 			'hierarchical'       => false,
+	// 			'menu_position'      => null,
+	// 			'menu_icon' => 'dashicons-format-audio',
+	// 			'supports'           => array( 'title', 'editor', 'thumbnail' )
+	// 		);
+	// 
+	// 		register_post_type( 'flauta', $args );
+	// 	}
 	/////////////////////////////////////////
 	
 	/////////////CPT Projetos

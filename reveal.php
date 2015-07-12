@@ -11,6 +11,10 @@ if(is_object($wp_query) && is_object($wp_query->post) && !empty($wp_query->post-
     get_template_part('modal','disco');
 
   	}
+  	elseif($type == 'midia'){
+	    get_template_part('modal','midia');
+	
+	}
     else{
       get_template_part('modal');
     }
