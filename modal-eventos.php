@@ -26,7 +26,7 @@
 					$data_explo = explode("/", $data_invert);
 					echo
 					'<span class="data-evento">' .
-					date('d/m', $data_invert)
+					date('d/m/y', $data_invert)
 					. '</span>'; 
 					echo '<span > <div id="horario">' .get_post_meta( $post->ID , 'agenda_horario_inic' , true ). '</div>'; 
 					echo '<div id="endereco" >' .get_post_meta( $post->ID , 'agenda_endereco' , true ). '</div></span>';?>
