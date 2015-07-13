@@ -2,7 +2,7 @@
 /* facebook posts content */
 global $fb_post;
 ?>
-<a class="social-link col-md-12" href="<?php echo esc_url($fb_post['link']);?>">
+<a class="social-link col-md-12" target="_blank"  href="<?php echo esc_url($fb_post['link']);?>">
 	<div class="col-md-2 pull-left img-container">
 		<?php if($fb_post['type'] == 'photo'): ?>
 		    <img src="<?php echo esc_url($fb_post['picture']);?>">
