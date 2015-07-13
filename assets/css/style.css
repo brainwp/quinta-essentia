@@ -6457,9 +6457,14 @@ input, textarea{
 	vertical-align:bottom;
 }
 #logo_footer img{
-	vertical-align:middle;
+	vertical-align:baseline;
 	max-width: 200px;
+	margin:0 10px;
+	
   
+}
+#logo_footer{
+	font-size:2em;
 }
 	
 #reveal-modal-id{

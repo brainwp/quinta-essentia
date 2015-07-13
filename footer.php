@@ -19,13 +19,15 @@ $logo = wp_get_attachment_url($sobre_options['logo'], 'full');
 		 		<polygon id="poligono_social_depois" points=""/></svg>
 			<div class="site-info row">
 				<div id="logo_footer" class="col-sm-6">
-				 	<img src="<?php echo $logo;?>"/>
-					<div><?php echo __('Alguns Direitos Reservados','odin');?></br>Quinta Essentia Quarteto 2015</div>
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cc.png">
+				 	<?php echo __('Criado com ','odin');?>  
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wp.png">
+					<?php echo __('pela ','odin');?>
+					<a href="http://www.brasa.art.br" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brasa.png"></a>
 				</div>
 				<div id="parcerias" class="col-sm-6">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wp.png">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brasa.png">
+					<img src="<?php echo $logo;?>"/>
+					<div><?php echo __('Alguns Direitos Reservados','odin');?></br>Quinta Essentia Quarteto 2015</div>
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cc.png">
 					
 				</div>
 			</div><!-- .site-info -->
