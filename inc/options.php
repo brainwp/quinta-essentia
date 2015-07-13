@@ -43,7 +43,7 @@ $odin_theme_options->set_fields(
 				),
 				array(
 				    'id'          => 'destaque', // Obrigatório
-				    'label'       => __( 'Testo de destaque', 'odin' ), // Obrigatório
+				    'label'       => __( 'Texto de destaque', 'odin' ), // Obrigatório
 				    'type'        => 'editor', // Obrigatório
 				    'default'     => '', // Opcional
 				    'description' => __( 'Preencha com o destaque da home', 'odin' ), // Opcional

@@ -5648,7 +5648,6 @@ video#bgvid {
 	right: 0;
 	bottom: 0;
 	min-width: 100%;
-	min-height: 100%;
 	width: auto;
 	height: auto;
 	z-index: -100;
@@ -6815,6 +6814,7 @@ input, textarea{
 	.single #page-content, .page #page-content{
 		max-width:1000px;
 		margin:0 auto;
+		font-size:1.4em;
 	}
 	.single article, .page article, .error404 article{
 		background-color:#ffffff;
