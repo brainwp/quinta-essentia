@@ -6787,7 +6787,7 @@ input, textarea{
 	.single, .page{
 		background-color:#ffffff;
 	}
-	.single #social, .page #social, .post-type-archive-eventos #social{
+	.error404 #social, .single #social, .page #social, .post-type-archive-eventos #social{
 		margin-top:-150px;
 	}
 	#single-header-img	img{
@@ -6816,14 +6816,21 @@ input, textarea{
 		max-width:1000px;
 		margin:0 auto;
 	}
-	.single article, .page article{
+	.single article, .page article, .error404 article{
 		background-color:#ffffff;
 		
+	}
+	.error404 article.nao-encontrado h2{
+		padding-left:10%;
+	}
+	.error404 article{
+		min-height:300px;
+	
 	}
 	.archive .entry-header{
 		background-color:transparent;
 	}
-	.single .entry-header , .page .entry-header, .archive .page-title {
+	.single .entry-header , .page .entry-header, .archive .page-title, .error404  .entry-header{
 		margin:0 0 20px;
 		padding:10px 0;
 		color:#000000;
@@ -7396,13 +7403,13 @@ select {
 }
 .midia-titulo-youtube{
 	top: 15%;
-	  left: 10%;
-	  margin: 0;
-	  color: #000;
-	  background-color: rgba(255, 255, 255, 0.46);
-	  width: initial;
-	  padding: 5px 10px;
-	  position: absolute;
+	left: 10%;
+	margin: 0;
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.46);
+	width: 75%;
+	padding: 5px 10px;
+	position: absolute;
 	
 }
 .img-midia{

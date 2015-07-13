@@ -87,7 +87,7 @@ switch ($post->post_name) {
 	  	$depois_conteudo .= '</div>';
 		$depois_conteudo .= '<div class="col-md-4 blog-feed ">';
     	$depois_conteudo .= '<div id="blog-feed"><h4>'.__('Nosso Blog','odin').'</h4>'.do_shortcode( '[query post_type=post]' ).'</div>';
-  		$depois_conteudo .= do_shortcode( '[contact-form-7 id="780" title="newsletter"]' ).'</div><!--blog-->';
+  		$depois_conteudo .= "<h4>".__('Newsletter','odin')."</h4>".do_shortcode( '[contact-form-7 id="780" title="newsletter"]' ).'</div><!--blog-->';
 		$depois_conteudo .= '';
 		$classe_conteudo = "col-md-4";
 	  	

@@ -6,23 +6,23 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
+get_header('page'); ?>
 
-	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
-		<main id="main-content" class="site-main" role="main">
-
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'odin' ); ?></h1>
-			</header>
+<div id="primary" class="">
+	<main id="main-content" class="site-main" role="main">
+		<article class="nao-encontrado">
+			<header class="entry-header">
+				<h1><?php _e( 'Not Found', 'odin' ); ?></h1>
+			</header><!-- .entry-header -->
 
 			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'odin' ); ?></p>
-
-				<?php get_search_form(); ?>
+				<h2><?php _e( 'It looks like nothing was found at this location.', 'odin' ); ?></h2>
 			</div><!-- .page-content -->
+		</article>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
-get_footer();
+
+get_footer('page');
