@@ -650,4 +650,21 @@ twitterFetcher.fetch(config1);
 	$(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
 		$.scPlayer.stopAll();
 	});
+	$(document).on('onPlayerPlay.scPlayer', function(e){
+		$(e.target).addClass('loadbg');
+		var check_timer = function() {
+			var timer = $(e.target).find('.sc-scrubber .sc-time-span .sc-buffer').css('width');
+			var timer = timer.split('.');
+			console.log(timer[0]);
+			if(parseInt(timer[0]) >= 1){
+				$(e.target).removeClass('loadbg');
+			}
+			else{
+				setTimeout(function(){
+					check_timer();	
+				},1)
+			}
+		}
+		check_timer();
+	});
 });
