@@ -6234,13 +6234,18 @@ font-size: 0.7em;
 	  height: 100%;
 }
 .sc-player .sc-controls{
-	background-image:url(../images/player.png);
+	background-image:url('../images/player.png');
  	height: 90px;
  	width: 90px;
 	content:'';
 }
 .sc-player.playing .sc-controls {
+    background-image:url('../images/player.png');
 	background-position: 90px;
+}
+.sc-player.loadbg .sc-controls {
+    background:url('../images/preloader-bg.gif') center center no-repeat;
+    background-size: cover;
 }
 .midia-category{
 	margin: 0 0 30px 10%;

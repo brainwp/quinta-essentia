@@ -582,6 +582,7 @@
       })
       // when the loaded track started to play
       .bind('scPlayer:onMediaPlay', function(event) {
+        alert('ahoy');
         clearInterval(positionPoll);
         positionPoll = setInterval(function() {
           var duration = audioEngine.getDuration(),
