@@ -105,7 +105,6 @@
     },
     // fired when widget starts playing current track (fired only once per track)
     onMediaStart : function(flashId, data) {
-      alert('start');
       this._redispatch('onMediaStart', flashId, data);
     },
     // fired when the track/playlist has finished playing
@@ -114,7 +113,6 @@
     },
     // fired when widget starts playing current track (fired on every play, seek)
     onMediaPlay : function(flashId, data) {
-      alert('play')
       this._redispatch('onMediaPlay', flashId, data);
     },
     // fired when track was paused
