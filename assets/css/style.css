@@ -6464,7 +6464,7 @@ input, textarea{
   
 }
 #logo_footer{
-	font-size:2em;
+  font-size: 1.5em;
 }
 	
 #reveal-modal-id{
@@ -6542,9 +6542,21 @@ input, textarea{
 	color:#4F4F4F;
 	display:inline-block;
 	margin-left:20px;
+	vertical-align: baseline;
+  
+}
+#info.modal-eventos {
+  padding: 0 20% 10px;
 }
 #info{
 	padding:0 10% 10px;
+}
+#info .data-evento{
+	color: #ED912A;
+  font-size: 37px;
+}
+.modal-eventos p{
+	margin:20px 0 0 ;
 }
 #reveal-modal-id .modal-eventos p{
 	color:#4F4F4F;
@@ -6554,6 +6566,9 @@ input, textarea{
 	}
 .modal-eventos h1{
 	color:#000000;
+}
+#cc{
+	display:inline-block;
 }
 .modal-eventos #tiangulo-modal {
   top: 60px;
@@ -6570,7 +6585,7 @@ input, textarea{
 	background-color:#F1EFF0;
 }
 #modal-quinta .imagem-modal{
-	padding:0 20px 0 0;
+	padding:20px;
 }
 #modal-quinta .imagem-modal img{
 	width:100%;

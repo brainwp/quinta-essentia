@@ -19,9 +19,15 @@
 					<h1 class="col-sm-6"><?php the_title(); ?></h1>
 				
 			</div>
-			
+			<?php if (has_post_thumbnail()){?>
 			<div class="col-sm-8">
-				<div id="info">
+			<?php 		
+			}
+			else{?>
+			<div class="col-sm-12">	
+			<?php } 
+			?>
+				<div id="info" class="modal-eventos">
 					<?php $data_invert = get_post_meta( $post->ID , 'agenda-event-date' , true );
 					$data_explo = explode("/", $data_invert);
 					echo
@@ -33,9 +39,13 @@
 					<?php the_content();?>
 				</div>
 			</div>
+			<?php if (has_post_thumbnail()){?>
+			
 			<div class=" imagem-modal col-sm-4 ">
 				<?php the_post_thumbnail('thumb-eventos');?>
 			</div>
+			
+			<?php 	}?>	
 		</div>
 	</div>
 	

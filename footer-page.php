@@ -40,13 +40,13 @@ $args = array(
 			<div class="site-info row">
 				<div id="logo_footer" class="col-sm-6">
 				 	<?php echo __('Criado em ','odin');?>  
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wp.png">
+					<a href="http://br.wordpress.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wp.png"></a>
 					<?php echo __('pela ','odin');?>
 					<a href="http://www.brasa.art.br" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brasa.png"></a>
 				</div>
 				<div id="parcerias" class="col-sm-6">
 					<img src="<?php echo $logo;?>"/>
-					<div><?php echo __('Alguns Direitos Reservados','odin');?></br>Quinta Essentia Quarteto 2015</div>
+					<div id="cc"><?php echo __('Alguns Direitos Reservados','odin');?></br>Quinta Essentia Quarteto 2015</div>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cc.png">
 					
 				</div>
