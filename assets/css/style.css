@@ -6830,6 +6830,9 @@ input, textarea{
 		background-color: #000000;
 	  
 	} 
+	.page-template-page-Blog .col-md-8{
+		width:66.66667%!important;
+	}
 	.single #primary, .page #primary{
 		margin:0 auto 100px;
 		width:100%;
