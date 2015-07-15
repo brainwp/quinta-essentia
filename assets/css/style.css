@@ -6847,6 +6847,13 @@ input, textarea{
 	.blog .linguas ul {
 	 	margin-top:50px;
 	}
+	.single-projeto-header-img{
+	  	margin-top: 56px;
+		height:initial!important;
+	}
+	.single-projeto-header-img img{
+		width:100%;
+	}
 	.page-template-page-Blog .col-md-8, .blog .col-md-8{
 		width:66.66667%!important;
 	}

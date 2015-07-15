@@ -78,19 +78,9 @@
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
-		
 			<?php 
-			if (has_post_thumbnail()){
-				$parallax_1 = get_the_post_thumbnail($post->ID, 'thumb-single-projeto');?>
-				<div id='single-header-img'class='single-projeto-header-img'>
-					<?php echo $parallax_1;?>'
-				</div>
-			<?php }
-			else{
-				$parallax_options= get_option( 'parallax_tab' );	
-				$parallax_1 = wp_get_attachment_url($parallax_options['parallax_1'], 'full');	
-				echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";
-			}?>
-			
-
+			$parallax_1 = get_the_post_thumbnail($post->ID, 'thumb-single-projeto');?>
+			<div id='single-header-img'class='single-projeto-header-img'>
+				<?php echo $parallax_1;?>'
+			</div>
 		<div id="main" class="site-main row">
