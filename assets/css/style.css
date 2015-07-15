@@ -6844,6 +6844,8 @@ input, textarea{
 		text-align: center;
 		color: #ffffff;
 		text-transform: uppercase;
+		font-weight:100;
+		font-size:2.7em;
 	}
 	.blog .entry-header.titulo-post{
 		color:#ffffff;
@@ -6864,9 +6866,18 @@ input, textarea{
 	}
 	.data-post h3, .data-post h4{
 		margin:0;
+		font-weight:200;
+	}
+	.blog .widget{
+		padding: 10px;
+	  border-top: solid 4px #F8B84E;
+	  background-color: #ffffff;
+	  font-weight: 100;
+	  font-family: 'Lato';
+	  text-transform: uppercase;
 	}
 	.data-post{
-		top:0;
+		top:25px;
 		right:5%;
 		position: absolute;
 	}
@@ -6881,15 +6892,25 @@ input, textarea{
 	}
 	
 	.blog article{
-		margin:20px 0;
+		margin:0 0 20px 0;
 	}
 	.blog #main-content, .blog article{
 		background-color:transparent!important;
 		
 	}
+	.post-lista-thumb{
+		position:relative;
+	}
+	.post-lista-thumb .data-post{
+		bottom: 10px;
+		top: inherit;
+		padding:10px;
+		background-color:rgba(255, 255, 255, 0.48);
+	}
+	
 	.blog .post-lista-thumb img{
 		position: relative;
-	  	bottom: -84px;
+	  	bottom: -104px;
 	}
 	.page-content hr{
 		border-top:3px solid #eee;
