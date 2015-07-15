@@ -393,3 +393,11 @@ function linguas_init() {
 
 }
 add_action( 'widgets_init', 'linguas_init' );
+
+function get_the_posts_excerpt(){
+	$excerpt = get_the_content();
+	$excerpt = strip_shortcodes($excerpt);
+	$excerpt = strip_tags($excerpt, '<img>');
+	$the_str = substr($excerpt, 0, 867);
+return $the_str;
+}

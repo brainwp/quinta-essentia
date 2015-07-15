@@ -38,8 +38,16 @@
 			<?php }?>
 	
 		<div class="page-content">
-			<?php
-				the_content( );
+			
+				<?php 
+				if (is_single()){
+					echo get_the_content();
+					}
+				else{
+					echo get_the_posts_excerpt();
+					echo '<a href="'.get_permalink().'"> - <b>Leia mais...</b></a>';
+				}?>
+			<?php 			
 				echo '<hr>';
 				$count =0;
 				$post_categories = wp_get_post_categories($post->ID );

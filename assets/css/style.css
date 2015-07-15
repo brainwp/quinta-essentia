@@ -6815,7 +6815,7 @@ input, textarea{
 	.single, .page{
 		background-color:#ffffff;
 	}
-	.error404 #social, .single #social, .page #social, .post-type-archive-eventos #social{
+	.date #social, .error404 #social, .single #social, .page #social, .post-type-archive-eventos #social{
 		margin-top:-150px;
 	}
 	#single-header-img	img{
@@ -6847,7 +6847,7 @@ input, textarea{
 	.blog .linguas ul {
 	 	margin-top:50px;
 	}
-	.page-template-page-Blog .col-md-8{
+	.page-template-page-Blog .col-md-8, .blog .col-md-8{
 		width:66.66667%!important;
 	}
 	#titulo-blog{
@@ -6916,7 +6916,7 @@ input, textarea{
 	}
 	
 	.blog article{
-		margin:0 0 20px 0;
+		margin:0 0 60px 0;
 	}
 	.blog #main-content, .blog article{
 		background-color:transparent!important;
@@ -6934,6 +6934,16 @@ input, textarea{
 	.blog #primary{
 		padding-top: 20px;
 	  
+	}
+	.blog a:hover{
+		text-decoration:none;
+		color:#F8B84E;
+	}
+	.archive.blog .titulo-mes{
+		color:inherit;
+	}
+	.blog a{
+		color:inherit;
 	}
 	.blog .post-lista-thumb img{
 		position: relative;
@@ -7361,7 +7371,7 @@ select {
 	width:80%;
 }
 @media screen and (min-width: 992px) {
-	.blog.page #primary{
+	.blog #primary{
 		float:left;
 	}
 }
