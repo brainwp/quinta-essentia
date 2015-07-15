@@ -14,16 +14,41 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<?php if( has_post_thumbnail($post->ID)  ){?>
+			<div class="post-lista-thumb">
+				<?php echo get_the_post_thumbnail($post->ID, 'thumb-blog-lista');?>
+			</div>
+			<?php }?>
+	<header class="entry-header titulo-post">
 		<?php
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h2 class="entry-title ">', '</h2>' );
 		?>
 
 	</header><!-- .entry-header -->
-
-		<div id="page-content">
+	<div class="data-post">
+		<h3><?php the_time( 'd/' ); ?></h3>
+		<h4><?php the_time( 'm/y' ); ?> </h4>
+	</div>
+		<div class="page-content">
 			<?php
-				the_content( );?>	
+				the_content( );
+				echo '<hr>';
+				$count =0;
+				$post_categories = wp_get_post_categories($post->ID );
+				$cats = array();
+
+				foreach($post_categories as $c){
+
+					$cat = get_category( $c );
+					if ($count!=0){
+						echo ' <span>●</span> ';
+					}
+					echo '<span>'.$cat->name.'</span>';
+					$count++;
+
+				}
+				?>	
+				
 		</div><!-- #page-content -->
 
 

@@ -373,6 +373,8 @@ add_image_size( 'thumb-midia', 334, 334, true );
 add_image_size( 'thumb-flauta', 120, 120, true );
 add_image_size( 'thumb-blog', 300, 130, true );
 add_image_size( 'thumb-eventos', 250, 250, true );
+add_image_size( 'thumb-blog-lista', 900, 390, true );
+
 
 
 require_once (get_stylesheet_directory() . '/inc/requires-agenda.php');
