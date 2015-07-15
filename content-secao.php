@@ -88,7 +88,6 @@ switch ($post->post_name) {
 		$depois_conteudo .= '<div class="col-md-4 blog-feed ">';
     	$depois_conteudo .= '<div id="blog-feed"><h4>'.__('Nosso Blog','odin').'</h4>'.do_shortcode( '[query post_type=post]' ).'</div>';
 		$lang = qtrans_getLanguage();
-		echo 'lang'.$lang;
 		$depois_conteudo .= "<h4>".__('Newsletter','odin')."</h4>".do_shortcode( '[contact-form-7  title="newsletter '.$lang.'"]' ).'</div><!--blog-->';
 		// if(qtrans_getLanguage()=='en') {
 		// 			$depois_conteudo .= "<h4>".__('Newsletter','odin')."</h4>".do_shortcode( '[contact-form-7 title="newsletter ingles"]' ).'</div><!--blog-->';

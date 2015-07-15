@@ -8,10 +8,16 @@
  * @since 2.2.0
  */
 
-get_header('blog'); ?>
+get_header('blog'); 
+?>
+
 	<div class="row blog-container">
 		<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
+			
 			<main id="main-content" class="site-main" role="main">
+				<article id="slider">
+					<?php echo do_shortcode('[brasa_slider name=blog]');?>
+				</article>
 					<?php 
 
 				$args = array(

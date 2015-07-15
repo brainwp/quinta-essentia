@@ -6411,7 +6411,7 @@ font-size: 0.7em;
 	top:0;
 }
 #social {
-	background-color:#f3b945;
+	background-color:#f3b945!important;
 }
 	
 input, textarea{
@@ -6457,11 +6457,15 @@ input, textarea{
 	margin-left:20px;
 	vertical-align:bottom;
 }
-#logo_footer div{
+#logo_footer div {
 	display:inline-block;
 	vertical-align:bottom;
 }
-#logo_footer img{
+#logo_footer  a, #logo_footer img{
+	vertical-align:bottom;
+}
+
+#parcerias img{
 	vertical-align:baseline;
 	max-width: 200px;
 	margin:0 10px;
@@ -6830,17 +6834,26 @@ input, textarea{
 		background-color: #000000;
 	  
 	}
+	.blog .is_slider{
+		float: none;
+	}
+	.blog .is_slider a{
+		max-height:325px;
+	}
 	.blog-container{
 		max-width:1200px;
 		margin:0 auto;
 	} 
+	.blog .linguas ul {
+	 	margin-top:50px;
+	}
 	.page-template-page-Blog .col-md-8{
 		width:66.66667%!important;
 	}
 	#titulo-blog{
-		margin-top: -10px;
+		margin-top:-25px;
 		background-color: rgb(227, 90, 48);
-		padding: 70px 0 35px;
+		padding: 55px 0 35px;
 		text-align: center;
 		color: #ffffff;
 		text-transform: uppercase;
@@ -6869,12 +6882,23 @@ input, textarea{
 		font-weight:200;
 	}
 	.blog .widget{
-		padding: 10px;
+		padding: 10px 20px;
 	  border-top: solid 4px #F8B84E;
 	  background-color: #ffffff;
-	  font-weight: 100;
+	  font-weight: 300!important;
 	  font-family: 'Lato';
 	  text-transform: uppercase;
+	}
+	.blog .widget h3, .blog .widget label{
+		font-weight: 200!important;
+	  
+	}
+	.blog .widget select{
+		box-shadow:none;
+		box-shadow: none;
+	  	border: none;
+	  	background-color: #E7E7E7;
+		margin-left:5px;
 	}
 	.data-post{
 		top:25px;
@@ -6907,10 +6931,17 @@ input, textarea{
 		padding:10px;
 		background-color:rgba(255, 255, 255, 0.48);
 	}
-	
+	.blog #primary{
+		padding-top: 20px;
+	  
+	}
 	.blog .post-lista-thumb img{
 		position: relative;
 	  	bottom: -104px;
+		margin-top:-55px;
+	}
+	.blog .slick-prev, .blog .slick-next{
+ 		display:none!important;
 	}
 	.page-content hr{
 		border-top:3px solid #eee;
