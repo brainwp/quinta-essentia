@@ -79,7 +79,7 @@
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
 			<?php 
-			$parallax_1 = get_the_post_thumbnail($post->ID, 'thumb-single-projeto');?>
+			$parallax_1 = get_the_post_thumbnail($post->ID, 'full');?>
 			<div id='single-header-img'class='single-projeto-header-img'>
 				<?php echo $parallax_1;?>'
 			</div>

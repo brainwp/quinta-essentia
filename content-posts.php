@@ -33,8 +33,9 @@
 			<?php } 
 			else { ?>
 				<header class="entry-header titulo-post">
-					<?php the_title( '<h2 class="entry-title ">', '</h2>' );?>
-				</header><!-- .entry-header -->
+					<a href="<?php echo get_permalink()?>">
+						<?php the_title( '<h2 class="entry-title ">', '</h2>' );?>
+					</a>				</header><!-- .entry-header -->
 				<div class="data-post">
 					<h3><?php the_time( 'd/' ); ?></h3>
 					<h4><?php the_time( 'm/y' ); ?> </h4>

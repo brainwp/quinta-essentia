@@ -6494,43 +6494,7 @@ input, textarea{
   	font-size: 1.2em;
 	color:#ffffff;
 }
-@media only screen and (min-width: 40.063em){
-	html dialog, html .reveal-modal {
-	  	margin-left: -500px;
-		  width: 100%;
-	}
-}
-@media only screen and (max-width:1020px ){
-	html .reveal-modal{
-		margin-left:0;
-		left:0;
-	}
-}
-@media only screen and (max-width:767px ){
-	#reveal-modal-id{
-		padding:5%;
-		background-color:transparent;
-		width:100%;
-	}
-	#reveal-modal-id h1 {
-	 
-	  padding: 0px 21% 40px;
-	}
-	.modal-eventos .imagem-modal{
-		max-width:100%;
-	}
-	.modal-eventos .imagem-modal img{
-		width:100%;
-	}
-	#sobre-escrito{
-		width:65%!important;
-	}
-	#sobre h5{
-		width:85%;
-		font-size: 3.2vw;
-	  
-	}
-}
+
 .next-post-reveal-nav,.prev-post-reveal-nav{
 	display:none;
 }
@@ -6829,6 +6793,7 @@ input, textarea{
 	#single-header-img	img{
 		margin: 0 auto;
 	  	display: block;
+		width:100;
 	}
 		
 	 .single #social .entry-header, .page #social.entry-header, .archive #social .page-title{
@@ -6866,7 +6831,7 @@ input, textarea{
 		width:66.66667%!important;
 	}
 	#titulo-blog{
-	  	margin-top: -55px;
+	  margin-top: -10px;
 		background-color: rgb(227, 90, 48);
 		padding: 55px 0 35px;
 		text-align: center;
@@ -7481,7 +7446,7 @@ select {
 		position:absolute;
 	}
 	#single-header-img	img {
-	  margin: 110px auto;
+	  margin: 110px auto 0 ;
 	}
 	.single #page-content, .page #page-content {
 		width:90%;
@@ -7614,4 +7579,44 @@ select {
  }
 .sumido a{
 	display:none!important;
+}
+@media only screen and (min-width: 40.063em){
+	html dialog, html .reveal-modal {
+	  	margin-left: -500px;
+		  width: 100%;
+	}
+}
+@media only screen and (max-width:1020px ){
+	html .reveal-modal{
+		margin-left:0;
+		left:0;
+	}
+}
+@media only screen and (max-width:767px ){
+	#reveal-modal-id{
+		padding:5%;
+		background-color:transparent;
+		width:100%;
+	}
+	#reveal-modal-id h1 {
+	 
+	  padding: 0px 21% 40px;
+	}
+	.modal-eventos .imagem-modal{
+		max-width:100%;
+	}
+	.modal-eventos .imagem-modal img{
+		width:100%;
+	}
+	#sobre-escrito{
+		width:65%!important;
+	}
+	#sobre h5{
+		width:85%;
+		font-size: 3.2vw;
+	  
+	}
+	#single-header-img{
+		background-color: transparent;
+	 }
 }

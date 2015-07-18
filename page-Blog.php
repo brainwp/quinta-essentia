@@ -22,6 +22,7 @@ get_header('blog');
 
 				$args = array(
 					'post_type' => 'post',
+					'posts_per_page'=> 99999
 					// 'meta_key' => 'ordem',
 					// 			'orderby' => 'meta_value',
 					// 			'order'   => 'ASC'
@@ -42,8 +43,10 @@ get_header('blog');
 							endwhile; ?>
 						<!-- end of the loop -->
 
-						<!-- pagination here -->
-
+						<?php 
+			    	    // Page navigation.
+				        odin_paging_nav();
+				        ?>
 						<?php wp_reset_postdata(); ?>
 
 					<?php endif; 
