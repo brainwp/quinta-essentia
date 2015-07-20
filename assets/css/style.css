@@ -6817,7 +6817,8 @@ input, textarea{
 		margin:0 auto;
 	} 
 	.blog .linguas ul {
-	 	margin-top:50px;
+	  margin-top: 17px;
+
 	}
 	.single-projeto-header-img{
 	  	margin-top: 56px;
@@ -6829,10 +6830,13 @@ input, textarea{
 	.page-template-page-Blog .col-md-8, .blog .col-md-8{
 		width:66.66667%!important;
 	}
+	.blog #triangulo_header_baixo{
+		display:none;
+	}
 	#titulo-blog{
-	  margin-top: -10px;
-		background-color: rgb(227, 90, 48);
-		padding: 55px 0 35px;
+	 	margin-top: -90px;
+	  	background-color: rgb(227, 90, 48);
+	  	padding: 174px 0 35px;
 		text-align: center;
 		color: #ffffff;
 		text-transform: uppercase;
@@ -7370,7 +7374,17 @@ select {
 }
 
 @media screen and (max-width: 767px) {
-	
+	.navbar-toggle .icon-bar{
+		width:26px;
+		height:3px;
+	}
+	.navbar-toggle{
+		padding:0 10px;
+	}
+	#triangulo_menu{
+		border-width: 100px 100px 0 0;
+	  
+	}
 	#destaque{
 		display:none;
 	}
