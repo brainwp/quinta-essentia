@@ -80,4 +80,4 @@
 		</header><!-- #header -->
 			
 		<div id="main" class="site-main">
-		<h1 id="titulo-blog">Blog</h1>
+		<h1 id="titulo-blog">Flautadoce<b>br</b></h1>

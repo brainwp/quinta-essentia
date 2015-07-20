@@ -14,7 +14,7 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if( has_post_thumbnail($post->ID)  ){?>
+	<?php if(( has_post_thumbnail($post->ID) && ( 'equipe' != get_post_type() ) )){?>
 			<div class="post-lista-thumb">
 				<?php echo get_the_post_thumbnail($post->ID, 'thumb-blog-lista');?>
 				<header class="entry-header titulo-post">
