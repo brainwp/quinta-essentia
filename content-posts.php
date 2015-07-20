@@ -47,6 +47,8 @@
 				<?php 
 				if (is_single()){
 					echo get_the_content();
+					comments_template();
+					
 					}
 				else{
 					echo get_the_posts_excerpt();

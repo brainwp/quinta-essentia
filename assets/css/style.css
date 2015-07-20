@@ -7378,6 +7378,9 @@ select {
 		width:26px;
 		height:3px;
 	}
+	.page-template-page-Blog .col-md-8, .blog .col-md-8{
+		width:100%!important;
+	}
 	.navbar-toggle{
 		padding:0 10px;
 	}
