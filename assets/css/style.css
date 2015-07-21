@@ -5660,7 +5660,7 @@ video {
 }
 #vidpause{
 	position: absolute;
-  top: 50vh;
+  top: 50%;
   z-index: 9999;
   left: 50%;
   font-size: 40px;
@@ -7031,6 +7031,22 @@ tr.visible-xs {
 th.visible-xs, td.visible-xs {
     display: table-cell !important;
 }
+}
+@media (max-width: 1024px) {
+	#sobre{
+		padding-top:66vw;
+	}
+	.secao-background{
+		background-attachment: initial;
+	  top: 181px;
+	  
+	}
+	#parallax_midia{
+		top:0;
+	}
+	#destaque_texto {
+	  font-size: 1em;
+	}
 }
 
 
