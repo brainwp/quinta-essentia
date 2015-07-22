@@ -7041,6 +7041,10 @@ th.visible-xs, td.visible-xs {
 	  top: 181px;
 	  
 	}
+	#sobre .secao-interno{
+		background-attachment: initial;
+		top:0;
+	}
 	#parallax_midia{
 		top:0;
 	}
