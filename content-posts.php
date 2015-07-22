@@ -46,7 +46,7 @@
 			
 				<?php 
 				if (is_single()){
-					echo get_the_content();
+					echo apply_filters( 'the_content', get_the_content() );
 					comments_template();
 					
 					}
