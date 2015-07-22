@@ -6956,17 +6956,17 @@ input, textarea{
 		.linguas{
 			top: 0;
 		}
-	    .blog #main-navigation {
+	    .page #main-navigation, .blog #main-navigation, .archive #main-navigation, .single #main-navigation{
 	        background-color:#F8B84E;
 			padding-bottom: 20px!important;
 	    }
 		#parallax_midia{
 			background-position: center 0vh;
 		}
-		.blog #svg_header{
+		.blog #svg_header, .page #svg_header, .archive #svg_header, .single #svg_header{
 			display:none;
 		}
-		.blog #menu-interno {
+		.blog #menu-interno, .page #menu-interno, .archive #menu-interno, .single #menu-interno {
 		    background-color: transparent;
 		    padding:  0  0 0 150px !important;
 		}
