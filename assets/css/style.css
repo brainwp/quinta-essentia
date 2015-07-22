@@ -6956,6 +6956,9 @@ input, textarea{
 		.linguas{
 			top: 0;
 		}
+		.single-projeto-header-img {
+		    margin-top: 0px;
+		}
 	    .page #main-navigation, .blog #main-navigation, .archive #main-navigation, .single #main-navigation{
 	        background-color:#F8B84E;
 			padding-bottom: 20px!important;
@@ -7078,6 +7081,7 @@ th.visible-xs, td.visible-xs {
 	}
 	#sobre .secao-interno{
 		background-attachment: initial;
+	    background-size: cover;
 		top:0;
 	}
 	#parallax_midia{

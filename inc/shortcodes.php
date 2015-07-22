@@ -12,6 +12,7 @@ function short_query_func( $atts ) {
 	
     $a = shortcode_atts( array(
 	        'post_type' => 'flauta',
+			'order'     => 'ASC',
 	        'paged'     => get_query_var( 'paged', 1 ),
 	        'category'  => false
 	        ), $atts );
