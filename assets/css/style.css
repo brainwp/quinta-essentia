@@ -6956,11 +6956,14 @@ input, textarea{
 		.linguas{
 			top: 0;
 		}
-	    #main-navigation {
+	    .blog #main-navigation {
 	        background-color:#F8B84E;
 			padding-bottom: 20px!important;
 	    }
-		#svg_header{
+		#parallax_midia{
+			background-position: center 0vh;
+		}
+		.blog #svg_header{
 			display:none;
 		}
 		.blog #menu-interno {
