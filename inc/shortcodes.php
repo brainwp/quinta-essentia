@@ -12,7 +12,6 @@ function short_query_func( $atts ) {
 	
     $a = shortcode_atts( array(
 	        'post_type' => 'flauta',
-			'order'     => 'ASC',
 	        'paged'     => get_query_var( 'paged', 1 ),
 	        'category'  => false
 	        ), $atts );
@@ -99,6 +98,9 @@ function short_query_func( $atts ) {
 		'post_type' => $a['post_type'],
 		'posts_per_page' => $per_page,
 		'paged'         => $paged,
+		'order'   => 'ASC',
+		
+		
 	    
 	);
 	if($a['category'] != false && $a['category'] !== 'all'){
