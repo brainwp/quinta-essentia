@@ -28,7 +28,7 @@ $odin_general_opts = get_option( 'odin_general' );
 				<video  
 				<?php 
 				// if(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) != $_SERVER['SERVER_NAME']) {
-					echo 'autoplay'; 
+					// echo 'autoplay'; 
 					//parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST)."<br>autoplay<br>".$_SERVER['SERVER_NAME'];
 				// }
 				?>
