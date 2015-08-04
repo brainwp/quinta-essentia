@@ -16,7 +16,7 @@
  * @since 2.2.0
  */
 
-get_header('page'); ?>
+get_header('agenda'); ?>
 
 	<section id="primary" class="single <?php echo odin_classes_page_full(); ?>">
 		<main id="main-content" class="site-main" role="main">
