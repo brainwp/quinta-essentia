@@ -27,11 +27,10 @@ $odin_general_opts = get_option( 'odin_general' );
 				
 				<video  
 				<?php 
-				// if(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) != $_SERVER['SERVER_NAME']) {
+				if(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) != $_SERVER['SERVER_NAME']) {
 					echo 'autoplay'; 
 					//parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST)."<br>autoplay<br>".$_SERVER['SERVER_NAME'];
-				// }
-				?>
+				}?>
 				poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.webm" type="video/webm">
 					<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.mp4" type="video/mp4">
