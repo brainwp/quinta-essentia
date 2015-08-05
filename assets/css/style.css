@@ -7711,3 +7711,15 @@ only screen and (                min-resolution: 2dppx)   {
  .blog .entry-header.titulo-post h2{
 	font-weight:300!important;
 }
+ }
+#comments-title{
+	background-color:#F8B84E;
+	padding:20px ;
+	font-weight:300;
+	color:#fff;
+}
+.form-submit .submit{
+	background-color:rgb(227, 90, 48);
+	color:#ffffff;
+}
+
