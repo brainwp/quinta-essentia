@@ -25,7 +25,6 @@ $logo = wp_get_attachment_url($sobre_options['logo'], 'full');
 					<a href="http://www.brasa.art.br" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brasa.png"></a>
 				</div>
 				<div id="parcerias" class="col-sm-6">
-					<img src="<?php echo $logo;?>"/>
 					<div id="cc"><?php echo __('Alguns Direitos Reservados','odin');?></br>Quinta Essentia Quarteto 2015</div>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cc.png">
 					

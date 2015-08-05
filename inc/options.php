@@ -78,7 +78,13 @@ $odin_theme_options->set_fields(
 				    'type'        => 'image', // Obrigatório
 				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
 				    'description' => __( 'Imagem entre midia e discografia', 'odin' ), // Opcional
-				)
+				),
+				array(
+				    'id'          => 'imagem', // Obrigatório
+				    'label'       => __( 'Imagem de destaque nas paginas', 'odin' ), // Obrigatório
+				    'type'        => 'image', // Obrigatório
+				    'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
+				),
             )
         ),
 		

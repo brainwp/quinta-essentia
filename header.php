@@ -22,7 +22,7 @@
 	
 </head>
 
-<body <?php body_class(); ?>>
+<body class="home">
 	<div id="preloader"></div><!-- #preloader -->
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">

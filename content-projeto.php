@@ -23,11 +23,9 @@
 
 		<div id="page-content">
 			<?php
-				the_content( );
-				comments_template();
-				?>	
+				the_content( );?>	
 		</div><!-- #page-content -->
-		
+
 
 	
 </article><!-- #post-## -->

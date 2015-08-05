@@ -7635,8 +7635,6 @@ select {
 	top: 15%;
 	left: 10%;
 	margin: 0;
-	font-size:16px;
-	font-weight:bold;
 	color: #000;
 	background-color: rgba(255, 255, 255, 0.46);
 	width: 75%;
@@ -7669,7 +7667,6 @@ select {
 		left:0;
 	}
 }
-
 @media only screen and (max-width:767px ){
 	#reveal-modal-id{
 		padding:5%;
@@ -7698,28 +7695,3 @@ select {
 		background-color: transparent;
 	 }
 }
-.nocomments{
-	display:none;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2)  ,
-only screen and (   min--moz-device-pixel-ratio: 2)      ,
-only screen and (     -o-min-device-pixel-ratio: 2/1)    ,
-only screen and (        min-device-pixel-ratio: 2)      ,
-only screen and (                min-resolution: 192dpi) ,
-only screen and (                min-resolution: 2dppx)   { 
-
- .blog .entry-header.titulo-post h2{
-	font-weight:300!important;
-}
- }
-#comments-title{
-	background-color:#F8B84E;
-	padding:20px ;
-	font-weight:300;
-	color:#fff;
-}
-.form-submit .submit{
-	background-color:rgb(227, 90, 48);
-	color:#ffffff;
-}
-

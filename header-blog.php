@@ -22,7 +22,7 @@
 	
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('blog'); ?>>
 	<div id="preloader"></div><!-- #preloader -->
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
@@ -78,18 +78,6 @@
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
-		
-			<?php if( has_post_thumbnail($post->ID)  ){
-					$parallax_1 = get_the_post_thumbnail($post->ID, 'full');
-					echo "<div id='single-header-img'> ".$parallax_1."</div>";
-				}
-				else{
-					$parallax_options= get_option( 'parallax_tab' );	
-					$parallax_1 = wp_get_attachment_url($parallax_options['imagem'], 'full');	
-					echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";
-				}
-				
-			?>
 			
-
-		<div id="main" class="site-main row">
+		<div id="main" class="site-main">
+		<h1 id="titulo-blog">Flautadoce<b>br</b></h1>

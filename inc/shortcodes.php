@@ -98,8 +98,20 @@ function short_query_func( $atts ) {
 		'post_type' => $a['post_type'],
 		'posts_per_page' => $per_page,
 		'paged'         => $paged,
-	    
+		'orderby' => 'post_date',
+		'order'   => 'DESC',
 	);
+	
+	if($a['post_type'] == 'disco'){
+		$args = array(
+			'post_type' => $a['post_type'],
+			'posts_per_page' => $per_page,
+			'paged'         => $paged,
+			'orderby'  => 'meta_value',
+			'meta_key' => 'ordem',
+			'order'   => 'ASC',
+		);
+    }
 	if($a['category'] != false && $a['category'] !== 'all'){
 		$args = array(
 			'post_type' => $a['post_type'],
