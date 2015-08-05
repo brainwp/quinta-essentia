@@ -7669,6 +7669,7 @@ select {
 		left:0;
 	}
 }
+
 @media only screen and (max-width:767px ){
 	#reveal-modal-id{
 		padding:5%;
@@ -7696,4 +7697,17 @@ select {
 	#single-header-img{
 		background-color: transparent;
 	 }
+}
+.nocomments{
+	display:none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2)  ,
+only screen and (   min--moz-device-pixel-ratio: 2)      ,
+only screen and (     -o-min-device-pixel-ratio: 2/1)    ,
+only screen and (        min-device-pixel-ratio: 2)      ,
+only screen and (                min-resolution: 192dpi) ,
+only screen and (                min-resolution: 2dppx)   { 
+
+ .blog .entry-header.titulo-post h2{
+	font-weight:300!important;
 }
