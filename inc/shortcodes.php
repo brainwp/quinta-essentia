@@ -120,15 +120,15 @@ function short_query_func( $atts ) {
 			'post_type' => $a['post_type'],
 			'posts_per_page' => -1,
 			'orderby'  => 'meta_value',
-									'meta_key' => 'agenda-event-date',
-									'order'   => 'DESC',
-									'meta_query' => array(
-										array(
-											'key' => 'agenda-event-date',
-											'compare' => '>',
-											'value' =>  time()-86400
-										),
-									),		
+			'meta_key' => 'agenda-event-date',
+			'order'   => 'ASC',
+			'meta_query' => array(
+				array(
+					'key' => 'agenda-event-date',
+					'compare' => '>',
+					'value' =>  time()-86400
+				),
+			),		
 		);
 	}
 	$query2 = new WP_Query( $args );
