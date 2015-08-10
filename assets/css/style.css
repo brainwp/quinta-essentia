@@ -7724,3 +7724,12 @@ only screen and (                min-resolution: 2dppx)   {
 	color:#ffffff;
 }
 
+div > .cada-midia:first-child {
+	clear: both;
+}
+
+#interno-midia .btn-loadmore {
+	clear: both;
+	float: left;
+	display: block;
+}
