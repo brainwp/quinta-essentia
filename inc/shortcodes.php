@@ -127,13 +127,12 @@ function short_query_func( $atts ) {
 		);
 	}
     if($a['post_type'] == 'eventos'){
-		
 		$args = array(
 			'post_type' => $a['post_type'],
 			'posts_per_page' => -1,
-			'orderby'  => 'meta_value',
 			'meta_key' => 'agenda-event-date',
 			'order'   => 'ASC',
+			'orderby'  => 'meta_value',
 			'meta_query' => array(
 				array(
 					'key' => 'agenda-event-date',

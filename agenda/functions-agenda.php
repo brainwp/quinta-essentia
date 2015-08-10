@@ -34,13 +34,10 @@
 // Ordena automaticamente os Eventos da Agenda de forma ascendente (ASC)
 	function agenda_pre_get_posts( $query ) {
 	
-		if (isset($query->query_vars['post_type'])) {
-			if ($query->query_vars['post_type'] == 'eventos') {
-	
-				$query->set('meta_key', 'agenda-event-date');
-				$query->set('orderby', 'meta_value');
-				$query->set('order', 'DESC');
-			}
+		if (is_post_type_archive('eventos') && $query->is_main_query()) {
+			$query->set('meta_key', 'agenda-event-date');
+			$query->set('orderby', 'meta_value');
+			$query->set('order', 'DESC');
 		}
 		if(is_post_type_archive('eventos') && isset($_GET['by_year']) && $query->is_main_query()){
 			$meta_query = array(
