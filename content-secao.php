@@ -16,7 +16,7 @@ $entre = '';
 $depois_conteudo= "";
 $post_antigo = $post;
 $classe_conteudo = "";
-
+// print_r($post);
 $parallax_1 = wp_get_attachment_url($parallax_options['parallax_1'], 'full');
 switch ($post->post_name) {
    case 'sobre':

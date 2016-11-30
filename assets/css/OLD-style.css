@@ -4798,14 +4798,10 @@ button.close {
 .modal-sm {
     width: 300px;
 }
-}
-@media (min-width: 992px) {
-    #sobre .secao-background{
-    top: -17vh;
-    }
+}@media (min-width: 992px) {
     .modal-lg {
     width: 900px;
-    }
+}
 }.tooltip {
     position: absolute;
     z-index: 1070;
@@ -5716,7 +5712,6 @@ video {
 	  margin: 18vw 0 -0 8.5vw;
 	  width: 44.5vw;
 }
-
 .secao-background{
 	width: 100%;
   	height: 100vw;
@@ -5725,8 +5720,7 @@ video {
   	z-index: 99;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
-/*	background-position: center 10vh; */
-	background-position: center -40vh;
+	background-position: center 10vh;
 	background-color:#000000;
   	background-size: cover;
 }
@@ -7079,12 +7073,12 @@ th.visible-xs, td.visible-xs {
 }
 @media (max-width: 1024px) {
 	#sobre{
-		/*padding-top:66vw;*/
+		padding-top:66vw;
 	}
 	.secao-background{
-		/*background-attachment: initial;*/
-/*	  top: 181px;   --edicao para fotos de flautas */
-	top: 181px;  
+		background-attachment: initial;
+	  top: 181px;
+	  
 	}
 	#sobre .secao-interno{
 		background-attachment: initial;
@@ -7104,10 +7098,7 @@ th.visible-xs, td.visible-xs {
 
 
 @media (max-width: 767px) {
-	.secao-background{
-        background-attachment: initial;
-    }
-
+	
 	#bgvid,#vidpause { display: none; }
 
 	.social-feed {
@@ -7180,22 +7171,11 @@ th.visible-xs, td.visible-xs {
 }
 }
 @media (max-width: 767px) {
-
     .visible-xs-inline-block {
     display: inline-block !important;
 }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    #sobre {
-        padding-top: 39vw;
-    }
-    #sobre .secao-background {
-     background-attachment: fixed; 
-    top: -12vh;
-}
-}
 @media (min-width: 768px) and (max-width: 991px) {
-    
     .visible-sm {
     display: block !important;
 }
@@ -7439,21 +7419,6 @@ select {
 #youtube-feed .social-feed img{
 	width:80%;
 }
-.rc-anchor-light {
-    background: transparent!important;
-    border: transparent!important;
-    color: #000;
-    box-shadow: none!important;
-}
-.rc-anchor-normal-footer {
-    display: none!important;
-}
-html .rc-anchor-checkbox-label {
-    font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif!important;
-    font-size: 14px;
-    font-weight: 300!important;
-    color: #333;
-}
 @media screen and (min-width: 992px) {
 	.blog #primary{
 		float:left;
@@ -7517,12 +7482,11 @@ html .rc-anchor-checkbox-label {
 		position:relative;
 	  	height: 500px;
 		background-attachment: initial;
-/*	    background-position: center 100px;   --edicao para fotos de flautas */
-	  	background-position: center 0px;
+	    background-position: center 100px;
+	  
 	}
 	#sobre header{
-        padding-top: 86px;
-        margin-bottom: -20px;
+		padding-top:0;
 	}
 	#cabecalho_sobre {
 	  position: relative;
@@ -7621,10 +7585,6 @@ html .rc-anchor-checkbox-label {
 	  height: 300px;
 	  background-attachment: initial;
 	}
-    #sobre .secao-background{
-        top:0;
-        background-size: cover;
-    }
 	#sobre .secao-interno {
 	  padding: 0% 0 10%;
 	}
@@ -7661,7 +7621,7 @@ html .rc-anchor-checkbox-label {
 	  position: absolute;
 	}
 	#discografia .entry-title{
-		color:#fff;
+		color:#000000;
 	}
 
 }
@@ -7772,7 +7732,4 @@ div > .cada-midia:first-child {
 	clear: both;
 	float: left;
 	display: block;
-}
-.qtranxs-available-languages-message{
-    display: none;
 }
