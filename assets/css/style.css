@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family:vineritc;
     src: url(../fonts/vineritc.ttf);
 }
@@ -8,7 +8,72 @@
 a , a:focus;{
 	border-style:none;
 }
+#triangulo_menu{
+  display: none;
+}
+.aparecido #triangulo_menu{
+  display: block;
+}
+.home .sub-menu {
+  position: absolute;
+  height: 0;
+  margin-top: -10px;
+  text-transform: uppercase;
+  list-style:none;
+  transition: height 0.5s linear;
+       -webkit-transition: height 0.5s linear;
+       -moz-transition: height 0.5s linear;
+       -o-transition: height 0.5s linear;
+       -ms-transition: height 0.5s linear;
+       background-color: #6f1112;
+}
+.menu-item:hover ul ul a{
+  color:white;
+  text-transform: uppercase;
+}
+.home .menu-item-has-children .sub-menu li {
+  height:0;
+  margin-left: -40px;
+  overflow: hidden;
+  background-color: #6f1112;
 
+}
+.home .menu-item-has-children .sub-menu li a {
+  background-color: #6f1112;
+
+}
+.home .menu-item-has-children .sub-menu{
+
+
+}
+.home .menu-item-has-children:hover .sub-menu a{
+  color:white;
+}
+.home .menu-item:hover{
+  background-color: #6f1112;
+}
+.home .menu-item-has-children:hover .sub-menu li{
+  height: auto;
+  background-color: #6f1112;
+  transition: height 0.5s linear;
+       -webkit-transition: height 0.5s linear;
+       -moz-transition: height 0.5s linear;
+       -o-transition: height 0.5s linear;
+       -ms-transition: height 0.5s linear;
+       padding: 0 10px 10px;
+
+}
+
+.home .menu-item-has-children:hover .sub-menu li{
+  height: auto;
+  padding: 10px 20px;
+
+  transition: height 0.5s linear;
+       -webkit-transition: height 0.5s linear;
+       -moz-transition: height 0.5s linear;
+       -o-transition: height 0.5s linear;
+       -ms-transition: height 0.5s linear;
+}
 .slick-slider
 {
     position: relative;
@@ -1415,7 +1480,7 @@ pre code {
 .container {
     margin-right: auto;
     margin-left: auto;
-    
+
 }
 .container:before, .container:after {
     content: " ";
@@ -1481,7 +1546,7 @@ pre code {
     clear: both;
 }
 .row {
-    
+
 }
 .row:before, .row:after {
     content: " ";
@@ -1493,7 +1558,7 @@ pre code {
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     position: relative;
     min-height: 1px;
-    
+
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
     float: left;
@@ -2495,7 +2560,7 @@ textarea.input-lg, .input-group-lg>textarea.form-control, .input-group-lg>textar
     user-select: none;
 }
 .btn:focus, input[type="submit"]:focus, input[type="reset"]:focus, button:focus, .btn.focus, input.focus[type="submit"], input.focus[type="reset"], button.focus, .btn:active:focus, input[type="submit"]:active:focus, input[type="reset"]:active:focus, button:active:focus, .btn:active.focus, input[type="submit"]:active.focus, input[type="reset"]:active.focus, button:active.focus, .btn.active:focus, input.active[type="submit"]:focus, input.active[type="reset"]:focus, button.active:focus, .btn.active.focus, input.active.focus[type="submit"], input.active.focus[type="reset"], button.active.focus {
-   
+
 }
 .btn:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .btn:focus, input[type="submit"]:focus, input[type="reset"]:focus, button:focus, .btn.focus, input.focus[type="submit"], input.focus[type="reset"], button.focus {
     color: #333;
@@ -3592,7 +3657,7 @@ tbody.collapse.in {
 	  top: 10px;
 	  left: 10px;
 	  z-index: 99999;
-	
+
 	}
 }
 
@@ -4798,14 +4863,10 @@ button.close {
 .modal-sm {
     width: 300px;
 }
-}
-@media (min-width: 992px) {
-    #sobre .secao-background{
-    top: -17vh;
-    }
+}@media (min-width: 992px) {
     .modal-lg {
     width: 900px;
-    }
+}
 }.tooltip {
     position: absolute;
     z-index: 1070;
@@ -5595,7 +5656,7 @@ html {
 /*Começo da customização*/
 .page 	#menu-lado{
 	oppacity:1;
-		
+
 }
 #main-content{
 	background-color: #000000
@@ -5624,7 +5685,7 @@ html {
 }
 .linguas ul{
 	list-style:none;
-	
+
 }
 .linguas li{
 	display:inline-block;
@@ -5637,18 +5698,18 @@ html {
 		left:0px;
 		padding-left:200px;
 		opacity:0;
-	
+
 	}
 .navbar-main-navigation{
 	z-index:99999;
 	position:relative;
 	top:2vw;
 	width:100%;
-	
+
 }
 
 video#bgvid {
-	position: relative; 
+	position: relative;
 	right: 0;
 	bottom: 0;
 	min-width: 100%;
@@ -5659,8 +5720,8 @@ video#bgvid {
 	background-size: cover;
 	z-index:999;
 }
-video { 
-	display: block; 
+video {
+	display: block;
 }
 #vidpause{
 	position: absolute;
@@ -5683,7 +5744,7 @@ video {
   margin: -2% 0 -10% -10%;
   height: 60vw;
   z-index: 9;
-	
+
 }
 #destaque_texto{
 	width:60%;
@@ -5706,8 +5767,8 @@ video {
    	  -ms-transform: rotate(-25deg); /* IE 9 */
    	  -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
    	  transform: rotate(-25deg);
-	
-	
+
+
 }
 #destaque_img img{
 	  -ms-transform: rotate(-4deg); /* IE 9 */
@@ -5716,7 +5777,6 @@ video {
 	  margin: 18vw 0 -0 8.5vw;
 	  width: 44.5vw;
 }
-
 .secao-background{
 	width: 100%;
   	height: 100vw;
@@ -5725,8 +5785,7 @@ video {
   	z-index: 99;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
-/*	background-position: center 10vh; */
-	background-position: center -40vh;
+	background-position: center 10vh;
 	background-color:#000000;
   	background-size: cover;
 }
@@ -5742,15 +5801,15 @@ video {
 	z-index:1;
 	margin-top: -15vw;
 	padding-top:45vw;
-  
-	
+
+
 }
 svg{
 	width:100vw;
 
 	position:absolute;
 	z-index: 9999;
-  
+
 }
 #triangulo_sobre{
 
@@ -5758,26 +5817,26 @@ svg{
 }
 #triangulo_laranja{
 	fill:#e45b31;
-	
-	
+
+
 }
 .menu-inicial{
 	opacity:1;
-	
+
 }
 
 .aparecido{
 	opacity:1;
 	transition-property: opacity;
     transition-duration: 0.7s;
-	
+
 }
 .sumido{
 	opacity:0;
 	transition-property: opacity;
     transition-duration: 0.7s;
 }
-.com-fundo{
+.com-fundo, #menu-interno.mobile {
 	background-color:#6f1112;
 	transition-property: background-color,top;
     transition-duration: 1s;
@@ -5798,13 +5857,13 @@ svg{
 .navbar-toggle{
 
 }
-	
+
  #poligono_agenda{
 
 }
 #poligono_branco{
 	fill:#ffffff;
-	
+
 }
 #triangulo_amarelo,#triangulo_footer,#triangulo_header_topo{
 	fill:#f3b945;
@@ -5824,14 +5883,14 @@ svg{
 	  left: 7.5vw;
 	  padding: 18vw 0 0vw;
 	  margin-top: 00vh;
-	
+
 	}
 .entry-header h1{
 	color:#ffffff;
 	text-transform:uppercase;
 	font-weight:300;
 	font-size:30pt;
-	
+
 }
 #cabecalho_sobre{
 	  position: relative;
@@ -5852,7 +5911,7 @@ svg{
 	  color: #000000;
 	  letter-spacing: -1pt;
 	text-transform:lowercase!important;
-	
+
 }
 #cabecalho_sobre img{
 	width:12vw;
@@ -5893,7 +5952,7 @@ svg{
 
 #sobre h5{
 	display:inline-block;
-	
+
 }
 #sobre .conteudo-secao p{
 	margin-right:10vw;
@@ -5911,7 +5970,7 @@ font-size: 0.7em;
 	color:#d25205;
 }
 .row_contato .col-sm-4{
-	
+
 	padding:0;
 	}
 .row_contato{
@@ -5928,7 +5987,7 @@ font-size: 0.7em;
 	z-index:999999;
 }
 #nome_contato:before{
-	
+
 }
 #interno-nav-equipe{
 	position:relative;
@@ -5958,7 +6017,7 @@ font-size: 0.7em;
 	position:relative;
 	display:inline-block;
 	float:left;
-	
+
 }
 .cada-eventos h2, .post-type-archive.post-type-archive-eventos h2{
 	font-size:20px;
@@ -6059,7 +6118,6 @@ font-size: 0.7em;
 }
 .home .cada-eventos>a{
 	position:relative;
-	width:100%;
 }
 .home .cada-eventos .mais-disco{
 	right:-2px;
@@ -6090,7 +6148,7 @@ font-size: 0.7em;
 	width:100vw;
 	height:100vw;
 	background-attachment:fixed;
-	
+
 }
 #interno-flauta .glyphicon{
 	  position: absolute;
@@ -6119,8 +6177,8 @@ font-size: 0.7em;
 	right:0;
 	border-radius:0;
 	border-left:solid 1px black;
-		
-  
+
+
 }
 .cada-flauta img{
 	width:120px;
@@ -6137,7 +6195,7 @@ font-size: 0.7em;
     -o-transition: all 0.8s ease-in-out;
     transition: all 0.8s ease-in-out;
 
-	
+
 
 }
 #projetos h1{
@@ -6157,7 +6215,7 @@ font-size: 0.7em;
 	border-style: solid;
 	border-width: 0 10vw 200vh 0;
 	border-color: transparent #121315 transparent transparent;
-	margin-top:-174px;	
+	margin-top:-174px;
 }
 #retangulo_projetos{
 	position:absolute;
@@ -6179,8 +6237,8 @@ font-size: 0.7em;
 #youtube-feed .social-feed{
 	padding-top: 10%;
   	width: 120%;
-	
-  
+
+
 }
 #interno-projeto{
 	display:inline-block;
@@ -6189,7 +6247,7 @@ font-size: 0.7em;
 	margin-bottom: 60px;
 	overflow: hidden;
 	background-color:rgba(0, 0, 0, 0.59);
-	
+
 }
 #projetos .botao{
 	position:absolute;
@@ -6198,7 +6256,7 @@ font-size: 0.7em;
 	font-size:30px;
 	width:100%;
 	background-color:rgba(0, 0, 0, 0.59);
-	
+
 }
 #projetos .botao span{
 	left:50%;
@@ -6226,12 +6284,12 @@ font-size: 0.7em;
 	margin-bottom:20px;
 }
 #projetos .secao-interno{
-  
+
 }
 #midia{
 	background:#f3b945;
   	padding: 80px 0 60px;
-  
+
 }
 .sc-player .sc-controls a{
 	color:transparent;
@@ -6298,7 +6356,7 @@ font-size: 0.7em;
 	background: #6f1112;
 	color:#ffffff;
 	border-radius:0;
-	
+
 }
 .depois{
 	position:relative;
@@ -6307,7 +6365,7 @@ font-size: 0.7em;
 	height: 50vw;
 	background-size:cover;
 	background-position-y:0;
-	
+
 }
 #svg_midia{
 	margin-top:-2px;
@@ -6363,16 +6421,16 @@ font-size: 0.7em;
 }
 #discografia .entry-header{
 	top: 0;
-   	
+
 }
 #interno-disco{
-	
 
-	
+
+
 }
 .cada-disco a .texto_disco{
 	color:#ffffff;
-	
+
 }
 .sc-play{
 	color:transparent;
@@ -6383,7 +6441,7 @@ font-size: 0.7em;
 	background-color:#565555;
 	color:#ffffff!important;
 	position: relative;
-  
+
 }
 
 .mais-disco{
@@ -6420,7 +6478,7 @@ font-size: 0.7em;
 #social {
 	background-color:#f3b945!important;
 }
-	
+
 input, textarea{
   box-shadow: none;
   border: none;
@@ -6476,13 +6534,13 @@ input, textarea{
 	vertical-align:baseline;
 	max-width: 200px;
 	margin:0 10px;
-	
-  
+
+
 }
 #logo_footer{
   font-size: 1.5em;
 }
-	
+
 #reveal-modal-id{
 	max-width:1000px;
 	z-index: 99999999;
@@ -6531,7 +6589,7 @@ input, textarea{
 	display:inline-block;
 	margin-left:20px;
 	vertical-align: baseline;
-  
+
 }
 #info.modal-eventos {
   padding: 0 20% 10px;
@@ -6579,7 +6637,7 @@ input, textarea{
 	width:100%;
 }
 	#logo{
-	
+
 	}
 	#fundo-modal-titulo{
 		background-color:#2e2c2d;
@@ -6613,7 +6671,7 @@ input, textarea{
 		right:-10px;
 		border-color: transparent #ed922a transparent transparent;
 		z-index:9;
-		
+
 	}
 	html dialog .close-reveal-modal,html .reveal-modal .close-reveal-modal {
 	  font-size: 2rem;
@@ -6632,13 +6690,13 @@ input, textarea{
 	    -webkit-transition: all 0.4s ease-in-out;
 	    -o-transition: all 0.4s ease-in-out;
 	    transition: all 0.4s ease-in-out;
-	
+
 	}
 	.reveal-modal-bg{
 		-webkit-transition: all 0.4s ease-in-out;
 	    -o-transition: all 0.4s ease-in-out;
 	    transition: all 0.4s ease-in-out;
-	    
+
 	}
 	.open{
 		display:block!important;
@@ -6655,7 +6713,7 @@ input, textarea{
 		height:5vw;
 		max-height:50px;
 		overflow:hidden;
-		
+
 	}
 	.social-feed{
 		padding:0 20px;
@@ -6677,7 +6735,7 @@ input, textarea{
 	  	background: rgba(255, 255, 255, 0.27);
 		padding:10px 10px;
 		margin-bottom:10px;
-		
+
 	}
 	#twitter-feed ul{
 		list-style:none;
@@ -6749,7 +6807,7 @@ input, textarea{
 	  vertical-align: top;
 		border-radius:7px;
 	}
-	
+
 	.blog-feed h1{
 		text-transform:capitalize;
 		padding:0;
@@ -6758,7 +6816,7 @@ input, textarea{
 	.cada-post{
 		background:#ffffff;
 	}
-	.cada-post img { 
+	.cada-post img {
 		width:100%
 		}
 	.cada-post .mais-disco{
@@ -6767,7 +6825,7 @@ input, textarea{
 		max-width:400px;
 		margin:0 auto;
 		padding: 20px;
-	  
+
 	}
 	.post-type-archive-eventos .single{
 		background-color:transparent;
@@ -6802,16 +6860,16 @@ input, textarea{
 	  	display: block;
 		width:100%;
 	}
-		
+
 	 .single #social .entry-header, .page #social.entry-header, .archive #social .page-title{
 		background-color:transparent;
 	}
-	
+
 	#single-header-img{
 		width:100%;
 		overflow:hidden;
 		background-color:#E35A30;
-	  
+
 	}
 	.blog .is_slider{
 		float: none;
@@ -6822,7 +6880,7 @@ input, textarea{
 	.blog-container{
 		max-width:1200px;
 		margin:0 auto;
-	} 
+	}
 	.blog .linguas ul {
 	  margin-top: 17px;
 
@@ -6852,7 +6910,7 @@ input, textarea{
 	}
 	.blog .entry-header.titulo-post a:hover{
 		color:#ffffff;
-	}  
+	}
 	.blog .entry-header.titulo-post{
 		color:#ffffff;
 		background-color:#F8B84E;
@@ -6862,7 +6920,7 @@ input, textarea{
 		position:relative;
 		z-index:999;
 		text-transform:uppercase;
-		
+
 	}
 	.blog .entry-header.titulo-post h2{
 		font-weight:200;
@@ -6884,7 +6942,7 @@ input, textarea{
 	}
 	.blog .widget h3, .blog .widget label{
 		font-weight: 200!important;
-	  
+
 	}
 	.blog .widget select{
 		box-shadow:none;
@@ -6907,13 +6965,13 @@ input, textarea{
 		margin-top:-30px;
 		font-size:20px;
 	}
-	
+
 	.blog article{
 		margin:0 0 60px 0;
 	}
 	.blog #main-content, .blog article{
 		background-color:transparent!important;
-		
+
 	}
 	.post-lista-thumb{
 		position:relative;
@@ -6929,7 +6987,7 @@ input, textarea{
 	}
 	.blog #primary{
 		padding-top: 20px;
-	  
+
 	}
 	.blog a:hover{
 		text-decoration:none;
@@ -6991,13 +7049,13 @@ input, textarea{
 		}
 	}
 	#main-navigation{
-		
+
 	}
-	
+
 	.blog #menu-interno{
 		background-color:transparent;
 		padding: 37px 150px 0;
-	  
+
 	}
 	.single #primary, .page #primary{
 		margin:0 auto 100px;
@@ -7012,14 +7070,14 @@ input, textarea{
 	}
 	.single article, .page article, .error404 article{
 		background-color:#ffffff;
-		
+
 	}
 	.error404 article.nao-encontrado h2{
 		padding-left:10%;
 	}
 	.error404 article{
 		min-height:300px;
-	
+
 	}
 	.archive .entry-header{
 		background-color:transparent;
@@ -7030,7 +7088,7 @@ input, textarea{
 		color:#000000;
 		text-align:center;
 		background-color:#e35a30;
-		
+
 	}
 	.single #main, .page #main{
 	}
@@ -7061,7 +7119,7 @@ input, textarea{
 @media (max-width: 767px) {
     .visible-xs {
     display: block !important;
-	
+
 	}
 .page-template-page-Blog .col-md-8{
 	width:95%!important;
@@ -7079,12 +7137,12 @@ th.visible-xs, td.visible-xs {
 }
 @media (max-width: 1024px) {
 	#sobre{
-		/*padding-top:66vw;*/
+		padding-top:66vw;
 	}
 	.secao-background{
-		/*background-attachment: initial;*/
-/*	  top: 181px;   --edicao para fotos de flautas */
-	top: 181px;  
+		background-attachment: initial;
+	  top: 181px;
+
 	}
 	#sobre .secao-interno{
 		background-attachment: initial;
@@ -7104,9 +7162,6 @@ th.visible-xs, td.visible-xs {
 
 
 @media (max-width: 767px) {
-	.secao-background{
-        background-attachment: initial;
-    }
 
 	#bgvid,#vidpause { display: none; }
 
@@ -7122,11 +7177,11 @@ th.visible-xs, td.visible-xs {
 	  padding-left: 0!important;
 	}
 	.midia-category .btn, .btn-loadmore {
-	 
+
 	  font-size: 35px;
 	}
 	#sobre .conteudo-secao {
-	 
+
 	  font-size: 16px;
 	}
 	#parallax_midia,#sobre .secao-interno,.secao-background {
@@ -7139,8 +7194,8 @@ th.visible-xs, td.visible-xs {
 	  top: 9vw;
 	  position: relative;
 	  -ms-transform: rotate(0);
-	   -webkit-transform: rotate(0); 
-	   transform: rotate(0); 
+	   -webkit-transform: rotate(0);
+	   transform: rotate(0);
 	}
 
 	#interno-disco {
@@ -7152,8 +7207,8 @@ th.visible-xs, td.visible-xs {
 	  -webkit-transition: all 0.5s ease-in-out;
 	  -o-transition: all 0.5s ease-in-out;
 	  transition: all 0.5s ease-in-out;
-	   visibility: visible; 
-	   top: 0; 
+	   visibility: visible;
+	   top: 0;
 	   width:100%;
 	}
 	#destaque_texto {
@@ -7180,22 +7235,11 @@ th.visible-xs, td.visible-xs {
 }
 }
 @media (max-width: 767px) {
-
     .visible-xs-inline-block {
     display: inline-block !important;
 }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    #sobre {
-        padding-top: 39vw;
-    }
-    #sobre .secao-background {
-     background-attachment: fixed; 
-    top: -12vh;
-}
-}
 @media (min-width: 768px) and (max-width: 991px) {
-    
     .visible-sm {
     display: block !important;
 }
@@ -7439,21 +7483,6 @@ select {
 #youtube-feed .social-feed img{
 	width:80%;
 }
-.rc-anchor-light {
-    background: transparent!important;
-    border: transparent!important;
-    color: #000;
-    box-shadow: none!important;
-}
-.rc-anchor-normal-footer {
-    display: none!important;
-}
-html .rc-anchor-checkbox-label {
-    font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif!important;
-    font-size: 14px;
-    font-weight: 300!important;
-    color: #333;
-}
 @media screen and (min-width: 992px) {
 	.blog #primary{
 		float:left;
@@ -7469,6 +7498,31 @@ html .rc-anchor-checkbox-label {
 }
 
 @media screen and (max-width: 767px) {
+
+  .home .menu-item{
+    text-align: left;
+  }
+  .home .sub-menu{
+    position: relative;
+    height: auto;
+    margin-left: 10px;
+
+  }
+  .home .menu-item-has-children .sub-menu li {
+    margin-left: 10px;
+
+    height: auto;
+    transition: height 0.5s linear;
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    -o-transition: height 0.5s linear;
+    -ms-transition: height 0.5s linear;
+    padding: 0 10px 10px;
+  }
+   .home .menu-item-has-children .sub-menu li  a{
+     color: white;
+     text-transform: uppercase;
+   }
 	.navbar-toggle .icon-bar{
 		width:26px;
 		height:3px;
@@ -7481,7 +7535,7 @@ html .rc-anchor-checkbox-label {
 	}
 	#triangulo_menu{
 		border-width: 100px 100px 0 0;
-	  
+
 	}
 	#destaque{
 		display:none;
@@ -7494,7 +7548,7 @@ html .rc-anchor-checkbox-label {
 		position:relative;
 	  	padding-left: 0;
 		top: 0;
-	  
+
 	}
 	#triangulo_projetos,#retangulo_projetos{
 		display:none;
@@ -7517,12 +7571,11 @@ html .rc-anchor-checkbox-label {
 		position:relative;
 	  	height: 500px;
 		background-attachment: initial;
-/*	    background-position: center 100px;   --edicao para fotos de flautas */
-	  	background-position: center 0px;
+	    background-position: center 100px;
+
 	}
 	#sobre header{
-        padding-top: 86px;
-        margin-bottom: -20px;
+		padding-top:0;
 	}
 	#cabecalho_sobre {
 	  position: relative;
@@ -7537,7 +7590,7 @@ html .rc-anchor-checkbox-label {
 	#cabecalho_sobre h1{
 		font-size:8%;
 		padding-bottom: 7%;
-	  
+
 	}
 	#cabecalho_sobre img {
 	  width: 30%;
@@ -7546,7 +7599,7 @@ html .rc-anchor-checkbox-label {
 		background:#F2F1F0 none no-repeat ;
 		background-attachment:initial;
 		background-size:contain;
-		
+
 	}
 	#sobre .conteudo-secao p {
 	  margin-right: 0;
@@ -7576,7 +7629,7 @@ html .rc-anchor-checkbox-label {
 		border:none;
 		max-width:100%;
 		background-color:transparent;
-		
+
 	}
 	#interno-nav-flauta{
 		width:100%;
@@ -7621,10 +7674,6 @@ html .rc-anchor-checkbox-label {
 	  height: 300px;
 	  background-attachment: initial;
 	}
-    #sobre .secao-background{
-        top:0;
-        background-size: cover;
-    }
 	#sobre .secao-interno {
 	  padding: 0% 0 10%;
 	}
@@ -7649,7 +7698,7 @@ html .rc-anchor-checkbox-label {
 	  width: 100%;
 	  background-color: #ffffff;
 	  padding: 45px 0 15px;
-	  margin: 0 0 30px;		
+	  margin: 0 0 30px;
 	}
 	.equipe-conteudo{
 		margin-bottom:40px;
@@ -7661,7 +7710,7 @@ html .rc-anchor-checkbox-label {
 	  position: absolute;
 	}
 	#discografia .entry-title{
-		color:#fff;
+		color:#000000;
 	}
 
 }
@@ -7670,7 +7719,7 @@ html .rc-anchor-checkbox-label {
 }
 .equipe-conteudo a{
 	color:#222;
-	
+
 }
 .midia-titulo-youtube{
 	top: 15%;
@@ -7683,7 +7732,7 @@ html .rc-anchor-checkbox-label {
 	width: 75%;
 	padding: 5px 10px;
 	position: absolute;
-	
+
 }
 .img-midia{
 	padding:0 0 70px;
@@ -7718,7 +7767,7 @@ html .rc-anchor-checkbox-label {
 		width:100%;
 	}
 	#reveal-modal-id h1 {
-	 
+
 	  padding: 0px 21% 40px;
 	}
 	.modal-eventos .imagem-modal{
@@ -7733,7 +7782,7 @@ html .rc-anchor-checkbox-label {
 	#sobre h5{
 		width:85%;
 		font-size: 3.2vw;
-	  
+
 	}
 	#single-header-img{
 		background-color: transparent;
@@ -7747,7 +7796,7 @@ only screen and (   min--moz-device-pixel-ratio: 2)      ,
 only screen and (     -o-min-device-pixel-ratio: 2/1)    ,
 only screen and (        min-device-pixel-ratio: 2)      ,
 only screen and (                min-resolution: 192dpi) ,
-only screen and (                min-resolution: 2dppx)   { 
+only screen and (                min-resolution: 2dppx)   {
 
  .blog .entry-header.titulo-post h2{
 	font-weight:300!important;
@@ -7764,15 +7813,27 @@ only screen and (                min-resolution: 2dppx)   {
 	color:#ffffff;
 }
 
-div > .cada-midia:first-child {
-	clear: both;
-}
 
-#interno-midia .btn-loadmore {
-	clear: both;
-	float: left;
-	display: block;
-}
-.qtranxs-available-languages-message{
-    display: none;
-}
+  .home .mobile .menu-item{
+    text-align: left;
+  }
+  .home .mobile .sub-menu{
+    position: relative;
+    height: auto;
+    margin-left: 10px;
+
+  }
+  .home .mobile .menu-item-has-children .sub-menu li {
+    margin-left: 10px;
+    height: auto;
+    transition: height 0.5s linear;
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    -o-transition: height 0.5s linear;
+    -ms-transition: height 0.5s linear;
+    padding: 0 10px 10px;
+  }
+   .home .mobile .menu-item-has-children .sub-menu li  a{
+     color: white;
+     text-transform: uppercase;
+   }

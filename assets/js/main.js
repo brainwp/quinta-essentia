@@ -318,7 +318,7 @@ if ($('body').hasClass('home')){
 			else if (!(Math.sqrt(($(window).scrollTop() +20 - altura_footer)*($(window).scrollTop() - altura_footer)) > 15 )){
 				$('#main-navigation').addClass('aparecido');
 	       		$('#main-navigation').removeClass('sumido');
-				$('#main-navigation #menu-interno').removeClass('com-fundo');
+				$('#main-navigation #menu-interno.desktop').removeClass('com-fundo');
 				$('#menu-lado').removeClass('aparecido');
 				$('#menu-lado').addClass('sumido');
 			}
@@ -355,7 +355,7 @@ if ($('body').hasClass('home')){
 		else{
 			$('#main-navigation').addClass('aparecido');
        		$('#main-navigation').removeClass('sumido');
-			$('#main-navigation #menu-interno').removeClass('com-fundo');
+			$('#main-navigation #menu-interno.desktop').removeClass('com-fundo');
 			$('#menu-lado').removeClass('aparecido');
 			$('#menu-lado').addClass('sumido');
 
@@ -526,7 +526,7 @@ else{
 		else if (!(Math.sqrt(($(window).scrollTop() +20 - altura_footer)*($(window).scrollTop() - altura_footer)) > 15 )){
 			$('#main-navigation').addClass('aparecido');
        		$('#main-navigation').removeClass('sumido');
-			$('#main-navigation #menu-interno').removeClass('com-fundo');
+			$('#main-navigation #menu-interno.desktop').removeClass('com-fundo');
 			$('#menu-lado').removeClass('aparecido');
 			$('#menu-lado').addClass('sumido');
 		}
