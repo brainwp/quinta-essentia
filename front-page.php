@@ -10,7 +10,7 @@
  * @since 2.2.0
  */
 
-get_header(); 
+get_header();
 $odin_general_opts = get_option( 'odin_general' );
 
 
@@ -24,11 +24,11 @@ $odin_general_opts = get_option( 'odin_general' );
 		<main id="main-content" class="site-main" role="main">
 			<article id="capa" <?php post_class('row secao'); ?>>
 				<div class="capa-capa"></div>
-				
-				<video  
-				<?php 
+
+				<video
+				<?php
 				// if(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) != $_SERVER['SERVER_NAME']) {
-					// echo 'autoplay'; 
+					// echo 'autoplay';
 					//parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST)."<br>autoplay<br>".$_SERVER['SERVER_NAME'];
 				// }
 				?>
@@ -38,32 +38,32 @@ $odin_general_opts = get_option( 'odin_general' );
 				</video>
 				<a class="button" id="vidpause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></a>
 			</article><!-- #post-## -->
-			
-			<article id="destaque" <?php post_class('row secao'); ?>> 
+
+			<article id="destaque" <?php post_class('row secao'); ?>>
 				<?php
 				if (isset($odin_general_opts['destaque_check'])){
 					$destaque = $odin_general_opts['destaque'];
 					$destaque_img = wp_get_attachment_image($odin_general_opts['destaque_img'], 'full');
 					?>
 					<div id="destaque_texto" class="col-sm-7 pull-right">
-							<?php 
+							<?php
 								echo $destaque;
 							?>
 					</div>
 					<div id="destaque_img" class="col-sm-5 pull-left" >
-						<?php 
+						<?php
 							echo $destaque_img;
 						?>
 					</div>
-					
-					
-				<?php 
+
+
+				<?php
 				}
-				
+
 				?>
 			</article>
-			
-			<?php 
+
+			<?php
 
 		$args = array(
 			'post_type' => 'secao',
@@ -81,23 +81,23 @@ $odin_general_opts = get_option( 'odin_general' );
 				<!-- pagination here -->
 
 				<!-- the loop -->
-				<?php while ( $query_secao->have_posts() ) : $query_secao->the_post(); 
-					
-						get_template_part( 'content', 'secao' );						
-					
+				<?php while ( $query_secao->have_posts() ) : $query_secao->the_post();
+
+						get_template_part( 'content', 'secao' );
+
 					endwhile; ?>
 				<!-- end of the loop -->
 
 				<!-- pagination here -->
 
 				<?php wp_reset_postdata(); ?>
-				
+
 			<?php else : ?>
 				<p><?php _e( 'Crie umaseção', 'odin' ); ?></p>
-			
-			<?php endif; 
+
+			<?php endif;
 			?>
-			
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

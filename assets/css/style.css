@@ -14,7 +14,7 @@ a , a:focus;{
 .aparecido #triangulo_menu{
   display: block;
 }
-.home .sub-menu {
+ .sub-menu {
   position: absolute;
   height: 0;
   margin-top: -10px;
@@ -31,28 +31,28 @@ a , a:focus;{
   color:white;
   text-transform: uppercase;
 }
-.home .menu-item-has-children .sub-menu li {
+ .menu-item-has-children .sub-menu li {
   height:0;
   margin-left: -40px;
   overflow: hidden;
   background-color: #6f1112;
 
 }
-.home .menu-item-has-children .sub-menu li a {
+ .menu-item-has-children .sub-menu li a {
   background-color: #6f1112;
 
 }
-.home .menu-item-has-children .sub-menu{
+ .menu-item-has-children .sub-menu{
 
 
 }
-.home .menu-item-has-children:hover .sub-menu a{
+ .menu-item-has-children:hover .sub-menu a{
   color:white;
 }
-.home .menu-item:hover{
+ .menu-item:hover{
   background-color: #6f1112;
 }
-.home .menu-item-has-children:hover .sub-menu li{
+ .menu-item-has-children:hover .sub-menu li{
   height: auto;
   background-color: #6f1112;
   transition: height 0.5s linear;
@@ -64,7 +64,7 @@ a , a:focus;{
 
 }
 
-.home .menu-item-has-children:hover .sub-menu li{
+ .menu-item-has-children:hover .sub-menu li{
   height: auto;
   padding: 10px 20px;
 
@@ -3635,6 +3635,10 @@ tbody.collapse.in {
 .navbar-default .navbar-nav>li:hover>a{
 	color:#e45b31
 	}
+  .navbar-default .com-fundo .navbar-nav>li>a {
+    text-align:left!important;
+
+  }
 .navbar-default .navbar-nav>li>a {
 	color:#ffffff;
 	text-align:center;
@@ -7013,7 +7017,7 @@ input, textarea{
 	.page-content span{
 /*		font-size:13px;*/
 	}
-	.blog #menu-interno{
+	.blog #menu-interno.desktop{
 		background-color:transparent;
 		padding-top:20p;
 	}
@@ -7051,8 +7055,11 @@ input, textarea{
 	#main-navigation{
 
 	}
+.blog #menu-interno.com-fundo{
+  background-color: #6f1112!important;
 
-	.blog #menu-interno{
+}
+	.blog #menu-interno.desktop{
 		background-color:transparent;
 		padding: 37px 150px 0;
 
@@ -7502,13 +7509,13 @@ select {
   .home .menu-item{
     text-align: left;
   }
-  .home .sub-menu{
+.sub-menu{
     position: relative;
     height: auto;
     margin-left: 10px;
 
   }
-  .home .menu-item-has-children .sub-menu li {
+  .menu-item-has-children .sub-menu li {
     margin-left: 10px;
 
     height: auto;
@@ -7519,7 +7526,7 @@ select {
     -ms-transition: height 0.5s linear;
     padding: 0 10px 10px;
   }
-   .home .menu-item-has-children .sub-menu li  a{
+.menu-item-has-children .sub-menu li  a{
      color: white;
      text-transform: uppercase;
    }
@@ -7761,6 +7768,9 @@ select {
 }
 
 @media only screen and (max-width:767px ){
+  .com-fundo, #menu-interno.mobile{
+    padding: 0 80px!important;
+  }
 	#reveal-modal-id{
 		padding:5%;
 		background-color:transparent;
@@ -7814,16 +7824,16 @@ only screen and (                min-resolution: 2dppx)   {
 }
 
 
-  .home .mobile .menu-item{
+   .mobile .menu-item{
     text-align: left;
   }
-  .home .mobile .sub-menu{
+   .mobile .sub-menu{
     position: relative;
     height: auto;
     margin-left: 10px;
 
   }
-  .home .mobile .menu-item-has-children .sub-menu li {
+   .mobile .menu-item-has-children .sub-menu li {
     margin-left: 10px;
     height: auto;
     transition: height 0.5s linear;
@@ -7833,7 +7843,7 @@ only screen and (                min-resolution: 2dppx)   {
     -ms-transition: height 0.5s linear;
     padding: 0 10px 10px;
   }
-   .home .mobile .menu-item-has-children .sub-menu li  a{
+    .mobile .menu-item-has-children .sub-menu li  a{
      color: white;
      text-transform: uppercase;
    }

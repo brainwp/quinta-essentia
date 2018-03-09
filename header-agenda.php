@@ -19,7 +19,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -48,9 +48,9 @@
 			  	<polygon id="triangulo_header_baixo" points=""/>
 			</svg>
 			<nav id="main-navigation" class=" aparecido menu-inicial col-md-12 navbar navbar-default" role="navigation">
-				
+
 				<div class="navbar-header">
-				
+
 					<?php /*
 
 					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -58,7 +58,7 @@
 					*/ ?>
 				</div>
 				<div id="menu-interno" class="com-fundo navbar-main-navigation">
-				
+
 					<?php
 						wp_nav_menu(
 							array(
@@ -78,14 +78,14 @@
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
-		
-			<?php 
-					$parallax_options= get_option( 'parallax_tab' );	
-					$parallax_1 = wp_get_attachment_url($parallax_options['imagem'], 'full');	
-					echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";
-				
-				
+
+			<?php
+					// $parallax_options= get_option( 'parallax_tab' );
+					// $parallax_1 = wp_get_attachment_url($parallax_options['imagem'], 'full');
+					// echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";
+
+
 			?>
-			
+
 
 		<div id="main" class="site-main row">

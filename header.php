@@ -27,7 +27,7 @@
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
 			<div id="menu-lado" class ="aparecido com-fundo <?php
-			if ( !wp_is_mobile() ) {
+			if ( wp_is_mobile() ) {
 				echo "mobile";
 			}
 			else{
@@ -55,7 +55,7 @@
 			  	<polygon id="triangulo_header_baixo" points=""/>
 			</svg>
 			<nav id="main-navigation" class=" aparecido menu-inicial col-md-12 navbar navbar-default  <?php
-			if ( !wp_is_mobile() ) {
+			if ( wp_is_mobile() ) {
 				echo "mobile";
 			}
 			else{
@@ -72,7 +72,7 @@
 					*/ ?>
 				</div>
 				<div id="menu-interno" class="com-fundo navbar-main-navigation  <?php
-				if ( !wp_is_mobile() ) {
+				if ( wp_is_mobile() ) {
 					echo "mobile";
 				}
 				else{

@@ -19,14 +19,21 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	
+
 </head>
 
 <body <?php body_class('blog'); ?>>
 	<div id="preloader"></div><!-- #preloader -->
 	<div class="container" id="container-preload">
 		<header id="header-principal" class ="row" id="header" role="banner">
-			<div id="menu-lado" class ="aparecido com-fundo">
+			<div id="menu-lado" class ="aparecido com-fundo <?php
+			if ( wp_is_mobile() ) {
+				echo "mobile";
+			}
+			else{
+				echo "desktop";
+			}
+			?>">
 				<div id="triangulo_menu" ></div>
 				<a class="menu-fechado" href="" title="">
 				<button id="botao-menu" type="button" class=" navbar-toggle" data-toggle="" data-target=".navbar-main-navigation">
@@ -47,18 +54,32 @@
 			  	<polygon fill="url(#image)" id="poligono_header" points=""/>
 			  	<polygon id="triangulo_header_baixo" points=""/>
 			</svg>
-			<nav id="main-navigation" class=" aparecido menu-inicial col-md-12 navbar navbar-default" role="navigation">
-				
+			<nav id="main-navigation" class="aparecido menu-inicial col-md-12 navbar navbar-default <?php
+			if ( wp_is_mobile() ) {
+				echo "mobile";
+			}
+			else{
+				echo "desktop";
+			}
+			?>" role="navigation">
+
 				<div class="navbar-header">
-				
+
 					<?php /*
 
 					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 
 					*/ ?>
 				</div>
-				<div id="menu-interno" class="com-fundo navbar-main-navigation">
-				
+				<div id="menu-interno" class="com-fundo navbar-main-navigation <?php
+				if ( wp_is_mobile() ) {
+					echo "mobile com-fundo";
+				}
+				else{
+					echo "desktop";
+				}
+				?>">
+
 					<?php
 						wp_nav_menu(
 							array(
@@ -78,6 +99,6 @@
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
-			
+
 		<div id="main" class="site-main">
 		<h1 id="titulo-blog">Flautadoce<b>br</b></h1>
