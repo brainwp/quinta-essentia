@@ -7,4 +7,5 @@ Vagrantfile
 *.swo
 *.zip
 *~
-sftp-config.json.remote-sync.json
+sftp-config.json
+.remote-sync.json
