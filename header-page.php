@@ -101,15 +101,15 @@
 		</header><!-- #header -->
 
 			<?php
-				// if( has_post_thumbnail($post->ID)  ){
-				// 	$parallax_1 = get_the_post_thumbnail($post->ID, 'full');
-				// 	echo "<div id='single-header-img'> ".$parallax_1."</div>";
-				// }
-				// else{
-				// 	$parallax_options= get_option( 'parallax_tab' );
-				// 	$parallax_1 = wp_get_attachment_url($parallax_options['imagem'], 'full');
-				// 	echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";
-				// }
+				if( has_post_thumbnail($post->ID)  ){
+					$parallax_1 = get_the_post_thumbnail($post->ID, 'full');
+					echo "<div id='single-header-img'> ".$parallax_1."</div>";
+				}
+				else{
+					$parallax_options= get_option( 'parallax_tab' );
+					$parallax_1 = wp_get_attachment_url($parallax_options['imagem'], 'full');
+					echo "<div id='single-header-img'> <img  src='".$parallax_1."'></div>";
+				}
 
 			?>
 

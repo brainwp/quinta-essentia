@@ -277,10 +277,12 @@ if ($('body').hasClass('home')){
 	///////////botao pause do video
 	///////////botao pause do video
 	var vid = document.getElementById("bgvid");
+
+	if ( $( vid).length ) {
 		var pauseButton = document.querySelector("#capa .button");
 
 		function vidFade() {
-		  vid.classList.add("stopfade");
+			vid.classList.add("stopfade");
 		}
 
 		vid.addEventListener('ended', function()
@@ -293,15 +295,18 @@ if ($('body').hasClass('home')){
 
 
 		pauseButton.addEventListener("click", function() {
-		  vid.classList.toggle("stopfade");
-		  if (vid.paused) {
-		    vid.play();
-		    pauseButton.innerHTML = '<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>';
-		  } else {
-		    vid.pause();
-		    pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
-		  }
+			vid.classList.toggle("stopfade");
+			if (vid.paused) {
+				vid.play();
+				pauseButton.innerHTML = '<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>';
+			} else {
+				vid.pause();
+				pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
+			}
 		});
+
+}
+
 		///////////botao pause do video
 		///////////botao pause do video
 

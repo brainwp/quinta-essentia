@@ -5789,7 +5789,7 @@ video {
   	z-index: 99;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
-	background-position: center 10vh;
+	background-position: center -10vh;
 	background-color:#000000;
   	background-size: cover;
 }
@@ -6107,7 +6107,7 @@ font-size: 0.7em;
 
 .cada-eventos a{
     background-color:#FFF;
-    display: inline-block;
+    display: block;
   	height: 300px;
 
 }
@@ -6386,7 +6386,7 @@ font-size: 0.7em;
 }
 .capa-capa{
 	background-color: rgba(0, 0, 0, 0.9);
-	background-image: url(http://www.transparenttextures.com/patterns/dark-dotted-2.png);
+	background-image: url(https://www.transparenttextures.com/patterns/dark-dotted-2.png);
 	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 	  position: absolute;
 	  height: 100%;
@@ -6483,13 +6483,17 @@ font-size: 0.7em;
 	background-color:#f3b945!important;
 }
 
+input.wpcf7-form-control.wpcf7-text, textarea.wpcf7-form-control.wpcf7-textarea {
+	width: 100%;
+}
+
 input, textarea{
   box-shadow: none;
   border: none;
   border-radius: 7px;
   font-size: 20px;
   padding: 7px;
-  width: 100%;
+/*  width: 100%; */
 }
 .wpcf7-submit{
 	width:30%;
@@ -6575,7 +6579,7 @@ input, textarea{
 	  font-size: 1.2em;
 	  line-height: 1.5em;
 	  vertical-align: top;
-	  margin-right: 5%;
+	  margin-right: 2%;
 }
 .post-type-archive-eventos #main{
 	background-color:#f5b843;
@@ -7148,7 +7152,8 @@ th.visible-xs, td.visible-xs {
 	}
 	.secao-background{
 		background-attachment: initial;
-	  top: 181px;
+		background-position: top;
+	  top: 50px;
 
 	}
 	#sobre .secao-interno{
@@ -7500,7 +7505,7 @@ select {
 		background-size:initial;
 	}
 	.data-evento{
-		font-size:1.8em;
+		font-size:1.75em;
 	}
 }
 

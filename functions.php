@@ -219,7 +219,7 @@ function odin_enqueue_scripts() {
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 	////fonts
-	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,900' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:100,300,400,900' );
 
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
