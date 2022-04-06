@@ -95,6 +95,7 @@ if(function_exists("register_field_group"))
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
+	
 		),
 		'location' => array (
 			array (
@@ -106,6 +107,45 @@ if(function_exists("register_field_group"))
 					'group_no' => 0,
 				),
 			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_opcoes-de-midia-discos',
+		'title' => 'Opções de mídia do disco',
+		'fields' => array (
+			array (
+				'key' => 'field_b35cd557bcb0f',
+				'label' => 'URL do disco no spotify (modal)',
+				'name' => 'oembed_url_disco',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_db7b3555cf',
+				'label' => 'URL da musica do disco ( para home )',
+				'name' => 'oembed_url',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
 			array (
 				array (
 					'param' => 'post_type',

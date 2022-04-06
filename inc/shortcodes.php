@@ -152,15 +152,13 @@ function short_query_func( $atts ) {
 	    				$query2->the_post();
         				if ($a['post_type'] == 'disco'){
 							$player = '';
-							if($url = get_post_meta($query2->post->ID, 'soundcloud_url', true)){
-								$player .= '
-								<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'">
-								</div>';
-
+							if($url = get_post_meta($query2->post->ID, 'oembed_url', true)){
+								$player .= wp_oembed_get(__($url));
+								
 							}
 							$html .="
-							<div class='".$class_item."cada-".$a['post_type']." animated bounceIn'>
-								<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb).$player."
+							<div class='".( $player ? ' player ': '') . $class_item."cada-".$a['post_type']." animated bounceIn'>
+								<div class='".$class_thumb."'>".get_the_post_thumbnail($query2->post->ID, $thumb)."
 								</div>";
 							$html .= "
 								<a href='".get_permalink( $query2->post->ID)."'>
@@ -169,7 +167,8 @@ function short_query_func( $atts ) {
 										</h1>"; 
 										$content = get_the_content();
 										$trimmed_content = wp_trim_words( $content, 100, '...');
-										$html .= $trimmed_content."
+										$html .= $trimmed_content.$player."
+										
 									</div>
 									<div class='mais-disco'></div>
 								</a>

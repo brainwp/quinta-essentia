@@ -6445,6 +6445,16 @@ font-size: 0.7em;
 	color:#ffffff;
 
 }
+.cada-disco.player .texto_disco {
+    padding: 10px 20px;
+}
+.cada-disco.player .titulo-disco{
+    margin-top: 0px;
+    margin-bottom: 7px;
+}
+.cada-disco.player iframe{
+    margin-top:7px;
+}
 .sc-play{
 	color:transparent;
 }
@@ -6652,6 +6662,9 @@ input, textarea{
 }
 #modal-quinta .imagem-modal img{
 	width:100%;
+}
+#modal-quinta .imagem-modal .disco-oembed{
+    margin-top:30px
 }
 	#logo{
 
