@@ -29,13 +29,7 @@ $odin_general_opts = get_option( 'odin_general' );
 						<?php
 							if (!wp_is_mobile()) {
 								?>
-						<video
-						<?php
-						// if(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) != $_SERVER['SERVER_NAME']) {
-							// echo 'autoplay';
-							//parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST)."<br>autoplay<br>".$_SERVER['SERVER_NAME'];
-						// }
-						?>
+						<video muted autoplay
 						poster="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa.png" id="bgvid">
 							<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.webm" type="video/webm">
 							<source src="<?php echo get_stylesheet_directory_uri();?>/assets/videos/capa2.mp4" type="video/mp4">
@@ -43,7 +37,10 @@ $odin_general_opts = get_option( 'odin_general' );
 						<?php
 					}
 				 ?>
-						<a class="button" id="vidpause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></a>
+				 	<div id="vidbuttons">
+						 <a class="button" id="vidaudio"><span class="red vidbutton glyphicon  glyphicon-volume-off" aria-hidden="true"></span></a>
+						 <a class="button" id="vidpause"><span class="redvidbutton glyphicon  glyphicon-pause" aria-hidden="true"></span></a>
+					 </div>
 					</article><!-- #post-## -->
 
 

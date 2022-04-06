@@ -5727,11 +5727,20 @@ video#bgvid {
 video {
 	display: block;
 }
-#vidpause{
-	position: absolute;
-  top: 50%;
-  z-index: 9999;
-  left: 50%;
+#vidbuttons {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    z-index: 9999;
+    width: 116px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.red{
+    color:#6e1515;
+}
+#vidpause, #vidaudio{
+    flex: auto;
   font-size: 40px;
   margin-left: -20px;
   margin-top: -25px;
@@ -7175,12 +7184,13 @@ th.visible-xs, td.visible-xs {
 
 @media (max-width: 767px) {
 
-	#bgvid,#vidpause { display: none; }
-
-	.social-feed {
-	  margin: 0 auto;
-	  display: block;
-	}
+	#vidbuttons{
+            .social-feed {
+	    margin: 0 auto;
+	    display: block;
+	    }
+    }
+    #bgvid,#vidpause, #vidaudio { display: none; }
 	.pull-right {
 	  float: none!important;
 	  margin: 0 auto;

@@ -279,7 +279,10 @@ if ($('body').hasClass('home')){
 	var vid = document.getElementById("bgvid");
 
 	if ( $( vid).length ) {
-		var pauseButton = document.querySelector("#capa .button");
+		
+		
+		var pauseButton = document.querySelector("#capa #vidpause");
+		var audioButton = document.querySelector("#capa #vidaudio");
 
 		function vidFade() {
 			vid.classList.add("stopfade");
@@ -287,12 +290,12 @@ if ($('body').hasClass('home')){
 
 		vid.addEventListener('ended', function()
 		{
-		// only functional if "loop" is removed
-		vid.pause();
-		// to capture IE10
-		vidFade();
+			// only functional if "loop" is removed
+			vid.pause();
+			vid.classList.add("stopped");
+			pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
+			vidFade();
 		});
-
 
 		pauseButton.addEventListener("click", function() {
 			vid.classList.toggle("stopfade");
@@ -302,6 +305,15 @@ if ($('body').hasClass('home')){
 			} else {
 				vid.pause();
 				pauseButton.innerHTML = '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>';
+			}
+		});
+		audioButton.addEventListener("click", function() {
+			vid.muted = !vid.muted;
+			if(vid.muted) {
+				audioButton.innerHTML = '<span class="glyphicon red glyphicon-volume-off" aria-hidden="true"></span>';
+			}
+			else{
+				audioButton.innerHTML = '<span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>';
 			}
 		});
 
