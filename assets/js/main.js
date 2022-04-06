@@ -35,17 +35,17 @@ $(window).load(function() {
 	}
 
 
-	var add_sc_players = function(){
-		$('.player-soundcloud').each(function(){
-			if(!$(this).hasClass('init')){
-				$(this).scPlayer({
-					links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
-				});
-				$(this).addClass('init');
-			}
-		});
-	}
-	add_sc_players();
+	// var add_sc_players = function(){
+	// 	$('.player-soundcloud').each(function(){
+	// 		if(!$(this).hasClass('init')){
+	// 			$(this).scPlayer({
+	// 				links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
+	// 			});
+	// 			$(this).addClass('init');
+	// 		}
+	// 	});
+	// }
+	// add_sc_players();
 	//ajax youtube
 	do_youtube_ajax = function(){
 		var data = {
@@ -437,16 +437,16 @@ if ($('body').hasClass('home')){
 		}
 		poligonos();
 	//sound cloud midias
-	var add_sc_players = function(){
-		$('.player-soundcloud').each(function(){
-			if(!$(this).hasClass('init')){
-				$(this).scPlayer({
-					links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
-				});
-				$(this).addClass('init');
-			}
-		});
-	}
+	// var add_sc_players = function(){
+	// 	$('.player-soundcloud').each(function(){
+	// 		if(!$(this).hasClass('init')){
+	// 			$(this).scPlayer({
+	// 				links: [{url: $(this).attr('data-url'), title: $(this).attr('data-url')}]
+	// 			});
+	// 			$(this).addClass('init');
+	// 		}
+	// 	});
+	// }
 
 	//ajax midia
 	$('.btn-loadmore').on('click',function(e){
@@ -468,7 +468,7 @@ if ($('body').hasClass('home')){
 			if(paged > max_paged){
 				$(elem).fadeOut('slow');
 			}
-			add_sc_players();
+			// add_sc_players();
 		});
 
 	});

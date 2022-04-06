@@ -85,8 +85,8 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_557b35cdbcb0f',
-				'label' => 'URL do audio no soundcloud',
-				'name' => 'soundcloud_url',
+				'label' => 'URL do audio no spotify',
+				'name' => 'oembed_url',
 				'type' => 'text',
 				'default_value' => '',
 				'placeholder' => '',

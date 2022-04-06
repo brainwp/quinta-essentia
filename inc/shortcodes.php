@@ -242,15 +242,10 @@ function short_query_func( $atts ) {
 					$depois_interno .= '</a>';
 				}
 				$player = '';
-				if($url = get_post_meta($query2->post->ID, 'soundcloud_url', true)){
-					$player .= '
-					<div class="player-soundcloud" id="play-'.$query2->post->ID.'" data-url="'.$url.'">
-					</div>';
+				if($url = get_post_meta($query2->post->ID, 'oembed_url', true)){
+					$player .= wp_oembed_get(__($url));
 					$html .="
-						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>
-								<img width='334' height='334' src='".get_template_directory_uri()."/assets/images/black.png'  class='attachment-thumb-midia wp-post-image' alt='midia'><h3 class='musica midia-titulo'> ".get_the_title()."</h3>
-								"
-								
+						<div class='".$class_item." cada-".$a['post_type']." animated bounceIn'>"
 							.$player."
 						</div>";
 				}
