@@ -12,7 +12,6 @@
  * @package Odin
  * @since 2.2.0
  */
-
 /**
  * Sets content width.
  */
@@ -240,10 +239,8 @@ function odin_enqueue_scripts() {
 		// Main jQuery.
 		$options = get_option('social');
 
-		wp_enqueue_script( 'twitter-api-js', $template_url . '/assets/js/libs/twitter.min.js', array(), null, true );
 		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
 		wp_localize_script( 'odin-main', 'odin_main', array('ajaxurl' => admin_url( 'admin-ajax.php' ), 'twitter_widget_id' => $options['twitter_widget_id'] ) );
-		wp_enqueue_script( 'soundcloud-js', $template_url . '/assets/js/libs/soundcloud.js', array(), null, true );
 
 
 	// Grunt watch livereload in the browser.

@@ -5817,6 +5817,21 @@ video {
 
 
 }
+.sobre-conteudo input, .sobre-conteudo textarea{
+    border:solid 1px #6f1112;
+    background-color:#ffe6e626;
+
+}
+
+.sobre-conteudo .btn-default, 
+.sobre-conteudo input[type="submit"], 
+.sobre-conteudo input[type="reset"], 
+.sobre-conteudo button {
+    color: #fff;
+    background-color: #6f1112;
+    border-color: #6f1112;
+    border-radius: 6px;
+}
 svg{
 	width:100vw;
 
@@ -7579,6 +7594,7 @@ select {
 	  margin-top: 0;
 	  padding-top: 0;
 	}
+   
 	#youtube-feed{
 		position:relative;
 	  	padding-left: 0;

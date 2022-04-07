@@ -15,7 +15,7 @@
 	<div id="modal-quinta" class="row modal-<?php echo get_post_type();?>">
 		<div class="imagem-modal col-md-4 ">
 			<?php the_post_thumbnail();?>
-			<?php if($url = get_post_meta(get_the_ID(), 'soundcloud_url', true)):?>
+			<?php if($url = get_post_meta(get_the_ID(), 'oembed_url', true)):?>
 				<div class="player-soundcloud-url-modal" data-id="<?php echo get_the_ID();?>" data-url="<?php echo $url;?>" style="display:none;"></div><!-- #player-soundcloud-url-modal -->
 				<div class="player-soundcloud" id="play-modal-<?php echo get_the_ID();?>" data-url="<?php echo $url;?>"></div>
 		    <?php endif;?>	
