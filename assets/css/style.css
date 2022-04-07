@@ -6764,6 +6764,12 @@ input, textarea{
 		padding:0 20px;
 		font-size:0.8em;
 	}
+    #social .social-feed{
+        padding-top: 8px;
+    }
+    #social .conteudo-secao .col-md-12{
+        padding-left:20px;
+    }
 	.social-feed a, .blog-feed a, .conteudo-secao a{
 		color:#292929;
 		text-decoration:none;
@@ -6799,13 +6805,15 @@ input, textarea{
 	  display: inline-block;
 	}
 	.twitter-icone{
-		background-image: url('../images/social.png');
-		  width: 25px;
-		  height: 20px;
-		  background-position: 0 0;
-		  background-repeat: no-repeat;
-		  display: inline-block;
-	}
+        background-image: url(../images/social.png);
+        width: 24px;
+        height: 20px;
+        margin-right: 6px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: 5px;	
+    }
 	.sound_cloud-icone{
 		background-image: url('../images/social.png');
 		  width: 35px;
@@ -6830,12 +6838,35 @@ input, textarea{
 		  background-repeat: no-repeat;
 		  display: inline-block;
 	}
+    .whatsapp-icone{
+        background-image: url(../images/whatsapp.png);
+        width: 28px;
+        height: 20px;
+        margin-left: 6px;
+        background-repeat: inherit;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .instagram-icone{
+        background-image: url('../images/instagram.png');
+        width: 32px;
+        height: 22px;
+        background-repeat: inherit;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 	.texto_post {
 		padding:10px 20px;
 	}
 	#blog-feed{
 		position:relative;
+        margin-top: -60px;
 	}
+    #blog-feed h4{
+        margin-bottom: 20px;
+    }
 	.blog-feed form{
 		margin-top:20px;
 	}
@@ -7211,7 +7242,19 @@ th.visible-xs, td.visible-xs {
 
 
 @media (max-width: 767px) {
+    #social .secao-interno {
+        margin-top:80px;
+        padding-top: 25px;
 
+    }
+    #blog-feed{
+        margin-top:0px
+    }
+    #social .conteudo-secao .col-md-12 {
+        padding-left: 20px;
+        max-width: 400px;
+        margin: 10px auto;
+    }
 	#vidbuttons{
             .social-feed {
 	    margin: 0 auto;

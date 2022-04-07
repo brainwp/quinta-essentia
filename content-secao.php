@@ -77,20 +77,27 @@ switch ($post->post_name) {
  		$depois = '';
 		
   		
-	  	$depois_conteudo .= '<div class="col-md-4 social-feed "><h4>'.__('Nos acompanhe nas redes sociais','odin').'</h4>';
-	  	$depois_conteudo .= '<div class="facebook-icone"></div><a target="_blank" href="http://www.facebook.com/5EOficial"><h5>/5EOficial</h5></a><div id="facebook-feed"></div>';
-	    $depois_conteudo .= '<div class="twitter-icone"></div><a target="_blank" href="https://twitter.com/quinta_essentia"><h5>@quinta_essentia</h5></a><div id="twitter-feed"></div><div class="clearfix"></div>';
- 		$depois_conteudo .= '<div class="sound_cloud-icone"></div><a target="_blank" href="https://soundcloud.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
-	    $depois_conteudo .= '<div class="reverbnation-icone"></div><a target="_blank" href="http://www.reverbnation.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
- 		$depois_conteudo .= '<div class="youtube-icone"></div><a target="_blank" href="http://www.youtube.com/essentiaquarteto"><h5>/essentiaquarteto</h5></a><div class="clearfix"></div>';
-		
-	  	$depois_conteudo .= '</div>';
+	  	$entre .= '<div class="col-md-12"><h4>'.__('Nos acompanhe nas redes sociais','odin').'</h4></div><div class="col-md-4 social-feed ">';
+	  	$entre .= '<div class="facebook-icone"></div><a target="_blank" href="http://www.facebook.com/5EOficial"><h5>/5EOficial</h5></a><div id="facebook-feed">' . do_shortcode('[custom-facebook-feed feed=1]') . '</div>';
+	    $entre .= '<div class="twitter-icone"></div><a target="_blank" href="https://twitter.com/quinta_essentia"><h5>@quinta_essentia</h5></a><div class="clearfix"></div>';
+ 		$entre .= '<div class="sound_cloud-icone"></div><a target="_blank" href="https://soundcloud.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
+	    $entre .= '<div class="reverbnation-icone"></div><a target="_blank" href="http://www.reverbnation.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
+	  	$entre .= '</div>';
+		$entre .= '<div class="col-md-4 social-feed">';
+		$entre .= '<div class="instagram-icone"></div><a target="_blank" href="https://www.instagram.com/5e_oficial/"><h5>/5e_oficial</h5></a><div id="facebook-feed">' . do_shortcode('[instagram-feed feed=1]') . '</div>';
+		$entre .= '<div class="youtube-icone"></div><a target="_blank" href="http://www.youtube.com/essentiaquarteto"><h5>/essentiaquarteto</h5></a><div class="clearfix"></div>';
+		$entre .= '<div class="whatsapp-icone"></div><a target="_blank" href="https://api.whatsapp.com/send?phone=5511966121591"><h5>55-11-966121591</h5></a><div class="clearfix"></div>';
+
+		$entre .= '</div>';  		
+		  
+
+
 		$depois_conteudo .= '<div class="col-md-4 blog-feed ">';
     	$depois_conteudo .= '<div id="blog-feed"><h4>'.__('Nosso Blog','odin').'</h4>'.do_shortcode( '[query post_type=post]' ).'</div>';
 		$lang = qtrans_getLanguage();
-		$depois_conteudo .= "<h4>".__('Newsletter','odin')."</h4>".do_shortcode( '[contact-form-7  title="newsletter '.$lang.'"]' ).'</div><!--blog-->';  		
+		$depois_conteudo .= '</div><!--blog-->';  		
 		$depois_conteudo .= '';
-		$classe_conteudo = "col-md-4";
+		$classe_conteudo = "hidden";
 	  	
 	
 	  	

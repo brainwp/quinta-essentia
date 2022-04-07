@@ -565,25 +565,6 @@ else{
 	$('#triangulo_footer').attr('points', '0,0 ' +largura+','+altura*0.35+ ' 0,'+ altura*0.35);
 }
 
-//ajax facebook
-
-var data = {
-	'action': 'facebook_brasa_social_feed'
-};
-$.post(odin_main.ajaxurl, data, function(response) {
-	$('#facebook-feed').html(response);
-});
-
-//ajax twitter
-var config1 = {
-	"id": odin_main.twitter_widget_id,
-	"domId": 'twitter-feed',
-	"maxTweets": 2,
-	"enableLinks": true,
-	"showTime": false,
-	"showRetweet": false,
-	"showInteraction": false
-};
 		//ajax youtube
 	do_youtube_ajax = function(){
 		var data = {
