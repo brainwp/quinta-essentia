@@ -79,10 +79,12 @@ switch ($post->post_name) {
   		
 	  	$entre .= '<div class="col-md-12"><h4>'.__('Nos acompanhe nas redes sociais','odin').'</h4></div><div class="col-md-4 social-feed ">';
 		$entre .= '<div class="instagram-icone"></div><a target="_blank" href="https://www.instagram.com/5e_oficial/"><h5>/5e_oficial</h5></a><div id="facebook-feed">' . do_shortcode('[instagram-feed feed=1]') . '</div>';
-		$entre .= '<div class="youtube-icone"></div><a target="_blank" href="http://www.youtube.com/essentiaquarteto"><h5>/essentiaquarteto</h5></a><div class="clearfix"></div>';
 		$entre .= '<div class="whatsapp-icone"></div><a target="_blank" href="https://api.whatsapp.com/send?phone=5511966121591"><h5>55-11-966121591</h5></a><div class="clearfix"></div>';
+		$entre .= '<div class="youtube-icone"></div><a target="_blank" href="http://www.youtube.com/essentiaquarteto"><h5>/essentiaquarteto</h5></a><div class="clearfix"></div>';
+		$entre .= '<div class="apple-music-icone"></div><a target="_blank" href="https://music.apple.com/artist/quinta-essentia-quarteto/699384309"><h5> Quinta Essentia</h5></a><div class="clearfix"></div>';
+		$entre .= '<div class="spotify-icone"></div><a target="_blank" href="https://open.spotify.com/artist/0NSJKW3FTsrp5B9gXRcIRn"><h5> Quinta Essentia</h5></a><div class="clearfix"></div>';
 		$entre .= '<div class="twitter-icone"></div><a target="_blank" href="https://twitter.com/quinta_essentia"><h5>@quinta_essentia</h5></a><div class="clearfix"></div>';
- 		$entre .= '<div class="sound_cloud-icone"></div><a target="_blank" href="https://soundcloud.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
+		$entre .= '<div class="sound_cloud-icone"></div><a target="_blank" href="https://soundcloud.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
 	    $entre .= '<div class="reverbnation-icone"></div><a target="_blank" href="http://www.reverbnation.com/quintaessentiaquarteto"><h5>/quintaessentiaquarteto</h5></a><div class="clearfix"></div>';
 	  	$entre .= '</div>';
 		$entre .= '<div class="col-md-4 social-feed">';
@@ -111,6 +113,9 @@ switch ($post->post_name) {
 		 			<polygon fill="url(#image)" id="poligono_agenda" points=""/>
 				</svg>';
 				$depois_conteudo = '<a class="btn btn-carregarmais" href="eventos/">'.__('+ Agenda','odin').'</a><div class="clearfix"></div>';
+		break;
+	 case 'contato':
+	   			$antes = '<header class="entry-header"><h1 class="entry-title">' . get_the_title($post->ID) . '</h1></header>';
 		break;
 	}
 	

@@ -6520,6 +6520,20 @@ font-size: 0.7em;
 input.wpcf7-form-control.wpcf7-text, textarea.wpcf7-form-control.wpcf7-textarea {
 	width: 100%;
 }
+#contato {
+    background-color: #6f1112;
+}
+#contato .conteudo-secao{
+    max-width: 520px;
+}
+#contato .conteudo-secao p{
+    color: #fff;
+    font-size: 22px;
+}
+#contato .entry-title{
+    text-align: center;
+    margin-top: 51px;
+}
 
 input, textarea{
   box-shadow: none;
@@ -6812,7 +6826,7 @@ input, textarea{
         background-position: 0 0;
         background-repeat: no-repeat;
         display: inline-block;
-        margin-left: 5px;	
+        margin-left: 6px;	
     }
 	.sound_cloud-icone{
 		background-image: url('../images/social.png');
@@ -6826,7 +6840,7 @@ input, textarea{
 	  background-image: url('../images/social.png');
 	  width: 35px;
 	  height: 23px;
-	  background-position: -27px -23px;
+	  background-position: -29px -23px;
 	  background-repeat: no-repeat;
 	  display: inline-block;
 	}
@@ -6842,7 +6856,7 @@ input, textarea{
         background-image: url(../images/whatsapp.png);
         width: 28px;
         height: 20px;
-        margin-left: 6px;
+        margin-left: 8px;
         background-repeat: inherit;
         display: inline-block;
         background-size: contain;
@@ -6855,6 +6869,27 @@ input, textarea{
         background-repeat: inherit;
         display: inline-block;
         background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .spotify-icone{
+        background-image: url('../images/logotipo-spotify.png');
+        width: 32px;
+        height: 22px;
+        background-repeat: inherit;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+
+    }
+    .apple-music-icone{
+        background-image: url('../images/apple-music.png');
+        width: 32px;
+        height: 22px;
+        background-repeat: inherit;
+        display: inline-block;
+        background-size: contain;
+        margin-left: 5px;
         background-repeat: no-repeat;
     }
 	.texto_post {
