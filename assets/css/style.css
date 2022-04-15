@@ -6461,9 +6461,11 @@ font-size: 0.7em;
     overflow: hidden;
     width: auto;
 }
+
 .red {
     color:#6e1515;
 }
+
 #vidpause, #vidaudio {
     color: white;
     cursor: pointer;
@@ -6483,11 +6485,6 @@ font-size: 0.7em;
 #vidaudio span.glyphicon {
     top: 2px;
 }
-
-
-
-
-
 
 .capa-capa{
 	background-color: rgba(0, 0, 0, 0.9);
