@@ -25,6 +25,18 @@ $odin_general_opts = get_option( 'odin_general' );
 
 
 					<article id="capa" <?php post_class('row secao'); ?>>
+
+						<div class="description">
+							<div class="container">
+								<h2>Entre para nossa comunidade!</h2>
+								<h3>Assine nossa <a href="#contato">newsletter</a></h3>
+								<div id="vidbuttons">
+									<a class="button" id="vidaudio"><span class="red vidbutton glyphicon  glyphicon-volume-off" aria-hidden="true"></span></a>
+									<a class="button" id="vidpause"><span class="redvidbutton glyphicon  glyphicon-pause" aria-hidden="true"></span></a>
+								</div>
+							</div>
+						</div>
+
 						<div class="capa-capa"></div>
 						<?php
 							if (!wp_is_mobile()) {
@@ -37,10 +49,7 @@ $odin_general_opts = get_option( 'odin_general' );
 						<?php
 					}
 				 ?>
-				 	<div id="vidbuttons">
-						 <a class="button" id="vidaudio"><span class="red vidbutton glyphicon  glyphicon-volume-off" aria-hidden="true"></span></a>
-						 <a class="button" id="vidpause"><span class="redvidbutton glyphicon  glyphicon-pause" aria-hidden="true"></span></a>
-					 </div>
+				 	
 					</article><!-- #post-## -->
 
 

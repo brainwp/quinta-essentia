@@ -5727,25 +5727,6 @@ video#bgvid {
 video {
 	display: block;
 }
-#vidbuttons {
-    position: absolute;
-    display: flex;
-    top: 50%;
-    z-index: 9999;
-    width: 116px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.red{
-    color:#6e1515;
-}
-#vidpause, #vidaudio{
-    flex: auto;
-  font-size: 40px;
-  margin-left: -20px;
-  margin-top: -25px;
-  color: white;
-}
 #destaque{
 	background-image:url('../images/black-paper.png');
 	background-color: #292929;
@@ -6408,6 +6389,86 @@ font-size: 0.7em;
   position: relative;
 	font-size:23px;
 }
+
+#capa {
+    position: relative;
+}
+
+#capa .description {
+    bottom: 50px;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+}
+
+#capa .description .container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+@media (max-width: 1060px) {
+    #capa .description .container {
+        max-width: 600px;
+    }
+}
+
+#capa .description h2 {
+    color: #FFF;
+    font-weight: 700;
+}
+
+#capa .description h3 {
+    color: #FFF;
+}
+
+#capa .description h3 a {
+    background-color: #D61528;
+    color: #FFF;
+    margin-left: 8px;
+    padding: 6px 8px;
+    text-decoration: none;
+}
+
+#capa .description h3 a:hover {
+    text-decoration: none;
+}
+
+#vidbuttons {
+    background-color: #f3b945;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 15px;
+    overflow: hidden;
+    width: auto;
+}
+.red {
+    color:#6e1515;
+}
+#vidpause, #vidaudio {
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 8px;
+}
+
+#vidaudio {
+    font-size: 30px;
+    padding-right: 2px;
+}
+
+#vidpause span.glyphicon {
+    top: -3px;
+}
+
+#vidaudio span.glyphicon {
+    top: 2px;
+}
+
+
+
+
+
+
 .capa-capa{
 	background-color: rgba(0, 0, 0, 0.9);
 	background-image: url(https://www.transparenttextures.com/patterns/dark-dotted-2.png);
