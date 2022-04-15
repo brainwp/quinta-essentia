@@ -6433,6 +6433,26 @@ font-size: 0.7em;
     text-decoration: none;
 }
 
+@media (max-width: 660px) {
+    #capa .description {
+        bottom: 15px;
+    }
+
+    #capa .description .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #capa .description h2,
+    #capa .description h3 {
+        font-size: 22px;
+    }
+
+    #capa .description h3 a {
+        padding: 4px 6px;
+    }
+}
+
 #vidbuttons {
     background-color: #f3b945;
     border-radius: 50px;
