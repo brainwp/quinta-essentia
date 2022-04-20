@@ -229,7 +229,9 @@ function odin_enqueue_scripts() {
 		
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
+
 		if (is_home()){
+			wp_enqueue_script( 'mask', $template_url . '/assets/js/libs/jquery.mask.min.js', array('jquery'), null, true );
 			wp_enqueue_script( 'home', $template_url . '/assets/js/home.js', array(), null, true );
 		}
 		
