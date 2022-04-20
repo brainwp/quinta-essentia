@@ -8087,3 +8087,8 @@ only screen and (                min-resolution: 2dppx)   {
      color: white;
      text-transform: uppercase;
    }
+
+Fix bug CSS on plugin Smash Ballon
+#sb_instagram a svg:not(:root).svg-inline--fa {
+    display: none;
+}
