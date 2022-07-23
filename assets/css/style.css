@@ -13593,25 +13593,20 @@ svg {
     left: 70px;
 }
 
-.conteudo-secao .btn-carregarmais,
-.btn-carregarmais {
-    font-size: 1.4em !important;
-    margin-top: 5px;
-    display: inline-block;
-    position: relative;
-}
-
 .midia-category .btn,
 .btn-loadmore,
 .conteudo-secao .btn-carregarmais,
 .btn-carregarmais {
     background: transparent;
-    padding: 5px 10px;
-    border: none;
+    border-radius: 7px;
+    border: solid 1px #6f1112;
     box-shadow: none;
     color: #6f1112;
-    font-size: 1.6em;
-    margin
+    font-size: 20px;
+    padding: 10px 15px;
+    line-height: 1;
+    margin-top: 5px;
+    display: inline-block;
 }
 
 .conteudo-secao .btn-loadmore-discos {
@@ -15383,11 +15378,6 @@ html .reveal-modal .close-reveal-modal {
         display: none;
     }
 
-    #sobre {
-        margin-top: 0;
-        padding-top: 0;
-    }
-
     #youtube-feed {
         position: relative;
         padding-left: 0;
@@ -15422,7 +15412,6 @@ html .reveal-modal .close-reveal-modal {
         height: 500px;
         background-attachment: initial;
         background-position: center 100px;
-
     }
 
     #sobre header {
@@ -15436,30 +15425,60 @@ html .reveal-modal .close-reveal-modal {
         width: 100%;
     }
 
-    #sobre .conteudo-secao {
-        margin: 0 5%;
-        width: 90%;
-    }
-
     #cabecalho_sobre h1 {
         font-size: 8%;
         padding-bottom: 7%;
-
     }
 
     #cabecalho_sobre img {
         width: 30%;
     }
 
-    #sobre .secao-interno {
-        background: #F2F1F0 none no-repeat;
-        background-attachment: initial;
-        background-size: contain;
-
+    #sobre .secao-background {
+        background-size: cover;
     }
 
     #sobre .conteudo-secao p {
         margin-right: 0;
+    }
+
+    #sobre {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #sobre header {
+        left: 30px;
+    }
+
+    #sobre #cabecalho_sobre {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #sobre .secao-interno {
+        background: #F2F1F0 none no-repeat;
+        background-attachment: initial;
+        background-size: contain;
+    }
+
+    #sobre .sobre-conteudo {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+    }
+
+    #sobre .conteudo-secao {
+        margin: 0 5%;
+        width: 90%;
+    }
+
+    #sobre .sobre-conteudo .wpcf7 {
+        font-size: 18px;
     }
 
     .single #social,
