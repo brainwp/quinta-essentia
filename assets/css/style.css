@@ -50,8 +50,6 @@ a:focus {
 
 }
 
-.menu-item-has-children .sub-menu {}
-
 .menu-item-has-children:hover .sub-menu a {
     color: white;
 }
@@ -69,7 +67,6 @@ a:focus {
     -o-transition: height 0.5s linear;
     -ms-transition: height 0.5s linear;
     padding: 0 10px 10px;
-
 }
 
 .menu-item-has-children:hover .sub-menu li {
@@ -105,10 +102,8 @@ a:focus {
 
 .slick-list {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
     padding: 0;
 }
@@ -135,7 +130,6 @@ a:focus {
     position: relative;
     top: 0;
     left: 0;
-
     display: block;
 }
 
@@ -194,8 +188,6 @@ a:focus {
     border: 1px solid transparent;
 }
 
-@charset 'UTF-8';
-
 /* Slider */
 .slick-loading .slick-list {
     background: #fff url('../images/ajax-loader.gif') center center no-repeat;
@@ -214,25 +206,20 @@ a:focus {
 /* Arrows */
 .slick-prev,
 .slick-next {
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    display: block;
     font-size: 0;
+    height: 20px;
     line-height: 0;
-
+    margin-top: -10px;
+    outline: none;
+    padding: 0;
     position: absolute;
     top: 50%;
-
-    display: block;
-
     width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    padding: 0;
-
-    cursor: pointer;
-
-    color: transparent;
-    border: none;
-    outline: none;
-    background: transparent;
 }
 
 .slick-prev:hover,
@@ -309,48 +296,37 @@ a:focus {
 }
 
 .slick-dots {
-    position: absolute;
     bottom: -45px;
-
     display: block;
-
-    width: 100%;
-    padding: 0;
-
     list-style: none;
-
+    padding: 0;
+    position: absolute;
     text-align: center;
+    width: 100%;
 }
 
 .slick-dots li {
-    position: relative;
-
+    cursor: pointer;
     display: inline-block;
-
-    width: 20px;
     height: 20px;
     margin: 0 5px;
     padding: 0;
-
-    cursor: pointer;
+    position: relative;
+    width: 20px;
 }
 
 .slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-
-    display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-
-    cursor: pointer;
-
-    color: transparent;
-    border: 0;
-    outline: none;
     background: transparent;
+    border: 0;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    outline: none;
+    padding: 5px;
+    width: 20px;
 }
 
 .slick-dots li button:hover,
@@ -364,23 +340,18 @@ a:focus {
 }
 
 .slick-dots li button:before {
+    color: black;
+    content: '•';
     font-family: 'slick';
     font-size: 6px;
-    line-height: 20px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 20px;
     height: 20px;
-
-    content: '•';
-    text-align: center;
-
+    left: 0;
+    line-height: 20px;
     opacity: .25;
-    color: black;
-
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 20px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -12748,7 +12719,6 @@ ul.page-numbers>li>span.current:focus {
 .main-navigation .assistive-text:hover,
 .main-navigation .assistive-text:active,
 .main-navigation .assistive-text:focus {
-
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -12895,15 +12865,13 @@ html {
     margin-bottom: 10px;
 }
 
-
 .error404 #searchform {
     margin-bottom: 10px;
 }
 
 /*Começo da customização*/
 .page #menu-lado {
-    oppacity: 1;
-
+    opacity: 1;
 }
 
 #main-content {
@@ -12935,7 +12903,6 @@ html {
 
 .linguas ul {
     list-style: none;
-
 }
 
 .linguas li {
@@ -12950,7 +12917,6 @@ html {
     left: 0px;
     padding-left: 200px;
     opacity: 0;
-
 }
 
 .navbar-main-navigation {
@@ -12992,7 +12958,6 @@ video {
     margin: -2% 0 -10% -10%;
     height: 60vw;
     z-index: 9;
-
 }
 
 #destaque_texto {
@@ -13021,8 +12986,6 @@ video {
     -webkit-transform: rotate(-25deg);
     /* Chrome, Safari, Opera */
     transform: rotate(-25deg);
-
-
 }
 
 #destaque_img img {
@@ -13063,15 +13026,12 @@ video {
     z-index: 1;
     margin-top: -15vw;
     padding-top: 45vw;
-
-
 }
 
 .sobre-conteudo input,
 .sobre-conteudo textarea {
     border: solid 1px #6f1112;
     background-color: #ffe6e626;
-
 }
 
 .sobre-conteudo .btn-default,
@@ -13086,30 +13046,22 @@ video {
 
 svg {
     width: 100vw;
-
     position: absolute;
     z-index: 9999;
-
 }
-
-#triangulo_sobre {}
 
 #triangulo_laranja {
     fill: #e45b31;
-
-
 }
 
 .menu-inicial {
     opacity: 1;
-
 }
 
 .aparecido {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.7s;
-
 }
 
 .sumido {
@@ -13139,13 +13091,8 @@ svg {
     left: 0;
 }
 
-.navbar-toggle {}
-
-#poligono_agenda {}
-
 #poligono_branco {
     fill: #ffffff;
-
 }
 
 #triangulo_amarelo,
@@ -13156,7 +13103,6 @@ svg {
 
 #poligono_disco {
     fill: #292929;
-
 }
 
 #svg_disco {
@@ -13171,7 +13117,6 @@ svg {
     left: 7.5vw;
     padding: 18vw 0 0vw;
     margin-top: 00vh;
-
 }
 
 .entry-header h1 {
@@ -13179,7 +13124,6 @@ svg {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 30pt;
-
 }
 
 #cabecalho_sobre {
@@ -13202,7 +13146,6 @@ svg {
     color: #000000;
     letter-spacing: -1pt;
     text-transform: lowercase !important;
-
 }
 
 #cabecalho_sobre img {
@@ -13210,7 +13153,6 @@ svg {
     width: 215px;
     vertical-align: bottom;
     filter: hue-rotate(60deg);
-
 }
 
 #retangulo-branco {
@@ -13241,12 +13183,10 @@ svg {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 #sobre h5 {
     display: inline-block;
-
 }
 
 #sobre .conteudo-secao p {
@@ -13269,7 +13209,6 @@ svg {
 }
 
 .row_contato .col-sm-4 {
-
     padding: 0;
 }
 
@@ -13289,8 +13228,6 @@ svg {
     position: relative;
     z-index: 999999;
 }
-
-#nome_contato:before {}
 
 #interno-nav-equipe {
     position: relative;
@@ -13327,27 +13264,18 @@ svg {
     position: relative;
     display: inline-block;
     float: left;
-
 }
 
 .cada-eventos h2,
 .post-type-archive.post-type-archive-eventos h2 {
     font-size: 20px;
     margin-top: 90px;
-
 }
 
 .thumb-eventos img {
     margin-bottom: 15px;
     width: 100%;
 }
-
-.link-equipe {}
-
-
-
-.link-equipe {}
-
 
 .cada-equipe {
     padding: 1vw;
@@ -13396,8 +13324,6 @@ svg {
     font-size: 3.5vw;
 }
 
-#agenda {}
-
 #agenda .btn-loadmore {
     margin-bottom: 30px;
 }
@@ -13406,8 +13332,6 @@ svg {
     background-color: #f5b843;
     position: relative;
 }
-
-#agenda .conteudo-secao {}
 
 #agenda {
     background-color: #f5b843;
@@ -13421,14 +13345,12 @@ svg {
     position: relative;
     padding-bottom: 6px;
     width: 100%;
-
 }
 
 .cada-eventos a {
     background-color: #FFF;
     display: block;
     height: 300px;
-
 }
 
 .hora {
@@ -13461,7 +13383,6 @@ svg {
 
 .cada-flauta {
     margin: 0 10px;
-
 }
 
 #interno-flauta {
@@ -13479,7 +13400,6 @@ svg {
     width: 100vw;
     height: 100vw;
     background-attachment: fixed;
-
 }
 
 #interno-flauta .glyphicon {
@@ -13495,7 +13415,6 @@ svg {
 
 #interno-flauta .glyphicon-menu-right:before,
 #interno-flauta .glyphicon-menu-left:before {
-
     position: relative;
     display: block;
     top: 50%;
@@ -13506,22 +13425,18 @@ svg {
     left: 0;
     border-radius: 0;
     border-right: solid 1px black;
-
 }
 
 #interno-flauta .glyphicon.direita {
     right: 0;
     border-radius: 0;
     border-left: solid 1px black;
-
-
 }
 
 .cada-flauta img {
     width: 120px;
     max-width: 120px;
 }
-
 
 #interno-nav-flauta {
     position: relative;
@@ -13531,9 +13446,6 @@ svg {
     -webkit-transition: all 0.8s ease-in-out;
     -o-transition: all 0.8s ease-in-out;
     transition: all 0.8s ease-in-out;
-
-
-
 }
 
 #projetos h1 {
@@ -13579,8 +13491,6 @@ svg {
 #youtube-feed .social-feed {
     padding-top: 10%;
     width: 120%;
-
-
 }
 
 #interno-projeto {
@@ -13590,7 +13500,6 @@ svg {
     margin-bottom: 60px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.59);
-
 }
 
 #projetos .botao {
@@ -13600,7 +13509,6 @@ svg {
     font-size: 30px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.59);
-
 }
 
 #projetos .botao span {
@@ -13622,7 +13530,6 @@ svg {
     -webkit-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
-
 }
 
 #projetos .entry-header {
@@ -13633,8 +13540,6 @@ svg {
 .cada-projeto {
     margin-bottom: 20px;
 }
-
-#projetos .secao-interno {}
 
 #midia {
     background: #f3b945;
@@ -13901,8 +13806,6 @@ svg {
 
 }
 
-#interno-disco {}
-
 .cada-disco a .texto_disco {
     color: #ffffff;
 
@@ -13931,7 +13834,6 @@ svg {
     background-color: #565555;
     color: #ffffff !important;
     position: relative;
-
 }
 
 .mais-disco {
@@ -14120,8 +14022,6 @@ textarea {
     vertical-align: baseline;
     max-width: 200px;
     margin: 0 10px;
-
-
 }
 
 #logo_footer {
@@ -14187,7 +14087,6 @@ textarea {
     display: inline-block;
     margin-left: 20px;
     vertical-align: baseline;
-
 }
 
 #info.modal-eventos {
@@ -14251,8 +14150,6 @@ textarea {
     margin-top: 30px
 }
 
-#logo {}
-
 #fundo-modal-titulo {
     background-color: #2e2c2d;
     -ms-transform: rotate(4deg);
@@ -14314,14 +14211,12 @@ html .reveal-modal .close-reveal-modal {
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-
 }
 
 .reveal-modal-bg {
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-
 }
 
 .open {
@@ -14380,7 +14275,6 @@ html .reveal-modal .close-reveal-modal {
     background: rgba(255, 255, 255, 0.27);
     padding: 10px 10px;
     margin-bottom: 10px;
-
 }
 
 #twitter-feed ul {
@@ -14537,7 +14431,6 @@ html .reveal-modal .close-reveal-modal {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-
 }
 
 .post-type-archive-eventos .single {
@@ -14559,7 +14452,6 @@ html .reveal-modal .close-reveal-modal {
 
 .post-type-archive-eventos .cada-eventos .endereco-eventos {
     margin-bottom: 13px;
-
 }
 
 .post-type-archive-eventos .titulo_disco {
@@ -14597,7 +14489,6 @@ html .reveal-modal .close-reveal-modal {
     width: 100%;
     overflow: hidden;
     background-color: #E35A30;
-
 }
 
 .blog .is_slider {
@@ -14660,7 +14551,6 @@ html .reveal-modal .close-reveal-modal {
     position: relative;
     z-index: 999;
     text-transform: uppercase;
-
 }
 
 .blog .entry-header.titulo-post h2 {
@@ -14689,7 +14579,6 @@ html .reveal-modal .close-reveal-modal {
 .blog .widget h3,
 .blog .widget label {
     font-weight: 200 !important;
-
 }
 
 .blog .widget select {
@@ -14724,7 +14613,6 @@ html .reveal-modal .close-reveal-modal {
 .blog #main-content,
 .blog article {
     background-color: transparent !important;
-
 }
 
 .post-lista-thumb {
@@ -14744,7 +14632,6 @@ html .reveal-modal .close-reveal-modal {
 
 .blog #primary {
     padding-top: 20px;
-
 }
 
 .blog a:hover {
@@ -14773,10 +14660,6 @@ html .reveal-modal .close-reveal-modal {
 
 .page-content hr {
     border-top: 3px solid #eee;
-}
-
-.page-content span {
-    /*		font-size:13px;*/
 }
 
 .blog #menu-interno.desktop {
@@ -14832,17 +14715,13 @@ html .reveal-modal .close-reveal-modal {
     }
 }
 
-#main-navigation {}
-
 .blog #menu-interno.com-fundo {
     background-color: #6f1112 !important;
-
 }
 
 .blog #menu-interno.desktop {
     background-color: transparent;
     padding: 37px 150px 0;
-
 }
 
 .single #primary,
@@ -14864,7 +14743,6 @@ html .reveal-modal .close-reveal-modal {
 .page article,
 .error404 article {
     background-color: #ffffff;
-
 }
 
 .error404 article.nao-encontrado h2 {
@@ -14873,7 +14751,6 @@ html .reveal-modal .close-reveal-modal {
 
 .error404 article {
     min-height: 300px;
-
 }
 
 .archive .entry-header {
@@ -14889,11 +14766,7 @@ html .reveal-modal .close-reveal-modal {
     color: #000000;
     text-align: center;
     background-color: #e35a30;
-
 }
-
-.single #main,
-.page #main {}
 
 .single .site-info>div,
 .page .site-info>div {
@@ -14901,7 +14774,6 @@ html .reveal-modal .close-reveal-modal {
 }
 
 /*fim da custoimização*/
-
 
 @-ms-viewport {
     width: device-width;
@@ -14941,7 +14813,6 @@ html .reveal-modal .close-reveal-modal {
 @media (max-width: 767px) {
     .visible-xs {
         display: block !important;
-
     }
 
     .page-template-page-Blog .col-md-8 {
@@ -14971,7 +14842,6 @@ html .reveal-modal .close-reveal-modal {
         background-attachment: initial;
         background-position: top;
         top: 50px;
-
     }
 
     #sobre .secao-interno {
@@ -14989,15 +14859,10 @@ html .reveal-modal .close-reveal-modal {
     }
 }
 
-
-
-
-
 @media (max-width: 767px) {
     #social .secao-interno {
         margin-top: 80px;
         padding-top: 25px;
-
     }
 
     #blog-feed {
@@ -15010,11 +14875,9 @@ html .reveal-modal .close-reveal-modal {
         margin: 10px auto;
     }
 
-    #vidbuttons {
-        .social-feed {
-            margin: 0 auto;
-            display: block;
-        }
+    #vidbuttons .social-feed {
+        margin: 0 auto;
+        display: block;
     }
 
     #bgvid,
@@ -15038,7 +14901,6 @@ html .reveal-modal .close-reveal-modal {
     }
 
     #sobre .conteudo-secao {
-
         font-size: 16px;
     }
 
@@ -15234,7 +15096,6 @@ html .reveal-modal .close-reveal-modal {
     .hidden-md {
         display: none !important;
     }
-
 }
 
 @media (min-width: 1200px) {
@@ -15306,7 +15167,7 @@ html .reveal-modal .close-reveal-modal {
 @media print {
 
     *,
-    *: before,
+    *:before,
     *:after {
         background: transparent !important;
         color: #000 !important;
@@ -15477,7 +15338,6 @@ html .reveal-modal .close-reveal-modal {
         position: relative;
         height: auto;
         margin-left: 10px;
-
     }
 
     .menu-item-has-children .sub-menu li {
@@ -15532,7 +15392,6 @@ html .reveal-modal .close-reveal-modal {
         position: relative;
         padding-left: 0;
         top: 0;
-
     }
 
     #triangulo_projetos,
@@ -15746,7 +15605,6 @@ html .reveal-modal .close-reveal-modal {
     #discografia .entry-title {
         color: #000000;
     }
-
 }
 
 .equipe-conteudo a:hover {
@@ -15755,7 +15613,6 @@ html .reveal-modal .close-reveal-modal {
 
 .equipe-conteudo a {
     color: #222;
-
 }
 
 .midia-titulo-youtube {
@@ -15769,7 +15626,6 @@ html .reveal-modal .close-reveal-modal {
     width: 75%;
     padding: 5px 10px;
     position: absolute;
-
 }
 
 .img-midia {
@@ -15790,7 +15646,6 @@ html .reveal-modal .close-reveal-modal {
 }
 
 @media only screen and (min-width: 40.063em) {
-
     html dialog,
     html .reveal-modal {
         margin-left: -500px;
@@ -15819,7 +15674,6 @@ html .reveal-modal .close-reveal-modal {
     }
 
     #reveal-modal-id h1 {
-
         padding: 0px 21% 40px;
     }
 
@@ -15838,7 +15692,6 @@ html .reveal-modal .close-reveal-modal {
     #sobre h5 {
         width: 85%;
         font-size: 3.2vw;
-
     }
 
     #single-header-img {
@@ -15874,7 +15727,6 @@ only screen and (min-resolution: 2dppx) {
     color: #ffffff;
 }
 
-
 .mobile .menu-item {
     text-align: left;
 }
@@ -15883,7 +15735,6 @@ only screen and (min-resolution: 2dppx) {
     position: relative;
     height: auto;
     margin-left: 10px;
-
 }
 
 .mobile .menu-item-has-children .sub-menu li {
@@ -15902,6 +15753,7 @@ only screen and (min-resolution: 2dppx) {
     text-transform: uppercase;
 }
 
-Fix bug CSS on plugin Smash Ballon #sb_instagram a svg:not(:root).svg-inline--fa {
+/* Fix bug CSS on plugin Smash Ballon */
+#sb_instagram a svg:not(:root).svg-inline--fa {
     display: none;
 }
