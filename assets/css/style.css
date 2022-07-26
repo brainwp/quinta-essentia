@@ -13234,6 +13234,7 @@ svg {
 }
 
 .cada-equipe img {
+    border-radius: 7px;
     width: 80%;
     opacity: 0.9;
     -webkit-transition: opacity, width 0.5s ease-in-out;
@@ -15472,6 +15473,10 @@ html .reveal-modal .close-reveal-modal {
         width: 100%;
     }
 
+    #sobre .sobre-conteudo {
+        font-size: 20px;
+    }
+
     #sobre .conteudo-secao {
         margin: 0 5%;
         width: 90%;
@@ -15479,6 +15484,17 @@ html .reveal-modal .close-reveal-modal {
 
     #sobre .sobre-conteudo .wpcf7 {
         font-size: 18px;
+    }
+
+    #interno-equipe .cada-equipe {
+        margin-left: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    #interno-equipe .cada-equipe img {
+        margin-bottom: 15px;
+        width: 100%;
     }
 
     .single #social,
