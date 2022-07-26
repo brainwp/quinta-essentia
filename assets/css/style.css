@@ -14892,7 +14892,6 @@ html .reveal-modal .close-reveal-modal {
 
     .midia-category .btn,
     .btn-loadmore {
-
         font-size: 35px;
     }
 
@@ -14951,15 +14950,11 @@ html .reveal-modal .close-reveal-modal {
     .visible-xs-block {
         display: block !important;
     }
-}
 
-@media (max-width: 767px) {
     .visible-xs-inline {
         display: inline !important;
     }
-}
 
-@media (max-width: 767px) {
     .visible-xs-inline-block {
         display: inline-block !important;
     }
@@ -15731,6 +15726,27 @@ html .reveal-modal .close-reveal-modal {
 
     #single-header-img {
         background-color: transparent;
+    }
+
+    #agenda #titulo_agenda {
+        font-size: 24px;
+        left: 0;
+        margin-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: relative;
+        text-align: center;
+    }
+
+    #agenda .conteudo-secao {
+        padding: 30px;
+        z-index: 1;
+    }
+
+    #agenda .btn {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
