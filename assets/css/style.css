@@ -15767,6 +15767,12 @@ html .reveal-modal .close-reveal-modal {
         width: 100%;
     }
 
+    #midia .midia-category {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 30px 30px;
+    }
+
     #midia .midia-category .btn {
         border: 0;
     }
@@ -15795,7 +15801,44 @@ html .reveal-modal .close-reveal-modal {
         margin-top: 5px;
         padding: 10px 15px;
     }
+
+    #interno-disco .cada-disco {
+        padding: 30px;
+        overflow: hidden;
+    }
+
+    #interno-disco .cada-disco .texto_disco iframe {
+        margin-top: 30px;
+    }
+
+    #interno-disco .cada-disco img {
+        border-radius: 7px;
+    }
+
+    #interno-disco .btn-loadmore-discos {
+        box-shadow: none;
+        display: table;
+        font-size: 20px;
+        line-height: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        padding: 10px 15px;
+    }
 }
+
+@media only screen and (max-width:767px) {
+    #interno-disco .cada-disco .col-xs-4 {
+        width: 100%;
+    }
+
+    #interno-disco .cada-disco .texto_disco {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 0;
+    }
+}
+
 
 .nocomments {
     display: none;
