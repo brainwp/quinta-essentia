@@ -15846,6 +15846,24 @@ html .reveal-modal .close-reveal-modal {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    #footer .site-info.row {
+        padding: 30px;
+        width: 100%;
+    }
+
+    #footer .site-info.row #logo_footer {
+        text-align: center;
+    }
+
+    #footer .site-info.row #logo_footer img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #footer .site-info.row  #parcerias {
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width:500px) {
