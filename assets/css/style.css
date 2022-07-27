@@ -15840,6 +15840,12 @@ html .reveal-modal .close-reveal-modal {
     #social .secao-interno .col-md-4 {
         max-width: 500px;
     }
+
+    #contato {
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 @media only screen and (max-width:500px) {
