@@ -15825,9 +15825,7 @@ html .reveal-modal .close-reveal-modal {
         margin-top: 5px;
         padding: 10px 15px;
     }
-}
 
-@media only screen and (max-width:767px) {
     #interno-disco .cada-disco .col-xs-4 {
         width: 100%;
     }
@@ -15837,8 +15835,20 @@ html .reveal-modal .close-reveal-modal {
         margin-top: 30px;
         padding: 0;
     }
+
+    #social .secao-interno .col-md-12,
+    #social .secao-interno .col-md-4 {
+        max-width: 500px;
+    }
 }
 
+@media only screen and (max-width:500px) {
+    #social .secao-interno .col-md-12,
+    #social .secao-interno .col-md-4 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
 
 .nocomments {
     display: none;
