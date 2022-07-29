@@ -15861,7 +15861,14 @@ html .reveal-modal .close-reveal-modal {
         margin-left: 10px;
         margin-right: 10px;
     }
-
+    #footer .site-info.row #logo_footer #logo-brasa img{
+        width:60px;
+    }
+    #footer .site-info.row #logo_footer #logo-wp img{
+        width:30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
     #footer .site-info.row  #parcerias {
         margin-top: 30px;
     }
