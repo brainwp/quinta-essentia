@@ -343,7 +343,7 @@ if ($('body').hasClass('home')){
 		///////////Quando redimensiona
 	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 	altura_footer= parseInt($('#footer').css('height'));
-
+	var footer = document.querySelector('#footer')
 	var lastScrollTop = $(this).scrollTop();
 	primeira=1;
 
@@ -370,9 +370,10 @@ if ($('body').hasClass('home')){
 
 		}
 		var st = $(this).scrollTop();
-
-		if(!isMobile.matches && st > lastScrollTop && ($(window).scrollTop() + ($(window).height() - $(document).height())) >= -1)  {
-
+		
+		space = $(document).height() - $(this).scrollTop();
+		
+		if(!isMobile.matches && st > lastScrollTop && ($(window).scrollTop() + ($(window).height() - $(document).height())) >= -2)  {
 			$('#footer').css('position','absolute')
 
 		      $('#footer').css('top','0')
@@ -387,19 +388,25 @@ if ($('body').hasClass('home')){
 			$('#footer').css('position','relative')
 
 			}
-		else if (!isMobile.matches && st < lastScrollTop && $(window).scrollTop() == 0){
-
+		else if (!isMobile.matches && st < lastScrollTop && $(window).scrollTop() <= 2 ){
 			$('#footer').css('position','relative')
 					  	.css('top','0')
 						.css('width','100vw')
 						.css('z-index','9999')
 			$('#header-principal').css('margin-top','0')
-			window.scrollTo(0, $(document).height()  )
+			window.scrollTo(0, $(document).height()  );
 			st = $(document).height();
 								}
-		else if (!isMobile.matches && st < lastScrollTop && $(document).height() - 2* $(window).scrollTop() > 2*$(window).height() ){
+		else if (!isMobile.matches && st < lastScrollTop && space >  2* altura_footer ){
+			margin_top = parseInt($('#header-principal').css('margin-top'));
 			$('#footer').css('position','absolute')
-			$('#header-principal').css('margin-top',altura_footer)
+			if (margin_top < altura_footer  ){
+				$('#header-principal').css('margin-top',margin_top+2)
+			}
+			if ($('#header-principal').css('margin-top') > altura_footer  ){
+				$('#header-principal').css('margin-top',altura_footer)
+			}
+			// $('#header-principal').css('margin-top',altura_footer)
 
 		}
 		else if (isMobile.matches){
@@ -645,7 +652,6 @@ else{
 		var check_timer = function() {
 			var timer = $(e.target).find('.sc-scrubber .sc-time-span .sc-buffer').css('width');
 			var timer = timer.split('.');
-			console.log(timer[0]);
 			if(parseInt(timer[0]) >= 1){
 				$(e.target).removeClass('loadbg');
 			}
