@@ -14806,6 +14806,12 @@ html .reveal-modal .close-reveal-modal {
 }
 
 @media (max-width: 767px) {
+    #interno-projeto{
+		width:100%;
+	}
+    .cada-projeto img.wp-post-image{
+        width: 100%;
+    }
     .visible-xs {
         display: block !important;
     }
