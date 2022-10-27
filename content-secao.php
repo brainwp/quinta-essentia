@@ -79,7 +79,7 @@ switch ($post->post_name) {
 	  	$entre .= '<div class="col-md-12"><h4>' . __('Nos acompanhe nas redes sociais','odin') . '</h4></div><!-- .col-md-12 -->';
 		$entre .= '<div class="col-md-4 social-feed">';
 		$entre .= '<div class="social-icon-wrapper"><a target="_blank" href="https://www.instagram.com/5e_oficial/"><div class="instagram-icone icone"></div><h5>/5e_oficial</h5></a>'. do_shortcode('[instagram-feed feed=1]') .'</div>';
-		$entre .= '<div class="social-icon-wrapper"><a target="_blank" href="https://api.whatsapp.com/send?phone=5511966121591"><div class="whatsapp-icone icone"></div><h5>55-11-966121591</h5></a></div>';
+		$entre .= '<div class="social-icon-wrapper"><a target="_blank" href="https://api.whatsapp.com/send?phone=5511996660497"><div class="whatsapp-icone icone"></div><h5>55-11-966121591</h5></a></div>';
 		$entre .= '<div class="social-icon-wrapper"><a target="_blank" href="https://www.youtube.com/essentiaquarteto"><div class="youtube-icone icone"></div><h5>/essentiaquarteto</h5></a></div>';
 		$entre .= '<div class="social-icon-wrapper"><a target="_blank" href="https://music.apple.com/artist/quinta-essentia-quarteto/699384309"><div class="apple-music-icone icone"></div><h5>Quinta Essentia</h5></a></div>';
 		$entre .= '<div class="social-icon-wrapper"><a target="_blank" href="https://open.spotify.com/artist/0NSJKW3FTsrp5B9gXRcIRn"><div class="spotify-icone icone"></div><h5>Quinta Essentia</h5></a></div>';
